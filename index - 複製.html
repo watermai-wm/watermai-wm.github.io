@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碧藍航線卡片查詢</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>碧藍航線卡片查詢</h1>
+        
+        <!-- 文字搜尋框 -->
+        <input type="text" id="searchName" placeholder="輸入卡片名稱..." oninput="searchCards()">
+        <input type="text" id="searchCode" placeholder="輸入卡片編號..." oninput="searchCards()">
+        <input type="text" id="searchEffect" placeholder="輸入卡片效果..." oninput="searchCards()">
+ <!----------------------------------------------------->
+         <!-- 多選式篩選條件 -->
+        <div class="filters">
+			<div class="filter-group">
+                <h3>陣營</h3>
+                <label><input type="checkbox" name="color" value="紅"> 紅</label>
+				<label><input type="checkbox" name="color" value="藍"> 藍</label>
+				<label><input type="checkbox" name="color" value="黃"> 黃</label>
+				<label><input type="checkbox" name="color" value="紅藍"> 紅藍</label>
+				<label><input type="checkbox" name="color" value="紅黃"> 紅黃</label>
+				<label><input type="checkbox" name="color" value="紅黑"> 紅黑</label>
+				<label><input type="checkbox" name="color" value="藍黄"> 藍黄</label>
+				<label><input type="checkbox" name="color" value="藍黑"> 藍黑</label>
+				<label><input type="checkbox" name="color" value="黃黑"> 黃黑</label>
+				<label><input type="checkbox" name="color" value="魔方"> 魔方</label>
+				<label><input type="checkbox" name="color" value="無"> 無</label>
+            </div>
+            <div class="filter-group">
+                <h3>陣營</h3>
+                <label><input type="checkbox" name="faction" value="白鷹"> 白鷹</label>
+                <label><input type="checkbox" name="faction" value="皇家"> 皇家</label>
+                <label><input type="checkbox" name="faction" value="鐵血"> 鐵血</label>
+                <label><input type="checkbox" name="faction" value="重櫻"> 重櫻</label>
+				<label><input type="checkbox" name="faction" value="自由鳶尾"> 自由鳶尾</label>
+				<label><input type="checkbox" name="faction" value="維希教廷"> 維希教廷</label>
+				<label><input type="checkbox" name="faction" value="東煌"> 東煌</label>
+				<label><input type="checkbox" name="faction" value="北方聯合"> 北方聯合</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>艦船類型</h3>
+                <label><input type="checkbox" name="type" value="驅逐"> 驅逐</label>
+				<label><input type="checkbox" name="type" value="戰巡"> 戰巡</label>
+                <label><input type="checkbox" name="type" value="輕巡"> 輕巡</label>
+                <label><input type="checkbox" name="type" value="重巡"> 重巡</label>
+				<label><input type="checkbox" name="type" value="輕航"> 輕航</label>
+                <label><input type="checkbox" name="type" value="航母"> 航母</label>
+                <label><input type="checkbox" name="type" value="潛艇"> 潛艇</label>
+				<label><input type="checkbox" name="type" value="戰列"> 戰列</label>
+				<label><input type="checkbox" name="type" value="維修"> 維修</label>
+				<label><input type="checkbox" name="type" value="潛母"> 潛母</label>
+				<label><input type="checkbox" name="type" value="超巡"> 超巡</label>
+				<label><input type="checkbox" name="type" value="航戰"> 航戰</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>罕貴度</h3>
+                <label><input type="checkbox" name="rarity" value="N"> N</label>
+                <label><input type="checkbox" name="rarity" value="R"> R</label>
+                <label><input type="checkbox" name="rarity" value="SR"> SR</label>
+                <label><input type="checkbox" name="rarity" value="SSR"> SSR</label>
+				<label><input type="checkbox" name="rarity" value="UR"> UR</label>
+                <label><input type="checkbox" name="rarity" value="L"> L</label>
+				<label><input type="checkbox" name="rarity" value="N-SEC"> N-SEC</label>
+                <label><input type="checkbox" name="rarity" value="SR-SEC"> SR-SEC</label>
+                <label><input type="checkbox" name="rarity" value="SSR-SEC"> SSR-SEC</label>
+				<label><input type="checkbox" name="rarity" value="UR-SEC"> UR-SEC</label>
+                <label><input type="checkbox" name="rarity" value="L-SEC"> L-SEC</label>
+				<label><input type="checkbox" name="rarity" value="PR"> PR</label>
+                <label><input type="checkbox" name="rarity" value="SPR"> SPR</label>
+				
+                
+            </div>
+        </div>
+
+        <!-- 查詢按鈕 -->
+        <button onclick="searchCards()">查詢</button>
+<!-------------------------------------------->
+        <!-- 篩選選單 -->
+        <select id="filterColor" onchange="searchCards()">
+            <option value="">顏色</option>
+        </select>
+        <select id="filterType" onchange="searchCards()">
+            <option value="">種類</option>
+        </select>
+        <select id="filterCost" onchange="searchCards()">
+            <option value="">費用</option>
+        </select>
+        <select id="filterPower" onchange="searchCards()">
+            <option value="">戰力</option>
+        </select>
+        <select id="filterFaction" onchange="searchCards()">
+            <option value="">陣營</option>
+        </select>
+        <select id="filterShipType" onchange="searchCards()">
+            <option value="">艦船類型</option>
+        </select>
+        <select id="filterRarity" onchange="searchCards()">
+            <option value="">罕貴</option>
+        </select>
+        <select id="filterForce" onchange="searchCards()">
+            <option value="">勢力</option>
+        </select>
+        <select id="filterSupportType" onchange="searchCards()">
+            <option value="">支援類型</option>
+        </select>
+        <select id="filterSupportValue" onchange="searchCards()">
+            <option value="">支援值</option>
+        </select>
+        <select id="filterObtain" onchange="searchCards()">
+            <option value="">獲取方法</option>
+        </select>
+
+        <div id="results"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

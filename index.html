@@ -1,7 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碧藍航線卡片查詢</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1>碧藍航線卡片查詢</h1>
+        
+        <!-- 文字搜尋框 -->
+        <input type="text" id="searchName" placeholder="輸入卡片名稱..." oninput="searchCards()">
+        <input type="text" id="searchCode" placeholder="輸入卡片編號..." oninput="searchCards()">
+        <input type="text" id="searchEffect" placeholder="輸入卡片效果..." oninput="searchCards()">
+        
+        <!-- 重置按鈕 -->
+        <button id="resetButton">重置</button>
+
+        <!-- 多選式篩選條件 -->
+        <div class="filters">
+            <div class="filter-group" id="filterColorGroup">
+                <h3>顏色</h3>
+            </div>
+            <div class="filter-group" id="filterTypeGroup">
+                <h3>種類</h3>
+            </div>
+            <div class="filter-group" id="filterCostGroup">
+                <h3>費用</h3>
+            </div>
+            <div class="filter-group" id="filterPowerGroup">
+                <h3>戰力</h3>
+            </div>
+            <div class="filter-group" id="filterFactionGroup">
+                <h3>陣營</h3>
+            </div>
+            <div class="filter-group" id="filterShipTypeGroup">
+                <h3>艦船類型</h3>
+            </div>
+            <div class="filter-group" id="filterRarityGroup">
+                <h3>罕貴</h3>
+            </div>
+            <div class="filter-group" id="filterForceGroup">
+                <h3>勢力</h3>
+            </div>
+            <div class="filter-group" id="filterSupportTypeGroup">
+                <h3>支援範圍</h3>
+            </div>
+            <div class="filter-group" id="filterSupportValueGroup">
+                <h3>支援值</h3>
+            </div>
+            <div class="filter-group" id="filterObtainGroup">
+                <h3>獲取方法</h3>
+            </div>
+        </div>
+
+        <!-- 顯示查詢結果 -->
+        <div id="results"></div>
+        
+        <!-- 分頁按鈕 -->
+        <div id="pagination"></div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
