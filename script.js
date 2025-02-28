@@ -220,6 +220,9 @@ function displayResults(filteredCards) {
         updatePagination(0);
         return;
     }
+	 // 依照 card_id **降冪排序**（從大到小）
+    filteredCards.sort((a, b) => parseInt(b.card_id) - parseInt(a.card_id));
+
 
     // 分頁邏輯
     const startIndex = (currentPage - 1) * cardsPerPage;
