@@ -1,24 +1,71 @@
-/* styles.css */
+/* 搜尋框 */
+.search-inputs {
+    display: flex; /* 使用 flex 佈局讓輸入框並排顯示 */
+    gap: 10px; /* 設置輸入框之間的間距 */
+    margin-bottom: 20px; /* 與下方內容的間距 */
+}
+
+.search-inputs input[type="text"] {
+    flex: 1; /* 讓輸入框平均分配寬度 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-column {
+    width: 48%; /* 兩欄之間留一些間距 */
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.filter-group label {
+    display: inline-flex; /* 讓 label 並排顯示 */
+    align-items: center;
+    margin-right: 10px; /* 調整 label 之間的間距 */
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-group label input[type="checkbox"] {
+    margin-right: 5px; /* 調整 checkbox 和文字之間的間距 */
+    transform: scale(0.7); /* 進一步縮小 checkbox 的大小 */
+}
+
+/* 其他現有的樣式保持不變 */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #fff;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #222;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #fff;
+    color: #333;
 }
 
 input[type="text"] {
@@ -26,99 +73,107 @@ input[type="text"] {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
-    border: 1px solid #555;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
 }
 
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-.filter-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-
-.filter-group h3 {
-    width: 100%;
-    margin: 10px 0;
-    color: #ddd;
-    text-align: center;
-}
-
-.filter-group label {
-    display: inline-block;
-    padding: 5px 15px;
-    background-color: transparent;
-    border: 1px solid #00bfff;
-    color: #00bfff;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    text-align: center;
-    min-width: 50px;
+    margin-bottom: 20px;
 }
 
-.filter-group input[type="checkbox"] {
-    display: none;
+button:hover {
+    background-color: #0056b3;
 }
 
-.filter-group input[type="checkbox"]:checked + label {
-    background-color: #00bfff !important;
-    color: #000 !important;
-    font-weight: bold;
-    box-shadow: 0 0 5px #00bfff;
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 #results {
     margin-top: 20px;
 }
+/* 新增卡片內容的佈局樣式 */
+.card-content {
+    display: flex; /* 使用 flex 佈局 */
+    gap: 20px; /* 圖片和文字之間的間距 */
+}
+
+.card-image-container {
+    flex: 0 0 150px; /* 固定圖片容器的寬度 */
+}
+
+.card-image {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 5px; /* 圓角效果 */
+}
+
+.card-text {
+    flex: 1; /* 文字部分佔用剩餘空間 */
+}
+/* 新增卡片圖片的樣式 */
 
 .card {
-    border: 1px solid #00bfff;
+    border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
+    background-color: #f9f9f9;
 }
 
 .card h2 {
     margin: 0 0 10px;
-    color: #00bfff;
+    color: #333;
 }
 
 .card p {
     margin: 5px 0;
-    color: #ccc;
+    color: #666;
 }
 
 #pagination {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 20px;
 }
 
 #pagination button {
-    background-color: #00bfff;
-    color: #000;
-    border: none;
-    padding: 5px 10px;
     margin: 0 5px;
+}
+/* 新增下拉式選單的樣式 */
+.filter-group select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-#pagination button:hover {
-    background-color: #0088cc;
+.filter-group select:hover {
+    border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+    .card-content {
+        flex-direction: column; /* 在小螢幕上讓圖片和文字垂直堆疊 */
+        gap: 10px; /* 調整間距 */
+    }
+
+    .card-image-container {
+        flex: 0 0 auto; /* 取消固定寬度 */
+        text-align: center; /* 圖片居中 */
+    }
+
+    .card-image {
+        width: 150px; /* 固定圖片寬度 */
+    }
 }

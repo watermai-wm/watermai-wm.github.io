@@ -1,7 +1,7 @@
 // data.js
 const cards = [
-    // 這裡放入你的JSON數據
     {
+        "card_id": 226,
         "card_name": "華盛頓",
         "card_code": "SD01-001",
         "attributes": {
@@ -20,6 +20,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 227,
         "card_name": "華盛頓",
         "card_code": "SD01-001覺醒",
         "attributes": {
@@ -38,6 +39,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 228,
         "card_name": "卡辛",
         "card_code": "SD01-002",
         "attributes": {
@@ -56,6 +58,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 229,
         "card_name": "唐斯",
         "card_code": "SD01-003",
         "attributes": {
@@ -74,6 +77,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 230,
         "card_name": "西姆斯",
         "card_code": "SD01-004",
         "attributes": {
@@ -92,6 +96,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 231,
         "card_name": "哈曼",
         "card_code": "SD01-005",
         "attributes": {
@@ -110,6 +115,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 232,
         "card_name": "亞特蘭大",
         "card_code": "SD01-006",
         "attributes": {
@@ -128,6 +134,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 233,
         "card_name": "朱諾",
         "card_code": "SD01-007",
         "attributes": {
@@ -146,6 +153,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 234,
         "card_name": "安克拉治",
         "card_code": "SD01-008",
         "attributes": {
@@ -164,6 +172,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 235,
         "card_name": "波特蘭",
         "card_code": "SD01-009",
         "attributes": {
@@ -182,6 +191,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 236,
         "card_name": "印第安納波利斯",
         "card_code": "SD01-010",
         "attributes": {
@@ -200,6 +210,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 237,
         "card_name": "賓夕法尼亞",
         "card_code": "SD01-011",
         "attributes": {
@@ -218,6 +229,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 238,
         "card_name": "亞利桑那",
         "card_code": "SD01-012",
         "attributes": {
@@ -236,6 +248,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 239,
         "card_name": "博格",
         "card_code": "SD01-013",
         "attributes": {
@@ -254,6 +267,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 240,
         "card_name": "全員就位",
         "card_code": "SD01-014",
         "attributes": {
@@ -272,6 +286,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 241,
         "card_name": "戰力補充",
         "card_code": "SD01-015",
         "attributes": {
@@ -290,6 +305,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 242,
         "card_name": "歸港",
         "card_code": "SD01-016",
         "attributes": {
@@ -308,6 +324,7 @@ const cards = [
         "acquisition_method": "SD01"
     },
     {
+        "card_id": 243,
         "card_name": "胡德",
         "card_code": "SD02-001",
         "attributes": {
@@ -326,6 +343,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 244,
         "card_name": "胡德",
         "card_code": "SD02-001覺醒",
         "attributes": {
@@ -344,6 +362,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 245,
         "card_name": "回聲",
         "card_code": "SD02-002",
         "attributes": {
@@ -362,6 +381,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 246,
         "card_name": "紐卡斯爾",
         "card_code": "SD02-003",
         "attributes": {
@@ -380,6 +400,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 247,
         "card_name": "謝菲爾德",
         "card_code": "SD02-004",
         "attributes": {
@@ -398,6 +419,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 248,
         "card_name": "愛丁堡",
         "card_code": "SD02-005",
         "attributes": {
@@ -416,6 +438,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 249,
         "card_name": "貝爾法斯特",
         "card_code": "SD02-006",
         "attributes": {
@@ -434,6 +457,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 250,
         "card_name": "反擊",
         "card_code": "SD02-007",
         "attributes": {
@@ -452,6 +476,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 251,
         "card_name": "納爾遜",
         "card_code": "SD02-008",
         "attributes": {
@@ -470,6 +495,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 252,
         "card_name": "羅德尼",
         "card_code": "SD02-009",
         "attributes": {
@@ -488,6 +514,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 253,
         "card_name": "光榮",
         "card_code": "SD02-010",
         "attributes": {
@@ -506,6 +533,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 254,
         "card_name": "光輝",
         "card_code": "SD02-011",
         "attributes": {
@@ -524,6 +552,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 255,
         "card_name": "競技神",
         "card_code": "SD02-012",
         "attributes": {
@@ -542,6 +571,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 256,
         "card_name": "皇家的誓約",
         "card_code": "SD02-013",
         "attributes": {
@@ -560,6 +590,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 257,
         "card_name": "皇室鐵壁",
         "card_code": "SD02-014",
         "attributes": {
@@ -578,6 +609,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 258,
         "card_name": "英式午茶",
         "card_code": "SD02-015",
         "attributes": {
@@ -596,6 +628,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 259,
         "card_name": "皇室守護",
         "card_code": "SD02-016",
         "attributes": {
@@ -614,6 +647,7 @@ const cards = [
         "acquisition_method": "SD02"
     },
     {
+        "card_id": 260,
         "card_name": "俾斯麥",
         "card_code": "SD03-001",
         "attributes": {
@@ -632,6 +666,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 261,
         "card_name": "俾斯麥",
         "card_code": "SD03-001覺醒",
         "attributes": {
@@ -650,6 +685,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 262,
         "card_name": "Z16",
         "card_code": "SD03-002",
         "attributes": {
@@ -668,6 +704,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 263,
         "card_name": "Z18",
         "card_code": "SD03-003",
         "attributes": {
@@ -686,6 +723,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 264,
         "card_name": "Z19",
         "card_code": "SD03-004",
         "attributes": {
@@ -704,6 +742,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 265,
         "card_name": "Z20",
         "card_code": "SD03-005",
         "attributes": {
@@ -722,6 +761,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 266,
         "card_name": "Z21",
         "card_code": "SD03-006",
         "attributes": {
@@ -740,6 +780,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 267,
         "card_name": "萊比錫",
         "card_code": "SD03-007",
         "attributes": {
@@ -758,6 +799,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 268,
         "card_name": "紐倫堡",
         "card_code": "SD03-008",
         "attributes": {
@@ -776,6 +818,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 269,
         "card_name": "希佩爾將軍",
         "card_code": "SD03-009",
         "attributes": {
@@ -794,6 +837,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 270,
         "card_name": "布呂歇爾",
         "card_code": "SD03-010",
         "attributes": {
@@ -812,6 +856,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 271,
         "card_name": "歐根親王",
         "card_code": "SD03-011",
         "attributes": {
@@ -830,6 +875,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 272,
         "card_name": "圖林根",
         "card_code": "SD03-012",
         "attributes": {
@@ -848,6 +894,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 273,
         "card_name": "威悉",
         "card_code": "SD03-013",
         "attributes": {
@@ -866,6 +913,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 274,
         "card_name": "真理必勝",
         "card_code": "SD03-014",
         "attributes": {
@@ -884,6 +932,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 275,
         "card_name": "火力壓制",
         "card_code": "SD03-015",
         "attributes": {
@@ -902,6 +951,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 276,
         "card_name": "鐵血威壓",
         "card_code": "SD03-016",
         "attributes": {
@@ -920,6 +970,7 @@ const cards = [
         "acquisition_method": "SD03"
     },
     {
+        "card_id": 277,
         "card_name": "薩拉托加",
         "card_code": "BP01-001",
         "attributes": {
@@ -938,6 +989,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 278,
         "card_name": "薩拉托加",
         "card_code": "BP01-001覺醒",
         "attributes": {
@@ -956,6 +1008,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 279,
         "card_name": "企業",
         "card_code": "BP01-002",
         "attributes": {
@@ -974,6 +1027,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 280,
         "card_name": "企業",
         "card_code": "BP01-002覺醒",
         "attributes": {
@@ -992,6 +1046,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 281,
         "card_name": "格里德利",
         "card_code": "BP01-003",
         "attributes": {
@@ -1010,6 +1065,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 282,
         "card_name": "克雷文",
         "card_code": "BP01-004",
         "attributes": {
@@ -1028,6 +1084,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 283,
         "card_name": "麥考爾",
         "card_code": "BP01-005",
         "attributes": {
@@ -1046,6 +1103,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 284,
         "card_name": "莫里",
         "card_code": "BP01-006",
         "attributes": {
@@ -1064,6 +1122,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 285,
         "card_name": "班森",
         "card_code": "BP01-007",
         "attributes": {
@@ -1082,6 +1141,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 286,
         "card_name": "拉菲",
         "card_code": "BP01-008",
         "attributes": {
@@ -1100,6 +1160,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 287,
         "card_name": "聖路易斯",
         "card_code": "BP01-009",
         "attributes": {
@@ -1118,6 +1179,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 288,
         "card_name": "海倫娜",
         "card_code": "BP01-010",
         "attributes": {
@@ -1136,6 +1198,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 289,
         "card_name": "克里夫蘭",
         "card_code": "BP01-011",
         "attributes": {
@@ -1154,6 +1217,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 290,
         "card_name": "哥倫比亞",
         "card_code": "BP01-012",
         "attributes": {
@@ -1172,6 +1236,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 291,
         "card_name": "丹佛",
         "card_code": "BP01-013",
         "attributes": {
@@ -1190,6 +1255,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 292,
         "card_name": "比洛克西",
         "card_code": "BP01-014",
         "attributes": {
@@ -1208,6 +1274,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 293,
         "card_name": "彭薩科拉",
         "card_code": "BP01-015",
         "attributes": {
@@ -1226,6 +1293,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 294,
         "card_name": "布雷默頓",
         "card_code": "BP01-016",
         "attributes": {
@@ -1244,6 +1312,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 295,
         "card_name": "長島",
         "card_code": "BP01-017",
         "attributes": {
@@ -1262,6 +1331,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 296,
         "card_name": "女灶神",
         "card_code": "BP01-018",
         "attributes": {
@@ -1280,6 +1350,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 297,
         "card_name": "假日時光",
         "card_code": "BP01-019",
         "attributes": {
@@ -1298,6 +1369,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 298,
         "card_name": "整裝待發",
         "card_code": "BP01-020",
         "attributes": {
@@ -1316,6 +1388,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 299,
         "card_name": "禁忌的雙重列星頓",
         "card_code": "BP01-021",
         "attributes": {
@@ -1334,6 +1407,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 300,
         "card_name": "與騎士共舞",
         "card_code": "BP01-022",
         "attributes": {
@@ -1352,6 +1426,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 301,
         "card_name": "鐵底灣之夜",
         "card_code": "BP01-023",
         "attributes": {
@@ -1370,6 +1445,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 302,
         "card_name": "反擊之翼",
         "card_code": "BP01-024",
         "attributes": {
@@ -1388,6 +1464,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 303,
         "card_name": "厭戰",
         "card_code": "BP01-025",
         "attributes": {
@@ -1406,6 +1483,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 304,
         "card_name": "厭戰",
         "card_code": "BP01-025覺醒",
         "attributes": {
@@ -1424,6 +1502,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 305,
         "card_name": "光輝",
         "card_code": "BP01-026",
         "attributes": {
@@ -1442,6 +1521,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 306,
         "card_name": "光輝",
         "card_code": "BP01-026覺醒",
         "attributes": {
@@ -1460,6 +1540,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 307,
         "card_name": "女將",
         "card_code": "BP01-027",
         "attributes": {
@@ -1478,6 +1559,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 308,
         "card_name": "吸血鬼",
         "card_code": "BP01-028",
         "attributes": {
@@ -1496,6 +1578,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 309,
         "card_name": "新月",
         "card_code": "BP01-029",
         "attributes": {
@@ -1514,6 +1597,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 310,
         "card_name": "彗星",
         "card_code": "BP01-030",
         "attributes": {
@@ -1532,6 +1616,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 311,
         "card_name": "伊卡洛斯",
         "card_code": "BP01-031",
         "attributes": {
@@ -1550,6 +1635,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 312,
         "card_name": "標槍",
         "card_code": "BP01-032",
         "attributes": {
@@ -1568,6 +1654,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 313,
         "card_name": "澤西",
         "card_code": "BP01-033",
         "attributes": {
@@ -1586,6 +1673,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 314,
         "card_name": "火槍手",
         "card_code": "BP01-034",
         "attributes": {
@@ -1604,6 +1692,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 315,
         "card_name": "南安普敦",
         "card_code": "BP01-035",
         "attributes": {
@@ -1622,6 +1711,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 316,
         "card_name": "格拉斯哥",
         "card_code": "BP01-036",
         "attributes": {
@@ -1640,6 +1730,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 317,
         "card_name": "格洛斯特",
         "card_code": "BP01-037",
         "attributes": {
@@ -1658,6 +1749,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 318,
         "card_name": "司戰女神",
         "card_code": "BP01-038",
         "attributes": {
@@ -1676,6 +1768,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 319,
         "card_name": "諾福克",
         "card_code": "BP01-039",
         "attributes": {
@@ -1694,6 +1787,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 320,
         "card_name": "約克",
         "card_code": "BP01-040",
         "attributes": {
@@ -1712,6 +1806,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 321,
         "card_name": "勝利",
         "card_code": "BP01-041",
         "attributes": {
@@ -1730,6 +1825,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 322,
         "card_name": "可畏",
         "card_code": "BP01-042",
         "attributes": {
@@ -1748,6 +1844,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 323,
         "card_name": "獨角獸",
         "card_code": "BP01-043",
         "attributes": {
@@ -1766,6 +1863,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 324,
         "card_name": "薔薇之絆",
         "card_code": "BP01-044",
         "attributes": {
@@ -1784,6 +1882,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 325,
         "card_name": "茶會準備",
         "card_code": "BP01-045",
         "attributes": {
@@ -1802,6 +1901,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 326,
         "card_name": "女僕的心意",
         "card_code": "BP01-046",
         "attributes": {
@@ -1820,6 +1920,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 327,
         "card_name": "予怨予還",
         "card_code": "BP01-047",
         "attributes": {
@@ -1838,6 +1939,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 328,
         "card_name": "女僕隊的小憩",
         "card_code": "BP01-048",
         "attributes": {
@@ -1856,6 +1958,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 329,
         "card_name": "皇室聯軍",
         "card_code": "BP01-049",
         "attributes": {
@@ -1874,6 +1977,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 330,
         "card_name": "鐵必制",
         "card_code": "BP01-050",
         "attributes": {
@@ -1892,6 +1996,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 331,
         "card_name": "鐵必制",
         "card_code": "BP01-050覺醒",
         "attributes": {
@@ -1910,6 +2015,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 332,
         "card_name": "齊柏林伯爵",
         "card_code": "BP01-051",
         "attributes": {
@@ -1928,6 +2034,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 333,
         "card_name": "齊柏林伯爵",
         "card_code": "BP01-051覺醒",
         "attributes": {
@@ -1946,6 +2053,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 334,
         "card_name": "不知火",
         "card_code": "BP01-052",
         "attributes": {
@@ -1964,6 +2072,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 335,
         "card_name": "青葉",
         "card_code": "BP01-053",
         "attributes": {
@@ -1982,6 +2091,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 336,
         "card_name": "衣笠",
         "card_code": "BP01-054",
         "attributes": {
@@ -2000,6 +2110,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 337,
         "card_name": "明石",
         "card_code": "BP01-055",
         "attributes": {
@@ -2018,6 +2129,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 338,
         "card_name": "Z1",
         "card_code": "BP01-056",
         "attributes": {
@@ -2036,6 +2148,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 339,
         "card_name": "Z2",
         "card_code": "BP01-057",
         "attributes": {
@@ -2054,6 +2167,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 340,
         "card_name": "Z21",
         "card_code": "BP01-058",
         "attributes": {
@@ -2072,6 +2186,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 341,
         "card_name": "Z23",
         "card_code": "BP01-059",
         "attributes": {
@@ -2090,6 +2205,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 342,
         "card_name": "Z25",
         "card_code": "BP01-060",
         "attributes": {
@@ -2108,6 +2224,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 343,
         "card_name": "Z26",
         "card_code": "BP01-061",
         "attributes": {
@@ -2126,6 +2243,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 344,
         "card_name": "Z28",
         "card_code": "BP01-062",
         "attributes": {
@@ -2144,6 +2262,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 345,
         "card_name": "德意志",
         "card_code": "BP01-063",
         "attributes": {
@@ -2162,6 +2281,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 346,
         "card_name": "施佩伯爵將軍",
         "card_code": "BP01-064",
         "attributes": {
@@ -2180,6 +2300,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 347,
         "card_name": "沙恩霍斯特",
         "card_code": "BP01-065",
         "attributes": {
@@ -2198,6 +2319,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 348,
         "card_name": "格奈森瑙",
         "card_code": "BP01-066",
         "attributes": {
@@ -2216,6 +2338,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 349,
         "card_name": "怒濤之勢",
         "card_code": "BP01-067",
         "attributes": {
@@ -2234,6 +2357,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 350,
         "card_name": "物資掠奪",
         "card_code": "BP01-068",
         "attributes": {
@@ -2252,6 +2376,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 351,
         "card_name": "鐵血先鋒",
         "card_code": "BP01-069",
         "attributes": {
@@ -2270,6 +2395,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 352,
         "card_name": "誓言之海",
         "card_code": "BP01-070",
         "attributes": {
@@ -2288,6 +2414,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 353,
         "card_name": "公主巡遊",
         "card_code": "BP01-071",
         "attributes": {
@@ -2306,6 +2433,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 354,
         "card_name": "親王的邀約",
         "card_code": "BP01-072",
         "attributes": {
@@ -2324,6 +2452,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 355,
         "card_name": "不屈之力",
         "card_code": "BP01-073",
         "attributes": {
@@ -2342,6 +2471,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 356,
         "card_name": "紐澤西",
         "card_code": "BP01-074",
         "attributes": {
@@ -2360,6 +2490,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 357,
         "card_name": "腓特烈大帝",
         "card_code": "BP01-075",
         "attributes": {
@@ -2378,6 +2509,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 364,
         "card_name": "德意志",
         "card_code": "BP01-063<PR>",
         "attributes": {
@@ -2396,6 +2528,7 @@ const cards = [
         "acquisition_method": "-"
     },
     {
+        "card_id": 365,
         "card_name": "女灶神",
         "card_code": "BP01-018<PR>",
         "attributes": {
@@ -2414,6 +2547,7 @@ const cards = [
         "acquisition_method": "-"
     },
     {
+        "card_id": 366,
         "card_name": "格拉斯哥",
         "card_code": "BP01-036<PR>",
         "attributes": {
@@ -2432,6 +2566,7 @@ const cards = [
         "acquisition_method": "-"
     },
     {
+        "card_id": 369,
         "card_name": "長門",
         "card_code": "BP02-001",
         "attributes": {
@@ -2450,6 +2585,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 370,
         "card_name": "長門",
         "card_code": "BP02-001覺醒",
         "attributes": {
@@ -2468,6 +2604,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 371,
         "card_name": "加賀",
         "card_code": "BP02-002",
         "attributes": {
@@ -2486,6 +2623,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 372,
         "card_name": "加賀",
         "card_code": "BP02-002覺醒",
         "attributes": {
@@ -2504,6 +2642,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 373,
         "card_name": "追風",
         "card_code": "BP02-003",
         "attributes": {
@@ -2522,6 +2661,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 374,
         "card_name": "吹雪",
         "card_code": "BP02-004",
         "attributes": {
@@ -2540,6 +2680,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 375,
         "card_name": "綾波",
         "card_code": "BP02-005",
         "attributes": {
@@ -2558,6 +2699,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 376,
         "card_name": "響",
         "card_code": "BP02-006",
         "attributes": {
@@ -2576,6 +2718,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 377,
         "card_name": "雷",
         "card_code": "BP02-007",
         "attributes": {
@@ -2594,6 +2737,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 378,
         "card_name": "電",
         "card_code": "BP02-008",
         "attributes": {
@@ -2612,6 +2756,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 379,
         "card_name": "霞",
         "card_code": "BP02-009",
         "attributes": {
@@ -2630,6 +2775,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 380,
         "card_name": "黑潮",
         "card_code": "BP02-010",
         "attributes": {
@@ -2648,6 +2794,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 381,
         "card_name": "親潮",
         "card_code": "BP02-011",
         "attributes": {
@@ -2666,6 +2813,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 382,
         "card_name": "三隈",
         "card_code": "BP02-012",
         "attributes": {
@@ -2684,6 +2832,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 383,
         "card_name": "能代",
         "card_code": "BP02-013",
         "attributes": {
@@ -2702,6 +2851,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 384,
         "card_name": "加古",
         "card_code": "BP02-014",
         "attributes": {
@@ -2720,6 +2870,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 385,
         "card_name": "霧島",
         "card_code": "BP02-015",
         "attributes": {
@@ -2738,6 +2889,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 386,
         "card_name": "大鳳",
         "card_code": "BP02-016",
         "attributes": {
@@ -2756,6 +2908,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 387,
         "card_name": "伊58",
         "card_code": "BP02-017",
         "attributes": {
@@ -2774,6 +2927,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 388,
         "card_name": "神子覺醒",
         "card_code": "BP02-018",
         "attributes": {
@@ -2792,6 +2946,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 389,
         "card_name": "先手必勝",
         "card_code": "BP02-019",
         "attributes": {
@@ -2810,6 +2965,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 390,
         "card_name": "迅雷閃電",
         "card_code": "BP02-020",
         "attributes": {
@@ -2828,6 +2984,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 391,
         "card_name": "緋紅進擊",
         "card_code": "BP02-021",
         "attributes": {
@@ -2846,6 +3003,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 392,
         "card_name": "誓言祈願",
         "card_code": "BP02-022",
         "attributes": {
@@ -2864,6 +3022,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 393,
         "card_name": "晨會時間",
         "card_code": "BP02-023",
         "attributes": {
@@ -2882,6 +3041,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 394,
         "card_name": "紐澤西",
         "card_code": "BP02-024",
         "attributes": {
@@ -2900,6 +3060,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 395,
         "card_name": "紐澤西",
         "card_code": "BP02-024覺醒",
         "attributes": {
@@ -2918,6 +3079,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 396,
         "card_name": "約克鎮",
         "card_code": "BP02-025",
         "attributes": {
@@ -2936,6 +3098,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 397,
         "card_name": "約克鎮",
         "card_code": "BP02-025覺醒",
         "attributes": {
@@ -2954,6 +3117,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 398,
         "card_name": "貝利",
         "card_code": "BP02-026",
         "attributes": {
@@ -2972,6 +3136,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 399,
         "card_name": "莫里森",
         "card_code": "BP02-027",
         "attributes": {
@@ -2990,6 +3155,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 400,
         "card_name": "奧馬哈",
         "card_code": "BP02-028",
         "attributes": {
@@ -3008,6 +3174,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 401,
         "card_name": "波夕",
         "card_code": "BP02-029",
         "attributes": {
@@ -3026,6 +3193,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 402,
         "card_name": "聖地牙哥",
         "card_code": "BP02-030",
         "attributes": {
@@ -3044,6 +3212,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 403,
         "card_name": "聖胡安",
         "card_code": "BP02-031",
         "attributes": {
@@ -3062,6 +3231,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 404,
         "card_name": "鹽湖城",
         "card_code": "BP02-032",
         "attributes": {
@@ -3080,6 +3250,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 405,
         "card_name": "巴爾的摩",
         "card_code": "BP02-033",
         "attributes": {
@@ -3098,6 +3269,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 406,
         "card_name": "大黃蜂",
         "card_code": "BP02-034",
         "attributes": {
@@ -3116,6 +3288,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 407,
         "card_name": "大青花魚",
         "card_code": "BP02-035",
         "attributes": {
@@ -3134,6 +3307,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 408,
         "card_name": "泳裝派對",
         "card_code": "BP02-036",
         "attributes": {
@@ -3152,6 +3326,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 409,
         "card_name": "意志傳承",
         "card_code": "BP02-037",
         "attributes": {
@@ -3170,6 +3345,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 410,
         "card_name": "假日特快",
         "card_code": "BP02-038",
         "attributes": {
@@ -3188,6 +3364,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 411,
         "card_name": "約克鎮的冬天",
         "card_code": "BP02-039",
         "attributes": {
@@ -3206,6 +3383,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 412,
         "card_name": "伊莉莎白女王",
         "card_code": "BP02-040",
         "attributes": {
@@ -3224,6 +3402,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 413,
         "card_name": "伊莉莎白女王",
         "card_code": "BP02-040覺醒",
         "attributes": {
@@ -3242,6 +3421,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 414,
         "card_name": "英王喬治五世",
         "card_code": "BP02-041",
         "attributes": {
@@ -3260,6 +3440,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 415,
         "card_name": "英王喬治五世",
         "card_code": "BP02-041覺醒",
         "attributes": {
@@ -3278,6 +3459,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 416,
         "card_name": "狐提",
         "card_code": "BP02-042",
         "attributes": {
@@ -3296,6 +3478,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 417,
         "card_name": "格倫維爾",
         "card_code": "BP02-043",
         "attributes": {
@@ -3314,6 +3497,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 418,
         "card_name": "勇敢",
         "card_code": "BP02-044",
         "attributes": {
@@ -3332,6 +3516,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 419,
         "card_name": "獵人",
         "card_code": "BP02-045",
         "attributes": {
@@ -3350,6 +3535,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 420,
         "card_name": "賈維斯",
         "card_code": "BP02-046",
         "attributes": {
@@ -3368,6 +3554,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 421,
         "card_name": "丘比特",
         "card_code": "BP02-047",
         "attributes": {
@@ -3386,6 +3573,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 422,
         "card_name": "加拉蒂亞",
         "card_code": "BP02-048",
         "attributes": {
@@ -3404,6 +3592,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 423,
         "card_name": "天狼星",
         "card_code": "BP02-049",
         "attributes": {
@@ -3422,6 +3611,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 424,
         "card_name": "埃克塞特",
         "card_code": "BP02-050",
         "attributes": {
@@ -3440,6 +3630,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 425,
         "card_name": "鷹",
         "card_code": "BP02-051",
         "attributes": {
@@ -3458,6 +3649,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 426,
         "card_name": "新年祈願",
         "card_code": "BP02-052",
         "attributes": {
@@ -3476,6 +3668,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 427,
         "card_name": "女王號令",
         "card_code": "BP02-053",
         "attributes": {
@@ -3494,6 +3687,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 428,
         "card_name": "晚宴的邀請",
         "card_code": "BP02-054",
         "attributes": {
@@ -3512,6 +3706,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 429,
         "card_name": "夏日園遊會",
         "card_code": "BP02-055",
         "attributes": {
@@ -3530,6 +3725,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 430,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "BP02-056",
         "attributes": {
@@ -3548,6 +3744,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 431,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "BP02-056覺醒",
         "attributes": {
@@ -3566,6 +3763,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 432,
         "card_name": "U-47",
         "card_code": "BP02-057",
         "attributes": {
@@ -3584,6 +3782,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 433,
         "card_name": "U-47",
         "card_code": "BP02-057覺醒",
         "attributes": {
@@ -3602,6 +3801,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 434,
         "card_name": "Z35",
         "card_code": "BP02-058",
         "attributes": {
@@ -3620,6 +3820,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 435,
         "card_name": "Z36",
         "card_code": "BP02-059",
         "attributes": {
@@ -3638,6 +3839,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 436,
         "card_name": "柯尼斯堡",
         "card_code": "BP02-060",
         "attributes": {
@@ -3656,6 +3858,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 437,
         "card_name": "卡爾斯魯厄",
         "card_code": "BP02-061",
         "attributes": {
@@ -3674,6 +3877,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 438,
         "card_name": "約克",
         "card_code": "BP02-062",
         "attributes": {
@@ -3692,6 +3896,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 439,
         "card_name": "俾斯麥",
         "card_code": "BP02-063",
         "attributes": {
@@ -3710,6 +3915,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 440,
         "card_name": "U-81",
         "card_code": "BP02-064",
         "attributes": {
@@ -3728,6 +3934,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 441,
         "card_name": "U-96",
         "card_code": "BP02-065",
         "attributes": {
@@ -3746,6 +3953,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 442,
         "card_name": "U-556",
         "card_code": "BP02-066",
         "attributes": {
@@ -3764,6 +3972,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 443,
         "card_name": "U-557",
         "card_code": "BP02-067",
         "attributes": {
@@ -3782,6 +3991,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 444,
         "card_name": "場間休息",
         "card_code": "BP02-068",
         "attributes": {
@@ -3800,6 +4010,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 445,
         "card_name": "小小的約定",
         "card_code": "BP02-069",
         "attributes": {
@@ -3818,6 +4029,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 446,
         "card_name": "海底摸魚",
         "card_code": "BP02-070",
         "attributes": {
@@ -3836,6 +4048,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 447,
         "card_name": "晨間問候",
         "card_code": "BP02-071",
         "attributes": {
@@ -3854,6 +4067,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 448,
         "card_name": "島風",
         "card_code": "BP02-072",
         "attributes": {
@@ -3872,6 +4086,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 449,
         "card_name": "豪",
         "card_code": "BP02-073",
         "attributes": {
@@ -3890,6 +4105,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 450,
         "card_name": "赤城",
         "card_code": "SD04-001",
         "attributes": {
@@ -3908,6 +4124,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 451,
         "card_name": "赤城",
         "card_code": "SD04-001覺醒",
         "attributes": {
@@ -3926,6 +4143,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 452,
         "card_name": "松風",
         "card_code": "SD04-002",
         "attributes": {
@@ -3944,6 +4162,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 453,
         "card_name": "旗風",
         "card_code": "SD04-003",
         "attributes": {
@@ -3962,6 +4181,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 454,
         "card_name": "曉",
         "card_code": "SD04-004",
         "attributes": {
@@ -3980,6 +4200,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 455,
         "card_name": "大潮",
         "card_code": "SD04-005",
         "attributes": {
@@ -3998,6 +4219,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 456,
         "card_name": "陽炎",
         "card_code": "SD04-006",
         "attributes": {
@@ -4016,6 +4238,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 457,
         "card_name": "阿賀野",
         "card_code": "SD04-007",
         "attributes": {
@@ -4034,6 +4257,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 458,
         "card_name": "古鷹",
         "card_code": "SD04-008",
         "attributes": {
@@ -4052,6 +4276,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 459,
         "card_name": "鈴谷",
         "card_code": "SD04-009",
         "attributes": {
@@ -4070,6 +4295,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 460,
         "card_name": "加賀",
         "card_code": "SD04-010",
         "attributes": {
@@ -4088,6 +4314,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 461,
         "card_name": "蒼龍",
         "card_code": "SD04-011",
         "attributes": {
@@ -4106,6 +4333,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 462,
         "card_name": "飛龍",
         "card_code": "SD04-012",
         "attributes": {
@@ -4124,6 +4352,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 463,
         "card_name": "花火祭典",
         "card_code": "SD04-013",
         "attributes": {
@@ -4142,6 +4371,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 464,
         "card_name": "小隊出擊",
         "card_code": "SD04-014",
         "attributes": {
@@ -4160,6 +4390,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 465,
         "card_name": "歌牌對決",
         "card_code": "SD04-015",
         "attributes": {
@@ -4178,6 +4409,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 466,
         "card_name": "狐之誘惑",
         "card_code": "SD04-016",
         "attributes": {
@@ -4196,6 +4428,7 @@ const cards = [
         "acquisition_method": "SD04"
     },
     {
+        "card_id": 467,
         "card_name": "薩拉托加",
         "card_code": "BP01-001<SEC>",
         "attributes": {
@@ -4214,6 +4447,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 468,
         "card_name": "企業",
         "card_code": "BP01-002<SEC>",
         "attributes": {
@@ -4232,6 +4466,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 469,
         "card_name": "拉菲",
         "card_code": "BP01-008<SEC>",
         "attributes": {
@@ -4250,6 +4485,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 470,
         "card_name": "克里夫蘭",
         "card_code": "BP01-011<SEC>",
         "attributes": {
@@ -4268,6 +4504,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 471,
         "card_name": "布雷默頓",
         "card_code": "BP01-016<SEC>",
         "attributes": {
@@ -4286,6 +4523,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 472,
         "card_name": "厭戰",
         "card_code": "BP01-025<SEC>",
         "attributes": {
@@ -4304,6 +4542,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 473,
         "card_name": "光輝",
         "card_code": "BP01-026<SEC>",
         "attributes": {
@@ -4322,6 +4561,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 474,
         "card_name": "標槍",
         "card_code": "BP01-032<SEC>",
         "attributes": {
@@ -4340,6 +4580,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 475,
         "card_name": "勝利",
         "card_code": "BP01-041<SEC>",
         "attributes": {
@@ -4358,6 +4599,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 476,
         "card_name": "可畏",
         "card_code": "BP01-042<SEC>",
         "attributes": {
@@ -4376,6 +4618,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 477,
         "card_name": "獨角獸",
         "card_code": "BP01-043<SEC>",
         "attributes": {
@@ -4394,6 +4637,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 478,
         "card_name": "鐵必制",
         "card_code": "BP01-050<SEC>",
         "attributes": {
@@ -4412,6 +4656,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 479,
         "card_name": "齊柏林伯爵",
         "card_code": "BP01-051<SEC>",
         "attributes": {
@@ -4430,6 +4675,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 480,
         "card_name": "明石",
         "card_code": "BP01-055<SEC>",
         "attributes": {
@@ -4448,6 +4694,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 481,
         "card_name": "Z23",
         "card_code": "BP01-059<SEC>",
         "attributes": {
@@ -4466,6 +4713,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 482,
         "card_name": "施佩伯爵將軍",
         "card_code": "BP01-064<SEC>",
         "attributes": {
@@ -4484,6 +4732,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 483,
         "card_name": "紐澤西",
         "card_code": "BP01-074<SEC>",
         "attributes": {
@@ -4502,6 +4751,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 484,
         "card_name": "腓特烈大帝",
         "card_code": "BP01-075<SEC>",
         "attributes": {
@@ -4520,6 +4770,7 @@ const cards = [
         "acquisition_method": "BP01"
     },
     {
+        "card_id": 485,
         "card_name": "長門",
         "card_code": "BP02-001覺醒<SEC>",
         "attributes": {
@@ -4538,6 +4789,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 486,
         "card_name": "加賀",
         "card_code": "BP02-002覺醒<SEC>",
         "attributes": {
@@ -4556,6 +4808,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 487,
         "card_name": "綾波",
         "card_code": "BP02-005<SEC>",
         "attributes": {
@@ -4574,6 +4827,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 488,
         "card_name": "能代",
         "card_code": "BP02-013<SEC>",
         "attributes": {
@@ -4592,6 +4846,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 489,
         "card_name": "大鳳",
         "card_code": "BP02-016<SEC>",
         "attributes": {
@@ -4610,6 +4865,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 490,
         "card_name": "紐澤西",
         "card_code": "BP02-024覺醒<SEC>",
         "attributes": {
@@ -4628,6 +4884,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 491,
         "card_name": "約克鎮",
         "card_code": "BP02-025覺醒<SEC>",
         "attributes": {
@@ -4646,6 +4903,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 492,
         "card_name": "聖地牙哥",
         "card_code": "BP02-030<SEC>",
         "attributes": {
@@ -4664,6 +4922,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 493,
         "card_name": "巴爾的摩",
         "card_code": "BP02-033<SEC>",
         "attributes": {
@@ -4682,6 +4941,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 494,
         "card_name": "大青花魚",
         "card_code": "BP02-035<SEC>",
         "attributes": {
@@ -4700,6 +4960,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 495,
         "card_name": "伊莉莎白女王",
         "card_code": "BP02-040覺醒<SEC>",
         "attributes": {
@@ -4718,6 +4979,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 496,
         "card_name": "英王喬治五世",
         "card_code": "BP02-041覺醒<SEC>",
         "attributes": {
@@ -4736,6 +4998,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 497,
         "card_name": "賈維斯",
         "card_code": "BP02-046<SEC>",
         "attributes": {
@@ -4754,6 +5017,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 498,
         "card_name": "天狼星",
         "card_code": "BP02-049<SEC>",
         "attributes": {
@@ -4772,6 +5036,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 499,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "BP02-056覺醒<SEC>",
         "attributes": {
@@ -4790,6 +5055,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 500,
         "card_name": "U-47",
         "card_code": "BP02-057覺醒<SEC>",
         "attributes": {
@@ -4808,6 +5074,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 501,
         "card_name": "俾斯麥",
         "card_code": "BP02-063<SEC>",
         "attributes": {
@@ -4826,6 +5093,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 502,
         "card_name": "U-81",
         "card_code": "BP02-064<SEC>",
         "attributes": {
@@ -4844,6 +5112,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 503,
         "card_name": "U-96",
         "card_code": "BP02-065<SEC>",
         "attributes": {
@@ -4862,6 +5131,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 504,
         "card_name": "島風",
         "card_code": "BP02-072<SEC>",
         "attributes": {
@@ -4880,6 +5150,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 505,
         "card_name": "豪",
         "card_code": "BP02-073<SEC>",
         "attributes": {
@@ -4898,6 +5169,7 @@ const cards = [
         "acquisition_method": "BP02"
     },
     {
+        "card_id": 507,
         "card_name": "魔方卡",
         "card_code": "-",
         "attributes": {
@@ -4916,6 +5188,7 @@ const cards = [
         "acquisition_method": "-"
     },
     {
+        "card_id": 508,
         "card_name": "朱諾",
         "card_code": "SD01-007<PR>",
         "attributes": {
@@ -4934,6 +5207,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 509,
         "card_name": "紐卡斯爾",
         "card_code": "SD02-003<PR>",
         "attributes": {
@@ -4952,6 +5226,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 510,
         "card_name": "紐倫堡",
         "card_code": "SD03-008<PR>",
         "attributes": {
@@ -4970,6 +5245,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 511,
         "card_name": "魔方卡<鐵血>",
         "card_code": "-",
         "attributes": {
@@ -4988,6 +5264,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 518,
         "card_name": "魔方卡<白鷹>",
         "card_code": "-",
         "attributes": {
@@ -5006,6 +5283,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 520,
         "card_name": "魔方卡<重櫻>",
         "card_code": "-",
         "attributes": {
@@ -5024,6 +5302,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 521,
         "card_name": "魔方卡<皇家>",
         "card_code": "-",
         "attributes": {
@@ -5042,6 +5321,7 @@ const cards = [
         "acquisition_method": "EP01"
     },
     {
+        "card_id": 522,
         "card_name": "貝利",
         "card_code": "BP02-026<PR>",
         "attributes": {
@@ -5060,6 +5340,7 @@ const cards = [
         "acquisition_method": "EP02"
     },
     {
+        "card_id": 523,
         "card_name": "伊58",
         "card_code": "BP02-017<PR>",
         "attributes": {
@@ -5078,6 +5359,7 @@ const cards = [
         "acquisition_method": "EP02"
     },
     {
+        "card_id": 524,
         "card_name": "U-557",
         "card_code": "BP02-067<PR>",
         "attributes": {
@@ -5096,6 +5378,7 @@ const cards = [
         "acquisition_method": "EP02"
     },
     {
+        "card_id": 525,
         "card_name": "埃克賽特",
         "card_code": "BP02-050<PR>",
         "attributes": {
@@ -5114,6 +5397,7 @@ const cards = [
         "acquisition_method": "EP02"
     },
     {
+        "card_id": 526,
         "card_name": "江風",
         "card_code": "EX01-001",
         "attributes": {
@@ -5132,6 +5416,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 527,
         "card_name": "夕張",
         "card_code": "EX01-002",
         "attributes": {
@@ -5150,6 +5435,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 528,
         "card_name": "伊勢",
         "card_code": "EX01-003",
         "attributes": {
@@ -5168,6 +5454,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 529,
         "card_name": "陸奧",
         "card_code": "EX01-004",
         "attributes": {
@@ -5186,6 +5473,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 530,
         "card_name": "伊25",
         "card_code": "EX01-005",
         "attributes": {
@@ -5204,6 +5492,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 531,
         "card_name": "南達科他",
         "card_code": "EX01-006",
         "attributes": {
@@ -5222,6 +5511,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 532,
         "card_name": "企業",
         "card_code": "EX01-007",
         "attributes": {
@@ -5240,6 +5530,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 533,
         "card_name": "胡蜂",
         "card_code": "EX01-008",
         "attributes": {
@@ -5258,6 +5549,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 534,
         "card_name": "藍鰓魚",
         "card_code": "EX01-009",
         "attributes": {
@@ -5276,6 +5568,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 535,
         "card_name": "灰色幽靈",
         "card_code": "EX01-010",
         "attributes": {
@@ -5294,6 +5587,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 536,
         "card_name": "鸚鵡螺",
         "card_code": "EX01-011",
         "attributes": {
@@ -5312,6 +5606,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 537,
         "card_name": "黛朵",
         "card_code": "EX01-012",
         "attributes": {
@@ -5330,6 +5625,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 538,
         "card_name": "黑太子",
         "card_code": "EX01-013",
         "attributes": {
@@ -5348,6 +5644,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 539,
         "card_name": "英勇",
         "card_code": "EX01-014",
         "attributes": {
@@ -5366,6 +5663,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 540,
         "card_name": "光輝閃耀",
         "card_code": "EX01-015",
         "attributes": {
@@ -5384,6 +5682,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 541,
         "card_name": "歐根親王",
         "card_code": "EX01-016",
         "attributes": {
@@ -5402,6 +5701,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 542,
         "card_name": "U-110",
         "card_code": "EX01-017",
         "attributes": {
@@ -5420,6 +5720,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 543,
         "card_name": "U-522",
         "card_code": "EX01-018",
         "attributes": {
@@ -5438,6 +5739,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 544,
         "card_name": "鐵必製的夏季休假",
         "card_code": "EX01-019",
         "attributes": {
@@ -5456,6 +5758,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 545,
         "card_name": "變革者的攻勢",
         "card_code": "EX01-020",
         "attributes": {
@@ -5474,6 +5777,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 546,
         "card_name": "奧丁",
         "card_code": "EX01-021",
         "attributes": {
@@ -5492,6 +5796,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 547,
         "card_name": "奧丁",
         "card_code": "EX01-021覺醒",
         "attributes": {
@@ -5510,6 +5815,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 548,
         "card_name": "威爾斯親王",
         "card_code": "EX01-022",
         "attributes": {
@@ -5528,6 +5834,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 549,
         "card_name": "威爾斯親王",
         "card_code": "EX01-022覺醒",
         "attributes": {
@@ -5546,6 +5853,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 550,
         "card_name": "伊卡洛斯",
         "card_code": "BP01-031<SEC>",
         "attributes": {
@@ -5564,6 +5872,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 551,
         "card_name": "Z26",
         "card_code": "BP01-061<SEC>",
         "attributes": {
@@ -5582,6 +5891,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 552,
         "card_name": "莫里森",
         "card_code": "BP02-027<SEC>",
         "attributes": {
@@ -5600,6 +5910,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 553,
         "card_name": "陽炎",
         "card_code": "SD04-006<SEC>",
         "attributes": {
@@ -5618,6 +5929,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 555,
         "card_name": "魔方卡<蓝黄>",
         "card_code": "-",
         "attributes": {
@@ -5636,6 +5948,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 556,
         "card_name": "魔方卡<红黑>",
         "card_code": "-",
         "attributes": {
@@ -5654,6 +5967,7 @@ const cards = [
         "acquisition_method": "EX01"
     },
     {
+        "card_id": 557,
         "card_name": "克雷文",
         "card_code": "BP01-004<PR>",
         "attributes": {
@@ -5672,6 +5986,7 @@ const cards = [
         "acquisition_method": "EP03"
     },
     {
+        "card_id": 558,
         "card_name": "謝菲爾德",
         "card_code": "SD02-004<PR>",
         "attributes": {
@@ -5690,6 +6005,7 @@ const cards = [
         "acquisition_method": "EP03"
     },
     {
+        "card_id": 559,
         "card_name": "威悉",
         "card_code": "SD03-013<PR>",
         "attributes": {
@@ -5708,6 +6024,7 @@ const cards = [
         "acquisition_method": "EP03"
     },
     {
+        "card_id": 560,
         "card_name": "蒼龍",
         "card_code": "SD04-011<PR>",
         "attributes": {
@@ -5726,6 +6043,7 @@ const cards = [
         "acquisition_method": "EP03"
     },
     {
+        "card_id": 561,
         "card_name": "飛龍",
         "card_code": "SD04-012<PR>",
         "attributes": {
@@ -5744,6 +6062,7 @@ const cards = [
         "acquisition_method": "EP03"
     },
     {
+        "card_id": 562,
         "card_name": "大鳳",
         "card_code": "BP03-001",
         "attributes": {
@@ -5762,6 +6081,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 563,
         "card_name": "大鳳",
         "card_code": "BP03-001覺醒",
         "attributes": {
@@ -5780,6 +6100,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 564,
         "card_name": "大鳳",
         "card_code": "BP03-001覺醒<SEC>",
         "attributes": {
@@ -5798,6 +6119,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 565,
         "card_name": "如月",
         "card_code": "BP03-002",
         "attributes": {
@@ -5816,6 +6138,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 566,
         "card_name": "卯月",
         "card_code": "BP03-003",
         "attributes": {
@@ -5834,6 +6157,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 567,
         "card_name": "綾波",
         "card_code": "BP03-004",
         "attributes": {
@@ -5852,6 +6176,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 568,
         "card_name": "綾波",
         "card_code": "BP03-004<PR>",
         "attributes": {
@@ -5870,6 +6195,7 @@ const cards = [
         "acquisition_method": "PR02"
     },
     {
+        "card_id": 569,
         "card_name": "不知火",
         "card_code": "BP03-005",
         "attributes": {
@@ -5888,6 +6214,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 570,
         "card_name": "高雄",
         "card_code": "BP03-006",
         "attributes": {
@@ -5906,6 +6233,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 571,
         "card_name": "高雄",
         "card_code": "BP03-006<SEC>",
         "attributes": {
@@ -5924,6 +6252,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 572,
         "card_name": "愛宕",
         "card_code": "BP03-007",
         "attributes": {
@@ -5942,6 +6271,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 573,
         "card_name": "愛宕",
         "card_code": "BP03-007<SEC>",
         "attributes": {
@@ -5960,6 +6290,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 574,
         "card_name": "赤城",
         "card_code": "BP03-008",
         "attributes": {
@@ -5978,6 +6309,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 575,
         "card_name": "赤城",
         "card_code": "BP03-008<SEC>",
         "attributes": {
@@ -5996,6 +6328,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 576,
         "card_name": "鳳翔",
         "card_code": "BP03-009",
         "attributes": {
@@ -6014,6 +6347,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 577,
         "card_name": "龍驤",
         "card_code": "BP03-010",
         "attributes": {
@@ -6032,6 +6366,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 578,
         "card_name": "祥鳳",
         "card_code": "BP03-011",
         "attributes": {
@@ -6050,6 +6385,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 579,
         "card_name": "伊56",
         "card_code": "BP03-012",
         "attributes": {
@@ -6068,6 +6404,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 580,
         "card_name": "雙龍茶會",
         "card_code": "BP03-013",
         "attributes": {
@@ -6086,6 +6423,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 581,
         "card_name": "調皮搗蛋",
         "card_code": "BP03-014",
         "attributes": {
@@ -6104,6 +6442,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 582,
         "card_name": "甜點時間",
         "card_code": "BP03-015",
         "attributes": {
@@ -6122,6 +6461,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 583,
         "card_name": "戰力核心",
         "card_code": "BP03-016",
         "attributes": {
@@ -6140,6 +6480,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 584,
         "card_name": "飲料去冰",
         "card_code": "BP03-017",
         "attributes": {
@@ -6158,6 +6499,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 585,
         "card_name": "列星頓",
         "card_code": "BP03-018",
         "attributes": {
@@ -6176,6 +6518,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 586,
         "card_name": "列星頓",
         "card_code": "BP03-018覺醒",
         "attributes": {
@@ -6194,6 +6537,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 587,
         "card_name": "列星頓",
         "card_code": "BP03-018覺醒<SEC>",
         "attributes": {
@@ -6212,6 +6556,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 588,
         "card_name": "杜威",
         "card_code": "BP03-019",
         "attributes": {
@@ -6230,6 +6575,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 589,
         "card_name": "艾爾文",
         "card_code": "BP03-020",
         "attributes": {
@@ -6248,6 +6594,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 590,
         "card_name": "拉菲",
         "card_code": "BP03-021",
         "attributes": {
@@ -6266,6 +6613,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 591,
         "card_name": "拉菲",
         "card_code": "BP03-021<PR>",
         "attributes": {
@@ -6284,6 +6632,7 @@ const cards = [
         "acquisition_method": "PR02"
     },
     {
+        "card_id": 592,
         "card_name": "科爾克",
         "card_code": "BP03-022",
         "attributes": {
@@ -6302,6 +6651,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 593,
         "card_name": "佛萊契爾",
         "card_code": "BP03-023",
         "attributes": {
@@ -6320,6 +6670,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 594,
         "card_name": "富特",
         "card_code": "BP03-024",
         "attributes": {
@@ -6338,6 +6689,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 595,
         "card_name": "斯彭斯",
         "card_code": "BP03-025",
         "attributes": {
@@ -6356,6 +6708,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 596,
         "card_name": "柴契爾",
         "card_code": "BP03-026",
         "attributes": {
@@ -6374,6 +6727,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 597,
         "card_name": "埃爾德里奇",
         "card_code": "BP03-027",
         "attributes": {
@@ -6392,6 +6746,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 598,
         "card_name": "埃爾德里奇",
         "card_code": "BP03-027<SEC>",
         "attributes": {
@@ -6410,6 +6765,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 599,
         "card_name": "康克德",
         "card_code": "BP03-028",
         "attributes": {
@@ -6428,6 +6784,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 600,
         "card_name": "艾塞克斯",
         "card_code": "BP03-029",
         "attributes": {
@@ -6446,6 +6803,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 601,
         "card_name": "艾塞克斯",
         "card_code": "BP03-029<SEC>",
         "attributes": {
@@ -6464,6 +6822,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 602,
         "card_name": "奇襲",
         "card_code": "BP03-030",
         "attributes": {
@@ -6482,6 +6841,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 603,
         "card_name": "戰鬥開始",
         "card_code": "BP03-031",
         "attributes": {
@@ -6500,6 +6860,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 604,
         "card_name": "張弛有度",
         "card_code": "BP03-032",
         "attributes": {
@@ -6518,6 +6879,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 605,
         "card_name": "長休",
         "card_code": "BP03-033",
         "attributes": {
@@ -6536,6 +6898,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 606,
         "card_name": "獨角獸",
         "card_code": "BP03-034",
         "attributes": {
@@ -6554,6 +6917,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 607,
         "card_name": "獨角獸",
         "card_code": "BP03-034覺醒",
         "attributes": {
@@ -6572,6 +6936,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 608,
         "card_name": "獨角獸",
         "card_code": "BP03-034覺醒<SEC>",
         "attributes": {
@@ -6590,6 +6955,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 609,
         "card_name": "小獵兔犬",
         "card_code": "BP03-035",
         "attributes": {
@@ -6608,6 +6974,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 610,
         "card_name": "大鬥犬",
         "card_code": "BP03-036",
         "attributes": {
@@ -6626,6 +6993,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 611,
         "card_name": "小天鵝",
         "card_code": "BP03-037",
         "attributes": {
@@ -6644,6 +7012,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 612,
         "card_name": "螢火蟲",
         "card_code": "BP03-038",
         "attributes": {
@@ -6662,6 +7031,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 613,
         "card_name": "標槍",
         "card_code": "BP03-039",
         "attributes": {
@@ -6680,6 +7050,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 614,
         "card_name": "標槍",
         "card_code": "BP03-039<PR>",
         "attributes": {
@@ -6698,6 +7069,7 @@ const cards = [
         "acquisition_method": "PR02"
     },
     {
+        "card_id": 615,
         "card_name": "海王星",
         "card_code": "BP03-040",
         "attributes": {
@@ -6716,6 +7088,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 616,
         "card_name": "海王星",
         "card_code": "BP03-040<SEC>",
         "attributes": {
@@ -6734,6 +7107,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 617,
         "card_name": "倫敦",
         "card_code": "BP03-041",
         "attributes": {
@@ -6752,6 +7126,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 618,
         "card_name": "伊莉莎白女王",
         "card_code": "BP03-042",
         "attributes": {
@@ -6770,6 +7145,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 619,
         "card_name": "伊莉莎白女王",
         "card_code": "BP03-042<SEC>",
         "attributes": {
@@ -6788,6 +7164,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 620,
         "card_name": "英仙座",
         "card_code": "BP03-043",
         "attributes": {
@@ -6806,6 +7183,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 621,
         "card_name": "英仙座",
         "card_code": "BP03-043<SEC>",
         "attributes": {
@@ -6824,6 +7202,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 622,
         "card_name": "情人節的回憶",
         "card_code": "BP03-044",
         "attributes": {
@@ -6842,6 +7221,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 623,
         "card_name": "無盡攻勢",
         "card_code": "BP03-045",
         "attributes": {
@@ -6860,6 +7240,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 624,
         "card_name": "强化合宿",
         "card_code": "BP03-046",
         "attributes": {
@@ -6878,6 +7259,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 625,
         "card_name": "當心怪人",
         "card_code": "BP03-047",
         "attributes": {
@@ -6896,6 +7278,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 626,
         "card_name": "福運再臨",
         "card_code": "BP03-048",
         "attributes": {
@@ -6914,6 +7297,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 627,
         "card_name": "皇室的茶會時間",
         "card_code": "BP03-049",
         "attributes": {
@@ -6932,6 +7316,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 628,
         "card_name": "不給糖就搗蛋",
         "card_code": "BP03-050",
         "attributes": {
@@ -6950,6 +7335,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 629,
         "card_name": "歐根親王",
         "card_code": "BP03-051",
         "attributes": {
@@ -6968,6 +7354,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 630,
         "card_name": "歐根親王",
         "card_code": "BP03-051覺醒",
         "attributes": {
@@ -6986,6 +7373,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 631,
         "card_name": "歐根親王",
         "card_code": "BP03-051覺醒<SEC>",
         "attributes": {
@@ -7004,6 +7392,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 632,
         "card_name": "川內",
         "card_code": "BP03-052",
         "attributes": {
@@ -7022,6 +7411,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 633,
         "card_name": "神通",
         "card_code": "BP03-053",
         "attributes": {
@@ -7040,6 +7430,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 634,
         "card_name": "那珂",
         "card_code": "BP03-054",
         "attributes": {
@@ -7058,6 +7449,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 635,
         "card_name": "Z23",
         "card_code": "BP03-055",
         "attributes": {
@@ -7076,6 +7468,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 636,
         "card_name": "Z23",
         "card_code": "BP03-055<PR>",
         "attributes": {
@@ -7094,6 +7487,7 @@ const cards = [
         "acquisition_method": "PR02"
     },
     {
+        "card_id": 637,
         "card_name": "科隆",
         "card_code": "BP03-056",
         "attributes": {
@@ -7112,6 +7506,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 638,
         "card_name": "施佩伯爵將軍",
         "card_code": "BP03-057",
         "attributes": {
@@ -7130,6 +7525,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 639,
         "card_name": "希佩爾將軍",
         "card_code": "BP03-058",
         "attributes": {
@@ -7148,6 +7544,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 640,
         "card_name": "希佩爾將軍",
         "card_code": "BP03-058<SEC>",
         "attributes": {
@@ -7166,6 +7563,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 641,
         "card_name": "海因里希親王",
         "card_code": "BP03-059",
         "attributes": {
@@ -7184,6 +7582,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 642,
         "card_name": "海因里希親王",
         "card_code": "BP03-059<SEC>",
         "attributes": {
@@ -7202,6 +7601,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 643,
         "card_name": "呂措",
         "card_code": "BP03-060",
         "attributes": {
@@ -7220,6 +7620,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 644,
         "card_name": "鐵必制",
         "card_code": "BP03-061",
         "attributes": {
@@ -7238,6 +7639,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 645,
         "card_name": "黎明將至",
         "card_code": "BP03-062",
         "attributes": {
@@ -7256,6 +7658,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 646,
         "card_name": "碾壓的一擊",
         "card_code": "BP03-063",
         "attributes": {
@@ -7274,6 +7677,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 647,
         "card_name": "數據解析",
         "card_code": "BP03-064",
         "attributes": {
@@ -7292,6 +7696,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 648,
         "card_name": "最強雙人組",
         "card_code": "BP03-065",
         "attributes": {
@@ -7310,6 +7715,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 649,
         "card_name": "白龍與魔女",
         "card_code": "BP03-066",
         "attributes": {
@@ -7328,6 +7734,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 650,
         "card_name": "明石",
         "card_code": "BP03-067",
         "attributes": {
@@ -7346,6 +7753,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 651,
         "card_name": "明石",
         "card_code": "BP03-067覺醒",
         "attributes": {
@@ -7364,6 +7772,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 652,
         "card_name": "明石",
         "card_code": "BP03-067覺醒<SEC>",
         "attributes": {
@@ -7382,6 +7791,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 653,
         "card_name": "皇家方舟",
         "card_code": "BP03-068",
         "attributes": {
@@ -7400,6 +7810,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 654,
         "card_name": "皇家方舟",
         "card_code": "BP03-068覺醒",
         "attributes": {
@@ -7418,6 +7829,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 655,
         "card_name": "皇家方舟",
         "card_code": "BP03-068覺醒<SEC>",
         "attributes": {
@@ -7436,6 +7848,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 656,
         "card_name": "喬治亞",
         "card_code": "BP03-069",
         "attributes": {
@@ -7454,6 +7867,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 657,
         "card_name": "喬治亞",
         "card_code": "BP03-069<SEC>",
         "attributes": {
@@ -7472,6 +7886,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 658,
         "card_name": "奧古斯特·馮·帕塞瓦爾",
         "card_code": "BP03-070",
         "attributes": {
@@ -7490,6 +7905,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 659,
         "card_name": "奧古斯特·馮·帕塞瓦爾",
         "card_code": "BP03-070<SEC>",
         "attributes": {
@@ -7508,6 +7924,7 @@ const cards = [
         "acquisition_method": "BP03"
     },
     {
+        "card_id": 660,
         "card_name": "貝爾法斯特",
         "card_code": "SD02-006<誓約>",
         "attributes": {
@@ -7526,6 +7943,7 @@ const cards = [
         "acquisition_method": "第一屆城市賽"
     },
     {
+        "card_id": 661,
         "card_name": "企業",
         "card_code": "BP01-002覺醒<誓約>",
         "attributes": {
@@ -7544,6 +7962,7 @@ const cards = [
         "acquisition_method": "第一屆城市賽TOP8"
     },
     {
+        "card_id": 662,
         "card_name": "啾啾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -7562,6 +7981,7 @@ const cards = [
         "acquisition_method": "碧藍戰卡首屆城市賽"
     },
     {
+        "card_id": 663,
         "card_name": "安克拉治",
         "card_code": "SD01-008<PR>",
         "attributes": {
@@ -7580,6 +8000,7 @@ const cards = [
         "acquisition_method": "泳裝爭奪戰-第一季"
     },
     {
+        "card_id": 664,
         "card_name": "綾波",
         "card_code": "CP01-001",
         "attributes": {
@@ -7598,6 +8019,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 665,
         "card_name": "綾波",
         "card_code": "CP01-001<SEC>",
         "attributes": {
@@ -7616,6 +8038,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 666,
         "card_name": "曉",
         "card_code": "CP01-002",
         "attributes": {
@@ -7634,6 +8057,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 667,
         "card_name": "曉",
         "card_code": "CP01-002<SEC>",
         "attributes": {
@@ -7652,6 +8076,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 668,
         "card_name": "雷",
         "card_code": "CP01-003",
         "attributes": {
@@ -7670,6 +8095,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 669,
         "card_name": "雷",
         "card_code": "CP01-003<SEC>",
         "attributes": {
@@ -7688,6 +8114,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 670,
         "card_name": "電",
         "card_code": "CP01-004",
         "attributes": {
@@ -7706,6 +8133,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 671,
         "card_name": "電",
         "card_code": "CP01-004<SEC>",
         "attributes": {
@@ -7724,6 +8152,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 672,
         "card_name": "翔鶴",
         "card_code": "CP01-005",
         "attributes": {
@@ -7742,6 +8171,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 673,
         "card_name": "翔鶴",
         "card_code": "CP01-005<SEC>",
         "attributes": {
@@ -7760,6 +8190,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 674,
         "card_name": "重櫻盛開的海濱",
         "card_code": "CP01-006",
         "attributes": {
@@ -7778,6 +8209,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 675,
         "card_name": "重櫻盛開的海濱",
         "card_code": "CP01-006<SEC>",
         "attributes": {
@@ -7796,6 +8228,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 676,
         "card_name": "拉菲",
         "card_code": "CP01-007",
         "attributes": {
@@ -7814,6 +8247,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 677,
         "card_name": "拉菲",
         "card_code": "CP01-007<SEC>",
         "attributes": {
@@ -7832,6 +8266,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 678,
         "card_name": "克里夫蘭",
         "card_code": "CP01-008",
         "attributes": {
@@ -7850,6 +8285,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 679,
         "card_name": "克里夫蘭",
         "card_code": "CP01-008<SEC>",
         "attributes": {
@@ -7868,6 +8304,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 680,
         "card_name": "波特蘭",
         "card_code": "CP01-009",
         "attributes": {
@@ -7886,6 +8323,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 681,
         "card_name": "波特蘭",
         "card_code": "CP01-009<SEC>",
         "attributes": {
@@ -7904,6 +8342,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 682,
         "card_name": "印第安納波利斯",
         "card_code": "CP01-010",
         "attributes": {
@@ -7922,6 +8361,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 683,
         "card_name": "印第安納波利斯",
         "card_code": "CP01-010<SEC>",
         "attributes": {
@@ -7940,6 +8380,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 684,
         "card_name": "女灶神",
         "card_code": "CP01-011",
         "attributes": {
@@ -7958,6 +8399,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 685,
         "card_name": "女灶神",
         "card_code": "CP01-011<SEC>",
         "attributes": {
@@ -7976,6 +8418,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 686,
         "card_name": "鶴之舞",
         "card_code": "CP01-012",
         "attributes": {
@@ -7994,6 +8437,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 687,
         "card_name": "鶴之舞",
         "card_code": "CP01-012<SEC>",
         "attributes": {
@@ -8012,6 +8456,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 688,
         "card_name": "吸血鬼",
         "card_code": "CP01-013",
         "attributes": {
@@ -8030,6 +8475,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 689,
         "card_name": "吸血鬼",
         "card_code": "CP01-013<SEC>",
         "attributes": {
@@ -8048,6 +8494,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 690,
         "card_name": "標槍",
         "card_code": "CP01-014",
         "attributes": {
@@ -8066,6 +8513,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 691,
         "card_name": "標槍",
         "card_code": "CP01-014<SEC>",
         "attributes": {
@@ -8084,6 +8532,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 692,
         "card_name": "阿賈克斯",
         "card_code": "CP01-015",
         "attributes": {
@@ -8102,6 +8551,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 693,
         "card_name": "阿賈克斯",
         "card_code": "CP01-015<SEC>",
         "attributes": {
@@ -8120,6 +8570,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 694,
         "card_name": "貝爾法斯特",
         "card_code": "CP01-016",
         "attributes": {
@@ -8138,6 +8589,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 695,
         "card_name": "貝爾法斯特",
         "card_code": "CP01-016<SEC>",
         "attributes": {
@@ -8156,6 +8608,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 696,
         "card_name": "威爾斯親王",
         "card_code": "CP01-017",
         "attributes": {
@@ -8174,6 +8627,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 697,
         "card_name": "威爾斯親王",
         "card_code": "CP01-017<SEC>",
         "attributes": {
@@ -8192,6 +8646,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 698,
         "card_name": "女僕長的祝福",
         "card_code": "CP01-018",
         "attributes": {
@@ -8210,6 +8665,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 699,
         "card_name": "女僕長的祝福",
         "card_code": "CP01-018<SEC>",
         "attributes": {
@@ -8228,6 +8684,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 700,
         "card_name": "Z23",
         "card_code": "CP01-019",
         "attributes": {
@@ -8246,6 +8703,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 701,
         "card_name": "Z23",
         "card_code": "CP01-019<SEC>",
         "attributes": {
@@ -8264,6 +8722,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 702,
         "card_name": "德意志",
         "card_code": "CP01-020",
         "attributes": {
@@ -8282,6 +8741,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 703,
         "card_name": "德意志",
         "card_code": "CP01-020<SEC>",
         "attributes": {
@@ -8300,6 +8760,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 704,
         "card_name": "施佩伯爵將軍",
         "card_code": "CP01-021",
         "attributes": {
@@ -8318,6 +8779,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 705,
         "card_name": "施佩伯爵將軍",
         "card_code": "CP01-021<SEC>",
         "attributes": {
@@ -8336,6 +8798,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 706,
         "card_name": "俾斯麥",
         "card_code": "CP01-022",
         "attributes": {
@@ -8354,6 +8817,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 707,
         "card_name": "俾斯麥",
         "card_code": "CP01-022<SEC>",
         "attributes": {
@@ -8372,6 +8836,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 708,
         "card_name": "U-556",
         "card_code": "CP01-023",
         "attributes": {
@@ -8390,6 +8855,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 709,
         "card_name": "U-556",
         "card_code": "CP01-023<SEC>",
         "attributes": {
@@ -8408,6 +8874,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 710,
         "card_name": "鐵血式女僕禮儀",
         "card_code": "CP01-024",
         "attributes": {
@@ -8426,6 +8893,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 711,
         "card_name": "鐵血式女僕禮儀",
         "card_code": "CP01-024<SEC>",
         "attributes": {
@@ -8444,6 +8912,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 712,
         "card_name": "瑞鶴",
         "card_code": "CP01-025",
         "attributes": {
@@ -8462,6 +8931,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 713,
         "card_name": "瑞鶴",
         "card_code": "CP01-025<覺醒>",
         "attributes": {
@@ -8480,6 +8950,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 714,
         "card_name": "瑞鶴",
         "card_code": "CP01-025<覺醒><SEC>",
         "attributes": {
@@ -8498,6 +8969,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 715,
         "card_name": "約克公爵",
         "card_code": "CP01-026",
         "attributes": {
@@ -8516,6 +8988,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 716,
         "card_name": "約克公爵",
         "card_code": "CP01-026<覺醒>",
         "attributes": {
@@ -8534,6 +9007,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 717,
         "card_name": "約克公爵",
         "card_code": "CP01-026<覺醒><SEC>",
         "attributes": {
@@ -8552,6 +9026,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 718,
         "card_name": "奧丁",
         "card_code": "CP01-027",
         "attributes": {
@@ -8570,6 +9045,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 719,
         "card_name": "奧丁",
         "card_code": "CP01-027<SEC>",
         "attributes": {
@@ -8588,6 +9064,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 720,
         "card_name": "全員就位",
         "card_code": "SD01-014<SEC>",
         "attributes": {
@@ -8606,6 +9083,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 721,
         "card_name": "皇家的誓約",
         "card_code": "SD02-013<SEC>",
         "attributes": {
@@ -8624,6 +9102,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 722,
         "card_name": "鐵血威壓",
         "card_code": "SD03-016<SEC>",
         "attributes": {
@@ -8642,6 +9121,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 723,
         "card_name": "狐之誘惑",
         "card_code": "SD04-016<SEC>",
         "attributes": {
@@ -8660,6 +9140,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 724,
         "card_name": "藍黃閃魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8678,6 +9159,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 725,
         "card_name": "紅黑閃魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8696,6 +9178,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 726,
         "card_name": "重櫻魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8714,6 +9197,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 727,
         "card_name": "皇家魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8732,6 +9216,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 728,
         "card_name": "白鷹魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8750,6 +9235,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 729,
         "card_name": "鐵血魔方卡",
         "card_code": "-",
         "attributes": {
@@ -8768,6 +9254,7 @@ const cards = [
         "acquisition_method": "CP01"
     },
     {
+        "card_id": 730,
         "card_name": "聖路易斯",
         "card_code": "BP01-009<PR>",
         "attributes": {
@@ -8786,6 +9273,7 @@ const cards = [
         "acquisition_method": "線下活動"
     },
     {
+        "card_id": 731,
         "card_name": "企業",
         "card_code": "EX01-007<PR>",
         "attributes": {
@@ -8804,6 +9292,7 @@ const cards = [
         "acquisition_method": "CP01限時特殊兌換碼"
     },
     {
+        "card_id": 732,
         "card_name": "無敵",
         "card_code": "BP04-038<PR>",
         "attributes": {
@@ -8822,6 +9311,7 @@ const cards = [
         "acquisition_method": "消費滿額贈送（2024.7.27~）"
     },
     {
+        "card_id": 733,
         "card_name": "島風",
         "card_code": "BP04-001",
         "attributes": {
@@ -8840,6 +9330,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 734,
         "card_name": "島風",
         "card_code": "BP04-001覺醒",
         "attributes": {
@@ -8858,6 +9349,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 736,
         "card_name": "島風",
         "card_code": "BP04-001覺醒<SEC>",
         "attributes": {
@@ -8876,6 +9368,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 737,
         "card_name": "山风",
         "card_code": "BP04-002",
         "attributes": {
@@ -8894,6 +9387,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 738,
         "card_name": "水無月",
         "card_code": "BP04-003",
         "attributes": {
@@ -8912,6 +9406,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 739,
         "card_name": "文月",
         "card_code": "BP04-004",
         "attributes": {
@@ -8930,6 +9425,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 740,
         "card_name": "白露",
         "card_code": "BP04-005",
         "attributes": {
@@ -8948,6 +9444,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 741,
         "card_name": "時雨",
         "card_code": "BP04-006",
         "attributes": {
@@ -8966,6 +9463,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 742,
         "card_name": "雪風",
         "card_code": "BP04-007",
         "attributes": {
@@ -8984,6 +9482,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 743,
         "card_name": "野分",
         "card_code": "BP04-008",
         "attributes": {
@@ -9002,6 +9501,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 744,
         "card_name": "加賀",
         "card_code": "BP04-009",
         "attributes": {
@@ -9020,6 +9520,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 745,
         "card_name": "加賀",
         "card_code": "BP04-009<SEC>",
         "attributes": {
@@ -9038,6 +9539,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 746,
         "card_name": "駿河",
         "card_code": "BP04-010",
         "attributes": {
@@ -9056,6 +9558,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 747,
         "card_name": "駿河",
         "card_code": "BP04-010<SEC>",
         "attributes": {
@@ -9074,6 +9577,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 748,
         "card_name": "赤城",
         "card_code": "BP04-011",
         "attributes": {
@@ -9092,6 +9596,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 749,
         "card_name": "追憶",
         "card_code": "BP04-012",
         "attributes": {
@@ -9110,6 +9615,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 750,
         "card_name": "櫻色的通學路",
         "card_code": "BP04-013",
         "attributes": {
@@ -9128,6 +9634,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 751,
         "card_name": "蒼紅的繼承者",
         "card_code": "BP04-014",
         "attributes": {
@@ -9146,6 +9653,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 752,
         "card_name": "新銳之刃",
         "card_code": "BP04-015",
         "attributes": {
@@ -9164,6 +9672,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 753,
         "card_name": "落幕的演習",
         "card_code": "BP04-016",
         "attributes": {
@@ -9182,6 +9691,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 754,
         "card_name": "守望的櫻吹雪",
         "card_code": "BP04-017",
         "attributes": {
@@ -9200,6 +9710,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 755,
         "card_name": "阿拉巴馬",
         "card_code": "BP04-018",
         "attributes": {
@@ -9218,6 +9729,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 756,
         "card_name": "阿拉巴馬",
         "card_code": "BP04-018覺醒",
         "attributes": {
@@ -9236,6 +9748,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 758,
         "card_name": "阿拉巴馬",
         "card_code": "BP04-018覺醒<SEC>",
         "attributes": {
@@ -9254,6 +9767,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 759,
         "card_name": "霍比",
         "card_code": "BP04-019",
         "attributes": {
@@ -9272,6 +9786,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 760,
         "card_name": "貝奇",
         "card_code": "BP04-020",
         "attributes": {
@@ -9290,6 +9805,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 761,
         "card_name": "菲尼克斯",
         "card_code": "BP04-021",
         "attributes": {
@@ -9308,6 +9824,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 762,
         "card_name": "威奇塔",
         "card_code": "BP04-022",
         "attributes": {
@@ -9326,6 +9843,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 763,
         "card_name": "阿斯托利亞",
         "card_code": "BP04-023",
         "attributes": {
@@ -9344,6 +9862,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 764,
         "card_name": "明尼亞波利斯",
         "card_code": "BP04-024",
         "attributes": {
@@ -9362,6 +9881,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 765,
         "card_name": "明尼亞波利斯",
         "card_code": "BP04-024<SEC>",
         "attributes": {
@@ -9380,6 +9900,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 766,
         "card_name": "昆西",
         "card_code": "BP04-025",
         "attributes": {
@@ -9398,6 +9919,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 767,
         "card_name": "文森尼斯",
         "card_code": "BP04-026",
         "attributes": {
@@ -9416,6 +9938,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 768,
         "card_name": "麻薩諸塞",
         "card_code": "BP04-027",
         "attributes": {
@@ -9434,6 +9957,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 769,
         "card_name": "麻薩諸塞",
         "card_code": "BP04-027<SEC>",
         "attributes": {
@@ -9452,6 +9976,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 770,
         "card_name": "棘鳍",
         "card_code": "BP04-028",
         "attributes": {
@@ -9470,6 +9995,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 771,
         "card_name": "棘鳍",
         "card_code": "BP04-028<SEC>",
         "attributes": {
@@ -9488,6 +10014,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 772,
         "card_name": "小小幸運星",
         "card_code": "BP04-029",
         "attributes": {
@@ -9506,6 +10033,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 773,
         "card_name": "實技練習",
         "card_code": "BP04-030",
         "attributes": {
@@ -9524,6 +10052,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 774,
         "card_name": "冬日宴席",
         "card_code": "BP04-031",
         "attributes": {
@@ -9542,6 +10071,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 775,
         "card_name": "一獲千金",
         "card_code": "BP04-032",
         "attributes": {
@@ -9560,6 +10090,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 776,
         "card_name": "隆重的邀請",
         "card_code": "BP04-033",
         "attributes": {
@@ -9578,6 +10109,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 777,
         "card_name": "貝爾法斯特",
         "card_code": "BP04-034",
         "attributes": {
@@ -9596,6 +10128,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 778,
         "card_name": "貝爾法斯特",
         "card_code": "BP04-034覺醒",
         "attributes": {
@@ -9614,6 +10147,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 780,
         "card_name": "貝爾法斯特",
         "card_code": "BP04-034覺醒<SEC>",
         "attributes": {
@@ -9632,6 +10166,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 781,
         "card_name": "命運女神",
         "card_code": "BP04-035",
         "attributes": {
@@ -9650,6 +10185,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 782,
         "card_name": "無敵",
         "card_code": "BP04-036",
         "attributes": {
@@ -9668,6 +10204,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 783,
         "card_name": "庫拉索",
         "card_code": "BP04-037",
         "attributes": {
@@ -9686,6 +10223,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 784,
         "card_name": "杓鷸",
         "card_code": "BP04-038",
         "attributes": {
@@ -9704,6 +10242,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 785,
         "card_name": "利安得",
         "card_code": "BP04-039",
         "attributes": {
@@ -9722,6 +10261,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 786,
         "card_name": "曼徹斯特",
         "card_code": "BP04-040",
         "attributes": {
@@ -9740,6 +10280,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 787,
         "card_name": "小貝法",
         "card_code": "BP04-041",
         "attributes": {
@@ -9758,6 +10299,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 788,
         "card_name": "小貝法",
         "card_code": "BP04-041<SEC>",
         "attributes": {
@@ -9776,6 +10318,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 789,
         "card_name": "肯特",
         "card_code": "BP04-042",
         "attributes": {
@@ -9794,6 +10337,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 790,
         "card_name": "薩福克",
         "card_code": "BP04-043",
         "attributes": {
@@ -9812,6 +10356,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 791,
         "card_name": "聲望",
         "card_code": "BP04-044",
         "attributes": {
@@ -9830,6 +10375,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 792,
         "card_name": "厭戰",
         "card_code": "BP04-045",
         "attributes": {
@@ -9848,6 +10394,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 793,
         "card_name": "厭戰",
         "card_code": "BP04-045<SEC>",
         "attributes": {
@@ -9866,6 +10413,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 794,
         "card_name": "女僕的指引",
         "card_code": "BP04-046",
         "attributes": {
@@ -9884,6 +10432,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 795,
         "card_name": "女僕的日課",
         "card_code": "BP04-047",
         "attributes": {
@@ -9902,6 +10451,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 796,
         "card_name": "新人研修會",
         "card_code": "BP04-048",
         "attributes": {
@@ -9920,6 +10470,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 797,
         "card_name": "不勝酒力",
         "card_code": "BP04-049",
         "attributes": {
@@ -9938,6 +10489,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 798,
         "card_name": "腓特烈大帝",
         "card_code": "BP04-050",
         "attributes": {
@@ -9956,6 +10508,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 799,
         "card_name": "腓特烈大帝",
         "card_code": "BP04-050覺醒",
         "attributes": {
@@ -9974,6 +10527,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 801,
         "card_name": "腓特烈大帝",
         "card_code": "BP04-050覺醒<SEC>",
         "attributes": {
@@ -9992,6 +10546,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 802,
         "card_name": "Z1",
         "card_code": "BP04-051",
         "attributes": {
@@ -10010,6 +10565,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 803,
         "card_name": "Z24",
         "card_code": "BP04-052",
         "attributes": {
@@ -10028,6 +10584,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 804,
         "card_name": "柯尼斯堡",
         "card_code": "BP04-053",
         "attributes": {
@@ -10046,6 +10603,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 805,
         "card_name": "卡爾斯魯厄",
         "card_code": "BP04-054",
         "attributes": {
@@ -10064,6 +10622,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 806,
         "card_name": "萊比錫",
         "card_code": "BP04-055",
         "attributes": {
@@ -10082,6 +10641,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 807,
         "card_name": "布呂歇爾",
         "card_code": "BP04-056",
         "attributes": {
@@ -10100,6 +10660,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 808,
         "card_name": "歐根親王",
         "card_code": "BP04-057",
         "attributes": {
@@ -10118,6 +10679,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 809,
         "card_name": "格奈森瑙",
         "card_code": "BP04-058",
         "attributes": {
@@ -10136,6 +10698,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 810,
         "card_name": "格奈森瑙",
         "card_code": "BP04-058<SEC>",
         "attributes": {
@@ -10154,6 +10717,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 811,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "BP04-059",
         "attributes": {
@@ -10172,6 +10736,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 812,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "BP04-059<SEC>",
         "attributes": {
@@ -10190,6 +10755,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 813,
         "card_name": "齊柏林伯爵",
         "card_code": "BP04-060",
         "attributes": {
@@ -10208,6 +10774,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 814,
         "card_name": "U-37",
         "card_code": "BP04-061",
         "attributes": {
@@ -10226,6 +10793,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 815,
         "card_name": "U-37",
         "card_code": "BP04-061<SEC>",
         "attributes": {
@@ -10244,6 +10812,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 816,
         "card_name": "芬里爾的鎖鏈",
         "card_code": "BP04-062",
         "attributes": {
@@ -10262,6 +10831,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 817,
         "card_name": "水分補充",
         "card_code": "BP04-063",
         "attributes": {
@@ -10280,6 +10850,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 818,
         "card_name": "破壞的交響曲",
         "card_code": "BP04-064",
         "attributes": {
@@ -10298,6 +10869,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 819,
         "card_name": "魔王與小鳥",
         "card_code": "BP04-065",
         "attributes": {
@@ -10316,6 +10888,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 820,
         "card_name": "毀滅的序章",
         "card_code": "BP04-066",
         "attributes": {
@@ -10334,6 +10907,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 821,
         "card_name": "天城",
         "card_code": "BP04-067",
         "attributes": {
@@ -10352,6 +10926,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 822,
         "card_name": "天城",
         "card_code": "BP04-067覺醒",
         "attributes": {
@@ -10370,6 +10945,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 824,
         "card_name": "天城",
         "card_code": "BP04-067覺醒<SEC>",
         "attributes": {
@@ -10388,6 +10964,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 825,
         "card_name": "沙恩霍斯特",
         "card_code": "BP04-068",
         "attributes": {
@@ -10406,6 +10983,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 826,
         "card_name": "沙恩霍斯特",
         "card_code": "BP04-068覺醒",
         "attributes": {
@@ -10424,6 +11002,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 828,
         "card_name": "沙恩霍斯特",
         "card_code": "BP04-068覺醒<SEC>",
         "attributes": {
@@ -10442,6 +11021,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 829,
         "card_name": "信濃",
         "card_code": "BP04-069",
         "attributes": {
@@ -10460,6 +11040,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 830,
         "card_name": "信濃",
         "card_code": "BP04-069<SEC>",
         "attributes": {
@@ -10478,6 +11059,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 831,
         "card_name": "貝爾法斯特",
         "card_code": "BP04-070",
         "attributes": {
@@ -10496,6 +11078,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 832,
         "card_name": "貝爾法斯特",
         "card_code": "BP04-070<SEC>",
         "attributes": {
@@ -10514,6 +11097,7 @@ const cards = [
         "acquisition_method": "BP04"
     },
     {
+        "card_id": 833,
         "card_name": "Z35",
         "card_code": "BP02-058<PR>",
         "attributes": {
@@ -10532,6 +11116,7 @@ const cards = [
         "acquisition_method": "EP04"
     },
     {
+        "card_id": 834,
         "card_name": "伊56",
         "card_code": "BP03-012<PR>",
         "attributes": {
@@ -10550,6 +11135,7 @@ const cards = [
         "acquisition_method": "EP04"
     },
     {
+        "card_id": 835,
         "card_name": "艾爾文",
         "card_code": "BP03-020<PR>",
         "attributes": {
@@ -10568,6 +11154,7 @@ const cards = [
         "acquisition_method": "EP04"
     },
     {
+        "card_id": 836,
         "card_name": "螢火蟲",
         "card_code": "BP03-038<PR>",
         "attributes": {
@@ -10586,6 +11173,7 @@ const cards = [
         "acquisition_method": "EP04"
     },
     {
+        "card_id": 837,
         "card_name": "愛丁堡",
         "card_code": "SD02-005<PR>",
         "attributes": {
@@ -10604,6 +11192,7 @@ const cards = [
         "acquisition_method": "EP04"
     },
     {
+        "card_id": 838,
         "card_name": "歐根親王",
         "card_code": "SD03-011<PR>",
         "attributes": {
@@ -10622,6 +11211,7 @@ const cards = [
         "acquisition_method": "WORLD CHAMPIONSHIP 2024預選賽"
     },
     {
+        "card_id": 839,
         "card_name": "赤城",
         "card_code": "SD04-001覺醒<PR>",
         "attributes": {
@@ -10640,6 +11230,7 @@ const cards = [
         "acquisition_method": "WORLD CHAMPIONSHIP 2024預選賽"
     },
     {
+        "card_id": 840,
         "card_name": "格洛斯特",
         "card_code": "BP01-037<PR>",
         "attributes": {
@@ -10658,6 +11249,7 @@ const cards = [
         "acquisition_method": "線下活動"
     },
     {
+        "card_id": 841,
         "card_name": "三笠",
         "card_code": "SD05-001",
         "attributes": {
@@ -10676,6 +11268,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 842,
         "card_name": "三笠",
         "card_code": "SD05-001覺醒",
         "attributes": {
@@ -10694,6 +11287,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 843,
         "card_name": "睦月",
         "card_code": "SD05-002",
         "attributes": {
@@ -10712,6 +11306,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 844,
         "card_name": "睦月.改",
         "card_code": "SD05-003",
         "attributes": {
@@ -10730,6 +11325,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 845,
         "card_name": "如月.改",
         "card_code": "SD05-004",
         "attributes": {
@@ -10748,6 +11344,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 846,
         "card_name": "綾波.改",
         "card_code": "SD05-005",
         "attributes": {
@@ -10766,6 +11363,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 847,
         "card_name": "標槍.改",
         "card_code": "SD05-006",
         "attributes": {
@@ -10784,6 +11382,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 848,
         "card_name": "半人馬",
         "card_code": "SD05-007",
         "attributes": {
@@ -10802,6 +11401,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 849,
         "card_name": "博物館崩壞",
         "card_code": "SD05-008",
         "attributes": {
@@ -10820,6 +11420,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 850,
         "card_name": "迷你博物館",
         "card_code": "SD05-009",
         "attributes": {
@@ -10838,6 +11439,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 851,
         "card_name": "巧克力交流會",
         "card_code": "SD05-010",
         "attributes": {
@@ -10856,6 +11458,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 852,
         "card_name": "禮儀指導",
         "card_code": "SD05-011",
         "attributes": {
@@ -10874,6 +11477,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 853,
         "card_name": "如月",
         "card_code": "BP03-002<SD05>",
         "attributes": {
@@ -10892,6 +11496,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 854,
         "card_name": "綾波",
         "card_code": "BP03-004<SD05>",
         "attributes": {
@@ -10910,6 +11515,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 855,
         "card_name": "標槍",
         "card_code": "BP03-039<SD05>",
         "attributes": {
@@ -10928,6 +11534,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 856,
         "card_name": "綾波",
         "card_code": "CP01-001<SD05>",
         "attributes": {
@@ -10946,6 +11553,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 857,
         "card_name": "標槍",
         "card_code": "CP01-014<SD05>",
         "attributes": {
@@ -10964,6 +11572,7 @@ const cards = [
         "acquisition_method": "SD05"
     },
     {
+        "card_id": 858,
         "card_name": "羅恩",
         "card_code": "SD06-001",
         "attributes": {
@@ -10982,6 +11591,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 859,
         "card_name": "羅恩",
         "card_code": "SD06-001覺醒",
         "attributes": {
@@ -11000,6 +11610,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 860,
         "card_name": "拉菲.改",
         "card_code": "SD06-002",
         "attributes": {
@@ -11018,6 +11629,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 861,
         "card_name": "貝利.改",
         "card_code": "SD06-003",
         "attributes": {
@@ -11036,6 +11648,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 862,
         "card_name": "尼古拉斯",
         "card_code": "SD06-004",
         "attributes": {
@@ -11054,6 +11667,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 863,
         "card_name": "尼古拉斯.改",
         "card_code": "SD06-005",
         "attributes": {
@@ -11072,6 +11686,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 864,
         "card_name": "Z23.改",
         "card_code": "SD06-006",
         "attributes": {
@@ -11090,6 +11705,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 865,
         "card_name": "U-410",
         "card_code": "SD06-007",
         "attributes": {
@@ -11108,6 +11724,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 866,
         "card_name": "慶典巡游",
         "card_code": "SD06-008",
         "attributes": {
@@ -11126,6 +11743,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 867,
         "card_name": "深海的旋律",
         "card_code": "SD06-009",
         "attributes": {
@@ -11144,6 +11762,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 868,
         "card_name": "秘密配方",
         "card_code": "SD06-010",
         "attributes": {
@@ -11162,6 +11781,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 869,
         "card_name": "閃襲",
         "card_code": "SD06-011",
         "attributes": {
@@ -11180,6 +11800,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 870,
         "card_name": "貝利",
         "card_code": "BP02-026<SD06>",
         "attributes": {
@@ -11198,6 +11819,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 871,
         "card_name": "拉菲",
         "card_code": "BP03-021<SD06>",
         "attributes": {
@@ -11216,6 +11838,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 872,
         "card_name": "Z23",
         "card_code": "BP03-055<SD06>",
         "attributes": {
@@ -11234,6 +11857,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 873,
         "card_name": "拉菲",
         "card_code": "CP01-007<SD06>",
         "attributes": {
@@ -11252,6 +11876,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 874,
         "card_name": "Z23",
         "card_code": "CP01-019<SD06>",
         "attributes": {
@@ -11270,6 +11895,7 @@ const cards = [
         "acquisition_method": "SD06"
     },
     {
+        "card_id": 875,
         "card_name": "信濃",
         "card_code": "BP04-069<PR>",
         "attributes": {
@@ -11288,6 +11914,7 @@ const cards = [
         "acquisition_method": "碧藍戰卡WORLD CHAMPIONSHIP 2024總決賽"
     },
     {
+        "card_id": 876,
         "card_name": "霧島",
         "card_code": "BP02-015<PR>",
         "attributes": {
@@ -11306,6 +11933,7 @@ const cards = [
         "acquisition_method": "線下活動"
     },
     {
+        "card_id": 877,
         "card_name": "約克",
         "card_code": "BP02-062<PR>",
         "attributes": {
@@ -11324,6 +11952,7 @@ const cards = [
         "acquisition_method": "線下活動"
     },
     {
+        "card_id": 878,
         "card_name": "大鳳",
         "card_code": "BP02-016<PR>",
         "attributes": {
@@ -11342,6 +11971,7 @@ const cards = [
         "acquisition_method": "SD05/SD06限時特殊兌換碼"
     },
     {
+        "card_id": 879,
         "card_name": "綾波",
         "card_code": "BP02-005<PR>",
         "attributes": {
@@ -11360,6 +11990,7 @@ const cards = [
         "acquisition_method": "【誓約決定戰】第一期"
     },
     {
+        "card_id": 881,
         "card_name": "讓·巴爾",
         "card_code": "BP05-001",
         "attributes": {
@@ -11378,6 +12009,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 882,
         "card_name": "讓·巴爾",
         "card_code": "BP05-001覺醒",
         "attributes": {
@@ -11396,6 +12028,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 883,
         "card_name": "讓·巴爾",
         "card_code": "BP05-001覺醒<SEC>",
         "attributes": {
@@ -11414,6 +12047,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 884,
         "card_name": "綾波",
         "card_code": "BP05-002",
         "attributes": {
@@ -11432,6 +12066,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 885,
         "card_name": "綾波.改",
         "card_code": "BP05-003",
         "attributes": {
@@ -11450,6 +12085,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 886,
         "card_name": "伊26",
         "card_code": "BP05-004",
         "attributes": {
@@ -11468,6 +12104,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 887,
         "card_name": "伊13",
         "card_code": "BP05-005",
         "attributes": {
@@ -11486,6 +12123,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 888,
         "card_name": "伊13",
         "card_code": "BP05-005<SEC>",
         "attributes": {
@@ -11504,6 +12142,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 889,
         "card_name": "勒馬爾",
         "card_code": "BP05-006",
         "attributes": {
@@ -11522,6 +12161,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 890,
         "card_name": "勒馬爾.改",
         "card_code": "BP05-007",
         "attributes": {
@@ -11540,6 +12180,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 891,
         "card_name": "塔爾圖",
         "card_code": "BP05-008",
         "attributes": {
@@ -11558,6 +12199,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 892,
         "card_name": "拉·加利索尼埃",
         "card_code": "BP05-009",
         "attributes": {
@@ -11576,6 +12218,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 893,
         "card_name": "馬賽曲",
         "card_code": "BP05-010",
         "attributes": {
@@ -11594,6 +12237,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 894,
         "card_name": "敦克爾克",
         "card_code": "BP05-011",
         "attributes": {
@@ -11612,6 +12256,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 895,
         "card_name": "加斯科涅",
         "card_code": "BP05-012",
         "attributes": {
@@ -11630,6 +12275,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 896,
         "card_name": "加斯科涅",
         "card_code": "BP05-012<SEC>",
         "attributes": {
@@ -11648,6 +12294,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 897,
         "card_name": "霞飛",
         "card_code": "BP05-013",
         "attributes": {
@@ -11666,6 +12313,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 898,
         "card_name": "霞飛",
         "card_code": "BP05-013<SEC>",
         "attributes": {
@@ -11684,6 +12332,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 899,
         "card_name": "影之海",
         "card_code": "BP05-014",
         "attributes": {
@@ -11702,6 +12351,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 900,
         "card_name": "護教之光",
         "card_code": "BP05-015",
         "attributes": {
@@ -11720,6 +12370,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 901,
         "card_name": "海濱之花",
         "card_code": "BP05-016",
         "attributes": {
@@ -11738,6 +12389,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 902,
         "card_name": "黎胥留",
         "card_code": "BP05-017",
         "attributes": {
@@ -11756,6 +12408,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 903,
         "card_name": "黎胥留",
         "card_code": "BP05-017覺醒",
         "attributes": {
@@ -11774,6 +12427,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 904,
         "card_name": "黎胥留",
         "card_code": "BP05-017覺醒<SEC>",
         "attributes": {
@@ -11792,6 +12446,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 905,
         "card_name": "拉菲",
         "card_code": "BP05-018",
         "attributes": {
@@ -11810,6 +12465,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 906,
         "card_name": "拉菲.改",
         "card_code": "BP05-019",
         "attributes": {
@@ -11828,6 +12484,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 907,
         "card_name": "阿拉巴馬",
         "card_code": "BP05-020",
         "attributes": {
@@ -11846,6 +12503,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 908,
         "card_name": "阿拉巴馬",
         "card_code": "BP05-020<SEC>",
         "attributes": {
@@ -11864,6 +12522,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 909,
         "card_name": "福爾班",
         "card_code": "BP05-021",
         "attributes": {
@@ -11882,6 +12541,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 910,
         "card_name": "福爾班.改",
         "card_code": "BP05-022",
         "attributes": {
@@ -11900,6 +12560,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 911,
         "card_name": "魯莽",
         "card_code": "BP05-023",
         "attributes": {
@@ -11918,6 +12579,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 912,
         "card_name": "倔強",
         "card_code": "BP05-024",
         "attributes": {
@@ -11936,6 +12598,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 913,
         "card_name": "馬耶·布雷澤",
         "card_code": "BP05-025",
         "attributes": {
@@ -11954,6 +12617,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 914,
         "card_name": "凱旋",
         "card_code": "BP05-026",
         "attributes": {
@@ -11972,6 +12636,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 915,
         "card_name": "凱旋",
         "card_code": "BP05-026<SEC>",
         "attributes": {
@@ -11990,6 +12655,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 916,
         "card_name": "路易九世",
         "card_code": "BP05-027",
         "attributes": {
@@ -12008,6 +12674,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 917,
         "card_name": "路易九世",
         "card_code": "BP05-027<SEC>",
         "attributes": {
@@ -12026,6 +12693,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 918,
         "card_name": "速科夫",
         "card_code": "BP05-028",
         "attributes": {
@@ -12044,6 +12712,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 919,
         "card_name": "湮燼塵墟",
         "card_code": "BP05-029",
         "attributes": {
@@ -12062,6 +12731,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 920,
         "card_name": "授劍之誓",
         "card_code": "BP05-030",
         "attributes": {
@@ -12080,6 +12750,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 921,
         "card_name": "騎士公主的禮儀",
         "card_code": "BP05-031",
         "attributes": {
@@ -12098,6 +12769,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 922,
         "card_name": "光之海",
         "card_code": "BP05-032",
         "attributes": {
@@ -12116,6 +12788,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 923,
         "card_name": "怨仇",
         "card_code": "BP05-033",
         "attributes": {
@@ -12134,6 +12807,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 924,
         "card_name": "怨仇",
         "card_code": "BP05-033覺醒",
         "attributes": {
@@ -12152,6 +12826,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 925,
         "card_name": "怨仇",
         "card_code": "BP05-033覺醒<SEC>",
         "attributes": {
@@ -12170,6 +12845,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 926,
         "card_name": "命運女神",
         "card_code": "BP05-034",
         "attributes": {
@@ -12188,6 +12864,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 927,
         "card_name": "命運女神.改",
         "card_code": "BP05-035",
         "attributes": {
@@ -12206,6 +12883,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 928,
         "card_name": "標槍",
         "card_code": "BP05-036",
         "attributes": {
@@ -12224,6 +12902,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 929,
         "card_name": "標槍.改",
         "card_code": "BP05-037",
         "attributes": {
@@ -12242,6 +12921,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 930,
         "card_name": "阿瑞托莎",
         "card_code": "BP05-038",
         "attributes": {
@@ -12260,6 +12940,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 931,
         "card_name": "厭戰",
         "card_code": "BP05-039",
         "attributes": {
@@ -12278,6 +12959,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 932,
         "card_name": "厭戰",
         "card_code": "BP05-039<SEC>",
         "attributes": {
@@ -12296,6 +12978,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 933,
         "card_name": "皇家方舟",
         "card_code": "BP05-040",
         "attributes": {
@@ -12314,6 +12997,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 934,
         "card_name": "皇家方舟",
         "card_code": "BP05-040<SEC>",
         "attributes": {
@@ -12332,6 +13016,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 935,
         "card_name": "獨角獸",
         "card_code": "BP05-041",
         "attributes": {
@@ -12350,6 +13035,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 936,
         "card_name": "獨角獸.改",
         "card_code": "BP05-042",
         "attributes": {
@@ -12368,6 +13054,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 937,
         "card_name": "獨角獸.改",
         "card_code": "BP05-042<SEC>",
         "attributes": {
@@ -12386,6 +13073,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 938,
         "card_name": "埃米爾·貝爾坦",
         "card_code": "BP05-043",
         "attributes": {
@@ -12404,6 +13092,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 939,
         "card_name": "埃米爾·貝爾坦.改",
         "card_code": "BP05-044",
         "attributes": {
@@ -12422,6 +13111,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 940,
         "card_name": "聖堂遠征",
         "card_code": "BP05-045",
         "attributes": {
@@ -12440,6 +13130,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 941,
         "card_name": "前路探索",
         "card_code": "BP05-046",
         "attributes": {
@@ -12458,6 +13149,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 942,
         "card_name": "旗幟之下",
         "card_code": "BP05-047",
         "attributes": {
@@ -12476,6 +13168,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 943,
         "card_name": "雨後之虹",
         "card_code": "BP05-048",
         "attributes": {
@@ -12494,6 +13187,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 944,
         "card_name": "彼得·史特拉塞",
         "card_code": "BP05-049",
         "attributes": {
@@ -12512,6 +13206,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 945,
         "card_name": "彼得·史特拉塞",
         "card_code": "BP05-049覺醒",
         "attributes": {
@@ -12530,6 +13225,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 946,
         "card_name": "彼得·史特拉塞",
         "card_code": "BP05-049覺醒<SEC>",
         "attributes": {
@@ -12548,6 +13244,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 947,
         "card_name": "Z1",
         "card_code": "BP05-050",
         "attributes": {
@@ -12566,6 +13263,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 948,
         "card_name": "Z1.改",
         "card_code": "BP05-051",
         "attributes": {
@@ -12584,6 +13282,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 949,
         "card_name": "Z23",
         "card_code": "BP05-052",
         "attributes": {
@@ -12602,6 +13301,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 950,
         "card_name": "Z23.改",
         "card_code": "BP05-053",
         "attributes": {
@@ -12620,6 +13320,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 951,
         "card_name": "Z46",
         "card_code": "BP05-054",
         "attributes": {
@@ -12638,6 +13339,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 952,
         "card_name": "Z46",
         "card_code": "BP05-054<SEC>",
         "attributes": {
@@ -12656,6 +13358,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 953,
         "card_name": "萊比錫",
         "card_code": "BP05-055",
         "attributes": {
@@ -12674,6 +13377,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 954,
         "card_name": "萊比錫.改",
         "card_code": "BP05-056",
         "attributes": {
@@ -12692,6 +13396,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 955,
         "card_name": "腓特烈大帝",
         "card_code": "BP05-057",
         "attributes": {
@@ -12710,6 +13415,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 956,
         "card_name": "腓特烈大帝",
         "card_code": "BP05-057<SEC>",
         "attributes": {
@@ -12728,6 +13434,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 957,
         "card_name": "U-101",
         "card_code": "BP05-058",
         "attributes": {
@@ -12746,6 +13453,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 958,
         "card_name": "U-101",
         "card_code": "BP05-<SEC>",
         "attributes": {
@@ -12764,6 +13472,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 959,
         "card_name": "沃克蘭",
         "card_code": "BP05-059",
         "attributes": {
@@ -12782,6 +13491,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 960,
         "card_name": "福煦",
         "card_code": "BP05-060",
         "attributes": {
@@ -12800,6 +13510,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 961,
         "card_name": "侵攻之時",
         "card_code": "BP05-061",
         "attributes": {
@@ -12818,6 +13529,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 962,
         "card_name": "殲滅指令",
         "card_code": "BP05-062",
         "attributes": {
@@ -12836,6 +13548,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 963,
         "card_name": "雪下之詣",
         "card_code": "BP05-063",
         "attributes": {
@@ -12854,6 +13567,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 964,
         "card_name": "迅擊鐵翼",
         "card_code": "BP05-064",
         "attributes": {
@@ -12872,6 +13586,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 965,
         "card_name": "新年御神籤",
         "card_code": "BP05-065",
         "attributes": {
@@ -12890,6 +13605,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 966,
         "card_name": "可怖",
         "card_code": "BP05-066",
         "attributes": {
@@ -12908,6 +13624,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 967,
         "card_name": "可怖",
         "card_code": "BP05-066<SEC>",
         "attributes": {
@@ -12926,6 +13643,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 968,
         "card_name": "泛用型布里",
         "card_code": "BP05-067",
         "attributes": {
@@ -12944,6 +13662,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 969,
         "card_name": "夜宴之約",
         "card_code": "BP05-068",
         "attributes": {
@@ -12962,6 +13681,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 970,
         "card_name": "教國之劍",
         "card_code": "BP05-069",
         "attributes": {
@@ -12980,6 +13700,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 971,
         "card_name": "認真與慵懶",
         "card_code": "BP05-070",
         "attributes": {
@@ -12998,6 +13719,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 972,
         "card_name": "訣別",
         "card_code": "BP05-071",
         "attributes": {
@@ -13016,6 +13738,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 973,
         "card_name": "毀滅與救贖",
         "card_code": "BP05-072",
         "attributes": {
@@ -13034,6 +13757,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 974,
         "card_name": "最速傳說",
         "card_code": "BP05-073",
         "attributes": {
@@ -13052,6 +13776,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 975,
         "card_name": "假日日常",
         "card_code": "BP05-074",
         "attributes": {
@@ -13070,6 +13795,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 976,
         "card_name": "金剛",
         "card_code": "BP05-075",
         "attributes": {
@@ -13088,6 +13814,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 977,
         "card_name": "金剛",
         "card_code": "BP05-075覺醒",
         "attributes": {
@@ -13106,6 +13833,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 978,
         "card_name": "金剛",
         "card_code": "BP05-075覺醒<SEC>",
         "attributes": {
@@ -13124,6 +13852,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 979,
         "card_name": "阿爾及利亞",
         "card_code": "BP05-076",
         "attributes": {
@@ -13142,6 +13871,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 980,
         "card_name": "阿爾及利亞",
         "card_code": "BP05-076覺醒",
         "attributes": {
@@ -13160,6 +13890,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 981,
         "card_name": "阿爾及利亞",
         "card_code": "BP05-076覺醒<SEC>",
         "attributes": {
@@ -13178,6 +13909,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 982,
         "card_name": "聖女貞德",
         "card_code": "BP05-077",
         "attributes": {
@@ -13196,6 +13928,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 983,
         "card_name": "聖女貞德",
         "card_code": "BP05-077覺醒",
         "attributes": {
@@ -13214,6 +13947,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 984,
         "card_name": "聖女貞德",
         "card_code": "BP05-077覺醒<SEC>",
         "attributes": {
@@ -13232,6 +13966,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 985,
         "card_name": "射水魚",
         "card_code": "BP05-078",
         "attributes": {
@@ -13250,6 +13985,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 986,
         "card_name": "射水魚",
         "card_code": "BP05-078覺醒",
         "attributes": {
@@ -13268,6 +14004,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 987,
         "card_name": "射水魚",
         "card_code": "BP05-078覺醒<SEC>",
         "attributes": {
@@ -13286,6 +14023,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 988,
         "card_name": "克里蒙梭",
         "card_code": "BP05-079",
         "attributes": {
@@ -13304,6 +14042,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 989,
         "card_name": "克里蒙梭",
         "card_code": "BP05-079<SEC>",
         "attributes": {
@@ -13322,6 +14061,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 990,
         "card_name": "布雷斯特",
         "card_code": "BP05-080",
         "attributes": {
@@ -13340,6 +14080,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 991,
         "card_name": "布雷斯特",
         "card_code": "BP05-080<SEC>",
         "attributes": {
@@ -13358,6 +14099,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 993,
         "card_name": "自由鳶尾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -13376,6 +14118,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 1008,
         "card_name": "維希教廷魔方卡",
         "card_code": "-",
         "attributes": {
@@ -13394,6 +14137,7 @@ const cards = [
         "acquisition_method": "BP05"
     },
     {
+        "card_id": 1009,
         "card_name": "南安普敦",
         "card_code": "BP01-035<PR>",
         "attributes": {
@@ -13412,6 +14156,7 @@ const cards = [
         "acquisition_method": "EP05"
     },
     {
+        "card_id": 1010,
         "card_name": "追風",
         "card_code": "BP02-003<PR>",
         "attributes": {
@@ -13430,6 +14175,7 @@ const cards = [
         "acquisition_method": "EP05"
     },
     {
+        "card_id": 1011,
         "card_name": "赤城",
         "card_code": "BP04-011<PR>",
         "attributes": {
@@ -13448,6 +14194,7 @@ const cards = [
         "acquisition_method": "EP05"
     },
     {
+        "card_id": 1012,
         "card_name": "Z24",
         "card_code": "BP04-052<PR>",
         "attributes": {
@@ -13466,6 +14213,7 @@ const cards = [
         "acquisition_method": "EP05"
     },
     {
+        "card_id": 1013,
         "card_name": "藍鰓魚",
         "card_code": "EX01-009<PR>",
         "attributes": {
@@ -13484,6 +14232,7 @@ const cards = [
         "acquisition_method": "EP05"
     },
     {
+        "card_id": 1014,
         "card_name": "可畏",
         "card_code": "BP01-042<PR>",
         "attributes": {
@@ -13502,6 +14251,7 @@ const cards = [
         "acquisition_method": "泳裝爭奪戰 第二期"
     },
     {
+        "card_id": 1015,
         "card_name": "吹雪",
         "card_code": "TP01-001",
         "attributes": {
@@ -13520,6 +14270,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1016,
         "card_name": "綾波",
         "card_code": "TP01-002",
         "attributes": {
@@ -13538,6 +14289,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1017,
         "card_name": "夕立",
         "card_code": "TP01-003",
         "attributes": {
@@ -13556,6 +14308,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1018,
         "card_name": "酒匂",
         "card_code": "TP01-004",
         "attributes": {
@@ -13574,6 +14327,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1019,
         "card_name": "山城",
         "card_code": "TP01-005",
         "attributes": {
@@ -13592,6 +14346,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1020,
         "card_name": "赤城(μ兵裝)",
         "card_code": "TP01-006",
         "attributes": {
@@ -13610,6 +14365,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1021,
         "card_name": "赤城(μ兵裝)",
         "card_code": "TP01-006<SEC>",
         "attributes": {
@@ -13628,6 +14384,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1022,
         "card_name": "明石",
         "card_code": "TP01-007",
         "attributes": {
@@ -13646,6 +14403,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1023,
         "card_name": "舞台對決",
         "card_code": "TP01-008",
         "attributes": {
@@ -13664,6 +14422,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1024,
         "card_name": "Polaris",
         "card_code": "TP01-009",
         "attributes": {
@@ -13682,6 +14441,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1025,
         "card_name": "Polaris",
         "card_code": "TP01-009<SPR>",
         "attributes": {
@@ -13700,6 +14460,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1026,
         "card_name": "哈曼",
         "card_code": "TP01-010",
         "attributes": {
@@ -13718,6 +14479,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1027,
         "card_name": "拉菲",
         "card_code": "TP01-011",
         "attributes": {
@@ -13736,6 +14498,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1028,
         "card_name": "埃爾德里奇",
         "card_code": "TP01-012",
         "attributes": {
@@ -13754,6 +14517,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1029,
         "card_name": "聖地牙哥",
         "card_code": "TP01-013",
         "attributes": {
@@ -13772,6 +14536,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1030,
         "card_name": "巴爾的摩(μ兵裝)",
         "card_code": "TP01-014",
         "attributes": {
@@ -13790,6 +14555,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1031,
         "card_name": "巴爾的摩(μ兵裝)",
         "card_code": "TP01-014<SEC>",
         "attributes": {
@@ -13808,6 +14574,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1032,
         "card_name": "薩拉托加",
         "card_code": "TP01-015",
         "attributes": {
@@ -13826,6 +14593,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1033,
         "card_name": "大青花魚(μ兵裝)",
         "card_code": "TP01-016",
         "attributes": {
@@ -13844,6 +14612,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1034,
         "card_name": "大青花魚(μ兵裝)",
         "card_code": "TP01-016<SEC>",
         "attributes": {
@@ -13862,6 +14631,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1035,
         "card_name": "激唱的宇宙",
         "card_code": "TP01-017",
         "attributes": {
@@ -13880,6 +14650,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1036,
         "card_name": "激唱的宇宙",
         "card_code": "TP01-017<SPR>",
         "attributes": {
@@ -13898,6 +14669,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1037,
         "card_name": "我是No.1!",
         "card_code": "TP01-018",
         "attributes": {
@@ -13916,6 +14688,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1038,
         "card_name": "安可時間",
         "card_code": "TP01-019",
         "attributes": {
@@ -13934,6 +14707,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1039,
         "card_name": "吸血鬼",
         "card_code": "TP01-020",
         "attributes": {
@@ -13952,6 +14726,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1040,
         "card_name": "標槍",
         "card_code": "TP01-021",
         "attributes": {
@@ -13970,6 +14745,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1041,
         "card_name": "黛朵(μ兵裝)",
         "card_code": "TP01-022",
         "attributes": {
@@ -13988,6 +14764,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1042,
         "card_name": "黛朵(μ兵裝)",
         "card_code": "TP01-022<SEC>",
         "attributes": {
@@ -14006,6 +14783,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1043,
         "card_name": "伊莉莎白女王",
         "card_code": "TP01-023",
         "attributes": {
@@ -14024,6 +14802,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1044,
         "card_name": "厭戰",
         "card_code": "TP01-024",
         "attributes": {
@@ -14042,6 +14821,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1045,
         "card_name": "獨角獸",
         "card_code": "TP01-025",
         "attributes": {
@@ -14060,6 +14840,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1046,
         "card_name": "寧海",
         "card_code": "TP01-026",
         "attributes": {
@@ -14078,6 +14859,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1047,
         "card_name": "平海",
         "card_code": "TP01-027",
         "attributes": {
@@ -14096,6 +14878,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1048,
         "card_name": "塔什干(μ兵裝)",
         "card_code": "TP01-028",
         "attributes": {
@@ -14114,6 +14897,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1049,
         "card_name": "塔什干(μ兵裝)",
         "card_code": "TP01-028<SEC>",
         "attributes": {
@@ -14132,6 +14916,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1050,
         "card_name": "Astrum",
         "card_code": "TP01-029",
         "attributes": {
@@ -14150,6 +14935,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1051,
         "card_name": "Astrum",
         "card_code": "TP01-029<SPR>",
         "attributes": {
@@ -14168,6 +14954,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1052,
         "card_name": "Z23",
         "card_code": "TP01-030",
         "attributes": {
@@ -14186,6 +14973,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1053,
         "card_name": "Z46",
         "card_code": "TP01-031",
         "attributes": {
@@ -14204,6 +14992,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1054,
         "card_name": "羅恩(μ兵裝)",
         "card_code": "TP01-032",
         "attributes": {
@@ -14222,6 +15011,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1055,
         "card_name": "羅恩(μ兵裝)",
         "card_code": "TP01-032<SEC>",
         "attributes": {
@@ -14240,6 +15030,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1056,
         "card_name": "施佩伯爵將軍",
         "card_code": "TP01-033",
         "attributes": {
@@ -14258,6 +15049,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1057,
         "card_name": "希佩爾將軍（μ兵裝）",
         "card_code": "TP01-034",
         "attributes": {
@@ -14276,6 +15068,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1058,
         "card_name": "希佩爾將軍（μ兵裝）",
         "card_code": "TP01-034<SEC>",
         "attributes": {
@@ -14294,6 +15087,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1059,
         "card_name": "U-110",
         "card_code": "TP01-035",
         "attributes": {
@@ -14312,6 +15106,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1060,
         "card_name": "沃克蘭",
         "card_code": "TP01-036",
         "attributes": {
@@ -14330,6 +15125,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1061,
         "card_name": "加斯科涅(μ兵裝)",
         "card_code": "TP01-037",
         "attributes": {
@@ -14348,6 +15144,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1062,
         "card_name": "加斯科涅(μ兵裝)",
         "card_code": "TP01-037<SEC>",
         "attributes": {
@@ -14366,6 +15163,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1063,
         "card_name": "閃亮微笑",
         "card_code": "TP01-038",
         "attributes": {
@@ -14384,6 +15182,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1064,
         "card_name": "Verheerender",
         "card_code": "TP01-039",
         "attributes": {
@@ -14402,6 +15201,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1065,
         "card_name": "Verheerender",
         "card_code": "TP01-039<SPR>",
         "attributes": {
@@ -14420,6 +15220,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1066,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "TP01-040",
         "attributes": {
@@ -14438,6 +15239,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1067,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "TP01-040覺醒",
         "attributes": {
@@ -14456,6 +15258,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1068,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "TP01-040覺醒<SEC>",
         "attributes": {
@@ -14474,6 +15277,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1069,
         "card_name": "克里夫蘭(μ兵裝)",
         "card_code": "TP01-041",
         "attributes": {
@@ -14492,6 +15296,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1070,
         "card_name": "克里夫蘭(μ兵裝)",
         "card_code": "TP01-041<SEC>",
         "attributes": {
@@ -14510,6 +15315,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1071,
         "card_name": "謝菲爾德(μ兵裝)",
         "card_code": "TP01-042",
         "attributes": {
@@ -14528,6 +15334,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1072,
         "card_name": "謝菲爾德(μ兵裝)",
         "card_code": "TP01-042<SEC>",
         "attributes": {
@@ -14546,6 +15353,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1073,
         "card_name": "派對開場",
         "card_code": "TP01-043",
         "attributes": {
@@ -14564,6 +15372,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1074,
         "card_name": "lumière",
         "card_code": "TP01-044",
         "attributes": {
@@ -14582,6 +15391,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1075,
         "card_name": "lumière",
         "card_code": "TP01-044<SPR>",
         "attributes": {
@@ -14600,6 +15410,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1076,
         "card_name": "激奏舞台",
         "card_code": "TP01-045",
         "attributes": {
@@ -14618,6 +15429,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1077,
         "card_name": "激奏舞台",
         "card_code": "TP01-045<SPR><1>",
         "attributes": {
@@ -14636,6 +15448,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1078,
         "card_name": "激奏舞台",
         "card_code": "TP01-045<SPR><2>",
         "attributes": {
@@ -14654,6 +15467,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1079,
         "card_name": "主演登場",
         "card_code": "TP01-046",
         "attributes": {
@@ -14672,6 +15486,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1080,
         "card_name": "大鳳(μ兵裝)",
         "card_code": "TP01-047",
         "attributes": {
@@ -14690,6 +15505,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1081,
         "card_name": "大鳳(μ兵裝)",
         "card_code": "TP01-047覺醒",
         "attributes": {
@@ -14708,6 +15524,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1082,
         "card_name": "大鳳(μ兵裝)",
         "card_code": "TP01-047覺醒<SEC>",
         "attributes": {
@@ -14726,6 +15543,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1083,
         "card_name": "光輝(μ兵裝)",
         "card_code": "TP01-048",
         "attributes": {
@@ -14744,6 +15562,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1084,
         "card_name": "光輝(μ兵裝)",
         "card_code": "TP01-048覺醒",
         "attributes": {
@@ -14762,6 +15581,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1085,
         "card_name": "光輝(μ兵裝)",
         "card_code": "TP01-048覺醒<SEC>",
         "attributes": {
@@ -14780,6 +15600,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1086,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "TP01-049",
         "attributes": {
@@ -14798,6 +15619,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1087,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "TP01-049<SEC>",
         "attributes": {
@@ -14816,6 +15638,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1092,
         "card_name": "紐澤西",
         "card_code": "BP02-024覺醒<PR>",
         "attributes": {
@@ -14834,6 +15657,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1093,
         "card_name": "綾波.改",
         "card_code": "BP05-003<SEC>",
         "attributes": {
@@ -14852,6 +15676,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1094,
         "card_name": "拉菲.改",
         "card_code": "BP05-019<SEC>",
         "attributes": {
@@ -14870,6 +15695,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1095,
         "card_name": "標槍.改",
         "card_code": "BP05-037<SEC>",
         "attributes": {
@@ -14888,6 +15714,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1096,
         "card_name": "Z23.改",
         "card_code": "BP05-053<SEC>",
         "attributes": {
@@ -14906,6 +15733,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1097,
         "card_name": "拉菲",
         "card_code": "BP01-008<PR>",
         "attributes": {
@@ -14924,6 +15752,7 @@ const cards = [
         "acquisition_method": "【誓約決定戰】第二期"
     },
     {
+        "card_id": 1100,
         "card_name": "應援啾啾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -14942,6 +15771,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1101,
         "card_name": "偶像啾啾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -14960,6 +15790,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1102,
         "card_name": "樂隊啾啾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -14978,6 +15809,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1103,
         "card_name": "LIVE啾啾魔方卡",
         "card_code": "-",
         "attributes": {
@@ -14996,6 +15828,7 @@ const cards = [
         "acquisition_method": "TP01"
     },
     {
+        "card_id": 1104,
         "card_name": "白龍",
         "card_code": "BP06-001",
         "attributes": {
@@ -15014,6 +15847,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1105,
         "card_name": "白龍",
         "card_code": "BP06-001<覺醒>",
         "attributes": {
@@ -15032,6 +15866,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1106,
         "card_name": "白龍",
         "card_code": "BP06-001<覺醒><SEC>",
         "attributes": {
@@ -15050,6 +15885,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1107,
         "card_name": "島風",
         "card_code": "BP06-002",
         "attributes": {
@@ -15068,6 +15904,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1108,
         "card_name": "島風",
         "card_code": "BP06-002<SEC>",
         "attributes": {
@@ -15086,6 +15923,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1109,
         "card_name": "海風",
         "card_code": "BP06-003",
         "attributes": {
@@ -15104,6 +15942,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1110,
         "card_name": "不知火",
         "card_code": "BP06-004",
         "attributes": {
@@ -15122,6 +15961,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1111,
         "card_name": "不知火.改",
         "card_code": "BP06-005",
         "attributes": {
@@ -15140,6 +15980,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1112,
         "card_name": "能代",
         "card_code": "BP06-006",
         "attributes": {
@@ -15158,6 +15999,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1113,
         "card_name": "能代",
         "card_code": "BP06-006<SEC>",
         "attributes": {
@@ -15176,6 +16018,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1114,
         "card_name": "高雄",
         "card_code": "BP06-007",
         "attributes": {
@@ -15194,6 +16037,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1115,
         "card_name": "高雄",
         "card_code": "BP06-007<SEC>",
         "attributes": {
@@ -15212,6 +16056,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1116,
         "card_name": "伊勢",
         "card_code": "BP06-008",
         "attributes": {
@@ -15230,6 +16075,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1117,
         "card_name": "伊勢.改",
         "card_code": "BP06-009",
         "attributes": {
@@ -15248,6 +16094,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1118,
         "card_name": "日向",
         "card_code": "BP06-010",
         "attributes": {
@@ -15266,6 +16113,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1119,
         "card_name": "日向.改",
         "card_code": "BP06-011",
         "attributes": {
@@ -15284,6 +16132,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1120,
         "card_name": "駿河",
         "card_code": "BP06-012",
         "attributes": {
@@ -15302,6 +16151,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1121,
         "card_name": "駿河",
         "card_code": "BP06-012<SEC>",
         "attributes": {
@@ -15320,6 +16170,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1122,
         "card_name": "信濃",
         "card_code": "BP06-013",
         "attributes": {
@@ -15338,6 +16189,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1123,
         "card_name": "信濃",
         "card_code": "BP06-013<SEC>",
         "attributes": {
@@ -15356,6 +16208,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1124,
         "card_name": "龍宮探索",
         "card_code": "BP06-014",
         "attributes": {
@@ -15374,6 +16227,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1125,
         "card_name": "祕寶之試煉",
         "card_code": "BP06-015",
         "attributes": {
@@ -15392,6 +16246,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1126,
         "card_name": "臨時盟約",
         "card_code": "BP06-016",
         "attributes": {
@@ -15410,6 +16265,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1127,
         "card_name": "碧海光粼",
         "card_code": "BP06-017",
         "attributes": {
@@ -15428,12 +16284,13 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1128,
         "card_name": "海上浮城",
         "card_code": "BP06-018",
         "attributes": {
             "顏　色": "紅",
             "種　類": "事件卡",
-            "費　用": "-",
+            "費　用": "0",
             "戰　力": "-",
             "陣　營": "重櫻",
             "艦船類型": "-",
@@ -15446,6 +16303,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1129,
         "card_name": "聖路易斯",
         "card_code": "BP06-019",
         "attributes": {
@@ -15464,6 +16322,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1130,
         "card_name": "聖路易斯",
         "card_code": "BP06-019<覺醒>",
         "attributes": {
@@ -15482,6 +16341,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1131,
         "card_name": "聖路易斯",
         "card_code": "BP06-019<覺醒><SEC>",
         "attributes": {
@@ -15500,6 +16360,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1132,
         "card_name": "西雅圖",
         "card_code": "BP06-020",
         "attributes": {
@@ -15518,6 +16379,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1133,
         "card_name": "西雅圖",
         "card_code": "BP06-020<SEC>",
         "attributes": {
@@ -15536,6 +16398,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1134,
         "card_name": "火奴魯魯",
         "card_code": "BP06-021",
         "attributes": {
@@ -15554,6 +16417,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1135,
         "card_name": "海倫娜",
         "card_code": "BP06-022",
         "attributes": {
@@ -15572,6 +16436,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1136,
         "card_name": "海倫娜",
         "card_code": "BP06-023",
         "attributes": {
@@ -15590,6 +16455,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1137,
         "card_name": "海倫娜",
         "card_code": "BP06-023<SEC>",
         "attributes": {
@@ -15608,6 +16474,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1138,
         "card_name": "海倫娜.改",
         "card_code": "BP06-024",
         "attributes": {
@@ -15626,6 +16493,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1139,
         "card_name": "海倫娜.改",
         "card_code": "BP06-024<SEC>",
         "attributes": {
@@ -15644,6 +16512,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1140,
         "card_name": "朱諾",
         "card_code": "BP06-025",
         "attributes": {
@@ -15662,6 +16531,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1141,
         "card_name": "朱諾.改",
         "card_code": "BP06-026",
         "attributes": {
@@ -15680,6 +16550,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1142,
         "card_name": "聖地牙哥",
         "card_code": "BP06-027",
         "attributes": {
@@ -15698,6 +16569,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1143,
         "card_name": "聖地牙哥.改",
         "card_code": "BP06-028",
         "attributes": {
@@ -15716,6 +16588,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1144,
         "card_name": "聖地牙哥.改",
         "card_code": "BP06-028<SEC>",
         "attributes": {
@@ -15734,6 +16607,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1145,
         "card_name": "克里夫蘭",
         "card_code": "BP06-029",
         "attributes": {
@@ -15752,6 +16626,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1146,
         "card_name": "克里夫蘭",
         "card_code": "BP06-029<SEC>",
         "attributes": {
@@ -15770,6 +16645,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1147,
         "card_name": "蒙彼利埃",
         "card_code": "BP06-030",
         "attributes": {
@@ -15788,6 +16664,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1148,
         "card_name": "波特蘭",
         "card_code": "BP06-031",
         "attributes": {
@@ -15806,6 +16683,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1149,
         "card_name": "波特蘭.改",
         "card_code": "BP06-032",
         "attributes": {
@@ -15824,6 +16702,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1150,
         "card_name": "印第安納波利斯",
         "card_code": "BP06-033",
         "attributes": {
@@ -15842,6 +16721,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1151,
         "card_name": "火力先驅",
         "card_code": "BP06-034",
         "attributes": {
@@ -15860,6 +16740,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1152,
         "card_name": "糖分準備中",
         "card_code": "BP06-035",
         "attributes": {
@@ -15878,6 +16759,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1153,
         "card_name": "返廠維修",
         "card_code": "BP06-036",
         "attributes": {
@@ -15896,6 +16778,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1154,
         "card_name": "鎮海",
         "card_code": "BP06-037",
         "attributes": {
@@ -15914,6 +16797,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1155,
         "card_name": "鎮海",
         "card_code": "BP06-037<覺醒>",
         "attributes": {
@@ -15932,6 +16816,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1156,
         "card_name": "鎮海",
         "card_code": "BP06-037<覺醒><SEC>",
         "attributes": {
@@ -15950,6 +16835,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1157,
         "card_name": "撫順",
         "card_code": "BP06-038",
         "attributes": {
@@ -15968,6 +16854,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1158,
         "card_name": "逸仙",
         "card_code": "BP06-039",
         "attributes": {
@@ -15986,6 +16873,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1159,
         "card_name": "逸仙",
         "card_code": "BP06-040",
         "attributes": {
@@ -16004,6 +16892,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1160,
         "card_name": "逸仙.改",
         "card_code": "BP06-041",
         "attributes": {
@@ -16022,6 +16911,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1161,
         "card_name": "逸仙.改",
         "card_code": "BP06-041<SEC>",
         "attributes": {
@@ -16040,6 +16930,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1162,
         "card_name": "海天",
         "card_code": "BP06-042",
         "attributes": {
@@ -16058,6 +16949,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1163,
         "card_name": "海天",
         "card_code": "BP06-042<SEC>",
         "attributes": {
@@ -16076,6 +16968,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1164,
         "card_name": "海圻",
         "card_code": "BP06-043",
         "attributes": {
@@ -16094,6 +16987,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1165,
         "card_name": "海圻",
         "card_code": "BP06-043<SEC>",
         "attributes": {
@@ -16112,6 +17006,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1166,
         "card_name": "寧海",
         "card_code": "BP06-044",
         "attributes": {
@@ -16130,6 +17025,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1167,
         "card_name": "寧海.改",
         "card_code": "BP06-045",
         "attributes": {
@@ -16148,6 +17044,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1168,
         "card_name": "寧海.改",
         "card_code": "BP06-045<SEC>",
         "attributes": {
@@ -16166,6 +17063,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1169,
         "card_name": "平海",
         "card_code": "BP06-046",
         "attributes": {
@@ -16184,6 +17082,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1170,
         "card_name": "平海.改",
         "card_code": "BP06-047",
         "attributes": {
@@ -16202,6 +17101,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1171,
         "card_name": "平海.改",
         "card_code": "BP06-047<SEC>",
         "attributes": {
@@ -16220,6 +17120,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1172,
         "card_name": "華甲",
         "card_code": "BP06-048",
         "attributes": {
@@ -16238,6 +17139,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1173,
         "card_name": "辭舊迎新",
         "card_code": "BP06-049",
         "attributes": {
@@ -16256,6 +17158,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1174,
         "card_name": "玉兔的款待",
         "card_code": "BP06-050",
         "attributes": {
@@ -16274,6 +17177,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1175,
         "card_name": "美食巡禮",
         "card_code": "BP06-051",
         "attributes": {
@@ -16292,6 +17196,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1176,
         "card_name": "恕汝無罪",
         "card_code": "BP06-052",
         "attributes": {
@@ -16310,6 +17215,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1177,
         "card_name": "中秋醉月",
         "card_code": "BP06-053",
         "attributes": {
@@ -16328,6 +17234,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1178,
         "card_name": "奧古斯特·馮·帕塞瓦爾",
         "card_code": "BP06-054",
         "attributes": {
@@ -16346,6 +17253,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1179,
         "card_name": "奧古斯特·馮·帕塞瓦爾",
         "card_code": "BP06-054<覺醒>",
         "attributes": {
@@ -16364,6 +17272,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1180,
         "card_name": "奧古斯特·馮·帕塞瓦爾",
         "card_code": "BP06-054<覺醒><SEC>",
         "attributes": {
@@ -16382,6 +17291,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1181,
         "card_name": "埃爾賓",
         "card_code": "BP06-055",
         "attributes": {
@@ -16400,6 +17310,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1182,
         "card_name": "埃爾賓",
         "card_code": "BP06-056",
         "attributes": {
@@ -16418,6 +17329,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1183,
         "card_name": "埃爾賓",
         "card_code": "BP06-056<SEC>",
         "attributes": {
@@ -16436,6 +17348,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1184,
         "card_name": "卡爾斯魯厄",
         "card_code": "BP06-057",
         "attributes": {
@@ -16454,6 +17367,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1185,
         "card_name": "卡爾斯魯厄.改",
         "card_code": "BP06-058",
         "attributes": {
@@ -16472,6 +17386,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1186,
         "card_name": "科隆",
         "card_code": "BP06-059",
         "attributes": {
@@ -16490,6 +17405,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1187,
         "card_name": "科隆.改",
         "card_code": "BP06-060",
         "attributes": {
@@ -16508,6 +17424,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1188,
         "card_name": "塞德利茨",
         "card_code": "BP06-061",
         "attributes": {
@@ -16526,6 +17443,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1189,
         "card_name": "塞德利茨",
         "card_code": "BP06-061<SEC>",
         "attributes": {
@@ -16544,6 +17462,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1190,
         "card_name": "呂措",
         "card_code": "BP06-062",
         "attributes": {
@@ -16562,6 +17481,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1191,
         "card_name": "呂措",
         "card_code": "BP06-062<SEC>",
         "attributes": {
@@ -16580,6 +17500,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1192,
         "card_name": "腓特烈大帝",
         "card_code": "BP06-063",
         "attributes": {
@@ -16598,6 +17519,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1193,
         "card_name": "腓特烈大帝",
         "card_code": "BP06-063<SEC>",
         "attributes": {
@@ -16616,6 +17538,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1194,
         "card_name": "圖林根",
         "card_code": "BP06-064",
         "attributes": {
@@ -16634,6 +17557,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1195,
         "card_name": "圖林根",
         "card_code": "BP06-064<SEC>",
         "attributes": {
@@ -16652,6 +17576,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1196,
         "card_name": "U-73",
         "card_code": "BP06-065",
         "attributes": {
@@ -16670,6 +17595,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1197,
         "card_name": "往昔之影",
         "card_code": "BP06-066",
         "attributes": {
@@ -16688,6 +17614,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1198,
         "card_name": "阿瓦隆之門",
         "card_code": "BP06-067",
         "attributes": {
@@ -16706,6 +17633,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1199,
         "card_name": "誕生之時",
         "card_code": "BP06-068",
         "attributes": {
@@ -16724,6 +17652,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1200,
         "card_name": "永夜的魅影",
         "card_code": "BP06-069",
         "attributes": {
@@ -16742,6 +17671,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1201,
         "card_name": "紀伊",
         "card_code": "BP06-070",
         "attributes": {
@@ -16760,6 +17690,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1202,
         "card_name": "紀伊",
         "card_code": "BP06-070<覺醒>",
         "attributes": {
@@ -16778,6 +17709,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1203,
         "card_name": "紀伊",
         "card_code": "BP06-070<覺醒><SEC>",
         "attributes": {
@@ -16796,6 +17728,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1204,
         "card_name": "埃姆登",
         "card_code": "BP06-071",
         "attributes": {
@@ -16814,6 +17747,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1205,
         "card_name": "埃姆登",
         "card_code": "BP06-071<SEC>",
         "attributes": {
@@ -16832,6 +17766,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1206,
         "card_name": "埃姆登",
         "card_code": "BP06-071<覺醒>",
         "attributes": {
@@ -16850,6 +17785,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1207,
         "card_name": "埃姆登",
         "card_code": "BP06-071<覺醒><SEC>",
         "attributes": {
@@ -16868,6 +17804,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1208,
         "card_name": "哈爾濱",
         "card_code": "BP06-072",
         "attributes": {
@@ -16886,6 +17823,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1209,
         "card_name": "哈爾濱",
         "card_code": "BP06-072<SEC>",
         "attributes": {
@@ -16904,6 +17842,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1210,
         "card_name": "埃吉爾",
         "card_code": "BP06-073",
         "attributes": {
@@ -16922,6 +17861,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1211,
         "card_name": "埃吉爾",
         "card_code": "BP06-073<SEC>",
         "attributes": {
@@ -16940,6 +17880,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1212,
         "card_name": "安克拉治（魔方卡）",
         "card_code": "-",
         "attributes": {
@@ -16958,6 +17899,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1213,
         "card_name": "英仙座（魔方卡）",
         "card_code": "-",
         "attributes": {
@@ -16976,6 +17918,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1215,
         "card_name": "東煌魔方卡",
         "card_code": "-",
         "attributes": {
@@ -16994,6 +17937,7 @@ const cards = [
         "acquisition_method": "BP06"
     },
     {
+        "card_id": 1216,
         "card_name": "標槍",
         "card_code": "BP01-032<PR>",
         "attributes": {
@@ -17011,4 +17955,4 @@ const cards = [
         "card_effect": "■【每回合1次】此卡通過攻擊擊破對方的艦船卡或對對方的旗艦卡造成傷害時，將對方戰場上的1張費用為4或以下的艦船卡轉為休息狀態。",
         "acquisition_method": "誓約決定戰 第三期"
     }
-];
+]
