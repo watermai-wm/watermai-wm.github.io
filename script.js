@@ -305,9 +305,12 @@ function openImageModal(imageSrc) {
 }
 
 // 關閉圖片視窗
-function closeImageModal() {
-    document.getElementById('imageModal').style.display = 'none';
+function closeImageModal(event) {
+    if (event.target.id === 'imageModal') {
+        document.getElementById('imageModal').style.display = 'none';
+    }
 }
+
 
 function updatePagination(totalCards) {
     const totalPages = Math.ceil(totalCards / cardsPerPage);
