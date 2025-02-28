@@ -15,6 +15,37 @@ function populateFilterOptions() {
         filterSupportTypeGroup: '支援範圍',
         filterSupportValueGroup: '支援值',
     };
+	
+	const colorOrder = [
+        "紅", "藍", "黃", "黑",
+        "紅藍", "紅黃", "紅黑",
+        "藍黃", "藍黑", "黃黑",
+        "魔方", "無"
+    ];
+	
+	const factionOrder = [
+        "白鷹", "皇家", "鐵血", "重櫻",
+        "自由鳶尾", "維希教廷", "東煌",
+        "北方聯合"
+    ];
+	
+	const shiptypeOrder = [
+        "驅逐", "戰巡", "輕巡", "重巡",
+        "輕航", "航母", "潛艇", "戰列",
+        "維修", "潛母", "超巡", "航戰"
+    ];
+	
+	const rarityOrder = [
+        "N", "R", "SR", "SSR",
+        "UR", "L", "SR-SEC", "SSR-SEC",
+        "UR-SEC", "L-SEC", "PR", "N-SEC", "SPR"
+    ];
+	const forceOrder = [
+        "碧藍航線", "赤色中軸"
+    ];
+	const supporttypeOrder = [
+        "手牌", "戰場", "手牌·戰場"
+    ];
 
     Object.entries(filterMapping).forEach(([groupId, attributeKey]) => {
        // 使用 Set 來獲取唯一值，並過濾掉 "-"
@@ -25,22 +56,103 @@ function populateFilterOptions() {
         );
 
         const filterGroup = document.getElementById(groupId);
+		
+		//顏色排序
+		if (groupId === 'filterColorGroup') {
+            // 依照指定順序排序
+            const sortedValues = colorOrder.filter(color => uniqueValues.has(color));
 
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		//陣營排序
+		else if (groupId === 'filterFactionGroup') {
+            // 依照指定順序排序
+            const sortedValues = factionOrder.filter(faction => uniqueValues.has(faction));
+
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		//艦船類型排序
+		else if (groupId === 'filterShipTypeGroup') {
+            // 依照指定順序排序
+            const sortedValues = shiptypeOrder.filter(shipType => uniqueValues.has(shipType));
+
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		//稀有度排序
+		else if (groupId === 'filterRarityGroup') {
+            // 依照指定順序排序
+            const sortedValues = rarityOrder.filter(rarity => uniqueValues.has(rarity));
+
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		//勢力排序
+		else if (groupId === 'filterForceGroup') {
+            // 依照指定順序排序
+            const sortedValues = forceOrder.filter(force => uniqueValues.has(force));
+
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		//支援範圍排序
+		else if (groupId === 'filterSupportTypeGroup') {
+            // 依照指定順序排序
+            const sortedValues = supporttypeOrder.filter(supportType => uniqueValues.has(supportType));
+
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+
+        }
+		
+		else {
         // 針對數字類型屬性進行排序
         const sortedValues = Array.from(uniqueValues).sort((a, b) => {
-            if (!isNaN(a) && !isNaN(b)) {
-                return parseFloat(a) - parseFloat(b);
-            }
-            return a.localeCompare(b);
-        });
+                if (!isNaN(a) && !isNaN(b)) {
+                    return parseFloat(a) - parseFloat(b);
+                }
+                return a.localeCompare(b);
+            });
 
-        sortedValues.forEach(value => {
-            const label = document.createElement('label');
-            label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
-            filterGroup.appendChild(label);
-        });
+            sortedValues.forEach(value => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" name="${groupId}" value="${value}" onchange="searchCards()"> ${value}`;
+                filterGroup.appendChild(label);
+            });
+        }
     });
-	 // 填充「獲取方法」的下拉式選單
+
+    // 填充「獲取方法」的下拉式選單
     const obtainSelect = document.getElementById('filterObtainSelect');
     const uniqueObtainMethods = new Set(
         cards
@@ -87,7 +199,7 @@ function searchCards() {
         (filters.type.length === 0 || filters.type.includes(card.attributes['種　類'])) &&
         (filters.cost.length === 0 || filters.cost.includes(card.attributes['費　用'])) &&
         (filters.power.length === 0 || filters.power.includes(card.attributes['戰　力'])) &&
-        (filters.faction.length === 0 || filters.faction.includes(card.attributes['陣　營'])) &&
+        (filters.faction.length === 0 ||  filters.faction.some(faction => card.attributes['陣　營'].split('/').includes(faction))) && // 處理陣營為「白鷹/重櫻」的情況
         (filters.shipType.length === 0 || filters.shipType.includes(card.attributes['艦船類型'])) &&
         (filters.rarity.length === 0 || filters.rarity.includes(card.attributes['罕　貴'])) &&
         (filters.force.length === 0 || filters.force.includes(card.attributes['勢　力'])) &&
@@ -132,7 +244,9 @@ function displayResults(filteredCards) {
         cardImage.src = `images/${card.card_id}.png`; // 假設圖片存放在 images/ 資料夾中
         cardImage.alt = card.card_name; // 設置圖片的替代文字
         cardImage.classList.add('card-image');
+		cardImage.onclick = function() { openImageModal(this.src); }; // 新增點擊事件
         cardImageContainer.appendChild(cardImage); // 將圖片添加到圖片容器中
+		
 
         // 文字部分
         const cardText = document.createElement('div');
@@ -165,15 +279,103 @@ function displayResults(filteredCards) {
     updatePagination(filteredCards.length);
 }
 
+// 打開放大圖片視窗
+function openImageModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+	if (!modal || !modalImage) {
+        console.error("模態框或圖片未找到");
+        return;
+    }
+
+	
+    modalImage.src = imageSrc;
+    modal.style.display = 'flex'; // 顯示模態框
+}
+
+// 關閉圖片視窗
+function closeImageModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
+
 function updatePagination(totalCards) {
     const totalPages = Math.ceil(totalCards / cardsPerPage);
-    const pageInfo = document.getElementById('pageInfo');
-    pageInfo.textContent = `第 ${currentPage} 頁，共 ${totalPages} 頁`;
+    const paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = ''; // 清空現有分頁內容
 
-    const prevButton = document.getElementById('prevPage');
-    const nextButton = document.getElementById('nextPage');
+    if (totalPages <= 1) return; // 如果只有 1 頁，則不顯示分頁
+
+    // 創建「上一頁」按鈕
+    const prevButton = document.createElement('button');
+    prevButton.textContent = '上一頁';
+    prevButton.onclick = function () { changePage(-1); };
     prevButton.disabled = currentPage === 1;
+    paginationContainer.appendChild(prevButton);
+
+    // 動態生成頁碼按鈕
+    const maxPagesToShow = 5; // 顯示的最大頁碼數（不包含省略號）
+
+    if (totalPages <= maxPagesToShow) {
+        // 如果總頁數較少，直接顯示所有頁碼
+        for (let i = 1; i <= totalPages; i++) {
+            addPageButton(i);
+        }
+    } else {
+        // 確保「1」永遠出現在最前面
+        addPageButton(1);
+
+        // 當前頁碼前後的範圍
+        let startPage = Math.max(2, currentPage - 2);
+        let endPage = Math.min(totalPages - 1, currentPage + 2);
+
+        // 添加省略號
+        if (startPage > 2) {
+            addEllipsis();
+        }
+
+        // 添加範圍內的頁碼
+        for (let i = startPage; i <= endPage; i++) {
+            addPageButton(i);
+        }
+
+        // 添加省略號
+        if (endPage < totalPages - 1) {
+            addEllipsis();
+        }
+
+        // 確保「最後一頁」永遠出現在最右側
+        addPageButton(totalPages);
+    }
+
+    // 創建「下一頁」按鈕
+    const nextButton = document.createElement('button');
+    nextButton.textContent = '下一頁';
+    nextButton.onclick = function () { changePage(1); };
     nextButton.disabled = currentPage === totalPages;
+    paginationContainer.appendChild(nextButton);
+
+    // **輔助函式：添加頁碼按鈕**
+    function addPageButton(pageNumber) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = pageNumber;
+        pageButton.onclick = function () {
+            currentPage = pageNumber;
+            searchCards();
+        };
+        if (pageNumber === currentPage) {
+            pageButton.style.fontWeight = 'bold'; // 高亮顯示當前頁
+        }
+        paginationContainer.appendChild(pageButton);
+    }
+
+    // **輔助函式：添加省略號**
+    function addEllipsis() {
+        const ellipsis = document.createElement('span');
+        ellipsis.textContent = '...';
+        ellipsis.style.margin = '0 5px';
+        paginationContainer.appendChild(ellipsis);
+    }
 }
 
 function changePage(delta) {
@@ -199,6 +401,8 @@ function resetFilters() {
 
 // 當頁面加載時，填充篩選選項
 window.onload = function() {
+    document.getElementById('imageModal').style.display = 'none'; // 強制隱藏模態框
     populateFilterOptions();
     searchCards(); // 初始顯示所有卡片
 };
+
