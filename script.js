@@ -175,6 +175,7 @@ function searchCards() {
     const nameInput = document.getElementById('searchName').value.toLowerCase();
     const codeInput = document.getElementById('searchCode').value.toLowerCase();
     const effectInput = document.getElementById('searchEffect').value.toLowerCase();
+	const effectFilter = document.getElementById('filterEffectSelect').value; // 取得下拉選單選擇的值
 
     // 獲取選中的篩選條件
     const filters = {
@@ -205,7 +206,8 @@ function searchCards() {
         (filters.force.length === 0 || filters.force.includes(card.attributes['勢　力'])) &&
         (filters.supportType.length === 0 || filters.supportType.includes(card.attributes['支援範圍'])) &&
         (filters.supportValue.length === 0 || filters.supportValue.includes(card.attributes['支援值'])) &&
-        (filters.obtain === '' || card.acquisition_method === filters.obtain) // 篩選獲取方法
+        (filters.obtain === '' || card.acquisition_method === filters.obtain) && // 篩選獲取方法
+		(effectFilter === '' || (card.card_effect && card.card_effect.includes(effectFilter))) // 🔹 根據選單篩選技能關鍵字
     );
 
     displayResults(filteredCards);
@@ -401,7 +403,10 @@ function resetFilters() {
     document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
         checkbox.checked = false;
     });
-
+	
+	 // **重置下拉式選單到預設值**
+    document.getElementById('filterEffectSelect').selectedIndex = 0; // 設定為第一個選項
+ 
     // 重置分頁
     currentPage = 1;
     searchCards();
