@@ -275,6 +275,11 @@ function displayResults(filteredCards) {
         const cardEffect = document.createElement('p');
         cardEffect.textContent = `效果: ${card.card_effect}`;
         cardText.appendChild(cardEffect);
+		
+		// 顯示獲取方法
+        const obtainMethod = document.createElement('p');
+        obtainMethod.textContent = `獲取方法: ${card.acquisition_method}`;
+        cardText.appendChild(obtainMethod);
 
         resultsContainer.appendChild(cardElement);
     });
