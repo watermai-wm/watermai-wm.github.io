@@ -16869,7 +16869,7 @@ const cards = [
             "支援範圍": "手牌·戰場",
             "支援值": "100"
         },
-        "card_effect": "",
+        "card_effect": "【無】",
         "acquisition_method": "BP06"
     },
     {
@@ -17306,7 +17306,7 @@ const cards = [
             "支援範圍": "手牌·戰場",
             "支援值": "100"
         },
-        "card_effect": "",
+        "card_effect": "【無】",
         "acquisition_method": "BP06"
     },
     {
