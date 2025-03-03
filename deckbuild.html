@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>組牌模擬器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>組牌模擬器</h1>
+        <!-- 文字搜尋框 -->
+		<div class="search-inputs">
+			<input type="text" id="searchName" placeholder="輸入卡片名稱..." oninput="searchCards()">
+			<input type="text" id="searchCode" placeholder="輸入卡片編號..." oninput="searchCards()">
+			<input type="text" id="searchEffect" placeholder="輸入卡片效果..." oninput="searchCards()">
+		</div>
+        <!-- 多選式篩選條件 -->
+		<div class="filters">
+			<div class="filter-column">
+				<div class="filter-group" id="filterColorGroup">
+					<h3>顏色</h3>
+				</div>
+				<div class="filter-group" id="filterTypeGroup">
+					<h3>種類</h3>
+				</div>
+				<div class="filter-group" id="filterCostGroup">
+					<h3>費用</h3>
+				</div>
+				<div class="filter-group" id="filterPowerGroup">
+					<h3>戰力</h3>
+				</div>
+				<div class="filter-group" id="filterFactionGroup">
+					<h3>陣營</h3>
+				</div>
+			</div>
+			<div class="filter-column">
+				<div class="filter-group" id="filterShipTypeGroup">
+					<h3>艦船類型</h3>
+				</div>
+				<div class="filter-group" id="filterRarityGroup">
+					<h3>罕貴</h3>
+				</div>
+				<div class="filter-group" id="filterForceGroup">
+					<h3>勢力</h3>
+				</div>
+				<div class="filter-group" id="filterSupportTypeGroup">
+					<h3>支援範圍</h3>
+				</div>
+				<div class="filter-group" id="filterSupportValueGroup">
+					<h3>支援值</h3>
+				</div>
+				<div class="filter-group" id="filterObtainGroup">
+					<h3>獲取方法</h3>
+					<select id="filterObtainSelect" onchange="searchCards()">
+						<option value="">全部</option> <!-- 預設選項，顯示全部 -->
+					</select>
+				</div>
+				<div class="filter-group" id="filterEffectGroup">
+					<h3>技能關鍵字</h3>
+					<select id="filterEffectSelect" onchange="searchCards()">
+						<option value="">全部</option> <!-- 預設顯示所有卡片 -->
+						<option value="【無】">不擁有技能</option> 
+						<option value="強擊">【強擊】</option> 
+						<option value="固守">【固守】</option> 
+						<option value="【遠程】">【遠程】</option> 
+						<option value="【速攻】">【速攻】</option>
+						<option value="【速攻】">【改造】</option>
+						<option value="【登場時】">【登場時】</option> 
+						<option value="【己方回合結束時】">【己方回合結束時】</option> 
+						<option value="【己方回合中】">【己方回合中】</option> 
+						<option value="【對方回合中】">【對方回合中】</option> 
+						<option value="【每回合1次】">【每回合1次】</option>  
+						<option value="【攻擊時】">【攻擊時】</option> 
+						<option value="被攻擊時">【被攻擊時】</option> 
+						<option value="【被擊破時】">【被擊破時】</option> 
+						<option value="【轉為休息狀態時】">【轉為休息狀態時】】</option> 
+						<option value="【己方的主階段中】">【己方的主階段中】</option> 
+						<option value="【主階段啟動】">【主階段啟動】</option> 
+						<option value="【反制】">【反制】</option> 
+						<option value="【追擊】">【追擊】</option> 
+						<option value="【絕地反擊】">【絕地反擊】</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+        <!-- 重置按鈕 -->
+        <button onclick="resetFilters()">重置篩選條件</button>
+
+        <!-- 顯示查詢結果 -->
+        <div id="results"></div>
+
+        <!-- 分頁控制 -->
+        <div id="pagination">
+            <button id="prevPage" onclick="changePage(-1)">上一頁</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" onclick="changePage(1)">下一頁</button>
+        </div>
+		<h2>構築表</h2>
+		<button id="clearDeckButton">清空構築表</button>
+		<button id="shareDeckButton">分享構築(匯出成圖片)</button>
+		<div id="deckCounter" style="
+			background: rgba(0, 0, 0, 0.8);
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			//z-index: 1000;
+		">
+			卡牌數量: 0/50
+		</div>
+
+
+		<div id="deck"></div>
+		<div id="flagship"></div>
+    </div>
+	
+
+
+    <script src="data.js"></script>
+    <script src="deckbuild.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
