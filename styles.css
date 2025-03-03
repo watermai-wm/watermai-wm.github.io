@@ -285,3 +285,14 @@ button:disabled {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+/* 讓 Format 和 Level 並排顯示 */
+.filter-row {
+    display: flex;
+    justify-content: space-between; /* 左右對齊 */
+    gap: 20px; /* 設定間距 */
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    flex: 1; /* 讓兩個區塊平均分配空間 */
+}

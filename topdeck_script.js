@@ -1,16 +1,19 @@
 let currentDeckPage = 1;
 const decksPerPage = 10; // 每頁顯示的牌組數量
 
+
 function searchDecks() {
     const descriptionInput = document.getElementById('searchDescription').value.toLowerCase();
     const lNameFilter = document.getElementById('filterLNameSelect').value;
     const formatFilters = Array.from(document.querySelectorAll('input[name="filterFormat"]:checked')).map(checkbox => checkbox.value);
+    const levelFilters = Array.from(document.querySelectorAll('input[name="filterLevel"]:checked')).map(checkbox => checkbox.value);
 
     // **篩選符合條件的牌組**
     let filteredDecks = topDecks.filter(deck =>
         (descriptionInput === '' || (deck.Description && deck.Description.toLowerCase().includes(descriptionInput))) &&
         (lNameFilter === '' || deck.L_name === lNameFilter) &&
-        (formatFilters.length === 0 || formatFilters.includes(deck.Format))
+        (formatFilters.length === 0 || formatFilters.includes(deck.Format)) &&
+        (levelFilters.length === 0 || levelFilters.includes(deck.Level))
     );
 
     // **按照 deck_id 降冪排序**
@@ -18,6 +21,7 @@ function searchDecks() {
 
     displayDeckResults(filteredDecks);
 }
+
 
 
 function displayDeckResults(filteredDecks) {
@@ -59,7 +63,7 @@ function displayDeckResults(filteredDecks) {
 
         // **描述 (Description)**
         const deckDescription = document.createElement('p');
-        deckDescription.textContent = `描述: ${deck.Description || "無描述"}`;
+        deckDescription.textContent = `${deck.Description || "無描述"}`;
         deckElement.appendChild(deckDescription);
 
         resultsContainer.appendChild(deckElement);
@@ -179,19 +183,26 @@ function resetDeckFilters() {
     document.querySelectorAll('input[name="filterFormat"]').forEach(checkbox => {
         checkbox.checked = false;
     });
+    document.querySelectorAll('input[name="filterLevel"]').forEach(checkbox => {
+        checkbox.checked = false;
+    });
     currentDeckPage = 1;
     searchDecks();
 }
+
 function populateFilters() {
     const lNameSelect = document.getElementById('filterLNameSelect');
     const formatGroup = document.getElementById('filterFormatGroup');
+    const levelGroup = document.getElementById('filterLevelGroup');
     const uniqueLNames = new Set();
     const uniqueFormats = new Set();
+    const uniqueLevels = new Set();
 
-    // 取得所有 L_name 和 Format 的唯一值
+    // 取得所有 L_name、Format 和 Level 的唯一值
     topDecks.forEach(deck => {
         if (deck.L_name) uniqueLNames.add(deck.L_name);
         if (deck.Format) uniqueFormats.add(deck.Format);
+        if (deck.Level) uniqueLevels.add(deck.Level);
     });
 
     // 填充 L_name 選單
@@ -208,11 +219,32 @@ function populateFilters() {
         label.innerHTML = `<input type="checkbox" name="filterFormat" value="${format}" onchange="searchDecks()"> ${format}`;
         formatGroup.appendChild(label);
     });
+
+    // 填充 Level 多選 Checkbox
+    Array.from(uniqueLevels).sort().forEach(level => {
+        const label = document.createElement('label');
+        label.innerHTML = `<input type="checkbox" name="filterLevel" value="${level}" onchange="searchDecks()"> ${level}`;
+        levelGroup.appendChild(label);
+    });
 }
 
+// **顯示/隱藏圓餅圖**
+function toggleChart() {
+    const chartModal = document.getElementById("chartModal");
+    chartModal.style.display = "flex"; // **顯示模態框**
+}
+
+// **點擊模態框以外的地方關閉圓餅圖**
+function closeChartModal(event) {
+    if (event.target.id === "chartModal") {
+        document.getElementById("chartModal").style.display = "none";
+    }
+}
 // 當頁面加載時，初始化搜尋與篩選選單
 window.onload = function () {
 	document.getElementById('imageModal').style.display = 'none'; // 強制隱藏模態框
+	document.getElementById('chartModal').style.display = 'none'; // 強制隱藏模態框
     populateFilters();
     searchDecks();
+	generateChampionChart();
 };
