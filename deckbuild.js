@@ -246,7 +246,7 @@ function renderCards(filteredCards) {
     paginatedCards.forEach(card => {
         let cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
-		cardDiv.style.width = "150px";
+		cardDiv.style.width = "200px";
         cardDiv.style.textAlign = "center";
         
         let cardHTML = `
@@ -290,7 +290,11 @@ function renderCards(filteredCards) {
         cardDiv.innerHTML = cardHTML;
         resultsDiv.appendChild(cardDiv);
     });
+	// Render pagination buttons
+    renderPagination(filteredCards.length);
 }
+
+
 
 function updateDeck(cardID, count) {
     let card = allCards.find(c => c.card_id == cardID);
@@ -375,7 +379,7 @@ function renderDeck() {
             
             if (costA !== costB) return costB - costA;
             
-            return a.card_code.localeCompare(b.card_code, 'zh-Hans-CN');
+            return b.card_code.localeCompare(a.card_code, 'zh-Hans-CN');
         });
     
     sortedDeck.forEach(card => {
@@ -396,8 +400,8 @@ function createCardElement(card, count) {
             <img src="images/${card.card_id}.png" class="deck-image" alt="${card.card_name}" style="width: 100px; height: auto; cursor: pointer;" onclick="openImageModal(this.src)">
             <div class="deck-overlay" style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 14px;">${count}</div>
         </div>
-        <div class="card-info" style="font-size: 18px; margin-top: 5px; text-align: center;">
-            <div>${card.card_code}</div>
+        <div class="card-info" style="font-size: 14px; margin-top: 5px; text-align: center;">
+            <div>${card.card_code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
             <div>${card.card_name}</div>
         </div>
     `;
@@ -444,10 +448,127 @@ function closeImageModal(event) {
 }
 
 
-function changePage(direction) {
-    currentPage += direction;
-    searchCards();
+//分頁
+function renderPagination(totalItems) {
+    const totalPages = Math.ceil(totalItems / cardsPerPage);
+    
+    // Create pagination container if it doesn't exist
+    let paginationDiv = document.getElementById("pagination");
+    if (!paginationDiv) {
+        paginationDiv = document.createElement("div");
+        paginationDiv.id = "pagination";
+        paginationDiv.style.textAlign = "center";
+        paginationDiv.style.margin = "20px 0";
+        document.getElementById("results").after(paginationDiv);
+    } else {
+        paginationDiv.innerHTML = "";
+    }
+    
+    // Don't show pagination if there's only one page
+    if (totalPages <= 1) {
+        paginationDiv.style.display = "none";
+        return;
+    } else {
+        paginationDiv.style.display = "block";
+    }
+    
+    // Previous page button
+    const prevBtn = document.createElement("button");
+    prevBtn.innerText = "上一頁";
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.style.margin = "0 5px";
+    prevBtn.onclick = () => {
+        if (currentPage > 1) {
+            currentPage--;
+            searchCards();
+        }
+    };
+    paginationDiv.appendChild(prevBtn);
+    
+    // Determine which page numbers to show
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    
+    // Adjust if we're near the end
+    if (endPage - startPage + 1 < maxVisiblePages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+    
+    // First page
+    if (startPage > 1) {
+        const pageBtn = createPageButton(1);
+        paginationDiv.appendChild(pageBtn);
+        
+        // Add ellipsis if there's a gap
+        if (startPage > 2) {
+            const ellipsis = document.createElement("span");
+            ellipsis.innerText = "...";
+            ellipsis.style.margin = "0 5px";
+            paginationDiv.appendChild(ellipsis);
+        }
+    }
+    
+    // Page numbers
+    for (let i = startPage; i <= endPage; i++) {
+        const pageBtn = createPageButton(i);
+        paginationDiv.appendChild(pageBtn);
+    }
+    
+    // Last page
+    if (endPage < totalPages) {
+        // Add ellipsis if there's a gap
+        if (endPage < totalPages - 1) {
+            const ellipsis = document.createElement("span");
+            ellipsis.innerText = "...";
+            ellipsis.style.margin = "0 5px";
+            paginationDiv.appendChild(ellipsis);
+        }
+        
+        const pageBtn = createPageButton(totalPages);
+        paginationDiv.appendChild(pageBtn);
+    }
+    
+    // Next page button
+    const nextBtn = document.createElement("button");
+    nextBtn.innerText = "下一頁";
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.style.margin = "0 5px";
+    nextBtn.onclick = () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            searchCards();
+        }
+    };
+    paginationDiv.appendChild(nextBtn);
+    
+    // Helper function to create page buttons
+    function createPageButton(pageNum) {
+        const pageBtn = document.createElement("button");
+        pageBtn.innerText = pageNum;
+        pageBtn.style.margin = "0 5px";
+        
+        // Highlight current page
+        if (pageNum === currentPage) {
+            pageBtn.style.fontWeight = "bold";
+            pageBtn.style.backgroundColor = "#4CAF50";
+            pageBtn.style.color = "white";
+        }
+        
+        pageBtn.onclick = () => {
+            currentPage = pageNum;
+            searchCards();
+        };
+        
+        return pageBtn;
+    }
 }
+
+// Remove the old changePage function as it's no longer needed
+// function changePage(direction) {
+//     currentPage += direction;
+//     searchCards();
+// }
 // 清空構築表函數（使用 Soft Alert）
 // 清空構築表函數（使用 Soft Alert）
 function clearDeck() {
@@ -537,7 +658,7 @@ function shareDeckAsImage() {
     let deckArea = document.createElement("div");
 	//自訂背景顏色
 	deckArea.style.backgroundColor="#121212";
-    deckArea.appendChild(document.getElementById("deckCounter").cloneNode(true));
+    //deckArea.appendChild(document.getElementById("deckCounter").cloneNode(true));
     deckArea.appendChild(document.getElementById("deck").cloneNode(true));
     deckArea.appendChild(document.getElementById("flagship").cloneNode(true));
     
