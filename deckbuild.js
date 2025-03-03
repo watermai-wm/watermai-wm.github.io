@@ -388,12 +388,12 @@ function renderDeck() {
 function createCardElement(card, count) {
     let cardDiv = document.createElement("div");
     cardDiv.classList.add("deck-card");
-    cardDiv.style.width = "150px";
+    cardDiv.style.width = "100px";
     cardDiv.style.textAlign = "center";
     
     cardDiv.innerHTML = `
         <div class="card-image-container" style="position: relative;">
-            <img src="images/${card.card_id}.png" class="deck-image" alt="${card.card_name}" style="width: 150px; height: auto; cursor: pointer;" onclick="openImageModal(this.src)">
+            <img src="images/${card.card_id}.png" class="deck-image" alt="${card.card_name}" style="width: 100px; height: auto; cursor: pointer;" onclick="openImageModal(this.src)">
             <div class="deck-overlay" style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 14px;">${count}</div>
         </div>
         <div class="card-info" style="font-size: 18px; margin-top: 5px; text-align: center;">
