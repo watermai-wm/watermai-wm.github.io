@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Deck 查詢</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Top Deck 查詢</h1>
+
+        <!-- 文字搜尋框 (搜尋 Description) -->
+        <div class="search-input">
+            <input type="text" id="searchDescription" placeholder="輸入關鍵字..." oninput="searchDecks()">
+        </div>
+
+        <!-- L_name 選擇篩選 -->
+        <div class="filter-group">
+            <h3>篩選 L_name</h3>
+            <select id="filterLNameSelect" onchange="searchDecks()">
+                <option value="">全部</option> <!-- 預設顯示所有資料 -->
+            </select>
+        </div>
+
+        <!-- Format 篩選 (Checkbox 多選) -->
+        <div class="filter-group">
+            <h3>篩選 Format</h3>
+            <div id="filterFormatGroup"></div>
+        </div>
+
+        <!-- 重置按鈕 -->
+        <button onclick="resetDeckFilters()">重置搜尋</button>
+
+        <!-- 顯示搜尋結果 -->
+        <div id="deckResults"></div>
+
+        <!-- 分頁控制 -->
+        <div id="deckPagination">
+            <button id="prevDeckPage" onclick="changeDeckPage(-1)">上一頁</button>
+            <span id="deckPageInfo"></span>
+            <button id="nextDeckPage" onclick="changeDeckPage(1)">下一頁</button>
+        </div>
+    </div>
+	<!-- 放大圖片的模態框 -->
+	<div id="imageModal" class="modal" onclick="closeImageModal()">
+		<img id="modalImage" class="modal-content">
+	</div>
+
+
+    <script src="topdeck.js"></script>
+    <script src="topdeck_script.js"></script>
+</body>
+</html>
