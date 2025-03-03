@@ -296,3 +296,19 @@ button:disabled {
 .filter-group {
     flex: 1; /* 讓兩個區塊平均分配空間 */
 }
+
+a {
+    color: white; /* 預設超連結顏色 */
+}
+
+a:hover {
+    color: red; /* 滑鼠懸停時的顏色 */
+}
+
+a:visited {
+    color: white; /* 按過的超連結顏色 */
+}
+
+a:active {
+    color: orange; /* 按下時的顏色 */
+}
