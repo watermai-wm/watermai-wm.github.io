@@ -6,14 +6,19 @@ function searchDecks() {
     const lNameFilter = document.getElementById('filterLNameSelect').value;
     const formatFilters = Array.from(document.querySelectorAll('input[name="filterFormat"]:checked')).map(checkbox => checkbox.value);
 
-    const filteredDecks = topDecks.filter(deck =>
+    // **篩選符合條件的牌組**
+    let filteredDecks = topDecks.filter(deck =>
         (descriptionInput === '' || (deck.Description && deck.Description.toLowerCase().includes(descriptionInput))) &&
         (lNameFilter === '' || deck.L_name === lNameFilter) &&
         (formatFilters.length === 0 || formatFilters.includes(deck.Format))
     );
 
+    // **按照 deck_id 降冪排序**
+    filteredDecks.sort((a, b) => b.deck_id.localeCompare(a.deck_id, undefined, { numeric: true }));
+
     displayDeckResults(filteredDecks);
 }
+
 
 function displayDeckResults(filteredDecks) {
     const resultsContainer = document.getElementById('deckResults');
