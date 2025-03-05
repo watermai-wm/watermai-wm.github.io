@@ -251,8 +251,8 @@ button:disabled {
 
 /* 放大圖片 */
 .modal-content {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 85%;
+    max-height: 85%;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
     animation: fadeIn 0.3s;
@@ -311,4 +311,9 @@ a:visited {
 
 a:active {
     color: orange; /* 按下時的顏色 */
+}
+
+#championChart {
+    max-width: 100%;
+    height: auto !important;
 }

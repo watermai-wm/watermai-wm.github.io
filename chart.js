@@ -97,13 +97,13 @@ function generateChampionChart() {
 
                         // 標籤位置調整
                         const angle = (arc.startAngle + arc.endAngle) / 2;
-                        const textDistance = radius * 1.3; // 標籤放置距離
+                        const textDistance = radius * 1.5; // 標籤放置距離
                         const textX = centerX + Math.cos(angle) * textDistance;
                         const textY = centerY + Math.sin(angle) * textDistance;
 
                         // 計算文字寬度和高度
                         ctx.save();
-                        ctx.font = "14px Arial"; // 字體大小
+                        ctx.font = "20px Arial"; // 字體大小
                         const textWidth = ctx.measureText(labelText).width;
                         const textHeight = 20; // 固定高度
 

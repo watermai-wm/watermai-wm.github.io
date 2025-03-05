@@ -55,6 +55,11 @@ function displayDeckResults(filteredDecks) {
         const deckFormat = document.createElement('p');
         deckFormat.textContent = `環境: ${deck.Format || "未知"}`;
         deckElement.appendChild(deckFormat);
+		
+		// **競爭等級 (Level)**
+        const deckLevel = document.createElement('p');
+        deckLevel.textContent = `競爭等級: ${deck.Level || "未知"}`;
+        deckElement.appendChild(deckLevel);
 
         // **旗艦 (L_name)**
         const deckLName = document.createElement('p');
