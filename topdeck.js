@@ -1,5 +1,23 @@
 // topdeck.js
 const topDecks = [
+{
+    "deck_id": "20250303-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250303 香港 CardKoi 天狼星新春賽 11人 冠軍 : 奧古斯特·馮·帕塞瓦爾 二ノ宮しいな",
+    "Level": "新春賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250304-1",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250304 香港 GreymonTcgWorkShop 天狼星新春賽 10人 冠軍 : 聖女貞德 二ノ宮しいな",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
+  },
   {
     "deck_id": "20250302-1",
     "L_name": "企業",
