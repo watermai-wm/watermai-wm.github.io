@@ -227,6 +227,26 @@ function searchCards() {
     renderCards(filteredCards);
 }
 
+function resetFilters() {
+    // 清空文字輸入框
+    document.getElementById('searchName').value = '';
+    document.getElementById('searchCode').value = '';
+    document.getElementById('searchEffect').value = '';
+
+    // 取消所有 Checkbox 的選中狀態
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+	
+	 // **重置下拉式選單到預設值**
+    document.getElementById('filterEffectSelect').selectedIndex = 0; // 設定為第一個選項
+ 
+    // 重置分頁
+    currentPage = 1;
+    searchCards();
+}
+
+
 function renderCards(filteredCards) {
     let resultsDiv = document.getElementById("results");
     if (!resultsDiv) {
