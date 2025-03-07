@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250307-1",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250307 重慶卡普塔斯 周五演習構築 8人 冠軍：鎮海 @二至二分",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250307-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250307 重慶卡普塔斯 周五演習構築 8人 亞軍：瑞鶴 夜明",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250305-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
