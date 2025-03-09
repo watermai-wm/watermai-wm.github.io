@@ -55,6 +55,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250309-7",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250309 逛逛紙牌社-集換式卡牌專賣店 店家賽 10人 冠軍：埃姆登 農恩",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250309-8",
+    "L_name": "怨仇",
+    "Format": "6.0",
+    "Description": "20250309 逛逛紙牌社-集換式卡牌專賣店 店家賽 10人 亞軍：怨仇 阿碧",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250308-1",
     "L_name": "天城",
     "Format": "6.0",
