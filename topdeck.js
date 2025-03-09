@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250309-1",
+    "L_name": "讓·巴爾",
+    "Format": "6.0",
+    "Description": "MOX Saga 天狼星新春賽 10人 冠軍：讓·巴爾 Zero.W-弱小巴爾",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250309-2",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250309 CardMaster 標槍婚紗賽 15人 冠軍：明石 努卡-綠色惡魔還在輸出",
+    "Level": "誓約賽",
+    "Players": 15,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250309-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250309 CardMaster 標槍婚紗賽 15人 亞軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "誓約賽",
+    "Players": 15,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250309-4",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250309 這裡有桌遊 標槍婚紗賽 14人 冠軍：射水魚 鈺堂",
+    "Level": "誓約賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250308-1",
     "L_name": "天城",
     "Format": "6.0",
