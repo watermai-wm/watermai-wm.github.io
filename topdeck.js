@@ -37,6 +37,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250309-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250309 貓腳印-新店店 店家賽 4人 冠軍：奧古斯特·馮·帕塞瓦爾 鴨子大人",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250309-6",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250309 哈爾濱進化卡牌 周日新春賽 10人 冠軍：奧古斯特·馮·帕塞瓦爾 @魅影猛龍",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250308-1",
     "L_name": "天城",
     "Format": "6.0",
@@ -171,7 +189,24 @@ const topDecks = [
     "Players": 11,
     "Champion": 0
   },
- 
+  {
+    "deck_id": "20250308-16",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250308 廣東中山kaboom 天狼星尋春賽 15人 冠軍：奧古斯特·馮·帕塞瓦爾 被女人打倒",
+    "Level": "新春賽",
+    "Players": 15,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250308-17",
+    "L_name": "貝爾法斯特",
+    "Format": "6.0",
+    "Description": "20250308 廣東中山kaboom 天狼星尋春賽 15人 亞軍：貝爾法斯特 Mr.white",
+    "Level": "新春賽",
+    "Players": 15,
+    "Champion": 0
+  },
   {
     "deck_id": "20250307-1",
     "L_name": "鎮海",
