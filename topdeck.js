@@ -70,6 +70,15 @@ const topDecks = [
     "Description": "20250309 逛逛紙牌社-集換式卡牌專賣店 店家賽 10人 亞軍：怨仇 阿碧",
     "Level": "常規賽",
     "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250309-9",
+    "L_name": "島風",
+    "Format": "6.0",
+    "Description": "20250309 貓腳印-士林店 店家賽 7人 冠軍：島風 蛋頭",
+    "Level": "常規賽",
+    "Players": 7,
     "Champion": 1
   },
   {
