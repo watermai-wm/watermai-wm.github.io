@@ -735,6 +735,10 @@ function shareDeckAsImage() {
         return;
     }
 
+    // 隱藏「移除卡片」按鈕和「調整數量」按鈕
+    let buttonsToHide = document.querySelectorAll(".remove-card-btn, .card-controls");
+    buttonsToHide.forEach(button => button.style.display = "none");
+
     // 創建一個新的 div 來匯出
     let deckArea = document.createElement("div");
     deckArea.style.position = "absolute";
@@ -804,8 +808,12 @@ function shareDeckAsImage() {
         link.download = "deck_build.png";
         link.click();
         document.body.removeChild(deckArea);
+
+        // 匯出完成後，恢復原本畫面的按鈕顯示
+        buttonsToHide.forEach(button => button.style.display = "");
     });
 }
+
 
 
 
