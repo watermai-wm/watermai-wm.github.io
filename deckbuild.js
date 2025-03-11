@@ -254,64 +254,66 @@ function renderCards(filteredCards) {
         return;
     }
     resultsDiv.innerHTML = "";
-	resultsDiv.style.display = "flex";
+    resultsDiv.style.display = "flex";
     resultsDiv.style.flexWrap = "wrap";
     resultsDiv.style.gap = "10px";
     resultsDiv.style.justifyContent = "center";
-     // 依照 card_id **降冪排序**（從大到小）
+
+    // 依照 card_id **降冪排序**（從大到小）
     filteredCards.sort((a, b) => parseInt(b.card_id) - parseInt(a.card_id));
+
     let start = (currentPage - 1) * cardsPerPage;
     let paginatedCards = filteredCards.slice(start, start + cardsPerPage);
-    
+
     paginatedCards.forEach(card => {
         let cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
-		cardDiv.style.width = "200px";
+        cardDiv.style.width = "200px";
         cardDiv.style.textAlign = "center";
-        
+
         let cardHTML = `
             <div class="card-image-container">
-                <img src="images/${card.card_id}.png" class="card-image" alt="${card.card_name} style="cursor: pointer;" onclick="openImageModal(this.src)">
-                <div class="card-overlay" id="overlay-${card.card_id}"></div>
+                <img src="images/${card.card_id}.png" class="card-image" alt="${card.card_name}" 
+                     style="cursor: pointer;" onclick="openImageModal(this.src)">
             </div>
             <div class="card-text">
                 <h2>${card.card_name}</h2>
-                
-                <div class="card-options" style="display: grid; grid-template-columns: 1fr; gap: 5px; justify-items: center; padding: 5px; border-radius: 5px;">
-                    <label style="font-size: 14px; display: block; text-align: center; padding: 5px; border-radius: 3px;">
-                        <input type="radio" name="card-${card.card_id}" value="0" ${deck[card.card_id] === 0 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 0)"> 0
-                    </label>
-                    ${card.attributes['罕　貴'] === 'L' || card.attributes['罕　貴'] === 'L-SEC' ? `
-                        <label style="font-size: 14px; padding: 5px; border-radius: 3px;">
-                            <input type="radio" name="card-${card.card_id}" value="1" ${deck[card.card_id] === 1 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 1)"> 1
-                        </label>
-                    ` : `
-                        <div style="display: flex; gap: 5px;">
-                            <label style="font-size: 14px; padding: 5px; border-radius: 3px;">
-                                <input type="radio" name="card-${card.card_id}" value="1" ${deck[card.card_id] === 1 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 1)"> 1
-                            </label>
-                            <label style="font-size: 14px; padding: 5px; border-radius: 3px;">
-                                <input type="radio" name="card-${card.card_id}" value="2" ${deck[card.card_id] === 2 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 2)"> 2
-                            </label>
-                        </div>
-                        <div style="display: flex; gap: 5px;">
-                            <label style="font-size: 14px; padding: 5px; border-radius: 3px;">
-                                <input type="radio" name="card-${card.card_id}" value="3" ${deck[card.card_id] === 3 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 3)"> 3
-                            </label>
-                            <label style="font-size: 14px; padding: 5px; border-radius: 3px;">
-                                <input type="radio" name="card-${card.card_id}" value="4" ${deck[card.card_id] === 4 ? "checked" : ""} onchange="updateDeck('${card.card_id}', 4)"> 4
-                            </label>
-                        </div>
-                    `}
-                </div>
+                <button class="add-card-btn" onclick="addCardToDeck('${card.card_id}')">
+                    加入卡片
+                </button>
             </div>
         `;
-        
+
         cardDiv.innerHTML = cardHTML;
         resultsDiv.appendChild(cardDiv);
     });
-	// Render pagination buttons
+
+    // Render pagination buttons
     renderPagination(filteredCards.length);
+}
+
+//新增卡片到牌組
+function addCardToDeck(cardID) {
+    let card = allCards.find(c => c.card_id == cardID);
+    let rarity = card.attributes['罕　貴'];
+
+    if (rarity === 'L' || rarity === 'L-SEC') {
+        if (Object.keys(deck.flagship).length >= 2) {
+            showSoftAlert("旗艦區最多只能選擇兩張卡片");
+            return;
+        }
+        deck.flagship[cardID] = 1;
+    } else {
+        if (!deck.mainDeck[cardID]) deck.mainDeck[cardID] = 0;
+        if (deck.mainDeck[cardID] >= 4) {
+            showSoftAlert("該卡片最多只能加入 4 張");
+            return;
+        }
+        deck.mainDeck[cardID] += 1;
+    }
+
+    renderDeck();
+    updateDeckCounter();
 }
 
 
@@ -360,7 +362,7 @@ function updateDeck(cardID, count) {
 function renderDeck() {
     let flagshipDiv = document.getElementById("flagship");
     let deckDiv = document.getElementById("deck");
-    
+
     if (!flagshipDiv) {
         flagshipDiv = document.createElement("div");
         flagshipDiv.id = "flagship";
@@ -371,37 +373,36 @@ function renderDeck() {
         deckDiv.id = "deck";
         document.body.appendChild(deckDiv);
     }
-    
+
     flagshipDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>旗艦</h2><div class='flagship-container' style='max-width: 800px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
     deckDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>牌組</h2><div class='deck-container' style='max-width: 800px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
-    
+
     let flagshipContainer = flagshipDiv.querySelector(".flagship-container");
     let deckContainer = deckDiv.querySelector(".deck-container");
-    
+
     Object.keys(deck.flagship).forEach(cardID => {
         let card = allCards.find(c => c.card_id == cardID);
-        let cardDiv = createCardElement(card, deck.flagship[cardID]);
+        let cardDiv = createCardElement(card, deck.flagship[cardID], true);
         flagshipContainer.appendChild(cardDiv);
     });
-    
 
-	 let sortedDeck = Object.keys(deck.mainDeck)
+    let sortedDeck = Object.keys(deck.mainDeck)
         .map(cardID => allCards.find(c => c.card_id == cardID))
         .sort((a, b) => {
             const typeOrder = { "艦船卡": 1, "事件卡": 2 };
             const typeA = typeOrder[a.attributes['種　類']] || 3;
             const typeB = typeOrder[b.attributes['種　類']] || 3;
-            
+
             if (typeA !== typeB) return typeA - typeB;
-            
+
             const costA = parseInt(a.attributes['費　用']) || 0;
             const costB = parseInt(b.attributes['費　用']) || 0;
-            
+
             if (costA !== costB) return costB - costA;
-            
+
             return b.card_code.localeCompare(a.card_code, 'zh-Hans-CN');
         });
-    
+
     sortedDeck.forEach(card => {
         let cardDiv = createCardElement(card, deck.mainDeck[card.card_id]);
         deckContainer.appendChild(cardDiv);
@@ -409,24 +410,76 @@ function renderDeck() {
 }
 
 
-function createCardElement(card, count) {
+
+function createCardElement(card, count, isFlagship = false) {
     let cardDiv = document.createElement("div");
     cardDiv.classList.add("deck-card");
-    cardDiv.style.width = "100px";
-    cardDiv.style.textAlign = "center";
-    
+
     cardDiv.innerHTML = `
-        <div class="card-image-container" style="position: relative;">
-            <img src="images/${card.card_id}.png" class="deck-image" alt="${card.card_name}" style="width: 100px; height: auto; cursor: pointer;" onclick="openImageModal(this.src)">
-            <div class="deck-overlay" style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; border-radius: 50%; width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 14px;">${count}</div>
+        <div class="card-image-container">
+            <img src="images/${card.card_id}.png" class="deck-image" alt="${card.card_name}" 
+                 onclick="openImageModal(this.src)">
+            <div class="deck-overlay" id="overlay-${card.card_id}">${count}</div>
         </div>
-        <div class="card-info" style="font-size: 14px; margin-top: 5px; text-align: center;">
-            <div>${card.card_code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+        <div class="card-info">
+            <div>${card.card_code}</div>
             <div>${card.card_name}</div>
         </div>
+        ${isFlagship ? `
+            <button class="remove-card-btn" onclick="removeFromDeck('${card.card_id}', true)">
+                移除卡片
+            </button>
+        ` : `
+            <div class="card-controls">
+                <button class="adjust-card-btn decrease" onclick="adjustCardCount('${card.card_id}', -1)">−</button>
+                <span id="count-${card.card_id}" class="card-count">${count}</span>
+                <button class="adjust-card-btn increase" onclick="adjustCardCount('${card.card_id}', 1)">+</button>
+            </div>
+        `}
     `;
+
     return cardDiv;
 }
+
+
+//調整卡片數量
+function adjustCardCount(cardID, change) {
+    let isFlagship = deck.flagship[cardID] !== undefined; // 檢查是否為旗艦卡
+
+    if (!deck.mainDeck[cardID] && !isFlagship) deck.mainDeck[cardID] = 0;
+
+    let newCount = (deck.mainDeck[cardID] || 0) + change;
+
+    if (newCount <= 0) {
+        delete deck.mainDeck[cardID]; // 若數量變為 0，則從牌組移除
+        if (isFlagship) {
+            delete deck.flagship[cardID]; // 若是旗艦區的卡片，也從旗艦區移除
+        }
+    } else if (newCount > 4) {
+        newCount = 4; // 限制最多 4 張
+    } else {
+        deck.mainDeck[cardID] = newCount; // 更新數量
+    }
+
+    renderDeck(); // 重新渲染牌組
+    updateDeckCounter(); // 更新數量顯示
+}
+
+
+
+//移除卡片
+function removeFromDeck(cardID, isFlagship = false) {
+    if (isFlagship) {
+        delete deck.flagship[cardID];
+    } else {
+        delete deck.mainDeck[cardID];
+    }
+    renderDeck();
+    updateDeckCounter();
+}
+
+
+
 // 打開放大圖片視窗
 function openImageModal(imageSrc) {
     let modal = document.getElementById('imageModal');

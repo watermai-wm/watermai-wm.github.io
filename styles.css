@@ -317,3 +317,182 @@ a:active {
     max-width: 100%;
     height: auto !important;
 }
+
+/*移除卡片按鈕*/
+.remove-card-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.remove-card-btn:hover {
+    background-color: #cc0000;
+}
+
+/*組牌模擬器自適應*/
+
+/* 牌組區域樣式 */
+.deck-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 牌組內的卡片 */
+.deck-card {
+    flex: 1 1 calc(20% - 10px); /* 每行 5 張卡片，根據寬度自適應 */
+    max-width: 180px; /* 設定卡片最大寬度 */
+    min-width: 100px; /* 設定卡片最小寬度 */
+    text-align: center;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 牌組內卡片圖片自適應 */
+.deck-card .card-image-container {
+    width: 100%;
+    position: relative;
+}
+
+.deck-card .deck-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.deck-card .deck-image:hover {
+    transform: scale(1.05);
+}
+
+/* 牌組內卡片的數量標記（右上角） */
+.deck-card .deck-overlay {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    width: 32px; /* 增大數字標記的寬度 */
+    height: 32px; /* 增大數字標記的高度 */
+    text-align: center;
+    line-height: 32px; /* 讓數字垂直居中 */
+    font-size: 18px; /* 增大數字的字體 */
+    font-weight: bold; /* 讓數字更醒目 */
+    border: 2px solid white; /* 增加白色邊框，讓數字更清晰 */
+}
+
+/* 小螢幕適應 */
+@media (max-width: 768px) {
+    .deck-card .deck-overlay {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .deck-card .deck-overlay {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+
+/* 牌組內的移除按鈕 */
+.deck-card .remove-card-btn {
+    width: 100%;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.deck-card .remove-card-btn:hover {
+    background-color: #cc0000;
+}
+
+/* 自適應（手機端） */
+@media (max-width: 768px) {
+    .deck-card {
+        flex: 1 1 calc(33.333% - 10px); /* 小屏幕一行顯示 3 張卡片 */
+    }
+}
+
+@media (max-width: 480px) {
+    .deck-card {
+        flex: 1 1 calc(50% - 10px); /* 更小的螢幕一行顯示 2 張卡片 */
+    }
+}
+
+/*調整卡片數量*/
+/* 調整卡片按鈕 */
+.card-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+.adjust-card-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.adjust-card-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    min-width: 30px;
+    text-align: center;
+}
+
+/*新增卡片按鈕*/
+.add-card-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.add-card-btn:hover {
+    background-color: #218838;
+}
+
+
+
