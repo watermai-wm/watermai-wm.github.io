@@ -726,7 +726,6 @@ function showSoftAlert(message) {
     setTimeout(() => document.body.removeChild(alertBox), 2000);
 }
 
-// 分享構築為圖片
 function shareDeckAsImage() {
     let deckContainer = document.getElementById("deck").querySelector(".deck-container");
     let flagshipContainer = document.getElementById("flagship").querySelector(".flagship-container");
@@ -744,17 +743,26 @@ function shareDeckAsImage() {
     deckArea.style.padding = "10px";
     deckArea.style.borderRadius = "10px";
     deckArea.style.display = "inline-block";
+    deckArea.style.textAlign = "center"; // 讓標題置中
+    deckArea.style.color = "white";
+    deckArea.style.fontFamily = "Arial, sans-serif";
 
-    // 計算實際需要的寬度
-    let maxCardsInRow = Math.max(deckContainer ? deckContainer.children.length : 0, 
-                                 flagshipContainer ? flagshipContainer.children.length : 0);
+    // 取得卡片的實際寬度
+    let sampleCard = deckContainer?.firstElementChild || flagshipContainer?.firstElementChild;
+    let cardWidth = sampleCard ? sampleCard.getBoundingClientRect().width : 110; // 預設110px
 
-    let cardWidth = 110; // 單張卡片寬度 (含間距)
-    let totalWidth = maxCardsInRow * cardWidth;
+    // 限制最大列數為 5 張
+    let maxCardsPerRow = 5;
 
-    deckArea.style.width = `${totalWidth}px`; // 根據卡片數量自適應寬度
-	
-	// 新增「旗艦」標題以及旗艦圖片
+    // 計算最大行內卡片數量（最多 5 張）
+    let maxCardsInRow = Math.min(maxCardsPerRow, 
+                                 Math.max(deckContainer ? deckContainer.children.length : 0, 
+                                          flagshipContainer ? flagshipContainer.children.length : 0));
+
+    let totalWidth = maxCardsInRow * (cardWidth + 10); // 加上間距
+    deckArea.style.width = `${totalWidth}px`; // 設定寬度
+
+    // 新增「旗艦」標題
     if (flagshipContainer && flagshipContainer.children.length > 0) {
         let flagshipTitle = document.createElement("h2");
         flagshipTitle.innerText = "旗艦";
@@ -763,10 +771,13 @@ function shareDeckAsImage() {
         deckArea.appendChild(flagshipTitle);
 
         let clonedFlagship = flagshipContainer.cloneNode(true);
+        clonedFlagship.style.display = "flex";
+        clonedFlagship.style.flexWrap = "wrap";
+        clonedFlagship.style.justifyContent = "center";
         deckArea.appendChild(clonedFlagship);
     }
 
-    // 新增「牌組」標題以及牌組圖片
+    // 新增「牌組」標題
     if (deckContainer && deckContainer.children.length > 0) {
         let deckTitle = document.createElement("h2");
         deckTitle.innerText = "牌組";
@@ -775,6 +786,9 @@ function shareDeckAsImage() {
         deckArea.appendChild(deckTitle);
 
         let clonedDeck = deckContainer.cloneNode(true);
+        clonedDeck.style.display = "flex";
+        clonedDeck.style.flexWrap = "wrap";
+        clonedDeck.style.justifyContent = "center";
         deckArea.appendChild(clonedDeck);
     }
 
@@ -792,6 +806,7 @@ function shareDeckAsImage() {
         document.body.removeChild(deckArea);
     });
 }
+
 
 
 
