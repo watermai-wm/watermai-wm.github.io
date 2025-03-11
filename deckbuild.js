@@ -783,7 +783,6 @@ function shareDeckAsImage() {
     // 使用 html2canvas 來轉換成圖片
     html2canvas(deckArea, {
         backgroundColor: null, // 保留背景色
-        scale: 2 // 提高解析度
     }).then(canvas => {
         let image = canvas.toDataURL("image/png");
         let link = document.createElement("a");
