@@ -728,16 +728,63 @@ function showSoftAlert(message) {
 
 // 分享構築為圖片
 function shareDeckAsImage() {
+    let deckContainer = document.getElementById("deck").querySelector(".deck-container");
+    let flagshipContainer = document.getElementById("flagship").querySelector(".flagship-container");
+
+    if (!deckContainer && !flagshipContainer) {
+        showSoftAlert("無卡片可匯出");
+        return;
+    }
+
+    // 創建一個新的 div 來匯出
     let deckArea = document.createElement("div");
-	//自訂背景顏色
-	deckArea.style.backgroundColor="#121212";
-    //deckArea.appendChild(document.getElementById("deckCounter").cloneNode(true));
-    deckArea.appendChild(document.getElementById("deck").cloneNode(true));
-    deckArea.appendChild(document.getElementById("flagship").cloneNode(true));
-    
+    deckArea.style.position = "absolute";
+    deckArea.style.left = "-9999px"; // 隱藏在畫面外
+    deckArea.style.backgroundColor = "#121212"; // 設定背景顏色
+    deckArea.style.padding = "10px";
+    deckArea.style.borderRadius = "10px";
+    deckArea.style.display = "inline-block";
+
+    // 計算實際需要的寬度
+    let maxCardsInRow = Math.max(deckContainer ? deckContainer.children.length : 0, 
+                                 flagshipContainer ? flagshipContainer.children.length : 0);
+
+    let cardWidth = 110; // 單張卡片寬度 (含間距)
+    let totalWidth = maxCardsInRow * cardWidth;
+
+    deckArea.style.width = `${totalWidth}px`; // 根據卡片數量自適應寬度
+	
+	// 新增「旗艦」標題以及旗艦圖片
+    if (flagshipContainer && flagshipContainer.children.length > 0) {
+        let flagshipTitle = document.createElement("h2");
+        flagshipTitle.innerText = "旗艦";
+        flagshipTitle.style.marginBottom = "5px";
+        flagshipTitle.style.fontSize = "20px";
+        deckArea.appendChild(flagshipTitle);
+
+        let clonedFlagship = flagshipContainer.cloneNode(true);
+        deckArea.appendChild(clonedFlagship);
+    }
+
+    // 新增「牌組」標題以及牌組圖片
+    if (deckContainer && deckContainer.children.length > 0) {
+        let deckTitle = document.createElement("h2");
+        deckTitle.innerText = "牌組";
+        deckTitle.style.marginBottom = "5px";
+        deckTitle.style.fontSize = "20px";
+        deckArea.appendChild(deckTitle);
+
+        let clonedDeck = deckContainer.cloneNode(true);
+        deckArea.appendChild(clonedDeck);
+    }
+
     document.body.appendChild(deckArea);
-    
-    html2canvas(deckArea).then(canvas => {
+
+    // 使用 html2canvas 來轉換成圖片
+    html2canvas(deckArea, {
+        backgroundColor: null, // 保留背景色
+        scale: 2 // 提高解析度
+    }).then(canvas => {
         let image = canvas.toDataURL("image/png");
         let link = document.createElement("a");
         link.href = image;
@@ -746,6 +793,8 @@ function shareDeckAsImage() {
         document.body.removeChild(deckArea);
     });
 }
+
+
 
 // 在頁面上新增按鈕
 window.onload = function() {
