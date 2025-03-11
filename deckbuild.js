@@ -374,8 +374,8 @@ function renderDeck() {
         document.body.appendChild(deckDiv);
     }
 
-    flagshipDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>旗艦</h2><div class='flagship-container' style='max-width: 800px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
-    deckDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>牌組</h2><div class='deck-container' style='max-width: 800px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
+    flagshipDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>旗艦</h2><div class='flagship-container' style='max-width: 1200px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
+    deckDiv.innerHTML = "<h2 style='text-align: center; width: 100%;'>牌組</h2><div class='deck-container' style='max-width: 1200px; margin: 0 auto;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;'></div>";
 
     let flagshipContainer = flagshipDiv.querySelector(".flagship-container");
     let deckContainer = deckDiv.querySelector(".deck-container");
