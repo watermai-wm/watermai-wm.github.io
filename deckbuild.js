@@ -739,23 +739,21 @@ function shareDeckAsImage() {
     let buttonsToHide = document.querySelectorAll(".remove-card-btn, .card-controls");
     buttonsToHide.forEach(button => button.style.display = "none");
 
-    // 創建一個新的 div 來匯出
+    // 創建匯出區域
     let deckArea = document.createElement("div");
     deckArea.style.position = "absolute";
     deckArea.style.left = "-9999px"; // 隱藏在畫面外
-    deckArea.style.backgroundColor = "#121212"; // 設定背景顏色
+    deckArea.style.backgroundColor = "#121212"; // 確保背景色
     deckArea.style.padding = "10px";
     deckArea.style.borderRadius = "10px";
     deckArea.style.display = "inline-block";
-    deckArea.style.textAlign = "center"; // 讓標題置中
+    deckArea.style.textAlign = "center";
     deckArea.style.color = "white";
     deckArea.style.fontFamily = "Arial, sans-serif";
 
     // 取得卡片的實際寬度
     let sampleCard = deckContainer?.firstElementChild || flagshipContainer?.firstElementChild;
-    let cardWidth = sampleCard ? sampleCard.getBoundingClientRect().width : 110; // 預設110px
-
-    // 限制最大列數為 5 張
+    let cardWidth = sampleCard ? sampleCard.getBoundingClientRect().width : 110;
     let maxCardsPerRow = 5;
 
     // 計算最大行內卡片數量（最多 5 張）
@@ -763,8 +761,8 @@ function shareDeckAsImage() {
                                  Math.max(deckContainer ? deckContainer.children.length : 0, 
                                           flagshipContainer ? flagshipContainer.children.length : 0));
 
-    let totalWidth = maxCardsInRow * (cardWidth + 10); // 加上間距
-    deckArea.style.width = `${totalWidth}px`; // 設定寬度
+    let totalWidth = maxCardsInRow * (cardWidth + 10);
+    deckArea.style.width = `${totalWidth}px`;
 
     // 新增「旗艦」標題
     if (flagshipContainer && flagshipContainer.children.length > 0) {
@@ -800,19 +798,26 @@ function shareDeckAsImage() {
 
     // 使用 html2canvas 來轉換成圖片
     html2canvas(deckArea, {
-        backgroundColor: null, // 保留背景色
+        backgroundColor: "#121212", // 確保背景色存在，避免透明問題
+        scale: 2 // 提高解析度
     }).then(canvas => {
-        let image = canvas.toDataURL("image/png");
-        let link = document.createElement("a");
-        link.href = image;
-        link.download = "deck_build.png";
-        link.click();
-        document.body.removeChild(deckArea);
+        let image = canvas.toDataURL("image/jpeg", 0.8); // 轉換為 JPG，並設置品質為 80%
 
-        // 匯出完成後，恢復原本畫面的按鈕顯示
+        // 檢查是否在 iPad Chrome 上（Chrome 不允許 download）
+        if (navigator.userAgent.includes("CriOS")) {
+            window.open(image, "_blank"); // 讓使用者手動長按存圖
+        } else {
+            let link = document.createElement("a");
+            link.href = image;
+            link.download = "deck_build.jpg"; // 下載為 JPG
+            link.click();
+        }
+
+        document.body.removeChild(deckArea);
         buttonsToHide.forEach(button => button.style.display = "");
     });
 }
+
 
 
 
