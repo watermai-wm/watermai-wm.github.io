@@ -1,6 +1,69 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250315-1",
+    "L_name": "腓特烈大帝",
+    "Format": "6.0",
+    "Description": "20250315 貓腳印-東門店 店家賽 10人 冠軍：腓特烈大帝 大帝麻麻唯一信仰",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250315-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250315 CardMaster 店家賽 6人 冠軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250315-3",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250315 貓腳印-桃園店 店家賽 11人 冠軍：埃姆登 小虛",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250315-4",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250315 重慶卡普塔斯 標槍誓約爭奪戰 12人 1位 天城 鐵血典獄長",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250315-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250315 重慶卡普塔斯 標槍誓約爭奪戰 12人 2位 奧古斯特·馮·帕塞瓦爾 @曉冬雨夜",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250315-6",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250315 重慶卡普塔斯 標槍誓約爭奪戰 12人 3位 埃姆登 莉可",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250315-7",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250315 重慶卡普塔斯 標槍誓約爭奪戰 12人 4位 鎮海 車車",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250313-1",
     "L_name": "明石",
     "Format": "6.0",
