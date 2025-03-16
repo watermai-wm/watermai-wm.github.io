@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250316-1",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250316 貓腳印-士林店 店家賽 6人 冠軍：埃姆登 小淡",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250316-2",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250316 貓腳印-東門店 標槍婚紗賽 8人 冠軍：明石 努卡",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250316-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250316 Card-Ple卡片人卡牌遊戲專賣店-民安店 標槍婚紗賽 6人 冠軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "誓約賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250315-1",
     "L_name": "腓特烈大帝",
     "Format": "6.0",
