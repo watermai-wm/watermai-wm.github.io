@@ -28,6 +28,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250316-4",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250316 這裡有桌遊 積分賽 9人 冠軍：聖女貞德 RF",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250315-1",
     "L_name": "腓特烈大帝",
     "Format": "6.0",
