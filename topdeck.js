@@ -100,6 +100,24 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250315-8",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250315 福建省薔薇卡牌 標槍誓約爭奪戰 10人 1位 埃姆登 遊子先生",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250315-9",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250315 福建省薔薇卡牌 標槍誓約爭奪戰 10人 2位 天城 dee",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250313-1",
     "L_name": "明石",
     "Format": "6.0",
