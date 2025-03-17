@@ -100,6 +100,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250316-12",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250316 浙江湖州JO俱樂部 標槍婚紗誓約賽 8人 1位 奧古斯特·馮·帕塞瓦爾 止水",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250316-12",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250316 浙江湖州JO俱樂部 標槍婚紗誓約賽 8人 2位 奧古斯特·馮·帕塞瓦爾 墨石為玖",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250315-1",
     "L_name": "腓特烈大帝",
     "Format": "6.0",
