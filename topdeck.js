@@ -91,6 +91,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250316-11",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250316 鬥樂-一中店 標槍婚紗賽 10人 冠軍：天城 政勳",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250315-1",
     "L_name": "腓特烈大帝",
     "Format": "6.0",
