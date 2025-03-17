@@ -64,6 +64,33 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250316-8",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250316 湖北武漢 秘銀大廳 標槍誓約賽 10人 1位 射水魚 雷普妹卡",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250316-9",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250316 湖北武漢 秘銀大廳 標槍誓約賽 10人 2位 埃姆登 愛吃瓜的貓",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250316-10",
+    "L_name": "黎胥留",
+    "Format": "6.0",
+    "Description": "20250316 湖北武漢 秘銀大廳 標槍誓約賽 10人 3位 黎胥留 港區後宮王",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250315-1",
     "L_name": "腓特烈大帝",
     "Format": "6.0",
