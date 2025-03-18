@@ -109,13 +109,22 @@ const topDecks = [
     "Champion": 1
   },
   {
-    "deck_id": "20250316-12",
+    "deck_id": "20250316-13",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
     "Description": "20250316 浙江湖州JO俱樂部 標槍婚紗誓約賽 8人 2位 奧古斯特·馮·帕塞瓦爾 墨石為玖",
     "Level": "誓約賽",
     "Players": 8,
     "Champion": 0
+  },
+  {
+    "deck_id": "20250316-14",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250316 台中黑殿 標槍婚紗誓約賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 台中好寶地",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 1
   },
   {
     "deck_id": "20250315-1",
