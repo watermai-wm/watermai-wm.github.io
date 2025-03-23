@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
-{
+  {
+    "deck_id": "20250323-1",
+    "L_name": "聖路易斯",
+    "Format": "6.0",
+    "Description": "20250323 貓腳印-士林店 店鋪賽 6人 冠軍：聖路易斯 男爵",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250323-2",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250323 貓腳印-東門店 標槍婚紗賽 10人 冠軍：明石 努卡",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250322-1",
     "L_name": "胡德",
     "Format": "6.0",
@@ -134,6 +152,15 @@ const topDecks = [
     "Level": "新春賽",
     "Players": 18,
     "Champion": 0
+  },
+  {
+    "deck_id": "20250322-16",
+    "L_name": "讓·巴爾",
+    "Format": "6.0",
+    "Description": "20250322 大連樂貓 Z23婚紗賽 10人 冠軍：讓·巴爾 稱魂",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
   },
   {
     "deck_id": "20250321-1",
@@ -350,6 +377,15 @@ const topDecks = [
     "Level": "誓約賽",
     "Players": 10,
     "Champion": 0
+  },
+  {
+    "deck_id": "20250315-10",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250315 大連樂貓 天狼星新春賽 10人 冠軍：光輝(μ兵裝) 睦月",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
   },
   {
     "deck_id": "20250313-1",
