@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250323-3",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250323 鬥樂 一中店 標槍婚紗賽 8人 冠軍：天城 政勳",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250322-1",
     "L_name": "胡德",
     "Format": "6.0",
