@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250324-1",
+    "L_name": "胡德",
+    "Format": "6.0",
+    "Description": "20250324 香港 cardkoi 構築賽 4人 冠軍：胡德 HMS Hood",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250323-1",
     "L_name": "聖路易斯",
     "Format": "6.0",
