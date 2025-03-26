@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250326-1",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250326 桌上旅程 APP STORE 14人 標槍婚紗賽 冠軍：明石 努卡",
+    "Level": "誓約賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250324-1",
     "L_name": "胡德",
     "Format": "6.0",
