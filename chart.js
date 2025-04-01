@@ -27,8 +27,8 @@ function generateChampionChart() {
 
     // **將總數為 1 的 L_name 合併為 "其他"**
     Object.entries(championCount).forEach(([flagship, count]) => {
-        if (count === 1) {
-            otherCount++;
+        if (count < 3) {
+            otherCount+=count;
         } else {
             labels.push(flagship);
             data.push(count);
