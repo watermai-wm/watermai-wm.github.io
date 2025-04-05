@@ -91,6 +91,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250405-11",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250405 鬥陣桌遊 店鋪賽 8人 冠軍：明石 尼酷",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250404-1",
     "L_name": "約克鎮",
     "Format": "6.0",
