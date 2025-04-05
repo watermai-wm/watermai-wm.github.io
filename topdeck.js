@@ -1,6 +1,96 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250405-1",
+    "L_name": "羅恩",
+    "Format": "6.0",
+    "Description": "20250405 APP STORE 桌上旅程 天狼星新春賽 13人 冠軍：羅恩 水麥",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250405-2",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250405 APP STORE 桌上旅程 天狼星新春賽 13人 亞軍：明石 明天去肉球森林摸貓貓",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250405-3",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250405 APP STORE 桌上旅程 天狼星新春賽 13人 四強：明石 努卡",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250405-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405 APP STORE 桌上旅程 天狼星新春賽 13人 四強：奧古斯特·馮·帕塞瓦爾 μ's music start",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250405-5",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250405 卡多商行 桑心卡店 店鋪賽 7人 冠軍：聖女貞德 富陽",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250405-6",
+    "L_name": " 奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405重慶賽樂斯卡牌桌遊 碧藍巡春賽 6人 1位 奧古斯特·馮·帕塞瓦爾 @fami--",
+    "Level": "新春賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250405-7",
+    "L_name": " 奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405重慶賽樂斯卡牌桌遊 碧藍巡春賽 6人 2位 奧古斯特·馮·帕塞瓦爾 @三九反應",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250405-8",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405 上海冒險者酒館 碧海巡春賽 16人 1位 奧古斯特·馮·帕塞瓦爾 破曉天",
+    "Level": "新春賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250405-9",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405 上海冒險者酒館 碧海巡春賽 16人 2位 奧古斯特·馮·帕塞瓦爾 @ccw可樂姬翅薯片 ",
+    "Level": "新春賽",
+    "Players": 16,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250405-10",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250405 上海冒險者酒館 碧海巡春賽 16人 3位 明石 紫羅蘭永世長存",
+    "Level": "新春賽",
+    "Players": 16,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250404-1",
     "L_name": "約克鎮",
     "Format": "6.0",
@@ -1093,7 +1183,7 @@ const topDecks = [
     "deck_id": "20250302-17",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
-    "Description": "20250302 CardMaster 標槍婚紗賽 20人 冠軍：奧古斯特·馮·帕塞瓦爾 μ's music start",
+    "Description": "20250302 CardMaster 標槍婚紗賽 20人 冠軍：	",
     "Level": "誓約賽",
     "Players": 20,
     "Champion": 1
