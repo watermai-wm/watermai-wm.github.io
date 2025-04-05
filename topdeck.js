@@ -100,6 +100,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250405-12",
+    "L_name": 埃姆登",
+    "Format": "6.0",
+    "Description": "20250405 貓腳印 桃園店 店鋪賽 4人 冠軍：埃姆登 小虛",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250404-1",
     "L_name": "約克鎮",
     "Format": "6.0",
