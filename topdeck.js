@@ -4,9 +4,18 @@ const topDecks = [
     "deck_id": "20250403-1",
     "L_name": "明石",
     "Format": "6.0",
-    "Description": "20250329 貓腳印-東門店 休閒賽 10人 冠軍：明石 努卡",
+    "Description": "20250403 貓腳印-東門店 休閒賽 10人 冠軍：明石 努卡",
     "Level": "常規賽",
     "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250403-1",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250402 台南紙牌屋 4人 店鋪賽 冠軍：天城 信濃一生推",
+    "Level": "常規賽",
+    "Players": 4,
     "Champion": 1
   },
   {
