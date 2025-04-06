@@ -37,6 +37,24 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250406-5",
+    "L_name": "阿拉巴馬",
+    "Format": "6.0",
+    "Description": "20250406 貓腳印-士林店 店家賽 6人 冠軍：阿拉巴馬 男爵",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250406-6",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250406 桃園一刻館 店舖賽 4人 冠軍：奧古斯特·馮·帕塞瓦爾 缺舟",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250405-1",
     "L_name": "羅恩",
     "Format": "6.0",
