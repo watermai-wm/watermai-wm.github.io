@@ -97,7 +97,7 @@ const topDecks = [
     "Description": "20250405 鬥陣桌遊 店鋪賽 8人 冠軍：明石 尼酷",
     "Level": "常規賽",
     "Players": 8,
-    "Champion": 0
+    "Champion": 1
   },
   {
     "deck_id": "20250405-12",
@@ -106,7 +106,16 @@ const topDecks = [
     "Description": "20250405 貓腳印 桃園店 店鋪賽 4人 冠軍：埃姆登 小虛",
     "Level": "常規賽",
     "Players": 4,
-    "Champion": 0
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250405-13",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250405 貓腳印-東門店 店家賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 建智",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
   },
   {
     "deck_id": "20250404-1",
