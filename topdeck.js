@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250406-1",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250406 CardMaster 天狼星新春賽 13人 冠軍：明石 努卡",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250406-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250406 CardMaster 天狼星新春賽 13人 亞軍：奧古斯特·馮·帕塞瓦爾 魔女飄呀飄",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250406-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250406 CardMaster 天狼星新春賽 13人 四強：奧古斯特·馮·帕塞瓦爾 想打天城但只能打魔女",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250406-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250406 CardMaster 天狼星新春賽 13人 四強：奧古斯特·馮·帕塞瓦爾 鐵血軍部俱樂部",
+    "Level": "新春賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250405-1",
     "L_name": "羅恩",
     "Format": "6.0",
