@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250407-1",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250407重慶卡普塔斯 周一練習賽 6人 1位 明石 @roadcari ",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250406-1",
     "L_name": "明石",
     "Format": "6.0",
