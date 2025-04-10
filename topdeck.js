@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250410-1",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250410 貓腳印-東門店 休閒賽 12人 冠軍：光輝(μ兵裝) 上杉幽與小魔術師",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250407-1",
     "L_name": "明石",
     "Format": "6.0",
