@@ -10,6 +10,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250410-2",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250410 20250410 HK-Moxsaga 香港限定海天playmat爭奪戰 19人 冠軍：光輝（μ兵裝）雪月千夜",
+    "Level": "新春賽",
+    "Players": 19,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250407-1",
     "L_name": "明石",
     "Format": "6.0",
