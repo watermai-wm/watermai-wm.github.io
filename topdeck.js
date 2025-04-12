@@ -1,6 +1,69 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250412-1",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250412 彰化鬥陣桌遊 碧海巡春賽 10人 冠軍：聖女貞德 diego",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250412-2",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250412 彰化鬥陣桌遊 碧海巡春賽 10人 四強：光輝(μ兵裝) 顯像館",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-3",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250412 彰化鬥陣桌遊 碧海巡春賽 10人 四強：光輝(μ兵裝) 政勳",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250412 彰化鬥陣桌遊 碧海巡春賽 10人 四強：奧古斯特·馮·帕塞瓦爾 仲文",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250412 卡多商行 桑心卡店 碧海巡春賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 弘儀",
+    "Level": "新春賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250412-6",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-東門店 店家賽 4人 冠軍：射水魚 水麥",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250412-7",
+    "L_name": "怨仇",
+    "Format": "6.0",
+    "Description": "20250412 CardMaster 店家賽 5人 冠軍：怨仇 Kira",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250410-1",
     "L_name": "光輝(μ兵裝)",
     "Format": "6.0",
