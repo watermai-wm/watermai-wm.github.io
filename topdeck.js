@@ -64,6 +64,42 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250412-8",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-桃園店 碧海巡春賽 10人 冠軍：奧古斯特·馮·帕塞瓦爾 想抱魔女大腿",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250412-9",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-桃園店 碧海巡春賽 10人 亞軍：奧古斯特·馮·帕塞瓦爾 參加獎抽到5包EX01",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-10",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-桃園店 碧海巡春賽 10人 四強：明石 濃稠",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-11",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-桃園店 碧海巡春賽 10人 光輝(μ兵裝) 十六那年蛋碎心傷",
+    "Level": "新春賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250410-1",
     "L_name": "光輝(μ兵裝)",
     "Format": "6.0",
