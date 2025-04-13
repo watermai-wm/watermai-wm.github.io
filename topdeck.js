@@ -100,6 +100,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250412-12",
+    "L_name": "三笠",
+    "Format": "6.0",
+    "Description": "20250412 貓腳印-桃園店 店家賽 7人 冠軍：三笠 十六那年蛋碎心傷",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250410-1",
     "L_name": "光輝(μ兵裝)",
     "Format": "6.0",
