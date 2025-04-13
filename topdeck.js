@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250413-1",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250413 這裡有桌遊 碧海尋春賽 11人 冠軍: 射水魚 RF",
+    "Level": "新春賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250413-2",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250413 貓腳印-東門店 碧海尋春賽 17人 冠軍：埃姆登 煒傑",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250413-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250413 貓腳印-東門店 碧海尋春賽 17人 四強：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250413-4",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250413 貓腳印-東門店 碧海尋春賽 17人 四強：鎮海 陸",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250412-1",
     "L_name": "聖女貞德",
     "Format": "6.0",
