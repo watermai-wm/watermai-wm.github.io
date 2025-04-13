@@ -109,6 +109,42 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250412-13",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250412 逛逛紙牌社 碧海尋春賽戰 14人 冠軍：明石 農恩",
+    "Level": "新春賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250412-14",
+    "L_name": "彼得·史特拉塞",
+    "Format": "6.0",
+    "Description": "20250412 逛逛紙牌社 碧海尋春賽戰 14人 四強：彼得·史特拉塞 蔡宗勳",
+    "Level": "新春賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-15",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250412 逛逛紙牌社 碧海尋春賽戰 14人 四強：射水魚 張鈺堂",
+    "Level": "新春賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250412-16",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "6.0",
+    "Description": "20250412 逛逛紙牌社 碧海尋春賽戰 14人 四強：光輝(μ兵裝) 陳柏菘",
+    "Level": "新春賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250410-1",
     "L_name": "光輝(μ兵裝)",
     "Format": "6.0",
