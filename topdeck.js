@@ -37,6 +37,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250413-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250413這裡有桌遊 積分賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 尚祐",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250412-1",
     "L_name": "聖女貞德",
     "Format": "6.0",
