@@ -843,26 +843,42 @@ function generateDeckText() {
         output += "旗艦卡編號\t旗艦卡名稱\n";
         flagshipIDs.forEach(id => {
             const card = allCards.find(c => c.card_id == id);
-            const cleanCode = card.card_code.replace(/<.*?>/g, ""); // 去除 <>
+            const cleanCode = card.card_code.replace(/<.*?>/g, "");
             output += `${cleanCode}\t${card.card_name}\n`;
         });
     }
 
-    // 一般卡牌
+    // 一般卡牌排序後輸出
     output += "\n卡牌編號\t卡牌名稱\n";
     let lineNumber = 1;
-    const entries = Object.entries(deck.mainDeck);
 
-    entries.forEach(([cardID, count]) => {
-        const card = allCards.find(c => c.card_id == cardID);
+    const sortedDeck = Object.keys(deck.mainDeck)
+        .map(cardID => allCards.find(c => c.card_id == cardID))
+        .sort((a, b) => {
+            const typeOrder = { "艦船卡": 1, "事件卡": 2 };
+            const typeA = typeOrder[a.attributes['種　類']] || 3;
+            const typeB = typeOrder[b.attributes['種　類']] || 3;
+
+            if (typeA !== typeB) return typeA - typeB;
+
+            const costA = parseInt(a.attributes['費　用']) || 0;
+            const costB = parseInt(b.attributes['費　用']) || 0;
+
+            if (costA !== costB) return costB - costA;
+
+            return b.card_code.localeCompare(a.card_code, 'zh-Hans-CN');
+        });
+
+    sortedDeck.forEach(card => {
         const cleanCode = card.card_code.replace(/<.*?>/g, "");
+        const count = deck.mainDeck[card.card_id];
         for (let i = 0; i < count; i++) {
             output += `${lineNumber}\t${cleanCode}\t${card.card_name}\n`;
             lineNumber++;
         }
     });
 
-    // 文字區塊
+    // 顯示文字區塊
     let textBox = document.getElementById("deckTextBox");
     if (!textBox) {
         textBox = document.createElement("textarea");
