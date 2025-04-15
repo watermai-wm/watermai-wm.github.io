@@ -2,7 +2,7 @@
 const topDecks = [
   {
     "deck_id": "20250413-1",
-    "L_name": "聖女貞德",
+    "L_name": "射水魚",
     "Format": "6.0",
     "Description": "20250413 這裡有桌遊 碧海尋春賽 11人 冠軍: 射水魚 RF",
     "Level": "新春賽",
