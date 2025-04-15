@@ -46,6 +46,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250413-6",
+    "L_name": "島風",
+    "Format": "6.0",
+    "Description": "20250413 廣州37°潮玩 御四家誓約戰 9人 冠軍：島風  燐川",
+    "Level": "誓約賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250413-7",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250413 廣州37°潮玩 御四家誓約戰 9人 亞軍：奧古斯特·馮·帕塞瓦爾  豆腐渣",
+    "Level": "誓約賽",
+    "Players": 9,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250412-1",
     "L_name": "聖女貞德",
     "Format": "6.0",
