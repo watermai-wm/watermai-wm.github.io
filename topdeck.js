@@ -4,7 +4,7 @@ const topDecks = [
     "deck_id": "20250417-1",
     "L_name": "鎮海",
     "Format": "6.0",
-    "Description": "20250410 貓腳印-東門店 休閒賽 11人 冠軍：鎮海 淵眼",
+    "Description": "20250417 貓腳印-東門店 休閒賽 11人 冠軍：鎮海 淵眼",
     "Level": "常規賽",
     "Players": 11,
     "Champion": 1

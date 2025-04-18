@@ -13455,7 +13455,7 @@ const cards = [
     {
         "card_id": 958,
         "card_name": "U-101",
-        "card_code": "BP05-<SEC>",
+        "card_code": "BP05-058<SEC>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
