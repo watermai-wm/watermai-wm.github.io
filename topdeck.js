@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250419-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250419 卡多商行 桑心卡店 店家賽 6人 冠軍：奧古斯特·馮·帕塞瓦爾 弘儀",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250419-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250419 卡咖王國-集換式卡牌桌遊專賣店 天狼星賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "新春賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250417-1",
     "L_name": "鎮海",
     "Format": "6.0",
