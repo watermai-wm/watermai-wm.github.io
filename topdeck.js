@@ -63,7 +63,15 @@ const topDecks = [
     "Players": 17,
     "Champion": 0
   },
-  
+  {
+    "deck_id": "20250420-8",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250420 Card-Ple卡片人卡牌遊戲專賣店-民安店 新春天狼星 8人 冠軍：奧古斯特·馮·帕塞瓦爾 魔女打貞德真過勞" ,
+    "Level": "新春賽",
+    "Players": 8,
+    "Champion": 1
+  },
   {
     "deck_id": "20250419-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
