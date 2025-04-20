@@ -1,6 +1,70 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250420-1",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250420 台中黑殿 新春天狼星 8人 冠軍：射水魚 無尾熊",
+    "Level": "新春賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250420-2",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250420 貓腳印-東門店 新春天狼星 17人 冠軍：射水魚 上杉幽",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250420-3",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250420 貓腳印-東門店 新春天狼星 17人 四強：射水魚 水麥",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250420-4",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250420 貓腳印-東門店 新春天狼星 17人 四強：明石 蛋頭",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250420-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250420 貓腳印-東門店 新春天狼星 17人 四強：奧古斯特·馮·帕塞瓦爾 平均魔女玩家",
+    "Level": "新春賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250420-6",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250420 重慶賽樂斯卡牌桌遊 Z23誓約爭奪戰 11人 1位 奧古斯特·馮·帕塞瓦爾 @曉冬雨夜" ,
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250420-7",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250420 重慶賽樂斯卡牌桌遊 Z23誓約爭奪戰 11人 2位 天城 夜明" ,
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  
+  {
     "deck_id": "20250419-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
@@ -92,7 +156,7 @@ const topDecks = [
   },
   {
     "deck_id": "20250419-11",
-    "L_name": "鎮海",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
     "Description": "20250419 貓腳印-東門店 店家賽 7人 冠軍：奧古斯特·馮·帕塞瓦爾 愛貓人士",
     "Level": "常規賽",
