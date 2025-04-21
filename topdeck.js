@@ -172,6 +172,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250419-12",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250419 哈爾濱進化卡牌 Z23誓約爭奪戰 7人 1位 奧古斯特·馮·帕塞瓦爾 七星君",
+    "Level": "誓約賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250417-1",
     "L_name": "鎮海",
     "Format": "6.0",
