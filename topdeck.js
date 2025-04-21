@@ -181,6 +181,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250419-13",
+    "L_name": "埃姆登",
+    "Format": "6.0",
+    "Description": "20250419 彰化鬥陣桌遊 店家賽 8人 冠軍：埃姆登 顯像管",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250417-1",
     "L_name": "鎮海",
     "Format": "6.0",
