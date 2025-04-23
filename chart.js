@@ -13,121 +13,138 @@ function getRandomColor() {
 function generateChampionChart() {
     const championCount = {};
 
-    // 統計 Champion 為 1 的 L_name
+    // 取得目前篩選的 Format 與 Level 值
+    const selectedFormats = Array.from(document.querySelectorAll('#filterFormatGroup input[type="checkbox"]:checked')).map(cb => cb.value);
+    const selectedLevels = Array.from(document.querySelectorAll('#filterLevelGroup input[type="checkbox"]:checked')).map(cb => cb.value);
+
+    // 篩選資料，符合 Champion、Format、Level
     topDecks.forEach(deck => {
-        if (deck.Champion === 1) {
+        const isChampion = deck.Champion === 1;
+        const formatMatch = selectedFormats.length === 0 || selectedFormats.includes(deck.Format);
+        const levelMatch = selectedLevels.length === 0 || selectedLevels.includes(deck.Level);
+
+        if (isChampion && formatMatch && levelMatch) {
             const flagship = deck.L_name;
             championCount[flagship] = (championCount[flagship] || 0) + 1;
         }
     });
 
-    let labels = [];
-    let data = [];
+    // 將統計結果整理與分類（保留原有小於 3 合併為「其他」的邏輯）
+    const sortedEntries = Object.entries(championCount)
+        .map(([flagship, count]) => ({ flagship, count }))
+        .sort((a, b) => b.count - a.count);
+
+    const labels = [];
+    const data = [];
     let otherCount = 0;
 
-    // **將總數為 1 的 L_name 合併為 "其他"**
-    Object.entries(championCount).forEach(([flagship, count]) => {
-        if (count < 3) {
-            otherCount+=count;
-        } else {
-            labels.push(flagship);
-            data.push(count);
-        }
-    });
+    // 判斷是否有勾選任何篩選
+	const hasFormatFilter = selectedFormats.length > 0;
+	const hasLevelFilter = selectedLevels.length > 0;
+	const mergeThreshold = (hasFormatFilter || hasLevelFilter) ? 2 : 3;
 
-    // **如果有 "其他"，則加入統計**
+	// 根據條件合併為「其他」
+	sortedEntries.forEach(({ flagship, count }) => {
+		if (count < mergeThreshold) {
+			otherCount += count;
+		} else {
+			labels.push(flagship);
+			data.push(count);
+		}
+	});
+
     if (otherCount > 0) {
         labels.push("其他");
         data.push(otherCount);
     }
 
-    // 如果沒有數據，隱藏圖表
     if (labels.length === 0) {
         document.getElementById("championChart").style.display = "none";
         return;
+    } else {
+        document.getElementById("championChart").style.display = "block";
     }
+	
+	// 顯示篩選條件描述
+	const filterText = [];
+	if (selectedFormats.length > 0) {
+		filterText.push(`環境: ${selectedFormats.join(', ')}`);
+	}
+	if (selectedLevels.length > 0) {
+		filterText.push(`競爭等級: ${selectedLevels.join(', ')}`);
+	}
 
-    // 獲取 canvas 元素
+	const chartFiltersText = filterText.length > 0 ? filterText.join("；") : "";
+	const chartFiltersElement = document.getElementById("chartFilters");
+	if (chartFiltersElement) {
+		chartFiltersElement.textContent = chartFiltersText;
+		chartFiltersElement.style.display = chartFiltersText ? 'block' : 'none';
+	}
+
+	//畫圖表
     const canvas = document.getElementById("championChart");
-    if (!canvas) {
-        console.error("Canvas element not found!");
-        return;
-    }
+    if (!canvas) return;
 
-    // 設置 canvas 大小
+    const existingChart = Chart.getChart(canvas);
+    if (existingChart) existingChart.destroy();
+
     canvas.width = 650;
     canvas.height = 650;
     const ctx = canvas.getContext("2d");
 
-    // 創建圓餅圖
-    const chart = new Chart(ctx, {
+    window.championChart = new Chart(ctx, {
         type: "pie",
         data: {
-            labels: labels, // 標籤
+            labels: labels,
             datasets: [{
-                data: data, // 數據
-                backgroundColor: labels.map(() => getRandomColor()), // 隨機顏色
+                data: data,
+                backgroundColor: labels.map(() => getRandomColor()),
                 borderColor: "#ffffff",
                 borderWidth: 2
             }]
         },
         options: {
-            responsive: false, // 固定大小
+            responsive: false,
             maintainAspectRatio: false,
-            layout: {
-                padding: 50 // 留白，避免標籤擠壓
-            },
+            layout: { padding: 50 },
             plugins: {
-                legend: { display: false }, // 隱藏內建圖例
-                tooltip: { enabled: false } // 禁用工具提示
+                legend: { display: false },
+                tooltip: { enabled: false }
             },
             animation: {
                 onComplete: function () {
-                    const chartArea = chart.chartArea;
+                    const chartArea = window.championChart.chartArea;
                     const centerX = (chartArea.left + chartArea.right) / 2;
                     const centerY = (chartArea.top + chartArea.bottom) / 2;
-                    const radius = (chartArea.right - chartArea.left) / 2 * 0.55; // 適度縮小圓餅圖
+                    const radius = (chartArea.right - chartArea.left) / 2 * 0.55;
 
-                    const datasetMeta = chart.getDatasetMeta(0);
+                    const datasetMeta = window.championChart.getDatasetMeta(0);
                     datasetMeta.data.forEach((arc, index) => {
-                        const { x, y } = arc.tooltipPosition(); // 標籤位置
                         const label = labels[index];
                         const percentage = ((data[index] / data.reduce((sum, val) => sum + val, 0)) * 100).toFixed(2);
                         const labelText = `${label} (${percentage}%)`;
 
-                        // 標籤位置調整
                         const angle = (arc.startAngle + arc.endAngle) / 2;
-                        const textDistance = radius * 1.5; // 標籤放置距離
-                        const textX = centerX + Math.cos(angle) * textDistance;
-                        const textY = centerY + Math.sin(angle) * textDistance;
+                        const textX = centerX + Math.cos(angle) * radius * 1.5;
+                        const textY = centerY + Math.sin(angle) * radius * 1.5;
 
-                        // 計算文字寬度和高度
                         ctx.save();
-                        ctx.font = "20px Arial"; // 字體大小
+                        ctx.font = "20px Arial";
                         const textWidth = ctx.measureText(labelText).width;
-                        const textHeight = 20; // 固定高度
+                        const textHeight = 20;
+                        const padding = 5;
 
-                        // 繪製帶外框的標籤背景
-                        ctx.fillStyle = "#000000"; // 黑色背景
-                        ctx.strokeStyle = "#ffffff"; // 白色外框
+                        ctx.fillStyle = "#000000";
+                        ctx.strokeStyle = "#ffffff";
                         ctx.lineWidth = 3;
-
-                        // 背景框位置（根據文字寬度和高度動態調整）
-                        const padding = 5; // 背景框內邊距
-                        const rectX = textX - textWidth / 2 - padding;
-                        const rectY = textY - textHeight / 2 - padding;
-                        const rectWidth = textWidth + 2 * padding;
-                        const rectHeight = textHeight + 2 * padding;
-
                         ctx.beginPath();
-                        ctx.roundRect(rectX, rectY, rectWidth, rectHeight, 5); // 圓角矩形
+                        ctx.roundRect(textX - textWidth / 2 - padding, textY - textHeight / 2 - padding, textWidth + 2 * padding, textHeight + 2 * padding, 5);
                         ctx.fill();
                         ctx.stroke();
 
-                        // 顯示標籤文字
                         ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center"; // 文字水平居中
-                        ctx.textBaseline = "middle"; // 文字垂直居中
+                        ctx.textAlign = "center";
+                        ctx.textBaseline = "middle";
                         ctx.fillText(labelText, textX, textY);
                         ctx.restore();
                     });

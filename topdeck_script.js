@@ -226,11 +226,25 @@ function populateFilters() {
     });
 
     // 填充 Level 多選 Checkbox
-    Array.from(uniqueLevels).sort().forEach(level => {
-        const label = document.createElement('label');
-        label.innerHTML = `<input type="checkbox" name="filterLevel" value="${level}" onchange="searchDecks()"> ${level}`;
-        levelGroup.appendChild(label);
-    });
+	Array.from(uniqueLevels).sort().forEach(level => {
+		const label = document.createElement('label');
+		const checkbox = document.createElement('input');
+		checkbox.type = 'checkbox';
+		checkbox.name = 'filterLevel';
+		checkbox.value = level;
+
+		// 加上 onchange 行為：搜尋＋更新圖表
+		checkbox.addEventListener('change', () => {
+			searchDecks();
+			generateChampionChart();
+		});
+
+		label.appendChild(checkbox);
+		label.appendChild(document.createTextNode(` ${level}`));
+		levelGroup.appendChild(label);
+	});
+	generateChampionChart(); // 確保 filter 載完再畫圖表
+
 }
 
 // **顯示/隱藏圓餅圖**
