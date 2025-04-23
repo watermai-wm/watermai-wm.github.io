@@ -121,8 +121,9 @@ function generateChampionChart() {
                     const datasetMeta = window.championChart.getDatasetMeta(0);
                     datasetMeta.data.forEach((arc, index) => {
                         const label = labels[index];
-                        const percentage = ((data[index] / data.reduce((sum, val) => sum + val, 0)) * 100).toFixed(2);
-                        const labelText = `${label} (${percentage}%)`;
+						const count = data[index];
+						const percentage = ((count / data.reduce((sum, val) => sum + val, 0)) * 100).toFixed(2);
+						const labelText = `${label}（${count}次, ${percentage}%)`;
 
                         const angle = (arc.startAngle + arc.endAngle) / 2;
                         const textX = centerX + Math.cos(angle) * radius * 1.5;
