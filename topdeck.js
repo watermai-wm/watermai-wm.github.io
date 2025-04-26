@@ -1,6 +1,78 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250426-1",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250426 卡多商行 桑心卡店 新春天狼星 8人 冠軍：鎮海 韋錡",
+    "Level": "新春賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250426-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250426 彰化鬥陣桌遊 新春天狼星 12人 冠軍：奧古斯特·馮·帕塞瓦爾 仲文",
+    "Level": "新春賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250426-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250426 彰化鬥陣桌遊 新春天狼星 12人 亞軍：天城 奶綠",
+    "Level": "新春賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250426-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250426 貓腳印-東門店 店鋪賽 12人 冠軍：奧古斯特·馮·帕塞瓦爾 子誠",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250426-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250426 貓腳印-桃園店 店鋪賽 5人 冠軍：奧古斯特·馮·帕塞瓦爾 黑鐵血教徒",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250426-6",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250426 重慶卡普塔斯 Z23誓約爭奪戰 13人 1位 奧古斯特·馮·帕塞瓦爾 @曉冬雨夜 ",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250426-7",
+    "L_name": "華盛頓",
+    "Format": "6.0",
+    "Description": "20250426 重慶卡普塔斯 Z23誓約爭奪戰 13人 2位 華盛頓 @skyzyy ",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250426-8",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250426 湖北武漢秘銀大廳 Z23誓約爭奪戰 12人 1位 聖女貞德 細雨",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250424-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
