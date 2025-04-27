@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250427-1",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250427 CardMaster 新春天狼星 12人 冠軍：明石 努卡",
+    "Level": "新春賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250427-2",
+    "L_name": "聖路易斯",
+    "Format": "6.0",
+    "Description": "20250427 貓腳印-士林店 店家賽 5人 冠軍：聖路易斯 小淡",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250427-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250427 Card-Ple卡片人卡牌遊戲專賣店-民安店 新春天狼星 6人 冠軍：奧古斯特·馮·帕塞瓦爾 鐵血才是正義",
+    "Level": "新春賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250426-1",
     "L_name": "鎮海",
     "Format": "6.0",
