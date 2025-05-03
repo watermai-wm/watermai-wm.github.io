@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250503-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250503 卡多商行 桑心卡店 Z23誓約賽 12人 冠軍：奧古斯特·馮·帕塞瓦爾 阿管",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250501-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
