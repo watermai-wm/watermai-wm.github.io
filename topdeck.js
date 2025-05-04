@@ -64,6 +64,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250504-8",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250504 貓腳印-士林店 店家賽 6人 冠軍：明石 蛋頭",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250503-1",
     "L_name": "獨角獸",
     "Format": "6.0",
@@ -98,6 +107,78 @@ const topDecks = [
     "Level": "常規賽",
     "Players": 10,
     "Champion": 1
+  },
+  {
+    "deck_id": "20250503-5",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 1位 明石 @問號三三",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250503-6",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 2位 鎮海 可可莉克的虞美人",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-7",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 3位 奧古斯特 止水",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-8",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 4位 射水魚 JZ",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-9",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 8強 射水魚 開膛手初華",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-10",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 8強 奧古斯特 超能擼戰隊-破曉天",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-11",
+    "L_name": "明石",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 8強 明石 淵井空",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250503-12",
+    "L_name": "聖女貞德",
+    "Format": "6.0",
+    "Description": "20250503上海敘敘亭 2025城市賽大陸賽區-上海站 43人 8強 聖女貞德 邪惡肥藍貓",
+    "Level": "城市賽",
+    "Players": 43,
+    "Champion": 0
   },
   {
     "deck_id": "20250501-1",
