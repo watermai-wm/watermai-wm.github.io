@@ -1,6 +1,69 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250504-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250504 CardMaster Z23誓約賽 16人 冠軍：奧古斯特·馮·帕塞瓦爾 Enix",
+    "Level": "誓約賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250504-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250504 彰化鬥陣桌遊 Z23誓約賽 11人 冠軍：奧古斯特·馮·帕塞瓦爾 侑廷",
+    "Level": "誓約賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250504-3",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250504 這裡有桌遊 Z23誓約賽 10人 冠軍：射水魚 鈺堂",
+    "Level": "誓約賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250504-4",
+    "L_name": "怨仇",
+    "Format": "6.0",
+    "Description": "20250504 重慶卡普塔斯 第11屆指揮官爭奪戰 14人 1位 怨仇 十六夜汐",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250504-5",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250504 重慶卡普塔斯 第11屆指揮官爭奪戰 14人 2位 奧古斯特·馮·帕塞瓦爾 黃豆粉單推人",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250504-6",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250504 重慶卡普塔斯 第11屆指揮官爭奪戰 14人 4強 奧古斯特·馮·帕塞瓦爾 @曉冬雨夜",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250504-7",
+    "L_name": "金剛",
+    "Format": "6.0",
+    "Description": "20250504 重慶卡普塔斯 第11屆指揮官爭奪戰 14人 4強 金剛 白龍大王",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250503-1",
     "L_name": "獨角獸",
     "Format": "6.0",
@@ -25,6 +88,15 @@ const topDecks = [
     "Description": "20250503 卡多商行 桑心卡店 Z23誓約賽 12人 冠軍：奧古斯特·馮·帕塞瓦爾 阿管",
     "Level": "誓約賽",
     "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250503-4",
+    "L_name": "羅恩",
+    "Format": "6.0",
+    "Description": "20250503 貓腳印-東門店 店家賽 10人 冠軍：羅恩 Limbo",
+    "Level": "常規賽",
+    "Players": 10,
     "Champion": 1
   },
   {
