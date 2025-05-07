@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250507-1",
+    "L_name": "鎮海",
+    "Format": "6.0",
+    "Description": "20250507 桌上旅程 APP STORE Z23誓約賽 14人 冠軍：鎮海 淵眼-東煌人柱力",
+    "Level": "誓約賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250504-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
