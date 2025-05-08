@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250508-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250508 貓腳印-東門店 休閒賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 kofe",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250507-1",
     "L_name": "鎮海",
     "Format": "6.0",
