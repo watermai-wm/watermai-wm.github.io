@@ -28,6 +28,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250511-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250511 哈爾濱進化卡牌 周日店賽 4人 1位 奧古斯特·馮·帕塞瓦爾 七星君",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250510-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
