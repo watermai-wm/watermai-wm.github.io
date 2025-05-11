@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250511-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "6.0",
+    "Description": "20250511 這裡有桌遊 Z23誓約賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 炘宏",
+    "Level": "誓約賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250511-2",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250511 CardMaster Z23誓約賽 13人 冠軍：射水魚 上杉幽",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250511-3",
+    "L_name": "天城",
+    "Format": "6.0",
+    "Description": "20250511 貓腳印-桃園店 Z23誓約賽 7人 冠軍：天城 長休送你回老家",
+    "Level": "誓約賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250510-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
