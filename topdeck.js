@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250521-1",
+    "L_name": "射水魚",
+    "Format": "6.0",
+    "Description": "20250521 桌上旅程 APP STORE Z23誓約賽 16人 冠軍：射水魚 海綿體大戰括約肌",
+    "Level": "誓約賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250518-1",
     "L_name": "射水魚",
     "Format": "6.0",
