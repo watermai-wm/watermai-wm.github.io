@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250607-1",
+    "L_name": "羅恩",
+    "Format": "7.0",
+    "Description": "20250607 重慶卡普塔斯 7.0先行賽 12人 1位 羅恩 二至二分",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250607-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250607 重慶卡普塔斯 7.0先行賽 12人 2位 奧古斯特·馮·帕塞瓦爾 曉冬雨夜",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250524-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
