@@ -52,7 +52,7 @@ function populateFilterOptions() {
 	const rarityOrder = [
         "N", "R", "SR", "SSR",
         "UR", "L", "SR-SEC", "SSR-SEC",
-        "UR-SEC", "L-SEC", "PR", "N-SEC", "SPR"
+        "UR-SEC", "L-SEC", "PR", "N-SEC", "SPR","L-PR"
     ];
 	const forceOrder = [
         "碧藍航線", "赤色中軸"
@@ -297,7 +297,7 @@ function addCardToDeck(cardID) {
     let card = allCards.find(c => c.card_id == cardID);
     let rarity = card.attributes['罕　貴'];
 
-    if (rarity === 'L' || rarity === 'L-SEC') {
+    if (['L', 'L-SEC', 'L-PR'].includes(rarity)) {
         if (Object.keys(deck.flagship).length >= 2) {
             showSoftAlert("旗艦區最多只能選擇兩張卡片");
             return;
@@ -323,7 +323,7 @@ function updateDeck(cardID, count) {
     let rarity = card.attributes['罕　貴'];
     let cardCode = card.card_code;
     
-    if (rarity === 'L' || rarity === 'L-SEC') {
+    if (['L', 'L-SEC', 'L-PR'].includes(rarity)) {
         if (count > 1) {
             count = 1; // 旗艦只能選擇 0 或 1
         }
