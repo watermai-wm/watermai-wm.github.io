@@ -38,7 +38,7 @@ function populateFilterOptions() {
 	const rarityOrder = [
         "N", "R", "SR", "SSR",
         "UR", "L", "SR-SEC", "SSR-SEC",
-        "UR-SEC", "L-SEC", "PR", "N-SEC", "SPR"
+        "UR-SEC", "L-SEC", "PR", "N-SEC", "SPR","L-PR"
     ];
 	const forceOrder = [
         "碧藍航線", "赤色中軸"
