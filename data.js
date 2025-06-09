@@ -9369,7 +9369,7 @@ const cards = [
     },
     {
         "card_id": 737,
-        "card_name": "山风",
+        "card_name": "山風",
         "card_code": "BP04-002",
         "attributes": {
             "顏　色": "紅",
