@@ -409,6 +409,7 @@ function resetFilters() {
 	
 	 // **重置下拉式選單到預設值**
     document.getElementById('filterEffectSelect').selectedIndex = 0; // 設定為第一個選項
+	document.getElementById('filterObtainSelect').selectedIndex = 0;  // 🔹 加這一行
  
     // 重置分頁
     currentPage = 1;
