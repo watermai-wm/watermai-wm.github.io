@@ -2,7 +2,7 @@ let allCards = []; // 存儲所有卡片數據
 let currentPage = 1;
 const cardsPerPage = 20;
 let deck = { flagship: {}, mainDeck: {} }; // 旗艦與牌組
-
+let filteredCardsGlobal = []; // 🔴 非常重要，不能宣告在 searchCards 裡
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("頁面加載完成");
@@ -185,7 +185,9 @@ function populateFilterOptions() {
         });
 }
 
-function searchCards() {
+function searchCards(resetPage = true) {
+    if (resetPage) currentPage = 1;
+
 	
     const nameInput = document.getElementById('searchName').value.toLowerCase();
     const codeInput = document.getElementById('searchCode').value.toLowerCase();
@@ -225,7 +227,8 @@ function searchCards() {
 		(effectFilter === '' || (card.card_effect && card.card_effect.includes(effectFilter))) // 🔹 根據選單篩選技能關鍵字
     );
 
-    renderCards(filteredCards);
+    filteredCardsGlobal = [...filteredCards].sort((a, b) => parseInt(b.card_id) - parseInt(a.card_id));
+	renderCards(filteredCardsGlobal);
 }
 
 function resetFilters() {
@@ -250,6 +253,11 @@ function resetFilters() {
 
 
 function renderCards(filteredCards) {
+	if (!filteredCards || filteredCards.length === 0) {
+    document.getElementById("results").innerHTML = "<p style='text-align:center;'>找不到符合條件的卡片</p>";
+    renderPagination(0);
+    return;
+	}
     let resultsDiv = document.getElementById("results");
     if (!resultsDiv) {
         console.error("錯誤: 找不到 results 容器");
@@ -261,11 +269,17 @@ function renderCards(filteredCards) {
     resultsDiv.style.gap = "10px";
     resultsDiv.style.justifyContent = "center";
 
-    // 依照 card_id **降冪排序**（從大到小）
-    filteredCards.sort((a, b) => parseInt(b.card_id) - parseInt(a.card_id));
+    // 拷貝一份資料再排序，避免破壞原始 filteredCardsGlobal
+
+	
+
 
     let start = (currentPage - 1) * cardsPerPage;
     let paginatedCards = filteredCards.slice(start, start + cardsPerPage);
+
+    if (paginatedCards.length === 0) {
+        console.warn("這一頁沒有卡片可顯示");
+    }
 
     paginatedCards.forEach(card => {
         let cardDiv = document.createElement("div");
@@ -632,7 +646,7 @@ function renderPagination(totalItems) {
         
         pageBtn.onclick = () => {
             currentPage = pageNum;
-            searchCards();
+            searchCards(false);
         };
         
         return pageBtn;

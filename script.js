@@ -1,6 +1,8 @@
 // script.js
 let currentPage = 1;
 const cardsPerPage = 20; // 每頁顯示的卡片數量
+let filteredCardsGlobal = []; // 全域儲存篩選後的卡片
+
 
 function populateFilterOptions() {
     const filterMapping = {
@@ -171,7 +173,8 @@ function populateFilterOptions() {
         });
 }
 
-function searchCards() {
+function searchCards(resetPage = true) {
+    if (resetPage) currentPage = 1;
 	
     const nameInput = document.getElementById('searchName').value.toLowerCase();
     const codeInput = document.getElementById('searchCode').value.toLowerCase();
@@ -210,8 +213,9 @@ function searchCards() {
         (filters.obtain === '' || card.acquisition_method === filters.obtain) && // 篩選獲取方法
 		(effectFilter === '' || (card.card_effect && card.card_effect.includes(effectFilter))) // 🔹 根據選單篩選技能關鍵字
     );
-
-    displayResults(filteredCards);
+	
+	filteredCardsGlobal = [...filteredCards].sort((a, b) => parseInt(b.card_id) - parseInt(a.card_id));
+    displayResults(filteredCardsGlobal);
 }
 
 function displayResults(filteredCards) {
@@ -323,67 +327,60 @@ function updatePagination(totalCards) {
     // 創建「上一頁」按鈕
     const prevButton = document.createElement('button');
     prevButton.textContent = '上一頁';
-    prevButton.onclick = function () { changePage(-1); };
+    prevButton.onclick = function () {
+        if (currentPage > 1) {
+            currentPage--;
+            searchCards(false); // ❗ 不重設頁碼
+        }
+    };
     prevButton.disabled = currentPage === 1;
     paginationContainer.appendChild(prevButton);
 
-    // 動態生成頁碼按鈕
-    const maxPagesToShow = 5; // 顯示的最大頁碼數（不包含省略號）
+    const maxPagesToShow = 5;
 
     if (totalPages <= maxPagesToShow) {
-        // 如果總頁數較少，直接顯示所有頁碼
         for (let i = 1; i <= totalPages; i++) {
             addPageButton(i);
         }
     } else {
-        // 確保「1」永遠出現在最前面
         addPageButton(1);
 
-        // 當前頁碼前後的範圍
         let startPage = Math.max(2, currentPage - 2);
         let endPage = Math.min(totalPages - 1, currentPage + 2);
 
-        // 添加省略號
-        if (startPage > 2) {
-            addEllipsis();
-        }
+        if (startPage > 2) addEllipsis();
+        for (let i = startPage; i <= endPage; i++) addPageButton(i);
+        if (endPage < totalPages - 1) addEllipsis();
 
-        // 添加範圍內的頁碼
-        for (let i = startPage; i <= endPage; i++) {
-            addPageButton(i);
-        }
-
-        // 添加省略號
-        if (endPage < totalPages - 1) {
-            addEllipsis();
-        }
-
-        // 確保「最後一頁」永遠出現在最右側
         addPageButton(totalPages);
     }
 
     // 創建「下一頁」按鈕
     const nextButton = document.createElement('button');
     nextButton.textContent = '下一頁';
-    nextButton.onclick = function () { changePage(1); };
+    nextButton.onclick = function () {
+        if (currentPage < totalPages) {
+            currentPage++;
+            searchCards(false); // ❗ 不重設頁碼
+        }
+    };
     nextButton.disabled = currentPage === totalPages;
     paginationContainer.appendChild(nextButton);
 
-    // **輔助函式：添加頁碼按鈕**
+    // ========== 小工具 ==========
     function addPageButton(pageNumber) {
         const pageButton = document.createElement('button');
         pageButton.textContent = pageNumber;
         pageButton.onclick = function () {
             currentPage = pageNumber;
-            searchCards();
+            searchCards(false); // ❗ 不重設頁碼
         };
         if (pageNumber === currentPage) {
-            pageButton.style.fontWeight = 'bold'; // 高亮顯示當前頁
+            pageButton.style.fontWeight = 'bold';
         }
         paginationContainer.appendChild(pageButton);
     }
 
-    // **輔助函式：添加省略號**
     function addEllipsis() {
         const ellipsis = document.createElement('span');
         ellipsis.textContent = '...';
@@ -392,11 +389,12 @@ function updatePagination(totalCards) {
     }
 }
 
+/*
 function changePage(delta) {
     currentPage += delta;
     searchCards();
 }
-
+*/
 function resetFilters() {
     // 清空文字輸入框
     document.getElementById('searchName').value = '';
