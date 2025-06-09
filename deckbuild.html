@@ -103,6 +103,8 @@
 		<button id="clearDeckButton">清空構築表</button>
 		<button id="shareDeckButton">分享構築(匯出成圖片)</button>
 		<button onclick="generateDeckText()">產生構築文字檔</button>
+
+
 		<div id="deckCounter" style="
 			background: rgba(0, 0, 0, 0.8);
 			color: white;
@@ -117,12 +119,19 @@
 		<div id="deck"></div>
 		<div id="flagship"></div>
     </div>
+	<br />
+		<button onclick="exportDeckCode()">匯出牌組代碼</button>
+		<textarea id="deckCodeOutput" readonly style="width: 100%; height: 80px;"></textarea>
+		<textarea id="deckCodeInput" placeholder="貼上牌組代碼" style="width: 100%; height: 80px;"></textarea>
+		<button onclick="importDeckCode()">載入牌組代碼</button>
 	
 
 
     <script src="data.js"></script>
     <script src="deckbuild.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lz-string@1.4.4/libs/lz-string.min.js"></script>
+
 
 </body>
 </html>

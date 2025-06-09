@@ -172,7 +172,6 @@ function populateFilterOptions() {
 }
 
 function searchCards() {
-	currentPage = 1; // 條件變更就回到第 1 頁
 	
     const nameInput = document.getElementById('searchName').value.toLowerCase();
     const codeInput = document.getElementById('searchCode').value.toLowerCase();

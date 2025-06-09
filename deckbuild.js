@@ -186,7 +186,6 @@ function populateFilterOptions() {
 }
 
 function searchCards() {
-	currentPage = 1; // 條件變更就回到第 1 頁
 	
     const nameInput = document.getElementById('searchName').value.toLowerCase();
     const codeInput = document.getElementById('searchCode').value.toLowerCase();
@@ -926,3 +925,34 @@ function generateDeckText() {
         document.body.appendChild(downloadBtn);
     }
 }
+
+//輸出牌組代碼
+
+function exportDeckCode() {
+    const deckString = JSON.stringify(deck);
+    const compressed = LZString.compressToBase64(deckString); // 壓縮 + 編碼
+    document.getElementById('deckCodeOutput').value = compressed;
+}
+
+
+//輸入牌組代碼
+
+function importDeckCode() {
+    const code = document.getElementById('deckCodeInput').value.trim();
+    try {
+        const decompressed = LZString.decompressFromBase64(code);
+        const parsed = JSON.parse(decompressed);
+        if (parsed.flagship && parsed.mainDeck) {
+            deck = parsed;
+            renderDeck(); // 載入並重新顯示
+            showSoftAlert("牌組已載入！");
+        } else {
+            throw new Error("格式錯誤");
+        }
+    } catch (e) {
+        showSoftAlert("載入失敗：無效的牌組代碼");
+    }
+}
+
+
+

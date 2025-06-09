@@ -494,5 +494,19 @@ a:active {
     background-color: #218838;
 }
 
+/*文字框變深色的*/
+textarea {
+    background-color: #2d2d2d; /* 深色背景 */
+    color: #e0e0e0;           /* 白字 */
+    border: 1px solid #444;   /* 邊框顏色稍亮 */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;         /* 允許垂直調整大小 */
+}
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
 
 
