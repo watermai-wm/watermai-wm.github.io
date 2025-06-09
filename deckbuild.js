@@ -569,7 +569,7 @@ function renderPagination(totalItems) {
     prevBtn.onclick = () => {
         if (currentPage > 1) {
             currentPage--;
-            searchCards();
+            searchCards(false);
         }
     };
     paginationDiv.appendChild(prevBtn);
@@ -626,7 +626,7 @@ function renderPagination(totalItems) {
     nextBtn.onclick = () => {
         if (currentPage < totalPages) {
             currentPage++;
-            searchCards();
+            searchCards(false);
         }
     };
     paginationDiv.appendChild(nextBtn);
