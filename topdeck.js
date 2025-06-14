@@ -1,6 +1,51 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250614-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250614 貓腳印-東門店 店家賽 12人 冠軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250614-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250614 CardMaster 店家賽 9人 冠軍：光輝 阿凱",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250614-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250614 貓腳印-桃園店 店家賽 8人 冠軍：奧古斯特·馮·帕塞瓦爾 毀滅得了MVP 火壓就是躺贏狗",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250614-4",
+    "L_name": "沙恩霍斯特",
+    "Format": "7.0",
+    "Description": "20250614 重慶卡普塔斯 極光戰曲發售賽 14人 1位 沙恩霍斯特 @曉冬雨夜",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250614-5",
+    "L_name": "武藏",
+    "Format": "7.0",
+    "Description": "20250614 重慶卡普塔斯 極光戰曲發售賽 14人 2位 武藏 白龍大王",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250607-1",
     "L_name": "羅恩",
     "Format": "7.0",
