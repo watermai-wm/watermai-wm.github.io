@@ -220,10 +220,21 @@ function populateFilters() {
 
     // 填充 Format 多選 Checkbox
     Array.from(uniqueFormats).sort().forEach(format => {
-        const label = document.createElement('label');
-        label.innerHTML = `<input type="checkbox" name="filterFormat" value="${format}" onchange="searchDecks()"> ${format}`;
-        formatGroup.appendChild(label);
-    });
+		const label = document.createElement('label');
+		const checkbox = document.createElement('input');
+		checkbox.type = 'checkbox';
+		checkbox.name = 'filterFormat';
+		checkbox.value = format;
+
+		checkbox.addEventListener('change', () => {
+			searchDecks();
+			generateChampionChart(); // 加上這行才能更新圖表
+		});
+
+		label.appendChild(checkbox);
+		label.appendChild(document.createTextNode(` ${format}`));
+		formatGroup.appendChild(label);
+	});
 
     // 填充 Level 多選 Checkbox
 	Array.from(uniqueLevels).sort().forEach(level => {
