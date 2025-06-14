@@ -55,6 +55,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250614-7",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250614 上海敘敘亭 極光戰曲發售賽 10人 1位 約克鎮II 小一",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250614-8",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250614 上海敘敘亭 極光戰曲發售賽 10人 2位 天城 @ccw可樂姬翅薯片 ",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250607-1",
     "L_name": "羅恩",
     "Format": "7.0",
