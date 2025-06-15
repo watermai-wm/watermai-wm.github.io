@@ -11,7 +11,7 @@ const topDecks = [
   },
   {
     "deck_id": "20250614-2",
-    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "L_name": "光輝",
     "Format": "7.0",
     "Description": "20250614 CardMaster 店家賽 9人 冠軍：光輝 阿凱",
     "Level": "常規賽",
