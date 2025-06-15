@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250615-1",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250615 貓腳印-士林店 店家賽 10人 冠軍：射水魚 上杉幽",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250615-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250615 CardMaster 7.0上市奪盒賽 10人 冠軍：奧古斯特·馮·帕塞瓦爾 濃稠",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250615-3",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250615 這裡有桌遊 店家賽 11人 冠軍：射水魚 RF",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250614-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.0",
