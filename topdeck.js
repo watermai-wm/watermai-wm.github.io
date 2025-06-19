@@ -1,6 +1,51 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250619-1",
+    "L_name": "聖女貞德",
+    "Format": "7.0",
+    "Description": "20250619 貓腳印-東門店 休閒賽 12人 冠軍：聖女貞德 海綿體大戰括約肌",
+    "Level": "常規賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250619-2",
+    "L_name": "三笠",
+    "Format": "7.0",
+    "Description": "20250619 重慶卡普塔斯 周四摸魚賽 8人 1位 三笠 @白涵不白",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250619-3",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250619 重慶卡普塔斯 周四摸魚賽 8人 2位 約克鎮II @skyzyy",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250618-1",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250618 鬥樂-一中店 店家賽 11人 冠軍：普利茅斯 政勳",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250618-2",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250618 鬥樂-一中店 店家賽 11人 亞軍：約克鎮II 初戀",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250615-1",
     "L_name": "射水魚",
     "Format": "7.0",
