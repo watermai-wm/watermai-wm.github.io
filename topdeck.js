@@ -1,6 +1,60 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250621-1",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250621 貓腳印-東門店 店家賽 15人 冠軍：普利茅斯 千早愛音",
+    "Level": "常規賽",
+    "Players": 15,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250621-2",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250621 CardMaster 店家賽 6人 冠軍：普利茅斯 明石測牌器",
+    "Level": "常規賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250621-3",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250621 重慶卡普塔斯 第十二屆指揮官爭奪戰 17人 1位 普利茅斯 莉可",
+    "Level": "常規賽",
+    "Players": 17,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250621-4",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250621 重慶卡普塔斯 第十二屆指揮官爭奪戰 17人 2位 俾斯麥Zwei @曉冬雨夜",
+    "Level": "常規賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250621-5",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250621 重慶卡普塔斯 第十二屆指揮官爭奪戰 17人 4強 普利茅斯 @fami--",
+    "Level": "常規賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250621-6",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250621 重慶卡普塔斯 第十二屆指揮官爭奪戰 17人 4強 普利茅斯 @二至二分",
+    "Level": "常規賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250619-1",
     "L_name": "聖女貞德",
     "Format": "7.0",
