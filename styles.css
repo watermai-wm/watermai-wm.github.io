@@ -509,4 +509,12 @@ textarea:focus {
     outline: none;
 }
 
+/*圖片置中*/
+.container img { /* 或者更具體地指定圖片，例如 .game-preparation img */
+    display: block; /* 讓圖片成為塊級元素 */
+    margin-left: auto; /* 左邊距自動 */
+    margin-right: auto; /* 右邊距自動，實現水平置中 */
+    max-width: 100%; /* 確保圖片不會超出容器，如果原始圖片尺寸大於容器，這很有用 */
+    height: auto; /* 保持圖片比例 */
+}
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碧藍航線Cockatrice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+	<p>本篇文章及模組內容大量參考<a href="https://anoda.substack.com/p/grand-archive-on-cockatrice"target="_blank">這篇文章</a>，特別感謝。</p>
+        <h1>概覽</h1>
+        <p>Cockatrice 是一個免費、開源、跨平台的程式，用於透過網路遊玩桌上卡牌遊戲。</p>
+
+        <h2>Cockatrice 的功能：</h2>
+        <ul>
+            <li>大廳功能，可用來尋找對局並與其他玩家聊天</li>
+            <li>套牌編輯器</li>
+            <li>重播功能 —— 自動記錄所有對局以便日後回顧</li>
+            <li>內建鍵盤快捷鍵，可用來操作卡片、加入指示物、追蹤遊戲階段</li>
+            <li>易於編輯的純文字格式套牌清單</li>
+            <li>你可以建立單人對局來測試套牌，或建立本地雙人對局並控制雙方以測試對戰情況</li>
+        </ul>
+
+        <h2>遊戲準備</h2>
+        <img src="cockatrice_image/pregame.png" width="80%"/>
+
+        <h2>遊戲中</h2>
+        <img src="cockatrice_image/ingame.png" width="80%"/>
+
+        <h2>組牌</h2>
+        <img src="cockatrice_image/deck.png" width="80%"/>
+
+        <h2>安裝</h2>
+        <p>下載Cockatrice並安裝：<a href="https://cockatrice.github.io/" target="_blank">https://cockatrice.github.io/</a></p>
+        <p>打開Cockatrice時，程式會問你要不要更新卡片資料庫(Card Database)，選擇不要(No)。</p>
+		<img src="cockatrice_image/1.png" width="80%"/>
+
+        <h2>下載碧藍戰卡資源</h2>
+        <p><a href="https://drive.google.com/file/d/1Krg4r3vNpkGrQTp7nVtyQphABPlk8Am0/view?usp=drive_link" target="_blank">在這裡下載碧藍戰卡資源</a></p>
+
+        <h2>安裝碧藍戰卡資源</h2>
+        <ol>
+            <li>在選單列中，前往「Card Database → Open custom image folder」。將「AzurLane Card Images」資料夾放在這裡。</li>
+			<img src="cockatrice_image/2.png" width="50%"/>
+            <li>接著前往「Card Database → Open custom sets folder」。將「01.AzurLane.xml」檔案放在這裡。</li>
+			<img src="cockatrice_image/3.png" width="50%"/>
+            <li>往上一層路徑，進入 Cockatrice/，將「cards.xml」檔案放在此處。（注意：如果你已經使用 Cockatrice 來玩 Magic，請跳過這個步驟並保留舊的 cards.xml 檔案）。</li>
+            <img src="cockatrice_image/4.png" width="80%"/>
+			<li>前往 Cockatrice/themes/，將「AzurLane theme」資料夾放在那裡。</li>
+			<pre>
+			Cockatrice/
+			├── cards.xml
+			├── customsets/
+			│   └── 01.AzurLane.xml
+			├── decks/
+			├── extra/
+			├── pics/
+			│   └── CUSTOM/
+			│       └── AzurLane Card Images/
+			├── replays/
+			├── settings/
+			└── themes/
+				└── AzurLane theme/
+			</pre>
+            <li>離開並重新開啟Cockatrice。</li>
+            <li>在選單列中，前往「 Cockatrice → Settings → Appearance」並選擇 “AzurLane theme”。</li>
+			<img src="cockatrice_image/5.png" width="50%"/>
+			<img src="cockatrice_image/6.png" width="80%"/>
+        </ol>
+
+        <h2>登入</h2>
+        <p>（如果你只是想單人測試套牌，無需註冊伺服器或登入。前往 Actions → Start Local Game 即可開始測試對局。）</p>
+		<p>由於程式機能限制，需要將魔方卡以及旗艦卡放入額外牌組</p>
+		<img src="cockatrice_image/7.png" width="30%"/>
+        <ol>
+            <li>在選單列中，前往 Actions → Register to Server 並註冊。</li>
+            <li>前往 Actions → Connect 並登入 Rooster Ranges 伺服器（預設伺服器）。</li>
+            <li>登入後，前往 Server 分頁並加入「Other Games」房間。</li>
+            <li>如果你正在尋找對手，可以加入柴郡試煉場的Discord找人。</li>
+			<img src="cockatrice_image/8.png" width="50%"/>
+        </ol>
+
+        <h2>遊玩與操作</h2>
+        <p>一分鐘快速上手 Cockatrice 操作與對戰指南：<a href="https://github.com/Cockatrice/Cockatrice/wiki/One-minute-game-guide" target="_blank">https://github.com/Cockatrice/Cockatrice/wiki/One-minute-game-guide</a></p>
+        <ul>
+            <li>橫置或重置卡片 = 滑鼠左鍵點兩下</li>
+            <li>重置所有卡片 = Ctrl+U</li>
+            <li>看牌庫頂X張卡 = Ctrl+W</li>
+            <li>將卡牌以背面形式出牌 = Shift+拖曳</li>
+			<li>覺醒/魔方翻面 = 右鍵點擊卡片 → Transform into</li>
+            <li>向所有人展示卡牌 = 將卡牌拖曳到左側的 stack 區，或 右鍵 → Turn Over</li>
+            <li>同時選取多張卡牌 = 按住 Shift，點擊並拖曳</li>
+            <li>查看魔方卡組/旗艦 = Ctrl+F3 或是 右鍵點擊場上 → Sideboard → View Sideboard</li>
+            <li>抽起始手牌 = Ctrl+M</li>
+            <li>抽一張牌 = Ctrl+D</li>
+            <li>進入結束階段/結束你的回合 = F10</li>
+            <li>換回合 = Ctrl+Enter</li>
+        </ul>
+    </div>
+</body>
+</html>
