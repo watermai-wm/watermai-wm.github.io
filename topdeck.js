@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250626-1",
+    "L_name": "曙光",
+    "Format": "7.0",
+    "Description": "20250626 貓腳印-東門店 休閒賽 10人 三勝：曙光 喵夢的狗",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250626-2",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250626 貓腳印-東門店 休閒賽 10人 三勝：射水魚 愛貓壬氏",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250625-1",
     "L_name": "明石",
     "Format": "7.0",
