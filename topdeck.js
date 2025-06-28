@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250628-3",
+    "L_name": "光輝(μ兵裝)",
+    "Format": "7.0",
+    "Description": "20250628 CardMaster 店家賽 9人 冠軍：光輝(μ兵裝) 明石測牌器",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250626-1",
     "L_name": "曙光",
     "Format": "7.0",
@@ -142,6 +151,15 @@ const topDecks = [
     "Description": "20250621 哈爾濱進化卡牌 店家賽 11人 冠軍：奧古斯特·馮·帕塞瓦爾 七星君",
     "Level": "常規賽",
     "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250621-9",
+    "L_name": "阿爾及利亞",
+    "Format": "7.0",
+    "Description": "20250621 彰化鬥陣桌遊 店家賽 8人 冠軍：阿爾及利亞 sprout",
+    "Level": "常規賽",
+    "Players": 8,
     "Champion": 1
   },
   {
