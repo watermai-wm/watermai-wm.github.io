@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250629-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250629 貓腳印-士林店 店家賽 8人 冠軍：明石 蛋頭",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250628-1",
     "L_name": "聖女貞德",
     "Format": "7.0",
@@ -26,6 +35,78 @@ const topDecks = [
     "Level": "常規賽",
     "Players": 9,
     "Champion": 1
+  },
+  {
+    "deck_id": "20250628-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 1位 普利茅斯 A⭐M⭐T",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250628-5",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 2位 明石 淵井空",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-6",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 3位 明石 問號",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-7",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 4位 俾斯麥Zwei Aya",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-8",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 8強 普利茅斯 島君@超能擼戰隊",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-9",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 8強 普利茅斯 泰泰",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-10",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 8強 約克鎮II 細雨",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250628-11",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 8強 俾斯麥Zwei 沖逼@RushB",
+    "Level": "城市賽",
+    "Players": 36,
+    "Champion": 0
   },
   {
     "deck_id": "20250626-1",
