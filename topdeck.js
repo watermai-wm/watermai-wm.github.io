@@ -10,6 +10,24 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250629-2",
+    "L_name": "讓·巴爾",
+    "Format": "7.0",
+    "Description": "20250629 北石家莊青夢卡牌 周日積分賽 9人 1位 讓·巴爾  @絵梨衣の屑狐貍",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250629-3",
+    "L_name": "曙光",
+    "Format": "7.0",
+    "Description": "20250629 北石家莊青夢卡牌 周日積分賽 9人 2位 曙光 @伊良華",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250628-1",
     "L_name": "聖女貞德",
     "Format": "7.0",
