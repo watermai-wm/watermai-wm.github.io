@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250703-1",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250703 貓腳印-東門店 休閒賽 9人 冠軍：天城 Whiskey",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250702-1",
     "L_name": "聖女貞德",
     "Format": "7.0",
