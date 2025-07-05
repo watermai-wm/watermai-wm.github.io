@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250705-1",
+    "L_name": "羅恩",
+    "Format": "7.0",
+    "Description": "20250705 彰化鬥陣桌遊 店家賽 4人 冠軍：羅恩 仲文",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250705-2",
+    "L_name": "龍鳳",
+    "Format": "7.0",
+    "Description": "20250705 貓腳印東門店 店家賽 14人 冠軍：龍鳳 上杉幽",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250705-3",
+    "L_name": "獨角獸",
+    "Format": "7.0",
+    "Description": "20250705 CardMaster 店家賽 9人 冠軍：獨角獸 Kira",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250705-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250705 花蓮玩具e哥 玩家自辦卡盒賽 6人 冠軍：奧古斯特.馮.帕塞瓦爾 無盡的明天",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250703-1",
     "L_name": "天城",
     "Format": "7.0",
