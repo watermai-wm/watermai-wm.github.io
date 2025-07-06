@@ -10,6 +10,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250706-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250706 哈爾濱進化卡牌 周日構築賽 6人 1位 奧古斯特·馮·帕塞瓦爾 七星君",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250705-1",
     "L_name": "羅恩",
     "Format": "7.0",
@@ -44,6 +53,78 @@ const topDecks = [
     "Level": "常規賽",
     "Players": 6,
     "Champion": 1
+  },
+  {
+    "deck_id": "20250705-5",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 1位 普利茅斯 A⭐M⭐T",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250705-6",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 2位 普利茅斯 商紂王",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-7",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 4強 普利茅斯 fami",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-8",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 4強 俾斯麥Zwei cloxiu",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-9",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 8強 普利茅斯 九九三十六",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-10",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 8強 明石 殘雪雪雪",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-11",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 8強 俾斯麥Zwei LAMOMO",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250705-12",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250705 重慶卡普塔斯 2025城市賽 重慶站 42人 8強 俾斯麥Zwei 生",
+    "Level": "城市賽",
+    "Players": 42,
+    "Champion": 0
   },
   {
     "deck_id": "20250703-1",
