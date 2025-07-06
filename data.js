@@ -18793,7 +18793,7 @@ const cards = [
     },
     {
         "card_id": 1424,
-        "card_name": "樱之結界",
+        "card_name": "櫻之結界",
         "card_code": "BP07-019",
         "attributes": {
             "顏　色": "紅",
