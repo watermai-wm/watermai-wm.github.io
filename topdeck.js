@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250706-3",
+    "L_name": "讓·巴爾",
+    "Format": "7.0",
+    "Description": "20250706 大連1001 積分賽 7人 1位 讓·巴爾 稱魂",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250705-1",
     "L_name": "羅恩",
     "Format": "7.0",
