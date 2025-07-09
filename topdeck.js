@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250709-1",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250709 鬥樂 一中店 店家賽 4人 冠軍：普利茅斯 十早",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250709-2",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250709 花蓮玩具e哥 玩家自辦卡包賽 6人 冠軍 約克鎮II 心皓",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250706-1",
     "L_name": "光輝",
     "Format": "7.0",
