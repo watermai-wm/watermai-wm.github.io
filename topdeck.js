@@ -28,6 +28,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250713-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250713 哈爾濱進化卡牌 周日積分賽 9人 1位 普利茅斯 雨中的風@雨中的風 ",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250712-1",
     "L_name": "龍鳳",
     "Format": "7.0",
