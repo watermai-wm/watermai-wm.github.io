@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250717-1",
+    "L_name": "沙恩霍斯特",
+    "Format": "7.0",
+    "Description": "20250717 貓腳印-東門店 休閒賽 6人 冠軍：沙恩霍斯特 明石測牌器",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250716-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250716 鬥樂-一中店 店家賽 11人 冠軍：明石 Diego",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250713-1",
     "L_name": "普利茅斯",
     "Format": "7.0",
@@ -20,7 +38,7 @@ const topDecks = [
   },
   {
     "deck_id": "20250713-3",
-    "L_name": "明石",
+    "L_name": "天城",
     "Format": "7.0",
     "Description": "20250713 花蓮玩具e哥 玩家自辦卡套賽 6人 冠軍：天城 天之驕子",
     "Level": "常規賽",
