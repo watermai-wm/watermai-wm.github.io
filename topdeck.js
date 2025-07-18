@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250718-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250718 花蓮玩具e哥 玩家自辦卡套賽 8人 冠軍 奧古斯特·馮·帕塞瓦爾 無盡的明天",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250717-1",
     "L_name": "沙恩霍斯特",
     "Format": "7.0",
