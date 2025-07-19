@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250719-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250719 貓腳印-東門店 店家賽 6人 冠軍：明石 小魔術師",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250718-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.0",
