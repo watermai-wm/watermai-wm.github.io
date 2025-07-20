@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250720-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250720 貓腳印-士林店 店家賽 9人 冠軍：奧古斯特·馮·帕塞瓦爾 表後的魔女會不會夢到T1 333",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250719-1",
     "L_name": "明石",
     "Format": "7.0",
