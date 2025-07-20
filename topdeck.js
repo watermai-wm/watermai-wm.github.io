@@ -6,7 +6,16 @@ const topDecks = [
     "Format": "7.0",
     "Description": "20250719 貓腳印-東門店 店家賽 6人 冠軍：明石 小魔術師",
     "Level": "常規賽",
-    "Players": 8,
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250719-2",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250719 CardMaster 店家賽 4人 冠軍：普利茅斯 千早愛音",
+    "Level": "常規賽",
+    "Players": 4,
     "Champion": 1
   },
   {
