@@ -28,6 +28,78 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250719-3",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 1位 明石 A⭐M⭐T（7-1）",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250719-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 2位 普利茅斯 simple",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-5",
+    "L_name": "光輝",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 4強 光輝 小水先森",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-6",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 4強 俾斯麥Zwei ADD-孝和",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-7",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 8強 普利茅斯 明鏡",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-8",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 8強 明石 馮の夢想",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-9",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 8強 普利茅斯 那群女人將我打到在地",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250719-10",
+    "L_name": "聖女貞德",
+    "Format": "7.0",
+    "Description": "20250719 廣東中山KaBoomTCG 2025城市賽-大陸賽區中山站 24人 8強 聖女貞德 ADD-MrWhite",
+    "Level": "常規賽",
+    "Players": 24,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250718-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.0",
@@ -98,6 +170,42 @@ const topDecks = [
     "Level": "常規賽",
     "Players": 11,
     "Champion": 1
+  },
+  {
+    "deck_id": "20250712-2",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250712 湖北武漢啟典卡牌 2025城市賽-大陸賽區武漢站 32人 1位 明石 A⭐M⭐T（8-0全勝）",
+    "Level": "城市賽",
+    "Players": 32,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250712-3",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250712 湖北武漢啟典卡牌 2025城市賽-大陸賽區武漢站 32人 2位 明石 殘雪",
+    "Level": "城市賽",
+    "Players": 32,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250712-4",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250712 湖北武漢啟典卡牌 2025城市賽-大陸賽區武漢站 32人 4強 明石 沖逼",
+    "Level": "城市賽",
+    "Players": 32,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250712-5",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250712 湖北武漢啟典卡牌 2025城市賽-大陸賽區武漢站 32人 4強 俾斯麥Zwei LAMOMO",
+    "Level": "城市賽",
+    "Players": 32,
+    "Champion": 0
   },
   {
     "deck_id": "20250709-1",
