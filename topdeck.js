@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250724-1",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250724 貓腳印-東門店 休閒賽 5人 冠軍：射水魚 水麥",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250723-1",
     "L_name": "普利茅斯",
     "Format": "7.0",
