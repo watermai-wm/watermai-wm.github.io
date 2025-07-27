@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250727-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250727 卡殿 Card Palace  店家賽 5人 冠軍：明石 仲文",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250727-2",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250727 貓腳印-士林店 店家賽 7人 冠軍：普利茅斯 千早愛音",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250726-1",
     "L_name": "普利茅斯",
     "Format": "7.0",
