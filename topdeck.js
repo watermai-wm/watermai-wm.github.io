@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250727-3",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250727 這裡有桌遊 大鳳誓約賽 9人 冠軍：普利茅斯 詮勝",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250726-1",
     "L_name": "普利茅斯",
     "Format": "7.0",
