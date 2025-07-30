@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250730-1",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250730 桌上旅程APP STORE 大鳳誓約賽 22人 冠軍：天城 世界一位沙恩",
+    "Level": "誓約賽",
+    "Players": 22,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250730-2",
+    "L_name": "長門",
+    "Format": "7.0",
+    "Description": "20250730 桌上旅程APP STORE 大鳳誓約賽 22人 四強：長門 海綿體大戰括約肌",
+    "Level": "誓約賽",
+    "Players": 22,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250730-3",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250730 桌上旅程APP STORE 大鳳誓約賽 22人 四強：普利茅斯 Kira",
+    "Level": "誓約賽",
+    "Players": 22,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250730-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250730 桌上旅程APP STORE 大鳳誓約賽 22人 四強：普利茅斯 咪薯",
+    "Level": "誓約賽",
+    "Players": 22,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250727-1",
     "L_name": "明石",
     "Format": "7.0",
