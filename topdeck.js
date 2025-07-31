@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250731-1",
+    "L_name": "惡毒(μ兵裝)",
+    "Format": "7.0",
+    "Description": "20250731 貓腳印-東門店 休閒賽 5人 冠軍：惡毒(μ兵裝) 水麥",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250730-1",
     "L_name": "天城",
     "Format": "7.0",
