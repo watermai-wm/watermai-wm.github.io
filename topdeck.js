@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250802-1",
+    "L_name": "曙光",
+    "Format": "7.0",
+    "Description": "20250802 貓腳印-東門店 店家賽 8人 冠軍：曙光 Kira",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250802-2",
+    "L_name": "龍鳳",
+    "Format": "7.0",
+    "Description": "20250802 CardMaster 店家賽 4人 冠軍：龍鳳 上杉幽",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250731-1",
     "L_name": "惡毒(μ兵裝)",
     "Format": "7.0",
