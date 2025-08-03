@@ -1,6 +1,69 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250803-1",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250803 貓腳印-桃園店 大鳳誓約賽 12人 冠軍：射水魚 愛貓壬氏",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250803-2",
+    "L_name": "龍鳳",
+    "Format": "7.0",
+    "Description": "20250803 CardMaster 大鳳誓約賽 31人 冠軍：龍鳳 上杉幽",
+    "Level": "誓約賽",
+    "Players": 31,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250803-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250803 CardMaster 大鳳誓約賽 31人 四強：奧古斯特·馮·帕塞瓦爾 Kira",
+    "Level": "誓約賽",
+    "Players": 31,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250803-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250803 CardMaster 大鳳誓約賽 31人 四強：普利茅斯 明石測牌器",
+    "Level": "誓約賽",
+    "Players": 31,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250803-5",
+    "L_name": "讓·巴爾",
+    "Format": "7.0",
+    "Description": "20250803 CardMaster 大鳳誓約賽 31人 四強：讓·巴爾 鴨子大人",
+    "Level": "誓約賽",
+    "Players": 31,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250803-6",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250803 Card-Ple 卡片人卡牌遊戲專賣店-民安店 大鳳誓約賽 12人 冠軍：明石 水麥",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250803-7",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250803 Card-Ple 卡片人卡牌遊戲專賣店-民安店 大鳳誓約賽 12人 亞軍：天城 香料",
+    "Level": "誓約賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250802-1",
     "L_name": "曙光",
     "Format": "7.0",
