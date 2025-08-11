@@ -1,6 +1,96 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250810-1",
+    "L_name": "射水魚",
+    "Format": "7.0",
+    "Description": "20250810 台中黑殿 大鳳誓約賽 19人 冠軍：射水魚 無尾熊",
+    "Level": "誓約賽",
+    "Players": 19,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250810-2",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250810 台中黑殿 大鳳誓約賽 19人 亞軍：明石 政勳",
+    "Level": "誓約賽",
+    "Players": 19,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250810-3",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250810 鬥樂 一中店 大鳳誓約賽 23人 冠軍：普利茅斯 Filieka",
+    "Level": "誓約賽",
+    "Players": 23,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250810-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250810 鬥樂 一中店 大鳳誓約賽 23人 亞軍：普利茅斯 仲文",
+    "Level": "誓約賽",
+    "Players": 23,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250809-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250809 卡多商行 桑心卡店大鳳誓約賽 13人 冠軍：明石 尚均",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250809-2",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250809 卡多商行 桑心卡店大鳳誓約賽 13人 亞軍：明石 政勳",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250809-3",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250809 卡咖王國-集換式卡牌桌遊專賣店 大鳳誓約賽 17人 冠軍：普利茅斯 千早愛音",
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250809-4",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250809 卡咖王國-集換式卡牌桌遊專賣店 大鳳誓約賽 17人 四強：奧古斯特·馮·帕塞瓦爾",
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250809-5",
+    "L_name": "沙恩霍斯特",
+    "Format": "7.0",
+    "Description": "20250809 卡咖王國-集換式卡牌桌遊專賣店 大鳳誓約賽 17人 四強：沙恩霍斯特 Funky",
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250809-6",
+    "L_name": "曙光",
+    "Format": "7.0",
+    "Description": "20250809 卡咖王國-集換式卡牌桌遊專賣店 大鳳誓約賽 17人 四強：曙光 何伊",
+    "Level": "誓約賽",
+    "Players": 17,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250808-1",
     "L_name": "明石",
     "Format": "7.0",
