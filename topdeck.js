@@ -91,6 +91,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250809-7",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250809 香港-nightcard 大鳳誓約 16人 冠軍：天城",
+    "Level": "誓約賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250808-1",
     "L_name": "明石",
     "Format": "7.0",
