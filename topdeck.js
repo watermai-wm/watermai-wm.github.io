@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250814-1",
+    "L_name": "約克鎮II ",
+    "Format": "7.0",
+    "Description": "20250814 香港 Mox Saga 14人 冠軍：約克鎮II ",
+    "Level": "常規賽",
+    "Players": 14,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250813-1",
     "L_name": "明石",
     "Format": "7.0",
