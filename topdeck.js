@@ -2,7 +2,7 @@
 const topDecks = [
   {
     "deck_id": "20250814-1",
-    "L_name": "約克鎮II ",
+    "L_name": "約克鎮II",
     "Format": "7.0",
     "Description": "20250814 香港 Mox Saga 14人 冠軍：約克鎮II ",
     "Level": "常規賽",
@@ -821,7 +821,7 @@ const topDecks = [
   },
   {
     "deck_id": "20250628-10",
-    "L_name": "普利茅斯",
+    "L_name": "約克鎮II",
     "Format": "7.0",
     "Description": "20250628浙江杭州桌上遊星CLUB 2025城市賽-大陸賽區杭州站 36人 8強 約克鎮II 細雨",
     "Level": "城市賽",
