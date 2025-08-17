@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250816-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250816 香港 One Draw 滿人16 冠。明石。黃色神獸",
+    "Level": "常規賽",
+    "Players": 16,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250814-1",
     "L_name": "約克鎮II",
     "Format": "7.0",
