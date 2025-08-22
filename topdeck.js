@@ -1,12 +1,39 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250822-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250821 貓腳印-東門店 休閒賽 6人 冠軍：明石 淵眼",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250817-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250817 貓腳印-士林店 店家賽 6人 冠軍：明石 只愛大鳳的那個男人",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250816-1",
     "L_name": "明石",
     "Format": "7.0",
     "Description": "20250816 香港 One Draw 滿人16 冠。明石。黃色神獸",
     "Level": "常規賽",
     "Players": 16,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250816-2",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250816 獵模士 大鳳誓約賽 20人 冠軍：普利茅斯 可蓮",
+    "Level": "誓約賽",
+    "Players": 20,
     "Champion": 1
   },
   {
