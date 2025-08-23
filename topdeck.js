@@ -1,6 +1,78 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250823-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 冠軍：明石 我弟弟敢吃屎",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250823-2",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 亞軍：明石 JoJo",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-3",
+    "L_name": "光輝",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 四強：光輝 魔女高手",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-4",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 四強：普利茅斯 阿中",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-5",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 八強：約克鎮II 小白",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-6",
+    "L_name": "龍鳳",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 八強：龍鳳 上杉幽",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-7",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 八強：明石 尚均",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250823-8",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250823 友誼杯 台北場 163人 八強：奧古斯特·馮·帕塞瓦爾 丞俊陶",
+    "Level": "城市賽",
+    "Players": 163,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250822-1",
     "L_name": "明石",
     "Format": "7.0",
