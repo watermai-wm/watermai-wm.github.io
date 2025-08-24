@@ -1,6 +1,42 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250824-1",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.0",
+    "Description": "20250824 貓腳印-東門店 大鳳誓約賽 27人 冠軍：俾斯麥Zwei 右手靠賽",
+    "Level": "誓約賽",
+    "Players": 27,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250824-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250824 貓腳印-東門店 大鳳誓約賽 27人 亞軍：奧古斯特·馮·帕塞瓦爾 Kira",
+    "Level": "誓約賽",
+    "Players": 27,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250824-3",
+    "L_name": "獨角獸",
+    "Format": "7.0",
+    "Description": "20250824 貓腳印-東門店 大鳳誓約賽 27人 四強：獨角獸 海綿體大戰括約肌",
+    "Level": "誓約賽",
+    "Players": 27,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250824-4",
+    "L_name": "武藏",
+    "Format": "7.0",
+    "Description": "20250824 貓腳印-東門店 大鳳誓約賽 27人 四強：武藏 重櫻還有救嗎",
+    "Level": "誓約賽",
+    "Players": 27,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250823-1",
     "L_name": "明石",
     "Format": "7.0",
