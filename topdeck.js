@@ -118,6 +118,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20250823-9",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250823 香港 皇巢 大鳳誓約戰 13人 冠軍 明石",
+    "Level": "誓約賽",
+    "Players": 13,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250822-1",
     "L_name": "明石",
     "Format": "7.0",
