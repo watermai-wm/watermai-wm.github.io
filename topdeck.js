@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250826-1",
+    "L_name": "鎮海",
+    "Format": "7.0",
+    "Description": "20250826 花蓮玩具e哥 玩家自辦卡包賽 6人 冠軍 鎮海 ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250824-1",
     "L_name": "俾斯麥Zwei",
     "Format": "7.0",
