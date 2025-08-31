@@ -1,12 +1,30 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250831-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250831 貓腳印-士林店 店家賽 7人 冠軍：明石 只愛大鳳的那個男人",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250830-1",
     "L_name": "伊莉莎白女王",
     "Format": "7.0",
     "Description": "20250830 貓腳印-東門店 店家賽 6人 冠軍：伊莉莎白女王 水麥",
     "Level": "常規賽",
     "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250830-2",
+    "L_name": "惡毒(μ兵裝)",
+    "Format": "7.0",
+    "Description": "20250830 彰化鬥陣桌遊 店家賽 12人 冠軍：惡毒(μ兵裝) 何老師",
+    "Level": "常規賽",
+    "Players": 12,
     "Champion": 1
   },
   {
