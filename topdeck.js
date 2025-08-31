@@ -10,6 +10,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250831-2",
+    "L_name": "聖女貞德",
+    "Format": "7.0",
+    "Description": "20250831 花蓮玩具e哥 玩家自辦卡套賽 6人 冠軍 聖女貞德 心皓",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250830-1",
     "L_name": "伊莉莎白女王",
     "Format": "7.0",
