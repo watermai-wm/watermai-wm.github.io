@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250904-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.0",
+    "Description": "20250904 貓腳印-東門店 休閒賽 5人 冠軍：奧古斯特·馮·帕塞瓦爾 被魔女抓回去的指揮官",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250831-1",
     "L_name": "明石",
     "Format": "7.0",
