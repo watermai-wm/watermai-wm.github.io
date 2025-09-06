@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250906-1",
+    "L_name": "伊莉莎白女王",
+    "Format": "7.0",
+    "Description": "20250906 彰化鬥陣桌遊 店家賽 8人 冠軍：伊莉莎白女王 奶綠",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250904-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.0",
