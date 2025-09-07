@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250907-1",
+    "L_name": "貝爾法斯特",
+    "Format": "7.0",
+    "Description": "20250907 貓腳印-士林店 店家賽 10人 冠軍：貝爾法斯特 Kira",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250906-1",
     "L_name": "伊莉莎白女王",
     "Format": "7.0",
