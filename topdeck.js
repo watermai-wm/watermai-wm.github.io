@@ -10,6 +10,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20250907-2",
+    "L_name": "長門",
+    "Format": "7.0",
+    "Description": "20250907 花蓮玩具e哥 玩家自辦卡套賽 10人 冠軍 長門 ひろし",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250906-1",
     "L_name": "伊莉莎白女王",
     "Format": "7.0",
