@@ -1,6 +1,78 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250913-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 冠軍：明石 鹽巴",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250913-2",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 亞軍：普利茅斯 陸",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-3",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 四強：明石 不當人了",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-4",
+    "L_name": "貝爾法斯特",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 四強：貝爾法斯特 kira",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-5",
+    "L_name": "島風",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 八強：島風 曉響雷電",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-6",
+    "L_name": "天城",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 八強：天城 九尾人柱力 宇智波寬",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-7",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 八強：普利茅斯 阿中",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20250913-8",
+    "L_name": "普利茅斯",
+    "Format": "7.0",
+    "Description": "20250913 友誼杯 台南場 98人 八強：普利茅斯 碧藍不能亡",
+    "Level": "城市賽",
+    "Players": 98,
+    "Champion": 0
+  },
+  {
     "deck_id": "20250907-1",
     "L_name": "貝爾法斯特",
     "Format": "7.0",
