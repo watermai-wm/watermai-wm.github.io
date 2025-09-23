@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250921-1",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "20250921 貓腳印-士林店 店家賽 6人 冠軍 明石 只愛大鳳的那個男人",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250921-2",
+    "L_name": "明石",
+    "Format": "7.0",
+    "Description": "碧藍戰卡 20250921 這裡有桌遊 積分賽 冠軍 武藏 信濃一生推",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250919-1",
     "L_name": "龍鳳",
     "Format": "7.0",
