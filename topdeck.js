@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250927-1",
+    "L_name": "蘇維埃俄羅斯",
+    "Format": "7.0",
+    "Description": "20250927 貓腳印-東門店 店家賽 4人 冠軍 蘇維埃俄羅斯 谷風天音的哥哥",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20250927-2",
+    "L_name": "蘇維埃俄羅斯",
+    "Format": "7.0",
+    "Description": "20250927 卡多商行 桑心卡店 碧藍戰卡告別最終賽 8人 冠軍 曙光 奶綠",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250921-1",
     "L_name": "明石",
     "Format": "7.0",
