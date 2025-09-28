@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20250928-1",
+    "L_name": "約克鎮II",
+    "Format": "7.0",
+    "Description": "20250928 貓腳印-士林店 店家賽 6人 冠軍 約克鎮II 吹到飛天",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20250927-1",
     "L_name": "蘇維埃俄羅斯",
     "Format": "7.0",
