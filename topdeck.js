@@ -11,7 +11,7 @@ const topDecks = [
   },
   {
     "deck_id": "20250927-2",
-    "L_name": "蘇維埃俄羅斯",
+    "L_name": "曙光",
     "Format": "7.0",
     "Description": "20250927 卡多商行 桑心卡店 碧藍戰卡告別最終賽 8人 冠軍 曙光 奶綠",
     "Level": "常規賽",
@@ -4000,7 +4000,7 @@ const topDecks = [
     "deck_id": "20250302-17",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "6.0",
-    "Description": "20250302 CardMaster 標槍婚紗賽 20人 冠軍：	",
+    "Description": "20250302 CardMaster 標槍婚紗賽 20人 冠軍：",
     "Level": "誓約賽",
     "Players": 20,
     "Champion": 1
