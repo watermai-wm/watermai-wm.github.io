@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251006-1",
+    "L_name": "曙光",
+    "Format": "7.0",
+    "Description": "20251006 花蓮玩具e哥 玩家自辦卡套賽 6人 冠軍 曙光 展示無敵的天羽羽斬",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251004-1",
     "L_name": "曙光",
     "Format": "7.0",
