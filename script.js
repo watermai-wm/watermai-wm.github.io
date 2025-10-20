@@ -421,4 +421,3 @@ window.onload = function() {
     populateFilterOptions();
     searchCards(); // 初始顯示所有卡片
 };
-
