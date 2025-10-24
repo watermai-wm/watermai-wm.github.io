@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251024-1",
+    "L_name": "金剛",
+    "Format": "7.0",
+    "Description": "20251024 花蓮玩具e哥 雷伊泰灣海戰主題賽 8人 冠軍 金剛 展示無敵的天羽羽斬",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251019-1",
     "L_name": "金剛",
     "Format": "7.0",
