@@ -10,6 +10,42 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20251025-1",
+    "L_name": "鐵必制",
+    "Format": "7.5",
+    "Description": "20251025 逛逛紙牌社 店家賽 10人 冠軍 : 鐵必制 卓",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20251025-2",
+    "L_name": "光輝",
+    "Format": "7.5",
+    "Description": "20251025 逛逛紙牌社 店家賽 10人 亞軍 : 光輝 柏融",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20251025-3",
+    "L_name": "阿爾及利亞",
+    "Format": "7.5",
+    "Description": "20251025 逛逛紙牌社 店家賽 10人 四強 : 阿爾及利亞 恆裕",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20251025-4",
+    "L_name": "埃姆登",
+    "Format": "7.5",
+    "Description": "20251025 逛逛紙牌社 店家賽 10人 四強 : 埃姆登 宇鑫",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
     "deck_id": "20251024-1",
     "L_name": "金剛",
     "Format": "7.0",
