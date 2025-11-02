@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251102-1",
+    "L_name": "明石",
+    "Format": "7.5",
+    "Description": "20251102 花蓮玩具e哥 玩家自辦卡套賽 6人 冠軍 明石 ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251101-1",
     "L_name": "曙光",
     "Format": "7.5",
@@ -8,6 +17,42 @@ const topDecks = [
     "Level": "常規賽",
     "Players": 4,
     "Champion": 1
+  },
+  {
+    "deck_id": "20251101-2",
+    "L_name": "約克鎮II",
+    "Format": "7.5",
+    "Description": "20251101 逛逛紙牌社 店家賽 8人 冠軍 : 約克鎮II 16夜",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20251101-3",
+    "L_name": "埃姆登",
+    "Format": "7.5",
+    "Description": "20251101 逛逛紙牌社 店家賽 8人 亞軍 : 埃姆登 韋峻",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20251101-4",
+    "L_name": "約克鎮II",
+    "Format": "7.5",
+    "Description": "20251101 逛逛紙牌社 店家賽 8人 四強 : 約克鎮II 柏融",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20251101-5",
+    "L_name": "埃姆登",
+    "Format": "7.5",
+    "Description": "20251101 逛逛紙牌社 店家賽 8人 四強 : 埃姆登 宇鑫",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
   },
   {
     "deck_id": "20251026-1",
