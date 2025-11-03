@@ -1,0 +1,224 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1300px; 
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center; 
+}
+
+#editor-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; 
+}
+
+#card-editor {
+    width: 767px;  
+    height: 1073px; 
+    position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    flex-shrink: 0; 
+}
+
+#card-editor > img,
+#card-editor > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#card-editor > img {
+    object-fit: cover; 
+    object-position: center;
+    pointer-events: none; 
+}
+
+/* !! 關鍵改動：重排 z-index !! */
+#base-layer { z-index: 1; }
+#bg-visual-layer { z-index: 2; }
+#mark-layer { z-index: 3; }
+#player-image-canvas { z-index: 4; }
+#fog-layer { z-index: 5; }
+#frame-layer { z-index: 6; }
+/* --- 耐久度/費用 --- */
+#extra-layer-base { z-index: 7; }
+#extra-layer-faction { z-index: 8; }
+#extra-layer-text { z-index: 9; }
+#extra-layer-number { z-index: 10; }
+/* --- 支援 --- */
+#support-range-layer { z-index: 11; }
+#support-value-layer { z-index: 12; }
+/* --- 戰力 --- */
+#power-layer { z-index: 13; } /* 新圖層 */
+/* --- 最上層 --- */
+#top-frame-layer { z-index: 14; } /* 保持最上層 */
+
+#fog-layer {
+    mix-blend-mode: multiply; /* 色彩增值 */
+}
+
+#player-image-canvas {
+    background-color: transparent;
+    pointer-events: auto;
+    cursor: grab; 
+}
+
+#controls-panel {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    flex-grow: 1; 
+    max-width: 300px; 
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 8px; 
+    width: 100%;
+}
+
+.control-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* !! 關鍵改動：新增戰力選項群組 !! */
+#leader-options-group,
+#cost-options-group,
+#support-options-group,
+#power-options-group {
+    display: none; /* 預設隱藏 (規則 1) */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    gap: 15px; 
+}
+#leader-options-group > label,
+#cost-options-group > label,
+#support-options-group > label,
+#power-options-group > label {
+    font-size: 1.1em;
+    color: #000;
+}
+#leader-options-group hr,
+#cost-options-group hr,
+#support-options-group hr,
+#power-options-group hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* (...其他 .radio-group, .checkbox-group 樣式不變...) */
+.radio-group label {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+.radio-group > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+}
+.radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.radio-group label[for] {
+    cursor: pointer;
+}
+.checkbox-group {
+    flex-direction: row; 
+    align-items: center; 
+    gap: 10px; 
+}
+.checkbox-group label {
+    font-weight: normal; 
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.button,
+#color-select,
+#card-type-select,
+#faction-select,
+#life-number-select,
+#cost-select,
+#support-range-select,
+#support-value-select,
+#power-select, /* 新增 */
+input[type="range"] {
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* ( ... 其他 .button, #image-upload, select 樣式不變 ... ) */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.button-download {
+    background-color: #28a745; 
+    margin-top: auto; 
+}
+.button-download:hover {
+    background-color: #218838;
+}
+#image-upload { display: none; }
+#color-select,
+#card-type-select,
+#faction-select,
+#life-number-select,
+#cost-select,
+#support-range-select,
+#support-value-select,
+#power-select { /* 新增 */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}

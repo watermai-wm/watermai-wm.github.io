@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自製卡片生成器 (戰力系統版)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>我的自製卡片</h1>
+
+        <div id="editor-layout">
+
+            <div id="card-editor">
+                <img id="base-layer" src="" alt="卡片底色">
+                <img id="bg-visual-layer" src="" alt="圖片背景樣式">
+                <img id="mark-layer" src="" alt="陣營標記">
+                <canvas id="player-image-canvas" width="767" height="1073"></canvas>
+                <img id="fog-layer" src="" alt="圖片濾鏡效果">
+                <img id="frame-layer" src="" alt="卡片外框">
+                
+                <img id="extra-layer-base" src="" alt="額外圖層-底座">
+                <img id="extra-layer-faction" src="" alt="額外圖層-陣營">
+                <img id="extra-layer-text" src="" alt="額外圖層-文字/覺醒">
+                <img id="extra-layer-number" src="" alt="額外圖層-數字">
+                
+                <img id="support-range-layer" src="" alt="支援範圍">
+                <img id="support-value-layer" src="" alt="支援值">
+
+                <img id="power-layer" src="" alt="戰力">
+                
+                <img id="top-frame-layer" src="" alt="最上層外框">
+            </div>
+
+            <div id="controls-panel">
+                <div class="control-group">
+                    <label for="card-type-select">卡牌種類:</label>
+                    <select id="card-type-select">
+                        <option value="leader">旗艦</option>
+                        <option value="kansen">艦船</option>
+                        <option value="event">事件</option>
+                    </select>
+                </div>
+
+                <div id="leader-options-group" class="control-group">
+                    <hr> 
+                    <label>旗艦設定:</label>
+                    <div class="control-group radio-group">
+                        <label>覺醒狀態:</label>
+                        <div>
+                            <input type="radio" id="awake-before" name="awake-status" value="before" checked>
+                            <label for="awake-before">覺醒前</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="awake-after" name="awake-status" value="after">
+                            <label for="awake-after">覺醒後</label>
+                        </div>
+                    </div>
+                    <div id="life-number-group" class="control-group">
+                        <label for="life-number-select">耐久度:</label>
+                        <select id="life-number-select">
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <hr>
+                </div>
+                
+                <div id="cost-options-group" class="control-group">
+                    <hr>
+                    <label for="cost-select">費用 (Cost):</label>
+                    <select id="cost-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <hr>
+                </div>
+
+                <div id="support-options-group" class="control-group">
+                    <hr>
+                    <label>支援設定:</label>
+                    <div id="support-range-group" class="control-group">
+                        <label for="support-range-select">支援範圍:</label>
+                        <select id="support-range-select">
+                            <option value="hand">手牌</option>
+                            <option value="field">戰場</option>
+                            <option value="handfield">手牌‧戰場</option>
+                        </select>
+                    </div>
+                    <div id="support-value-group" class="control-group">
+                        <label for="support-value-select">支援值:</label>
+                        <select id="support-value-select">
+                            <option value="0">0</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                        </select>
+                    </div>
+                    <hr>
+                </div>
+
+                <div id="power-options-group" class="control-group">
+                    <hr>
+                    <label for="power-select">戰力 (Power):</label>
+                    <select id="power-select">
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="600">600</option>
+                        <option value="700">700</option>
+                        <option value="800">800</option>
+                        <option value="900">900</option>
+                        <option value="1000">1000</option>
+                    </select>
+                    <hr>
+                </div>
+
+                <div class="control-group">
+                    <label for="color-select">顏色:</label>
+                    <select id="color-select">
+                        <option value="none">無色</option>
+                        <option value="red">紅色</option>
+                        <option value="blue">藍色</option>
+                        <option value="yellow">黃色</option>
+                        <option value="black">黑色</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="faction-select">陣營:</label>
+                    <select id="faction-select">
+                        <option value="uss">白鷹</option>
+                        <option value="hms">皇家</option>
+                        <option value="kms">鐵血</option>
+                        <option value="ijn">重櫻</option>
+                        <option value="ffnf">自由鳶尾</option>
+                        <option value="mnf">維希教廷</option>
+                        <option value="roc">東煌</option>
+                        <option value="rn">薩丁帝國</option>
+                        <option value="sn">北方聯合</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="image-upload" class="button">
+                        選擇卡圖
+                        <input type="file" id="image-upload" accept="image/*">
+                    </label>
+                </div>
+
+                <div class="control-group">
+                    <label for="zoom-slider">縮放 (Zoom):</label>
+                    <input type="range" id="zoom-slider" min="0.1" max="5" step="0.01" value="1">
+                </div>
+
+                <div class="control-group checkbox-group">
+                    <input type="checkbox" id="full-art-toggle">
+                    <label for="full-art-toggle">全圖 (Full Art)</label>
+                </div>
+
+                <button id="download-card" class="button button-download">下載卡片</button>
+            </div>
+
+        </div> </div> <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
