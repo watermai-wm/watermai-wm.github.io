@@ -32,8 +32,9 @@ h1 {
     gap: 40px; 
 }
 
+
 #card-editor {
-    width: 767px;  
+	width: 767px;  
     height: 1073px; 
     position: relative;
     border: 1px solid #ddd;
@@ -57,32 +58,33 @@ h1 {
     pointer-events: none; 
 }
 
-/* !! 關鍵改動：重排 z-index !! */
-#base-layer { z-index: 1; }
-#bg-visual-layer { z-index: 2; }
-#mark-layer { z-index: 3; }
-#player-image-canvas { z-index: 4; }
-/*#fog-layer { z-index: 5; }*/
-#frame-layer { z-index: 6; }
+/* !! 關鍵改動：z-index 大重排 !! */
+/* (base, bg, mark, fog 已被移除) */
+#player-image-canvas { z-index: 1; } /* Canvas 現在是底層 */
+#frame-layer { z-index: 2; }
 /* --- 耐久度/費用 --- */
-#extra-layer-base { z-index: 7; }
-#extra-layer-faction { z-index: 8; }
-#extra-layer-text { z-index: 9; }
-#extra-layer-number { z-index: 10; }
+#extra-layer-base { z-index: 3; }
+#extra-layer-faction { z-index: 4; }
+#extra-layer-text { z-index: 5; }
+#extra-layer-number { z-index: 6; }
 /* --- 支援 --- */
-#support-range-layer { z-index: 11; }
-#support-value-layer { z-index: 12; }
+#support-range-layer { z-index: 7; }
+#support-value-layer { z-index: 8; }
 /* --- 戰力 --- */
-#power-layer { z-index: 13; } /* 新圖層 */
+#power-layer { z-index: 9; }
 /* --- 最上層 --- */
-#top-frame-layer { z-index: 14; } /* 保持最上層 */
+#top-frame-layer { z-index: 10; } 
+
+
+/* !! 關鍵改動：刪除 fog 樣式 !! */
 /*
 #fog-layer {
-    mix-blend-mode: multiply; 
+    mix-blend-mode: multiply;
 }
 */
+
 #player-image-canvas {
-    background-color: transparent;
+    background-color: transparent; /* 保持透明 */
     pointer-events: auto;
     cursor: grab; 
 }

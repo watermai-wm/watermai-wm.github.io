@@ -32,11 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const powerOptionsGroup = document.getElementById('power-options-group');
     const powerSelect = document.getElementById('power-select');
 
-    // 卡片圖層 (13層)
-    const baseLayer = document.getElementById('base-layer');
-    const bgVisualLayer = document.getElementById('bg-visual-layer');
-    const markLayer = document.getElementById('mark-layer');
-    // const fogLayer = document.getElementById('fog-layer'); // !! 關鍵修正：已刪除此行
+    // 卡片圖層 (前景)
     const frameLayer = document.getElementById('frame-layer');
     const topFrameLayer = document.getElementById('top-frame-layer'); 
     const extraBaseLayer = document.getElementById('extra-layer-base');
@@ -58,9 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const TRANSPARENT_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
     // --- 2. 全域狀態 ---
-    let currentImage = null; 
+    let currentImage = null; // 玩家圖片
+    
+    // 背景圖層的 Image 物件
     let currentMask = new Image(); 
-    let currentFogImage = new Image(); // Fog 圖片物件
+    let currentFogImage = new Image();
+    let currentBaseImage = new Image();
+    let currentBgVisualImage = new Image();
+    let currentMarkImage = new Image();
+
+    // 選單狀態
     let currentColor = 'none'; 
     let currentType = 'leader'; 
     let currentFaction = 'uss'; 
@@ -75,50 +78,85 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let lastMouseX = 0;
     let lastMouseY = 0;
+    
+    // 圖片載入計數器
+    let imagesToLoad = 0;
+    let imagesLoaded = 0;
 
     // --- 3. 核心繪圖函式 (Canvas) ---
     
     function redrawCanvas() {
-        ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
-
-        // 檢查 3 個關鍵圖片
-        if (!currentMask.complete || currentMask.naturalHeight === 0) return;
-        // !! 關鍵修正：檢查 Fog 圖片
-        if (!currentFogImage.complete || currentFogImage.naturalHeight === 0) return; 
-        
-        if (!currentImage) {
+        // 檢查所有必要的圖片是否都載入完成了
+        if (imagesLoaded < imagesToLoad) {
+            ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
             ctx.fillStyle = '#999';
             ctx.font = '60px sans-serif'; 
             ctx.textAlign = 'center';
-            ctx.fillText('上傳你的卡圖', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
+            ctx.fillText('圖片載入中...', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
             return;
         }
-        
-        ctx.save();
-        
-        const scaledWidth = currentImage.width * imgState.zoom;
-        const scaledHeight = currentImage.height * imgState.zoom;
-        
-        // --- 步驟 1 & 2: 繪製遮罩和玩家圖片 ---
-        if (isFullArt) {
-            ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
+
+        ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
+        ctx.save(); // 儲存初始狀態
+
+        // 步驟 1: 繪製所有背景圖層 (Base, BG, Mark)
+        drawAspectCover(ctx, currentBaseImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+        drawAspectCover(ctx, currentBgVisualImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+        drawAspectCover(ctx, currentMarkImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+
+        // 步驟 2: 繪製玩家圖片 (有遮罩或全圖)
+        if (currentImage) {
+            const scaledWidth = currentImage.width * imgState.zoom;
+            const scaledHeight = currentImage.height * imgState.zoom;
+            
+            if (isFullArt) {
+                // --- 全圖模式 ---
+                // 直接在主畫布上繪製
+                ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
+            } else {
+                // --- 遮罩模式 (使用離屏畫布) ---
+                
+                // 1. 建立一個暫時的、看不見的畫布
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = TARGET_WIDTH;
+                tempCanvas.height = TARGET_HEIGHT;
+                const tempCtx = tempCanvas.getContext('2d');
+
+                // 2. 在「暫時畫布」上繪製遮罩 (bg-*.png)
+                drawAspectCover(tempCtx, currentMask, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+                
+                // 3. 設定混合模式為 "source-in"
+                tempCtx.globalCompositeOperation = 'source-in';
+                
+                // 4. 在「暫時畫布」上繪製玩家圖片 (會被遮罩)
+                tempCtx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
+                
+                // 5. 將「暫時畫布」(現在只剩下被遮罩的圖片) 畫回到「主畫布」上
+                ctx.drawImage(tempCanvas, 0, 0);
+            }
+            
         } else {
-            drawAspectCover(ctx, currentMask, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
-            ctx.globalCompositeOperation = 'source-in';
-            ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
+            // 沒有玩家圖片時，顯示佔位符
+            ctx.fillStyle = 'rgba(153, 153, 153, 0.5)'; 
+            ctx.font = '60px sans-serif'; 
+            ctx.textAlign = 'center';
+            ctx.fillText('上傳你的卡圖', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
         }
-        
-        // --- 步驟 3: 繪製 Fog (色彩增值) ---
+
+        // 步驟 3: 繪製 Fog (色彩增值)
+        // (此時 fog 會蓋在 base, bg, mark 和 playerImage 之上)
         ctx.globalCompositeOperation = 'multiply'; 
         drawAspectCover(ctx, currentFogImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
         
-        // --- 步驟 4: 恢復狀態 ---
-        ctx.globalCompositeOperation = 'source-over'; 
-        ctx.restore();
+        // 步驟 4: 恢復狀態
+        ctx.restore(); // 恢復初始狀態 (重置 globalCompositeOperation)
     }
     
+    // !! 關鍵修正：修正 typo (img.img.height -> img.height)
     function drawAspectCover(ctx, img, x, y, w, h) {
-        const imgRatio = img.width / img.height;
+        if (!img || img.naturalHeight === 0) return; 
+
+        const imgRatio = img.width / img.height; // <-- 修正
         const canvasRatio = w / h;
         let sx = 0, sy = 0, sw = img.width, sh = img.height;
         if (imgRatio > canvasRatio) { 
@@ -130,15 +168,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function resetPlaceholder() {
-        currentImage = null;
-        zoomSlider.value = 1;
-        imgState.zoom = 1;
-        imgState.offsetX = 0;
-        imgState.offsetY = 0;
-        redrawCanvas(); 
+        currentImage = null; // 移除玩家圖片
+        // 觸發一次 onSelectionChange 來重新載入所有5張基礎圖片
+        onSelectionChange();
     }
 
+
     // --- 4. 核心更新函式 (IMG 圖層) ---
+
+    // (新增) 圖片批次載入器
+    function loadAllImages(paths) {
+        // 基礎圖片 (base, bg, mark, fog, mask) 5 張
+        let baseImages = [
+            { obj: currentBaseImage, src: paths.basePath },
+            { obj: currentBgVisualImage, src: paths.bgPath },
+            { obj: currentMarkImage, src: paths.markPath },
+            { obj: currentFogImage, src: paths.fogPath },
+            { obj: currentMask, src: paths.bgPath } // 遮罩與 bg 相同
+        ];
+
+        imagesToLoad = baseImages.length; // 基礎圖片 5 張
+        imagesLoaded = 0;
+
+        const onImageLoad = () => {
+            imagesLoaded++;
+            if (imagesLoaded === imagesToLoad) {
+                redrawCanvas(); // 所有圖片載入完成後，執行繪製
+            }
+        };
+        
+        // 處理玩家圖片
+        if (currentImage) {
+            imagesToLoad++; // 總數 +1
+            // 確保玩家圖片的 onload 也會觸發 onImageLoad
+            if (currentImage.complete) {
+                onImageLoad();
+            } else {
+                currentImage.onload = onImageLoad;
+            }
+        }
+
+        // 為每張基礎圖片設定 src 並綁定 onload
+        baseImages.forEach(imgData => {
+            imgData.obj.crossOrigin = "anonymous";
+            // 檢查 src 是否真的改變，避免不必要的重載
+            if (imgData.obj.src !== imgData.src) {
+                imgData.obj.src = imgData.src;
+                if (!imgData.obj.complete) {
+                    imgData.obj.onload = onImageLoad;
+                } else {
+                    onImageLoad(); // 處理快取
+                }
+            } else {
+                onImageLoad(); // 如果 src 相同，直接計為已載入
+            }
+        });
+    }
+
 
     function updateCardFrame() {
         let basePath, bgPath, framePath, topFramePath, markPath, fogPath;
@@ -151,10 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let powerPath = TRANSPARENT_PIXEL; 
 
         // 3. 根據規則計算路徑
-        
         basePath = `${FRAME_FOLDER}/base-${currentColor}.png`;
         markPath = `${FRAME_FOLDER}/mark-${currentColor}-${currentFaction}.png`;
-        fogPath = `${FRAME_FOLDER}/fog-${currentColor}.png`; // 計算 fog 路徑
+        fogPath = `${FRAME_FOLDER}/fog-${currentColor}.png`;
 
         if (currentType === 'leader') {
             bgPath = `${FRAME_FOLDER}/bg-leader-${currentColor}.png`;
@@ -164,7 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
             extraFactionPath = `${FRAME_FOLDER}/life-${currentColor}-${currentFaction}.png`;
             if (currentLifeStatus === 'before') {
                 extraTextPath = `${FRAME_FOLDER}/life-${currentColor}-text.png`;
-                extraNumberPath = `${FRAME_FOLDER}/life-${currentColor}-${currentLifeNumber}.png`;
+                // !! 關鍵修正：FRAME_DELETE -> FRAME_FOLDER
+                extraNumberPath = `${FRAME_FOLDER}/life-${currentColor}-${currentLifeNumber}.png`; 
             } else { 
                 extraTextPath = `${FRAME_FOLDER}/life-${currentColor}-awake.png`;
                 extraNumberPath = TRANSPARENT_PIXEL; 
@@ -196,11 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
             powerPath = TRANSPARENT_PIXEL;
         }
 
-        // 4. 更新所有 <img> 圖層的 src (fogLayer.src 已被移除)
-        baseLayer.src = basePath;
-        bgVisualLayer.src = bgPath;
-        markLayer.src = markPath; 
-        // fogLayer.src = fogPath; // !! 關鍵修正：已刪除此行
+        // 4. 更新「前景」 <img> 圖層的 src
         frameLayer.src = framePath;
         topFrameLayer.src = topFramePath;
         extraBaseLayer.src = extraBasePath;
@@ -211,17 +293,8 @@ document.addEventListener('DOMContentLoaded', () => {
         supportValueLayer.src = supportValuePath;
         powerLayer.src = powerPath; 
         
-        // 5. 更新 Canvas 遮罩和 Fog 圖片
-        currentMask.crossOrigin = "anonymous";
-        currentMask.src = bgPath; 
-        currentMask.onload = () => { redrawCanvas(); };
-        if (currentMask.complete) { redrawCanvas(); }
-        
-        // 載入 fog 圖片到 JS 物件
-        currentFogImage.crossOrigin = "anonymous";
-        currentFogImage.src = fogPath;
-        currentFogImage.onload = () => { redrawCanvas(); };
-        if (currentFogImage.complete) { redrawCanvas(); }
+        // 5. 返回需要載入到 Canvas 的圖片路徑
+        return { basePath, bgPath, markPath, fogPath };
     }
 
     // --- 5. 事件監聽器 ---
@@ -262,10 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
             powerOptionsGroup.style.display = 'none'; 
         }
         
-        // 3. 觸發卡片重繪
-        updateCardFrame();
-        // 4. 觸發 Canvas 重繪
-        redrawCanvas(); 
+        // 3. 獲取路徑並觸發批次載入
+        const paths = updateCardFrame();
+        loadAllImages(paths);
+        
+        // ( redrawCanvas() 會在 loadAllImages 完成後自動觸發 )
     }
 
     // 綁定所有會影響卡片的控制項到主函式
@@ -282,13 +356,13 @@ document.addEventListener('DOMContentLoaded', () => {
     supportValueSelect.addEventListener('change', onSelectionChange);
     powerSelect.addEventListener('change', onSelectionChange); 
 
-    // (不變) 處理圖片上傳
+    // (更新) 處理圖片上傳
     imageUpload.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = (e) => {
-                currentImage = new Image();
+                currentImage = new Image(); // 每次都創建新 Image 物件
                 currentImage.crossOrigin = "anonymous";
                 currentImage.onload = () => {
                     const imgRatio = currentImage.width / currentImage.height;
@@ -307,24 +381,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     zoomSlider.min = baseZoom * 0.5;
                     zoomSlider.value = baseZoom;
                     zoomSlider.max = baseZoom * 3;
-                    redrawCanvas(); 
+                    
+                    // 重新觸發 onSelectionChange 來載入所有圖片 (包括這張新圖)
+                    onSelectionChange(); 
                 };
                 currentImage.src = e.target.result;
             };
             reader.readAsDataURL(file);
         } else {
-            resetPlaceholder(); 
+            resetPlaceholder(); // 取消選擇時，移除玩家圖片並重繪
         }
     });
 
-    // (不變) 處理縮放滑桿
+    // (更新) 處理縮放滑桿
     zoomSlider.addEventListener('input', () => {
         if (!currentImage) return;
         imgState.zoom = parseFloat(zoomSlider.value);
-        redrawCanvas();
+        redrawCanvas(); // 只需要重繪 Canvas
     });
 
-    // (不變) 處理滑鼠拖曳
+    // (更新) 處理滑鼠拖曳
     playerCanvas.addEventListener('mousedown', (e) => {
         if (!currentImage) return;
         isDragging = true;
@@ -341,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imgState.offsetY += (deltaY * canvasScaleRatio);
         lastMouseX = e.clientX;
         lastMouseY = e.clientY;
-        redrawCanvas();
+        redrawCanvas(); // 只需要重繪 Canvas
     });
     const stopDragging = () => {
         if (isDragging) {
@@ -351,6 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     playerCanvas.addEventListener('mouseup', stopDragging);
     playerCanvas.addEventListener('mouseleave', stopDragging);
+
 
     // (不變) 處理下載卡片功能
     downloadButton.addEventListener('click', () => {
