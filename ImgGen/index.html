@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自製卡片生成器 (戰力系統版)</title>
+    <title>自製卡片生成器 (完整版)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +17,6 @@
         <h1>我的自製卡片</h1>
 
         <div id="editor-layout">
-
-            <div id="editor-layout">
 
             <div id="card-editor">
                 <canvas id="player-image-canvas" width="767" height="1073"></canvas>
@@ -26,6 +29,11 @@
                 <img id="support-range-layer" src="" alt="支援範圍">
                 <img id="support-value-layer" src="" alt="支援值">
                 <img id="power-layer" src="" alt="戰力">
+                
+                <img id="affiliation-layer" src="" alt="勢力圖層">
+                
+                <canvas id="text-canvas" width="767" height="1073"></canvas>
+
                 <img id="top-frame-layer" src="" alt="最上層外框">
             </div>
 
@@ -38,6 +46,51 @@
                         <option value="event">事件</option>
                     </select>
                 </div>
+				
+                <div class="control-group">
+                    <label for="card-name-input">卡片名稱:</label>
+                    <input type="text" id="card-name-input" maxlength="30" placeholder="請輸入卡片名稱...">
+                </div>
+				<div class="control-group">
+                    <label for="color-select">顏色:</label>
+                    <select id="color-select">
+                        <option value="none">無色</option>
+                        <option value="red">紅色</option>
+                        <option value="blue">藍色</option>
+                        <option value="yellow">黃色</option>
+                        <option value="black">黑色</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="faction-select">陣營:</label>
+                    <select id="faction-select">
+                        <option value="uss">白鷹</option>
+                        <option value="hms">皇家</option>
+                        <option value="kms">鐵血</option>
+                        <option value="ijn">重櫻</option>
+                        <option value="ffnf">自由鳶尾</option>
+                        <option value="mnf">維希教廷</option>
+                        <option value="roc">東煌</option>
+                        <option value="rn">薩丁帝國</option>
+                        <option value="sn">北方聯合</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="affiliation-select">勢力:</label>
+                    <select id="affiliation-select">
+                        <option value="none">無</option>
+                        <option value="al">碧藍航線</option>
+                        <option value="ca">赤色中軸</option>
+                    </select>
+                </div>
+				<div class="control-group">
+                    <label for="faction-input">陣營/艦種:</label>
+                    <input type="text" id="faction-input" maxlength="30" placeholder="請輸入陣營/艦種...">
+                </div>
+
+                
 
                 <div id="leader-options-group" class="control-group">
                     <hr> 
@@ -123,31 +176,7 @@
                     <hr>
                 </div>
 
-                <div class="control-group">
-                    <label for="color-select">顏色:</label>
-                    <select id="color-select">
-                        <option value="none">無色</option>
-                        <option value="red">紅色</option>
-                        <option value="blue">藍色</option>
-                        <option value="yellow">黃色</option>
-                        <option value="black">黑色</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label for="faction-select">陣營:</label>
-                    <select id="faction-select">
-                        <option value="uss">白鷹</option>
-                        <option value="hms">皇家</option>
-                        <option value="kms">鐵血</option>
-                        <option value="ijn">重櫻</option>
-                        <option value="ffnf">自由鳶尾</option>
-                        <option value="mnf">維希教廷</option>
-                        <option value="roc">東煌</option>
-                        <option value="rn">薩丁帝國</option>
-                        <option value="sn">北方聯合</option>
-                    </select>
-                </div>
+                
 
                 <div class="control-group">
                     <label for="image-upload" class="button">

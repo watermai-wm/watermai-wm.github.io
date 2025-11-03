@@ -2,14 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. DOM 元素獲取 ---
     const cardEditor = document.getElementById('card-editor');
     const imageUpload = document.getElementById('image-upload');
-    const downloadButton = document.getElementById('download-card');
+    const downloadButton = document.getElementById('download-card'); // 修正 ID
     
+	
     // 控制項
     const colorSelect = document.getElementById('color-select');
     const cardTypeSelect = document.getElementById('card-type-select');
     const factionSelect = document.getElementById('faction-select');
+    const affiliationSelect = document.getElementById('affiliation-select'); // !! 關鍵改動：新增
     const zoomSlider = document.getElementById('zoom-slider');
     const fullArtToggle = document.getElementById('full-art-toggle');
+    const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
+	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
     
     // 旗艦專用
     const leaderOptionsGroup = document.getElementById('leader-options-group');
@@ -42,10 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const supportRangeLayer = document.getElementById('support-range-layer');
     const supportValueLayer = document.getElementById('support-value-layer');
     const powerLayer = document.getElementById('power-layer');
+    const affiliationLayer = document.getElementById('affiliation-layer'); // !! 關鍵改動：新增
     
     // Canvas 相關
     const playerCanvas = document.getElementById('player-image-canvas');
     const ctx = playerCanvas.getContext('2d');
+    const textCanvas = document.getElementById('text-canvas');
+    const textCtx = textCanvas.getContext('2d');
+    
     const TARGET_WIDTH = 767;
     const TARGET_HEIGHT = 1073;
 
@@ -53,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const FRAME_FOLDER = 'CardFrame'; 
     const TRANSPARENT_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-    // --- 2. 全域狀態 ---
-    let currentImage = null; // 玩家圖片
+    // --- 2. 全域狀態 ---    
+	let currentImage = null; // 玩家圖片
     
     // 背景圖層的 Image 物件
     let currentMask = new Image(); 
@@ -67,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentColor = 'none'; 
     let currentType = 'leader'; 
     let currentFaction = 'uss'; 
+    let currentAffiliation = 'none'; // !! 關鍵改動：新增
     let isFullArt = false; 
     let currentLifeStatus = 'before';
     let currentLifeNumber = '4';
@@ -74,6 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSupportRange = 'hand';
     let currentSupportValue = '0';
     let currentPower = '100'; 
+    let currentCardName = ''; // 卡片名稱狀態
+	let currentfaction = ''; // !! 關鍵改動：新增勢力狀態
+    
+    // 圖片變換狀態
     const imgState = { zoom: 1, offsetX: 0, offsetY: 0 };
     let isDragging = false;
     let lastMouseX = 0;
@@ -85,8 +98,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. 核心繪圖函式 (Canvas) ---
     
+    // 繪製文字
+    function redrawText() {
+        textCtx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+
+        // --- 1. 繪製卡片名稱 ---
+        if (currentCardName) {
+            const textX = TARGET_WIDTH / 2;
+            const textY = 936;
+            const fontSize = 40; // 這是您在 script.js 中設定的 40px
+
+            textCtx.font = `300 ${fontSize}px "Chiron GoRound TC"`;
+            textCtx.textAlign = 'center';
+            textCtx.strokeStyle = 'black';
+            textCtx.lineWidth = 3; // 這是您在 script.js 中設定的 3px
+            textCtx.fillStyle = 'white';
+            
+            textCtx.strokeText(currentCardName, textX, textY);
+            textCtx.fillText(currentCardName, textX, textY);
+        }
+		// --- 2. 繪製勢力 ---
+        if (currentfaction) {
+            let textX;
+            const textY = 1010;
+            
+            // !! 您可以在這裡調整「勢力」的字體大小 !!
+            const fontSize = 20; // 設為 30px，比卡片名稱小
+
+            // 根據卡牌種類決定 X 座標 (置中點)
+            if (currentType === 'leader' || currentType === 'kansen') {
+                textX = 531; // 旗艦/艦船: 靠右置中
+            } else { // 'event'
+                textX = TARGET_WIDTH / 2; // 事件: 整張圖置中
+            }
+
+            // 使用相同的字體和樣式
+            textCtx.font = `300 ${fontSize}px "Chiron GoRound TC"`; // 300 = Light
+            textCtx.textAlign = 'center';
+            textCtx.strokeStyle = 'black';
+            textCtx.lineWidth = 2; // 2px 描邊
+            textCtx.fillStyle = 'white';
+            
+            textCtx.strokeText(currentfaction, textX, textY);
+            textCtx.fillText(currentfaction, textX, textY);
+        }
+    }
+    
+    // 繪製背景/圖片/Fog
     function redrawCanvas() {
-        // 檢查所有必要的圖片是否都載入完成了
         if (imagesLoaded < imagesToLoad) {
             ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
             ctx.fillStyle = '#999';
@@ -95,67 +154,43 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillText('圖片載入中...', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
             return;
         }
-
         ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
-        ctx.save(); // 儲存初始狀態
-
-        // 步驟 1: 繪製所有背景圖層 (Base, BG, Mark)
+        ctx.save(); 
         drawAspectCover(ctx, currentBaseImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
         drawAspectCover(ctx, currentBgVisualImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
         drawAspectCover(ctx, currentMarkImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
-
-        // 步驟 2: 繪製玩家圖片 (有遮罩或全圖)
         if (currentImage) {
+            ctx.save();
             const scaledWidth = currentImage.width * imgState.zoom;
             const scaledHeight = currentImage.height * imgState.zoom;
-            
             if (isFullArt) {
-                // --- 全圖模式 ---
-                // 直接在主畫布上繪製
                 ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
             } else {
-                // --- 遮罩模式 (使用離屏畫布) ---
-                
-                // 1. 建立一個暫時的、看不見的畫布
                 const tempCanvas = document.createElement('canvas');
                 tempCanvas.width = TARGET_WIDTH;
                 tempCanvas.height = TARGET_HEIGHT;
                 const tempCtx = tempCanvas.getContext('2d');
-
-                // 2. 在「暫時畫布」上繪製遮罩 (bg-*.png)
                 drawAspectCover(tempCtx, currentMask, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
-                
-                // 3. 設定混合模式為 "source-in"
                 tempCtx.globalCompositeOperation = 'source-in';
-                
-                // 4. 在「暫時畫布」上繪製玩家圖片 (會被遮罩)
                 tempCtx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
-                
-                // 5. 將「暫時畫布」(現在只剩下被遮罩的圖片) 畫回到「主畫布」上
                 ctx.drawImage(tempCanvas, 0, 0);
             }
-            
+            ctx.restore();
         } else {
-            // 沒有玩家圖片時，顯示佔位符
             ctx.fillStyle = 'rgba(153, 153, 153, 0.5)'; 
             ctx.font = '60px sans-serif'; 
             ctx.textAlign = 'center';
             ctx.fillText('上傳你的卡圖', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
         }
-
-        // 步驟 3: 繪製 Fog (色彩增值)
-        // (此時 fog 會蓋在 base, bg, mark 和 playerImage 之上)
         ctx.globalCompositeOperation = 'multiply'; 
         drawAspectCover(ctx, currentFogImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
-        
-        // 步驟 4: 恢復狀態
-        ctx.restore(); // 恢復初始狀態 (重置 globalCompositeOperation)
+        ctx.restore(); 
+        redrawText();
     }
     
-    // !! 關鍵修正：修正 typo (img.img.height -> img.height)
+    // 輔助函式：修正 typo (img.img.height -> img.height)
     function drawAspectCover(ctx, img, x, y, w, h) {
         if (!img || img.naturalHeight === 0) return; 
-
         const imgRatio = img.width / img.height; // <-- 修正
         const canvasRatio = w / h;
         let sx = 0, sy = 0, sw = img.width, sh = img.height;
@@ -169,58 +204,48 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function resetPlaceholder() {
         currentImage = null; // 移除玩家圖片
-        // 觸發一次 onSelectionChange 來重新載入所有5張基礎圖片
-        onSelectionChange();
+        onSelectionChange(); // <--- 這樣就夠了，onSelectionChange 會處理後續所有繪製
     }
 
 
     // --- 4. 核心更新函式 (IMG 圖層) ---
 
-    // (新增) 圖片批次載入器
+    // 圖片批次載入器
     function loadAllImages(paths) {
-        // 基礎圖片 (base, bg, mark, fog, mask) 5 張
         let baseImages = [
             { obj: currentBaseImage, src: paths.basePath },
             { obj: currentBgVisualImage, src: paths.bgPath },
             { obj: currentMarkImage, src: paths.markPath },
             { obj: currentFogImage, src: paths.fogPath },
-            { obj: currentMask, src: paths.bgPath } // 遮罩與 bg 相同
+            { obj: currentMask, src: paths.bgPath }
         ];
-
-        imagesToLoad = baseImages.length; // 基礎圖片 5 張
+        imagesToLoad = baseImages.length;
         imagesLoaded = 0;
-
         const onImageLoad = () => {
             imagesLoaded++;
             if (imagesLoaded === imagesToLoad) {
-                redrawCanvas(); // 所有圖片載入完成後，執行繪製
+                redrawCanvas(); 
             }
         };
-        
-        // 處理玩家圖片
         if (currentImage) {
-            imagesToLoad++; // 總數 +1
-            // 確保玩家圖片的 onload 也會觸發 onImageLoad
+            imagesToLoad++;
             if (currentImage.complete) {
                 onImageLoad();
             } else {
                 currentImage.onload = onImageLoad;
             }
         }
-
-        // 為每張基礎圖片設定 src 並綁定 onload
         baseImages.forEach(imgData => {
             imgData.obj.crossOrigin = "anonymous";
-            // 檢查 src 是否真的改變，避免不必要的重載
             if (imgData.obj.src !== imgData.src) {
                 imgData.obj.src = imgData.src;
                 if (!imgData.obj.complete) {
                     imgData.obj.onload = onImageLoad;
                 } else {
-                    onImageLoad(); // 處理快取
+                    onImageLoad();
                 }
             } else {
-                onImageLoad(); // 如果 src 相同，直接計為已載入
+                onImageLoad();
             }
         });
     }
@@ -235,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let supportRangePath = TRANSPARENT_PIXEL;
         let supportValuePath = TRANSPARENT_PIXEL;
         let powerPath = TRANSPARENT_PIXEL; 
+        let affiliationPath = TRANSPARENT_PIXEL; // !! 關鍵改動：新增
 
         // 3. 根據規則計算路徑
         basePath = `${FRAME_FOLDER}/base-${currentColor}.png`;
@@ -249,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
             extraFactionPath = `${FRAME_FOLDER}/life-${currentColor}-${currentFaction}.png`;
             if (currentLifeStatus === 'before') {
                 extraTextPath = `${FRAME_FOLDER}/life-${currentColor}-text.png`;
-                // !! 關鍵修正：FRAME_DELETE -> FRAME_FOLDER
+                // 修正：FRAME_DELETE -> FRAME_FOLDER
                 extraNumberPath = `${FRAME_FOLDER}/life-${currentColor}-${currentLifeNumber}.png`; 
             } else { 
                 extraTextPath = `${FRAME_FOLDER}/life-${currentColor}-awake.png`;
@@ -282,6 +308,26 @@ document.addEventListener('DOMContentLoaded', () => {
             powerPath = TRANSPARENT_PIXEL;
         }
 
+        // !! 關鍵改動：處理勢力圖層 !!
+        if (currentAffiliation === 'al') {
+            if (currentType === 'leader') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-al-leader.png`;
+            } else if (currentType === 'kansen') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-al-kansen.png`;
+            } else if (currentType === 'event') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-al-event.png`;
+            }
+        } else if (currentAffiliation === 'ca') {
+            if (currentType === 'leader') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-ca-leader.png`;
+            } else if (currentType === 'kansen') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-ca-kansen.png`;
+            } else if (currentType === 'event') {
+                affiliationPath = `${FRAME_FOLDER}/affiliation-ca-event.png`;
+            }
+        }
+        // 如果 currentAffiliation === 'none'，affiliationPath 會維持 TRANSPARENT_PIXEL
+
         // 4. 更新「前景」 <img> 圖層的 src
         frameLayer.src = framePath;
         topFrameLayer.src = topFramePath;
@@ -292,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         supportRangeLayer.src = supportRangePath;
         supportValueLayer.src = supportValuePath;
         powerLayer.src = powerPath; 
+        affiliationLayer.src = affiliationPath; // !! 關鍵改動：新增
         
         // 5. 返回需要載入到 Canvas 的圖片路徑
         return { basePath, bgPath, markPath, fogPath };
@@ -304,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentColor = colorSelect.value;
         currentType = cardTypeSelect.value;
         currentFaction = factionSelect.value;
+        currentAffiliation = affiliationSelect.value; // !! 關鍵改動：新增
         isFullArt = fullArtToggle.checked;
         currentLifeStatus = document.querySelector('input[name="awake-status"]:checked').value;
         currentLifeNumber = lifeNumberSelect.value;
@@ -311,7 +359,9 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSupportRange = supportRangeSelect.value;
         currentSupportValue = supportValueSelect.value;
         currentPower = powerSelect.value;
-
+        currentCardName = cardNameInput.value; 
+		currentfaction = factionInput.value; // !! 新增
+        
         // 2. 處理條件 UI 顯示
         if (currentType === 'leader') {
             leaderOptionsGroup.style.display = 'flex';
@@ -339,13 +389,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const paths = updateCardFrame();
         loadAllImages(paths);
         
-        // ( redrawCanvas() 會在 loadAllImages 完成後自動觸發 )
+        // 4. (文字繪製已交給 redrawCanvas 處理)
+        // redrawText(); // <--- 已刪除
     }
 
     // 綁定所有會影響卡片的控制項到主函式
     colorSelect.addEventListener('change', onSelectionChange);
     cardTypeSelect.addEventListener('change', onSelectionChange);
     factionSelect.addEventListener('change', onSelectionChange);
+    affiliationSelect.addEventListener('change', onSelectionChange); // !! 關鍵改動：新增
     fullArtToggle.addEventListener('change', onSelectionChange);
     lifeNumberSelect.addEventListener('change', onSelectionChange);
     awakeStatusRadios.forEach(radio => {
@@ -356,13 +408,24 @@ document.addEventListener('DOMContentLoaded', () => {
     supportValueSelect.addEventListener('change', onSelectionChange);
     powerSelect.addEventListener('change', onSelectionChange); 
 
-    // (更新) 處理圖片上傳
+    // 新增文字輸入框的即時監聽
+    cardNameInput.addEventListener('input', () => {
+        currentCardName = cardNameInput.value;
+        redrawText(); // 只需要重繪文字畫布
+    });
+	// !! 關鍵改動：新增勢力輸入框的即時監聽
+    factionInput.addEventListener('input', () => {
+        currentfaction = factionInput.value;
+        redrawText(); // 只需要重繪文字畫布
+    });
+
+    // 處理圖片上傳
     imageUpload.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = (e) => {
-                currentImage = new Image(); // 每次都創建新 Image 物件
+                currentImage = new Image();
                 currentImage.crossOrigin = "anonymous";
                 currentImage.onload = () => {
                     const imgRatio = currentImage.width / currentImage.height;
@@ -382,8 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     zoomSlider.value = baseZoom;
                     zoomSlider.max = baseZoom * 3;
                     
-                    // 重新觸發 onSelectionChange 來載入所有圖片 (包括這張新圖)
-                    onSelectionChange(); 
+                    onSelectionChange(); // 重新觸發載入
                 };
                 currentImage.src = e.target.result;
             };
@@ -393,14 +455,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // (更新) 處理縮放滑桿
+    // 處理縮放滑桿
     zoomSlider.addEventListener('input', () => {
         if (!currentImage) return;
         imgState.zoom = parseFloat(zoomSlider.value);
-        redrawCanvas(); // 只需要重繪 Canvas
+        redrawCanvas();
     });
 
-    // (更新) 處理滑鼠拖曳
+    // 處理滑鼠拖曳
     playerCanvas.addEventListener('mousedown', (e) => {
         if (!currentImage) return;
         isDragging = true;
@@ -417,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imgState.offsetY += (deltaY * canvasScaleRatio);
         lastMouseX = e.clientX;
         lastMouseY = e.clientY;
-        redrawCanvas(); // 只需要重繪 Canvas
+        redrawCanvas();
     });
     const stopDragging = () => {
         if (isDragging) {
@@ -428,8 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playerCanvas.addEventListener('mouseup', stopDragging);
     playerCanvas.addEventListener('mouseleave', stopDragging);
 
-
-    // (不變) 處理下載卡片功能
+    // 處理下載卡片功能
     downloadButton.addEventListener('click', () => {
         const DOWNLOAD_MULTIPLIER = 1;
         const cssWidth = cardEditor.clientWidth; 
@@ -467,6 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardTypeSelect.value = 'leader';
     colorSelect.value = 'none';
     factionSelect.value = 'uss';
+    affiliationSelect.value = 'none'; // !! 關鍵改動：新增
     document.querySelector('input[name="awake-status"][value="before"]').checked = true;
     lifeNumberSelect.value = '5';
     costSelect.value = '0';
@@ -474,7 +536,12 @@ document.addEventListener('DOMContentLoaded', () => {
     supportValueSelect.value = '100';
     powerSelect.value = '400';
     fullArtToggle.checked = false;
+    cardNameInput.value = '';
+	factionInput.value = ''; // !! 關鍵改動：初始化勢力輸入框
     
-    // 執行一次主函式來設定初始 UI 和卡片
-    onSelectionChange();
+    // 等待字體載入
+    document.fonts.ready.then(() => {
+        console.log('字體已載入，執行初始繪製。');
+        onSelectionChange();
+    });
 });

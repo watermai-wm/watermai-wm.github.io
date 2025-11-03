@@ -32,9 +32,8 @@ h1 {
     gap: 40px; 
 }
 
-
 #card-editor {
-	width: 767px;  
+    width: 767px;  
     height: 1073px; 
     position: relative;
     border: 1px solid #ddd;
@@ -58,8 +57,7 @@ h1 {
     pointer-events: none; 
 }
 
-/* !! 關鍵改動：z-index 大重排 !! */
-/* (base, bg, mark, fog 已被移除) */
+/* !! 關鍵改動：z-index 堆疊順序 (11 層) !! */
 #player-image-canvas { z-index: 1; } /* Canvas 現在是底層 */
 #frame-layer { z-index: 2; }
 /* --- 耐久度/費用 --- */
@@ -72,21 +70,23 @@ h1 {
 #support-value-layer { z-index: 8; }
 /* --- 戰力 --- */
 #power-layer { z-index: 9; }
+/* --- 勢力 --- */
+#affiliation-layer { z-index: 10; } /* !! 新增 !! */
+/* --- 文字 --- */
+#text-canvas { z-index: 11; } /* 往後推 */
 /* --- 最上層 --- */
-#top-frame-layer { z-index: 10; } 
+#top-frame-layer { z-index: 12; } /* 往後推 */
 
-
-/* !! 關鍵改動：刪除 fog 樣式 !! */
-/*
-#fog-layer {
-    mix-blend-mode: multiply;
-}
-*/
 
 #player-image-canvas {
-    background-color: transparent; /* 保持透明 */
+    background-color: transparent; 
     pointer-events: auto;
     cursor: grab; 
+}
+
+/* !! 關鍵改動：確保文字畫布是透明且「可穿透」的 !! */
+#text-canvas {
+    pointer-events: none; /* 讓滑鼠點擊可以穿透到下面的 player-image-canvas */
 }
 
 #controls-panel {
@@ -110,12 +110,12 @@ h1 {
     color: #555;
 }
 
-/* !! 關鍵改動：新增戰力選項群組 !! */
+/* 旗艦/費用/支援/戰力 選項群組 */
 #leader-options-group,
 #cost-options-group,
 #support-options-group,
 #power-options-group {
-    display: none; /* 預設隱藏 (規則 1) */
+    display: none; /* 預設隱藏 */
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -137,7 +137,7 @@ h1 {
     border-top: 1px solid #eee;
 }
 
-/* (...其他 .radio-group, .checkbox-group 樣式不變...) */
+/* 單選按鈕樣式 */
 .radio-group label {
     font-weight: normal;
     font-size: 0.9em;
@@ -156,6 +156,8 @@ h1 {
 .radio-group label[for] {
     cursor: pointer;
 }
+
+/* 勾選框樣式 */
 .checkbox-group {
     flex-direction: row; 
     align-items: center; 
@@ -171,21 +173,25 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* 所有控制項 100% 寬度 */
 .button,
 #color-select,
 #card-type-select,
 #faction-select,
+#affiliation-select, /* !! 關鍵改動：新增 ID !! */
 #life-number-select,
 #cost-select,
 #support-range-select,
 #support-value-select,
-#power-select, /* 新增 */
+#power-select,
+#card-name-input,
+#faction-input, /* !! 關鍵改動：新增 ID !! */
 input[type="range"] {
     width: 100%;
     box-sizing: border-box; 
 }
 
-/* ( ... 其他 .button, #image-upload, select 樣式不變 ... ) */
+/* 按鈕樣式 */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -210,15 +216,34 @@ input[type="range"] {
 .button-download:hover {
     background-color: #218838;
 }
+
 #image-upload { display: none; }
+
+/* 輸入框樣式 */
+#card-name-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#faction-input { /* !! 關鍵改動：新增 ID !! */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* 下拉選單樣式 */
 #color-select,
 #card-type-select,
 #faction-select,
+#affiliation-select, /* !! 關鍵改動：新增 ID !! */
 #life-number-select,
 #cost-select,
 #support-range-select,
 #support-value-select,
-#power-select { /* 新增 */
+#power-select {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
