@@ -186,6 +186,7 @@ input[type="checkbox"] {
 #power-select,
 #card-name-input,
 #faction-input, /* !! 關鍵改動：新增 ID !! */
+#card-id-input, /* !! 新增 ID !! */
 input[type="range"] {
     width: 100%;
     box-sizing: border-box; 
@@ -228,6 +229,12 @@ input[type="range"] {
 }
 
 #faction-input { /* !! 關鍵改動：新增 ID !! */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+#card-id-input { /* !! 關鍵改動：新增 ID !! */
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;

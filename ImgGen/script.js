@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullArtToggle = document.getElementById('full-art-toggle');
     const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
 	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
+	const cardIdInput = document.getElementById('card-id-input'); // !! 新增 !!
     
     // 旗艦專用
     const leaderOptionsGroup = document.getElementById('leader-options-group');
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentColor = 'none'; 
     let currentType = 'leader'; 
     let currentFaction = 'uss'; 
+	let currentCardId = ''; // !! 新增：卡片編號狀態
     let currentAffiliation = 'none'; // !! 關鍵改動：新增
     let isFullArt = false; 
     let currentLifeStatus = 'before';
@@ -141,6 +143,23 @@ document.addEventListener('DOMContentLoaded', () => {
             
             textCtx.strokeText(currentfaction, textX, textY);
             textCtx.fillText(currentfaction, textX, textY);
+        }
+		// --- 3. 繪製編號 --- (!! 新增區塊 !!)
+        if (currentCardId) {
+            const textX = 579;
+            const textY = 1052;
+            
+            // !! 您可以在這裡單獨調整「編號」的字體大小 !!
+            const fontSize = 18; // 設置一個獨立的字體大小
+
+            textCtx.font = `500 ${fontSize}px "Chiron GoRound TC"`; // 300 = Light
+            textCtx.textAlign = 'left'; // 根據您的要求 (579, 1052) 往右
+            textCtx.strokeStyle = 'black';
+            textCtx.lineWidth = 1; // 1px 描邊 (可自行調整)
+            textCtx.fillStyle = 'white';
+            
+            textCtx.strokeText(currentCardId, textX, textY);
+            textCtx.fillText(currentCardId, textX, textY);
         }
     }
     
@@ -361,6 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPower = powerSelect.value;
         currentCardName = cardNameInput.value; 
 		currentfaction = factionInput.value; // !! 新增
+		currentCardId = cardIdInput.value; // !! 新增
         
         // 2. 處理條件 UI 顯示
         if (currentType === 'leader') {
@@ -416,6 +436,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	// !! 關鍵改動：新增勢力輸入框的即時監聽
     factionInput.addEventListener('input', () => {
         currentfaction = factionInput.value;
+        redrawText(); // 只需要重繪文字畫布
+    });
+	// !! 新增：編號輸入框的即時監聽 !!
+    cardIdInput.addEventListener('input', () => {
+        currentCardId = cardIdInput.value;
         redrawText(); // 只需要重繪文字畫布
     });
 
@@ -538,6 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fullArtToggle.checked = false;
     cardNameInput.value = '';
 	factionInput.value = ''; // !! 關鍵改動：初始化勢力輸入框
+	cardIdInput.value = 'CE00-000'; // !! 新增：初始化編號輸入框
     
     // 等待字體載入
     document.fonts.ready.then(() => {
