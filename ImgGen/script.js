@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const supportRangeSelect = document.getElementById('support-range-select');
     const supportValueSelect = document.getElementById('support-value-select');
     
-    // !! 關鍵改動：獲取戰力控制項
+    // 戰力
     const powerOptionsGroup = document.getElementById('power-options-group');
     const powerSelect = document.getElementById('power-select');
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseLayer = document.getElementById('base-layer');
     const bgVisualLayer = document.getElementById('bg-visual-layer');
     const markLayer = document.getElementById('mark-layer');
-    const fogLayer = document.getElementById('fog-layer');
+    // const fogLayer = document.getElementById('fog-layer'); // !! 關鍵修正：已刪除此行
     const frameLayer = document.getElementById('frame-layer');
     const topFrameLayer = document.getElementById('top-frame-layer'); 
     const extraBaseLayer = document.getElementById('extra-layer-base');
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const extraNumberLayer = document.getElementById('extra-layer-number');
     const supportRangeLayer = document.getElementById('support-range-layer');
     const supportValueLayer = document.getElementById('support-value-layer');
-    // !! 關鍵改動：獲取戰力圖層
     const powerLayer = document.getElementById('power-layer');
     
     // Canvas 相關
@@ -61,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. 全域狀態 ---
     let currentImage = null; 
     let currentMask = new Image(); 
+    let currentFogImage = new Image(); // Fog 圖片物件
     let currentColor = 'none'; 
     let currentType = 'leader'; 
     let currentFaction = 'uss'; 
@@ -69,20 +69,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLifeNumber = '4';
     let currentCost = '0';
     let currentSupportRange = 'hand';
-    let currentSupportValue = '100';
-    // !! 關鍵改動：新增戰力狀態
+    let currentSupportValue = '0';
     let currentPower = '100'; 
-    // 圖片變換狀態
     const imgState = { zoom: 1, offsetX: 0, offsetY: 0 };
     let isDragging = false;
     let lastMouseX = 0;
     let lastMouseY = 0;
 
     // --- 3. 核心繪圖函式 (Canvas) ---
-    // ( ... redrawCanvas, drawAspectCover, resetPlaceholder 函式保持不變 ... )
+    
     function redrawCanvas() {
         ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
+
+        // 檢查 3 個關鍵圖片
         if (!currentMask.complete || currentMask.naturalHeight === 0) return;
+        // !! 關鍵修正：檢查 Fog 圖片
+        if (!currentFogImage.complete || currentFogImage.naturalHeight === 0) return; 
+        
         if (!currentImage) {
             ctx.fillStyle = '#999';
             ctx.font = '60px sans-serif'; 
@@ -90,9 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillText('上傳你的卡圖', TARGET_WIDTH / 2, TARGET_HEIGHT / 2);
             return;
         }
+        
         ctx.save();
+        
         const scaledWidth = currentImage.width * imgState.zoom;
         const scaledHeight = currentImage.height * imgState.zoom;
+        
+        // --- 步驟 1 & 2: 繪製遮罩和玩家圖片 ---
         if (isFullArt) {
             ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
         } else {
@@ -100,9 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.globalCompositeOperation = 'source-in';
             ctx.drawImage(currentImage, imgState.offsetX, imgState.offsetY, scaledWidth, scaledHeight);
         }
-        ctx.globalCompositeOperation = 'source-over';
+        
+        // --- 步驟 3: 繪製 Fog (色彩增值) ---
+        ctx.globalCompositeOperation = 'multiply'; 
+        drawAspectCover(ctx, currentFogImage, 0, 0, TARGET_WIDTH, TARGET_HEIGHT); 
+        
+        // --- 步驟 4: 恢復狀態 ---
+        ctx.globalCompositeOperation = 'source-over'; 
         ctx.restore();
     }
+    
     function drawAspectCover(ctx, img, x, y, w, h) {
         const imgRatio = img.width / img.height;
         const canvasRatio = w / h;
@@ -114,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
     }
+    
     function resetPlaceholder() {
         currentImage = null;
         zoomSlider.value = 1;
@@ -125,11 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. 核心更新函式 (IMG 圖層) ---
 
-    // !! 關鍵改動：更新所有 <img> 圖層
     function updateCardFrame() {
-        // ... (讀取狀態) ...
-
-        // 2. 宣告所有圖層路徑
         let basePath, bgPath, framePath, topFramePath, markPath, fogPath;
         let extraBasePath = TRANSPARENT_PIXEL;
         let extraFactionPath = TRANSPARENT_PIXEL;
@@ -137,21 +148,18 @@ document.addEventListener('DOMContentLoaded', () => {
         let extraNumberPath = TRANSPARENT_PIXEL;
         let supportRangePath = TRANSPARENT_PIXEL;
         let supportValuePath = TRANSPARENT_PIXEL;
-        let powerPath = TRANSPARENT_PIXEL; // 新增
+        let powerPath = TRANSPARENT_PIXEL; 
 
         // 3. 根據規則計算路徑
         
         basePath = `${FRAME_FOLDER}/base-${currentColor}.png`;
         markPath = `${FRAME_FOLDER}/mark-${currentColor}-${currentFaction}.png`;
-        fogPath = `${FRAME_FOLDER}/fog-${currentColor}.png`;
+        fogPath = `${FRAME_FOLDER}/fog-${currentColor}.png`; // 計算 fog 路徑
 
         if (currentType === 'leader') {
-            // --- 旗艦規則 ---
             bgPath = `${FRAME_FOLDER}/bg-leader-${currentColor}.png`;
             framePath = `${FRAME_FOLDER}/frame-leader-${currentColor}.png`;
             topFramePath = `${FRAME_FOLDER}/topframe-leader.png`;
-            
-            // 載入「耐久度」
             extraBasePath = `${FRAME_FOLDER}/life-${currentColor}-base.png`;
             extraFactionPath = `${FRAME_FOLDER}/life-${currentColor}-${currentFaction}.png`;
             if (currentLifeStatus === 'before') {
@@ -161,53 +169,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 extraTextPath = `${FRAME_FOLDER}/life-${currentColor}-awake.png`;
                 extraNumberPath = TRANSPARENT_PIXEL; 
             }
-            
-            // 載入「支援」(僅值)
             supportValuePath = `${FRAME_FOLDER}/support-${currentSupportValue}.png`;
             supportRangePath = TRANSPARENT_PIXEL; 
-            
-            // 載入「戰力」
             powerPath = `${FRAME_FOLDER}/power-${currentPower}.png`;
-
         } else if (currentType === 'kansen') {
-            // --- 艦船規則 ---
             bgPath = `${FRAME_FOLDER}/bg-kansen-${currentColor}.png`;
             framePath = `${FRAME_FOLDER}/frame-kansen-${currentColor}.png`;
             topFramePath = `${FRAME_FOLDER}/topframe-kansen.png`;
-            
-            // 載入「費用」
             extraBasePath = `${FRAME_FOLDER}/cost-${currentColor}-base.png`;
             extraFactionPath = `${FRAME_FOLDER}/cost-${currentColor}-${currentFaction}.png`;
             extraTextPath = `${FRAME_FOLDER}/cost-${currentColor}-text.png`;
             extraNumberPath = `${FRAME_FOLDER}/cost-${currentColor}-${currentCost}.png`;
-
-            // 載入「支援」(範圍 + 值)
             supportRangePath = `${FRAME_FOLDER}/support-${currentSupportRange}.png`;
             supportValuePath = `${FRAME_FOLDER}/support-${currentSupportValue}.png`;
-            
-            // 載入「戰力」
             powerPath = `${FRAME_FOLDER}/power-${currentPower}.png`;
-
         } else if (currentType === 'event') {
-            // --- 事件規則 ---
             bgPath = `${FRAME_FOLDER}/bg-event.png`; 
             framePath = `${FRAME_FOLDER}/frame-event-${currentColor}.png`;
             topFramePath = `${FRAME_FOLDER}/topframe-event.png`;
-            
-            // 載入「費用」
             extraBasePath = `${FRAME_FOLDER}/cost-${currentColor}-base.png`;
             extraFactionPath = `${FRAME_FOLDER}/cost-${currentColor}-${currentFaction}.png`;
             extraTextPath = `${FRAME_FOLDER}/cost-${currentColor}-text.png`;
             extraNumberPath = `${FRAME_FOLDER}/cost-${currentColor}-${currentCost}.png`;
-            
-            // 事件無支援、無戰力 (路徑保持透明)
+            supportRangePath = TRANSPARENT_PIXEL;
+            supportValuePath = TRANSPARENT_PIXEL;
+            powerPath = TRANSPARENT_PIXEL;
         }
 
-        // 4. 更新所有 13 個 <img> 圖層的 src
+        // 4. 更新所有 <img> 圖層的 src (fogLayer.src 已被移除)
         baseLayer.src = basePath;
         bgVisualLayer.src = bgPath;
         markLayer.src = markPath; 
-        fogLayer.src = fogPath; 
+        // fogLayer.src = fogPath; // !! 關鍵修正：已刪除此行
         frameLayer.src = framePath;
         topFrameLayer.src = topFramePath;
         extraBaseLayer.src = extraBasePath;
@@ -216,18 +209,23 @@ document.addEventListener('DOMContentLoaded', () => {
         extraNumberLayer.src = extraNumberPath;
         supportRangeLayer.src = supportRangePath;
         supportValueLayer.src = supportValuePath;
-        powerLayer.src = powerPath; // 設定新圖層
+        powerLayer.src = powerPath; 
         
-        // 5. 更新 Canvas 遮罩
+        // 5. 更新 Canvas 遮罩和 Fog 圖片
         currentMask.crossOrigin = "anonymous";
         currentMask.src = bgPath; 
         currentMask.onload = () => { redrawCanvas(); };
         if (currentMask.complete) { redrawCanvas(); }
+        
+        // 載入 fog 圖片到 JS 物件
+        currentFogImage.crossOrigin = "anonymous";
+        currentFogImage.src = fogPath;
+        currentFogImage.onload = () => { redrawCanvas(); };
+        if (currentFogImage.complete) { redrawCanvas(); }
     }
 
     // --- 5. 事件監聽器 ---
-
-    // !! 關鍵改動：唯一的主控制函式
+    
     function onSelectionChange() {
         // 1. 讀取所有全域狀態
         currentColor = colorSelect.value;
@@ -239,33 +237,29 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCost = costSelect.value;
         currentSupportRange = supportRangeSelect.value;
         currentSupportValue = supportValueSelect.value;
-        currentPower = powerSelect.value; // 新增
+        currentPower = powerSelect.value;
 
-        // 2. 處理條件 UI 顯示 (規則 1)
+        // 2. 處理條件 UI 顯示
         if (currentType === 'leader') {
             leaderOptionsGroup.style.display = 'flex';
             costOptionsGroup.style.display = 'none';
             supportOptionsGroup.style.display = 'flex';
-            powerOptionsGroup.style.display = 'flex'; // 顯示戰力
-            
+            powerOptionsGroup.style.display = 'flex'; 
             supportRangeGroup.style.display = 'none'; 
             supportValueGroup.style.display = 'flex'; 
             lifeNumberGroup.style.display = (currentLifeStatus === 'after') ? 'none' : 'flex';
-
         } else if (currentType === 'kansen') {
             leaderOptionsGroup.style.display = 'none';
             costOptionsGroup.style.display = 'flex';
             supportOptionsGroup.style.display = 'flex';
-            powerOptionsGroup.style.display = 'flex'; // 顯示戰力
-            
+            powerOptionsGroup.style.display = 'flex'; 
             supportRangeGroup.style.display = 'flex'; 
             supportValueGroup.style.display = 'flex'; 
-
         } else if (currentType === 'event') {
             leaderOptionsGroup.style.display = 'none';
             costOptionsGroup.style.display = 'flex';
             supportOptionsGroup.style.display = 'none';
-            powerOptionsGroup.style.display = 'none'; // 隱藏戰力
+            powerOptionsGroup.style.display = 'none'; 
         }
         
         // 3. 觸發卡片重繪
@@ -286,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     costSelect.addEventListener('change', onSelectionChange);
     supportRangeSelect.addEventListener('change', onSelectionChange);
     supportValueSelect.addEventListener('change', onSelectionChange);
-    powerSelect.addEventListener('change', onSelectionChange); // 新增
+    powerSelect.addEventListener('change', onSelectionChange); 
 
     // (不變) 處理圖片上傳
     imageUpload.addEventListener('change', (event) => {
@@ -373,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backgroundColor: null, 
             scale: finalScale, 
         }).then(canvas => {
-            const image = canvas.toDataURL('png');
+            const image = canvas.toDataURL('image/png');
             const link = document.createElement('a');
             link.href = image;
             const outputWidth = TARGET_WIDTH * DOWNLOAD_MULTIPLIER;
@@ -393,18 +387,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // --- 6. 初始化 ---
-    // (更新) 設定所有預設值
     cardTypeSelect.value = 'leader';
     colorSelect.value = 'none';
     factionSelect.value = 'uss';
     document.querySelector('input[name="awake-status"][value="before"]').checked = true;
+    lifeNumberSelect.value = '5';
     costSelect.value = '0';
+    supportRangeSelect.value = 'handfield';
+    supportValueSelect.value = '100';
+    powerSelect.value = '400';
     fullArtToggle.checked = false;
-    // !! 關鍵改動：在這裡設定您要的預設值 !!
-    lifeNumberSelect.value = '5';        // 耐久度 5
-    supportRangeSelect.value = 'handfield'; // 支援範圍 手牌‧戰場
-    supportValueSelect.value = '100';      // 支援值 100
-    powerSelect.value = '400';         // 戰力 400
+    
     // 執行一次主函式來設定初始 UI 和卡片
     onSelectionChange();
 });

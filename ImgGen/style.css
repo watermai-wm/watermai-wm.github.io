@@ -62,7 +62,7 @@ h1 {
 #bg-visual-layer { z-index: 2; }
 #mark-layer { z-index: 3; }
 #player-image-canvas { z-index: 4; }
-#fog-layer { z-index: 5; }
+/*#fog-layer { z-index: 5; }*/
 #frame-layer { z-index: 6; }
 /* --- 耐久度/費用 --- */
 #extra-layer-base { z-index: 7; }
@@ -76,11 +76,11 @@ h1 {
 #power-layer { z-index: 13; } /* 新圖層 */
 /* --- 最上層 --- */
 #top-frame-layer { z-index: 14; } /* 保持最上層 */
-
+/*
 #fog-layer {
-    mix-blend-mode: multiply; /* 色彩增值 */
+    mix-blend-mode: multiply; 
 }
-
+*/
 #player-image-canvas {
     background-color: transparent;
     pointer-events: auto;
