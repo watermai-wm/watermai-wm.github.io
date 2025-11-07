@@ -21986,7 +21986,7 @@ const cards = [
 	{
         "card_id": 7510100,
         "card_name": "德意志",
-        "card_code": "CE01-009",
+        "card_code": "CE01-010",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
