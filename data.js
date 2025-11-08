@@ -22269,9 +22269,9 @@ const cards = [
         "acquisition_method": "CE01"
     },
 	{
-        "card_id": 7510350,
+        "card_id": 7510360,
         "card_name": "援軍到來",
-        "card_code": "CE01-035",
+        "card_code": "CE01-036",
         "attributes": {
             "顏　色": "藍",
             "種　類": "事件卡",
