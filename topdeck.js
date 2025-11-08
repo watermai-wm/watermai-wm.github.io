@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251108-1",
+    "L_name": "皇家幸運號",
+    "Format": "7.5",
+    "Description": "20251108 貓腳印-東門店 店家賽 8人 冠軍 : 皇家幸運號 上杉幽",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20251108-2",
+    "L_name": "埃姆登",
+    "Format": "7.5",
+    "Description": "20251108 貓腳印-東門店 店家賽 8人 亞軍 : 埃姆登 噗呼呼，請叫我戀愛大師杏珠",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 0
+  },
+  {
     "deck_id": "20251102-1",
     "L_name": "明石",
     "Format": "7.5",
