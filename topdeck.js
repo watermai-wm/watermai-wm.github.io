@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251109-1",
+    "L_name": "阿爾及利亞",
+    "Format": "7.5",
+    "Description": "20251109 貓腳印-士林店 店家賽 6人 冠軍 : 阿爾及利亞 男爵",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251108-1",
     "L_name": "皇家幸運號",
     "Format": "7.5",
