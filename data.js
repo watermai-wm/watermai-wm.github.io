@@ -23694,5 +23694,3 @@ const cards = [
         "acquisition_method": "CE01"
     }
 ]
-	
-]
