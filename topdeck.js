@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251115-1",
+    "L_name": "埃姆登",
+    "Format": "7.5",
+    "Description": "20251115 貓腳印-東門店 告別賽 10人 冠軍 : 埃姆登 噗呼呼，請叫我戀愛大師杏珠",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20251115-2",
+    "L_name": "明石",
+    "Format": "7.5",
+    "Description": "20251115 貓腳印-東門店 告別賽 10人 亞軍 : 明石 努卡",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 0
+  },
+  {
     "deck_id": "20251109-1",
     "L_name": "阿爾及利亞",
     "Format": "7.5",
