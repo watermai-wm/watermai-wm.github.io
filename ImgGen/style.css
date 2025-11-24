@@ -33,13 +33,24 @@ h1 {
 }
 
 #card-editor {
-    width: 767px;  
-    height: 1073px; 
+    /* --- RWD 響應式設定 --- */
+    width: 100%;           /* 在小螢幕時佔滿容器寬度 */
+    max-width: 650px;      /* 在大螢幕時限制最大寬度 (您可以隨意調整這個值) */
+    
+    /* !! 關鍵 !! 自動鎖定長寬比，確保卡片不會變形 */
+    aspect-ratio: 767 / 1073; 
+    
+    height: auto;          /* 讓高度由 aspect-ratio 自動決定，不要寫死像素 */
+    /* -------------------- */
+
     position: relative;
     border: 1px solid #ddd;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden; 
     flex-shrink: 0; 
+    
+    /* 讓它在父容器中置中 (選用) */
+    margin: 0 auto;
 }
 
 #card-editor > img,
