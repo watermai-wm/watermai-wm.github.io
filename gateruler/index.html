@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門將卡牌產生器</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            user-select: none;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* 控制項之間的距離 */
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        select {
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .canvas-container {
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid #ccc;
+            cursor: grab;
+            /* 為了讓大尺寸 Canvas 在小螢幕也能完整顯示 */
+            max-width: 90vw; 
+            max-height: 90vh;
+            overflow: hidden; /* 隱藏溢出 */
+        }
+        .canvas-container:active {
+            cursor: grabbing;
+        }
+        
+        canvas {
+            display: block;
+            /* 1. 寬度最大不超過螢幕 */
+            max-width: 100%;
+            /* 2. 高度最大不超過螢幕高度的 85%，這樣一定看得到全文 */
+            max-height: 85vh; 
+            /* 3. 讓瀏覽器自動計算另一邊的尺寸，保持 952:1296 的比例 */
+            width: auto;
+            height: auto;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background-color: #0056b3; }
+        
+        .instruction {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>門將卡牌產生器</h2>
+
+    <div class="controls">
+        <!-- 上傳與說明 -->
+        <div class="control-group">
+            <input type="file" id="uploadImage" accept="image/*">
+        </div>
+        
+        <!-- 新增：驅策區下拉選單 -->
+        <div class="control-group">
+            <label for="setSelect"><strong>驅策區：</strong></label>
+            <select id="setSelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <p class="instruction">操作：上傳後拖曳圖片移動，滾動滾輪縮放</p>
+        
+        <button id="downloadBtn">下載卡牌</button>
+    </div>
+
+    <div class="canvas-container">
+        <!-- 尺寸更新為 952 x 1296 -->
+        <canvas id="cardCanvas" width="952" height="1296"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('cardCanvas');
+        const ctx = canvas.getContext('2d');
+        const uploadInput = document.getElementById('uploadImage');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const setSelect = document.getElementById('setSelect');
+
+        // 定義所有圖層路徑
+        const assetsPaths = {
+            background:     '/pic/background.png',
+            textframe:      '/pic/textframe.png',
+            outerframe:     '/pic/outerframe.png',
+            power:          '/pic/power.png',
+            attackFront:    '/pic/AttackFront.png',
+            defend:         '/pic/Defend.png',
+            attackBackNone: '/pic/AttackBackNone.png',
+            // 新增驅策區圖片
+            set1:           '/pic/Set1.png',
+            set2:           '/pic/Set2.png',
+            set3:           '/pic/Set3.png'
+        };
+
+        const loadedImages = {};
+        let userUploadedImage = null;
+        // 預設選擇 '1'
+        let currentSetVal = '1';
+
+        let imgState = {
+            x: 0,
+            y: 0,
+            scale: 1,
+            isDragging: false,
+            startX: 0,
+            startY: 0
+        };
+
+        // 1. 載入素材
+        function loadAssets() {
+            const promises = Object.keys(assetsPaths).map(key => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = assetsPaths[key];
+                    img.onload = () => {
+                        loadedImages[key] = img;
+                        resolve();
+                    };
+                    img.onerror = () => {
+                        console.error(`找不到圖片: ${assetsPaths[key]}`);
+                        resolve(); 
+                    };
+                });
+            });
+
+            Promise.all(promises).then(() => {
+                drawCanvas();
+            });
+        }
+
+        // 2. 繪圖核心
+        function drawCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Layer 1: Background
+            if (loadedImages.background) ctx.drawImage(loadedImages.background, 0, 0);
+
+            // Layer 2: 玩家圖片 (可動)
+            if (userUploadedImage) {
+                const width = userUploadedImage.width * imgState.scale;
+                const height = userUploadedImage.height * imgState.scale;
+                ctx.drawImage(userUploadedImage, imgState.x, imgState.y, width, height);
+            }
+
+            // Layer 3: TextFrame
+            if (loadedImages.textframe) ctx.drawImage(loadedImages.textframe, 0, 0);
+
+            // Layer 4: OuterFrame
+            if (loadedImages.outerframe) ctx.drawImage(loadedImages.outerframe, 0, 0);
+
+            // Layer 5: Power
+            if (loadedImages.power) ctx.drawImage(loadedImages.power, 0, 0);
+
+            // Layer 6: AttackFront
+            if (loadedImages.attackFront) ctx.drawImage(loadedImages.attackFront, 0, 0);
+
+            // Layer 7: Defend
+            if (loadedImages.defend) ctx.drawImage(loadedImages.defend, 0, 0);
+
+            // Layer 8: AttackBackNone
+            if (loadedImages.attackBackNone) ctx.drawImage(loadedImages.attackBackNone, 0, 0);
+
+            // Layer 9: Set (驅策區 - 互斥邏輯)
+            // 根據 currentSetVal 決定畫哪一張
+            if (currentSetVal === '1' && loadedImages.set1) {
+                ctx.drawImage(loadedImages.set1, 0, 0);
+            } else if (currentSetVal === '2' && loadedImages.set2) {
+                ctx.drawImage(loadedImages.set2, 0, 0);
+            } else if (currentSetVal === '3' && loadedImages.set3) {
+                ctx.drawImage(loadedImages.set3, 0, 0);
+            }
+        }
+
+        // --- 事件監聽 ---
+
+        // 驅策區下拉選單改變時
+        setSelect.addEventListener('change', (e) => {
+            currentSetVal = e.target.value;
+            drawCanvas(); // 重畫
+        });
+
+        uploadInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = new Image();
+                img.onload = () => {
+                    userUploadedImage = img;
+                    resetImagePosition();
+                    drawCanvas();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        function resetImagePosition() {
+            if (!userUploadedImage) return;
+            // 由於 Canvas 變大，這裡的計算會自動適應新的 952x1296 尺寸
+            const scaleX = canvas.width / userUploadedImage.width;
+            const scaleY = canvas.height / userUploadedImage.height;
+            imgState.scale = Math.max(scaleX, scaleY);
+            
+            const finalWidth = userUploadedImage.width * imgState.scale;
+            const finalHeight = userUploadedImage.height * imgState.scale;
+            
+            imgState.x = (canvas.width - finalWidth) / 2;
+            imgState.y = (canvas.height - finalHeight) / 2;
+        }
+
+        // 滑鼠操作邏輯 (計算座標時需考慮 Canvas 在螢幕上的實際顯示大小與原始大小的比例)
+        canvas.addEventListener('mousedown', (e) => {
+            if (!userUploadedImage) return;
+            imgState.isDragging = true;
+            
+            const rect = canvas.getBoundingClientRect();
+            // 計算縮放比： 原始寬度(952) / CSS顯示寬度
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            const mouseX = (e.clientX - rect.left) * scaleX;
+            const mouseY = (e.clientY - rect.top) * scaleY;
+
+            imgState.startX = mouseX - imgState.x;
+            imgState.startY = mouseY - imgState.y;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!imgState.isDragging || !userUploadedImage) return;
+            e.preventDefault();
+            
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            const mouseX = (e.clientX - rect.left) * scaleX;
+            const mouseY = (e.clientY - rect.top) * scaleY;
+
+            imgState.x = mouseX - imgState.startX;
+            imgState.y = mouseY - imgState.startY;
+            
+            drawCanvas();
+        });
+
+        window.addEventListener('mouseup', () => {
+            imgState.isDragging = false;
+        });
+
+        canvas.addEventListener('wheel', (e) => {
+            if (!userUploadedImage) return;
+            e.preventDefault();
+            const zoomIntensity = 0.05; // 因為解析度變大，縮放幅度可以調小一點比較細緻
+            const delta = e.deltaY < 0 ? 1 : -1;
+            const newScale = imgState.scale + (delta * zoomIntensity);
+            
+            if (newScale > 0.05) { // 允許縮得更小一點以適應大畫布
+                imgState.scale = newScale;
+                drawCanvas();
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.download = `custom-card-set${currentSetVal}.png`; // 檔名自動加上 Set 編號
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+
+        loadAssets();
+    </script>
+</body>
+</html>
