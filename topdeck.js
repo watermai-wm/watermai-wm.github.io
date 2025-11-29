@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251129-1",
+    "L_name": "沙恩霍斯特",
+    "Format": "7.5.1",
+    "Description": "20251129 貓腳印-東門店 店家賽 6人 冠軍 : 沙恩霍斯特 噗呼呼，請叫我戀愛大師杏珠",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251121-1",
     "L_name": "明石",
     "Format": "7.5",
