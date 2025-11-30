@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>碧藍航線卡片查詢</title>
+    <title>アズールレーンTCG カード検索</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>碧藍航線卡片查詢</h1>
-        <h2><a href="topdeck.html">上位構築查詢</a></h2>
-		<h2><a href="deckbuild.html">組牌模擬器</a></h2>
-		<h2><a href="/ImgGen">碧藍戰卡自製卡片生成器</a></h2>
+        <h1>アズールレーンTCG カード検索</h1>
+        <h2><a href="../topdeck.html">上位デッキ検索</a></h2>
+		<h2><a href="deckbuild.html">デッキ構築シミュレーター</a></h2>
+		<h2><a href="../ImgGen">カスタムカード作成ジェネレーター</a></h2>
         <!-- 文字搜尋框 -->
 		<div class="search-inputs">
-			<input type="text" id="searchName" placeholder="輸入卡片名稱..." oninput="searchCards()">
-			<input type="text" id="searchCode" placeholder="輸入卡片編號..." oninput="searchCards()">
-			<input type="text" id="searchEffect" placeholder="輸入卡片技能..." oninput="searchCards()">
+			<input type="text" id="searchName" placeholder="カード名を入力…" oninput="searchCards()">
+			<input type="text" id="searchCode" placeholder="カード番号を入力…" oninput="searchCards()">
+			<input type="text" id="searchEffect" placeholder="カードスキルを入力…" oninput="searchCards()">
 		</div>
         <!-- 多選式篩選條件 -->
 		<div class="filters">
@@ -60,36 +60,36 @@
 					</select>
 				</div>
 				<div class="filter-group" id="filterEffectGroup">
-					<h3>技能關鍵字</h3>
+					<h3>スキル</h3>
 					<select id="filterEffectSelect" onchange="searchCards()">
 						<option value="">全部</option> <!-- 預設顯示所有卡片 -->
 						<option value="【無】">不擁有技能</option> 
-						<option value="強擊">【強擊】</option> 
-						<option value="固守">【固守】</option> 
-						<option value="【遠程】">【遠程】</option> 
+						<option value="強撃">【強撃】</option> 
+						<option value="堅守">【堅守】</option> 
+						<option value="【遠距離】">【遠距離】</option> 
 						<option value="【速攻】">【速攻】</option>
 						<option value="【改造】">【改造】</option>
 						<option value="【登場時】">【登場時】</option> 
-						<option value="【己方回合結束時】">【己方回合結束時】</option> 
-						<option value="【己方回合中】">【己方回合中】</option> 
-						<option value="【對方回合中】">【對方回合中】</option> 
-						<option value="【每回合1次】">【每回合1次】</option>  
-						<option value="【攻擊時】">【攻擊時】</option> 
-						<option value="【被攻擊時】">【被攻擊時】</option> 
-						<option value="【被擊破時】">【被擊破時】</option> 
-						<option value="【轉為休息狀態時】">【轉為休息狀態時】</option> 
-						<option value="【己方的主階段中】">【己方的主階段中】</option> 
-						<option value="【主階段啟動】">【主階段啟動】</option> 
-						<option value="【反制】">【反制】</option> 
-						<option value="【追擊】">【追擊】</option> 
-						<option value="【絕地反擊】">【絕地反擊】</option>
+						<option value="【自ターン終了時】">【自ターン終了時】</option> 
+						<option value="【自ターン中】">【自ターン中】</option> 
+						<option value="【相手ターン中】">【相手ターン中】</option> 
+						<option value="【ターン1回】">【ターン1回】</option>  
+						<option value="【攻撃時】">【攻撃時】</option> 
+						<option value="【攻撃された時】">【攻撃された時】</option> 
+						<option value="【撃破された時】">【撃破された時】</option> 
+						<option value="【レスト時】">【レスト時】</option> 
+						<option value="【自メイン中】">【自メイン中】</option> 
+						<option value="【メイン起動】">【メイン起動】</option> 
+						<option value="【カウンター】">【カウンター】</option> 
+						<option value="【追撃】">【追撃】</option> 
+						<option value="【絕地反撃】">【絕地反撃】</option>
 					</select>
 				</div>
 			</div>
 		</div>
 
         <!-- 重置按鈕 -->
-        <button onclick="resetFilters()">重置篩選條件</button>
+        <button onclick="resetFilters()">Reset</button>
 
         <!-- 顯示查詢結果 -->
         <div id="results"></div>
@@ -100,7 +100,6 @@
             <span id="pageInfo"></span>
             <button id="nextPage" onclick="changePage(1)">下一頁</button>
         </div>
-		<h2><a href="ja/index.html">日本語</a></h2>
     </div>
 	<!-- 放大圖片的模態框 -->
 	<div id="imageModal" class="modal" onclick="closeImageModal(event)">

@@ -1,0 +1,520 @@
+/* 搜尋框 */
+.search-inputs {
+    display: flex; /* 使用 flex 佈局讓輸入框並排顯示 */
+    gap: 10px; /* 設置輸入框之間的間距 */
+    margin-bottom: 20px; /* 與下方內容的間距 */
+}
+
+.search-inputs input[type="text"] {
+    flex: 1; /* 讓輸入框平均分配寬度 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-column {
+    width: 48%; /* 兩欄之間留一些間距 */
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.filter-group label {
+    display: inline-flex; /* 讓 label 並排顯示 */
+    align-items: center;
+    margin-right: 10px; /* 調整 label 之間的間距 */
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+	color: #e0e0e0; /* 亮色文字 */
+}
+
+.filter-group label:hover {
+    background-color: #444; /* 深色懸停背景 */
+}
+
+.filter-group label input[type="checkbox"] {
+    margin-right: 5px; /* 調整 checkbox 和文字之間的間距 */
+    transform: scale(0.7); /* 進一步縮小 checkbox 的大小 */
+}
+
+/* 其他現有的樣式保持不變 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+	color: #e0e0e0; /* 亮色文字 */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px; /* 圓角效果 */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #333; /* 深色邊框 */
+    border-radius: 5px;
+    background-color: #2d2d2d; /* 深色輸入框背景 */
+    color: #e0e0e0; /* 亮色文字 */
+}
+input[type="text"]:focus {
+    border-color: #007bff; /* 聚焦時邊框顏色 */
+    outline: none;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+#results {
+    margin-top: 20px;
+}
+/* 新增卡片內容的佈局樣式 */
+.card-content {
+    display: flex; /* 使用 flex 佈局 */
+    gap: 20px; /* 圖片和文字之間的間距 */
+}
+
+.card-image-container {
+    flex: 0 0 150px; /* 固定圖片容器的寬度 */
+}
+
+.card-image {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 5px; /* 圓角效果 */
+}
+
+.card-text {
+    flex: 1; /* 文字部分佔用剩餘空間 */
+}
+/* 新增卡片圖片的樣式 */
+
+.card {
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #e0e0e0;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    margin: 0 5px;
+}
+
+/*deck頁面的分頁按鈕相關*/
+
+#deckPagination {
+    display: flex;
+    justify-content: center; /* 讓按鈕置中 */
+    align-items: center;
+    gap: 5px; /* 按鈕之間的間距 */
+    margin-top: 20px;
+}
+
+#deckPagination button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#deckPagination button:hover {
+    background-color: #0056b3;
+}
+
+#deckPagination button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* 讓當前頁碼按鈕加粗且有不同顏色 */
+#deckPagination button.current-page {
+    font-weight: bold;
+    background-color: #0056b3;
+    color: white;
+}
+
+
+/* 新增下拉式選單的樣式 */
+.filter-group select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+	color: #e0e0e0;
+    cursor: pointer;
+}
+
+.filter-group select:hover {
+    border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+    .card-content {
+        flex-direction: column; /* 在小螢幕上讓圖片和文字垂直堆疊 */
+        gap: 10px; /* 調整間距 */
+    }
+
+    .card-image-container {
+        flex: 0 0 auto; /* 取消固定寬度 */
+        text-align: center; /* 圖片居中 */
+    }
+
+    .card-image {
+        width: 150px; /* 固定圖片寬度 */
+    }
+}	
+/* 模態框樣式 */
+.modal {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 放大圖片 */
+.modal-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.3s;
+}
+
+/* 點擊背景時關閉 */
+.modal:hover {
+    cursor: pointer;
+}
+
+/* 淡入動畫 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.deck-image {
+    width: 200px; /* 設定圖片寬度 */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* 讓 Format 和 Level 並排顯示 */
+.filter-row {
+    display: flex;
+    justify-content: space-between; /* 左右對齊 */
+    gap: 20px; /* 設定間距 */
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    flex: 1; /* 讓兩個區塊平均分配空間 */
+}
+
+a {
+    color: white; /* 預設超連結顏色 */
+}
+
+a:hover {
+    color: red; /* 滑鼠懸停時的顏色 */
+}
+
+a:visited {
+    color: white; /* 按過的超連結顏色 */
+}
+
+a:active {
+    color: orange; /* 按下時的顏色 */
+}
+
+#championChart {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/*移除卡片按鈕*/
+.remove-card-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.remove-card-btn:hover {
+    background-color: #cc0000;
+}
+
+/*組牌模擬器自適應*/
+
+/* 牌組區域樣式 */
+.deck-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 牌組內的卡片 */
+.deck-card {
+    flex: 1 1 calc(20% - 10px); /* 每行 5 張卡片，根據寬度自適應 */
+    max-width: 180px; /* 設定卡片最大寬度 */
+    min-width: 100px; /* 設定卡片最小寬度 */
+    text-align: center;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 牌組內卡片圖片自適應 */
+.deck-card .card-image-container {
+    width: 100%;
+    position: relative;
+}
+
+.deck-card .deck-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.deck-card .deck-image:hover {
+    transform: scale(1.05);
+}
+
+/* 牌組內卡片的數量標記（右上角） */
+.deck-card .deck-overlay {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    width: 32px; /* 增大數字標記的寬度 */
+    height: 32px; /* 增大數字標記的高度 */
+    text-align: center;
+    line-height: 32px; /* 讓數字垂直居中 */
+    font-size: 18px; /* 增大數字的字體 */
+    font-weight: bold; /* 讓數字更醒目 */
+    border: 2px solid white; /* 增加白色邊框，讓數字更清晰 */
+}
+
+/* 小螢幕適應 */
+@media (max-width: 768px) {
+    .deck-card .deck-overlay {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .deck-card .deck-overlay {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+
+/* 牌組內的移除按鈕 */
+.deck-card .remove-card-btn {
+    width: 100%;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.deck-card .remove-card-btn:hover {
+    background-color: #cc0000;
+}
+
+/* 自適應（手機端） */
+@media (max-width: 768px) {
+    .deck-card {
+        flex: 1 1 calc(33.333% - 10px); /* 小屏幕一行顯示 3 張卡片 */
+    }
+}
+
+@media (max-width: 480px) {
+    .deck-card {
+        flex: 1 1 calc(50% - 10px); /* 更小的螢幕一行顯示 2 張卡片 */
+    }
+}
+
+/*調整卡片數量*/
+/* 調整卡片按鈕 */
+.card-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+.adjust-card-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.adjust-card-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    min-width: 30px;
+    text-align: center;
+}
+
+/*新增卡片按鈕*/
+.add-card-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.add-card-btn:hover {
+    background-color: #218838;
+}
+
+/*文字框變深色的*/
+textarea {
+    background-color: #2d2d2d; /* 深色背景 */
+    color: #e0e0e0;           /* 白字 */
+    border: 1px solid #444;   /* 邊框顏色稍亮 */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;         /* 允許垂直調整大小 */
+}
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/*圖片置中*/
+.container img { /* 或者更具體地指定圖片，例如 .game-preparation img */
+    display: block; /* 讓圖片成為塊級元素 */
+    margin-left: auto; /* 左邊距自動 */
+    margin-right: auto; /* 右邊距自動，實現水平置中 */
+    max-width: 100%; /* 確保圖片不會超出容器，如果原始圖片尺寸大於容器，這很有用 */
+    height: auto; /* 保持圖片比例 */
+}
+

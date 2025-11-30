@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デッキ構築シミュレーター</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>デッキ構築シミュレーター</h1>
+		<h2><a href="index.html">カード検索</a></h2>
+        <!-- 文字搜尋框 -->
+		<div class="search-inputs">
+			<input type="text" id="searchName" placeholder="カード名を入力…" oninput="searchCards()">
+			<input type="text" id="searchCode" placeholder="カード番号を入力…" oninput="searchCards()">
+			<input type="text" id="searchEffect" placeholder="カードスキルを入力…" oninput="searchCards()">
+		</div>
+        <!-- 多選式篩選條件 -->
+		<div class="filters">
+			<div class="filter-column">
+				<div class="filter-group" id="filterColorGroup">
+					<h3>顏色</h3>
+				</div>
+				<div class="filter-group" id="filterTypeGroup">
+					<h3>種類</h3>
+				</div>
+				<div class="filter-group" id="filterCostGroup">
+					<h3>費用</h3>
+				</div>
+				<div class="filter-group" id="filterPowerGroup">
+					<h3>戰力</h3>
+				</div>
+				<div class="filter-group" id="filterFactionGroup">
+					<h3>陣營</h3>
+				</div>
+			</div>
+			<div class="filter-column">
+				<div class="filter-group" id="filterShipTypeGroup">
+					<h3>艦船類型</h3>
+				</div>
+				<div class="filter-group" id="filterRarityGroup">
+					<h3>罕貴</h3>
+				</div>
+				<div class="filter-group" id="filterForceGroup">
+					<h3>勢力</h3>
+				</div>
+				<div class="filter-group" id="filterSupportTypeGroup">
+					<h3>支援範圍</h3>
+				</div>
+				<div class="filter-group" id="filterSupportValueGroup">
+					<h3>支援值</h3>
+				</div>
+				<div class="filter-group" id="filterObtainGroup">
+					<h3>獲取方法</h3>
+					<select id="filterObtainSelect" onchange="searchCards()">
+						<option value="">全部</option> <!-- 預設選項，顯示全部 -->
+					</select>
+				</div>
+				<div class="filter-group" id="filterEffectGroup">
+					<h3>スキル</h3>
+					<select id="filterEffectSelect" onchange="searchCards()">
+						<option value="">全部</option> <!-- 預設顯示所有卡片 -->
+						<option value="【無】">不擁有技能</option> 
+						<option value="強撃">【強撃】</option> 
+						<option value="堅守">【堅守】</option> 
+						<option value="【遠距離】">【遠距離】</option> 
+						<option value="【速攻】">【速攻】</option>
+						<option value="【改造】">【改造】</option>
+						<option value="【登場時】">【登場時】</option> 
+						<option value="【自ターン終了時】">【自ターン終了時】</option> 
+						<option value="【自ターン中】">【自ターン中】</option> 
+						<option value="【相手ターン中】">【相手ターン中】</option> 
+						<option value="【ターン1回】">【ターン1回】</option>  
+						<option value="【攻撃時】">【攻撃時】</option> 
+						<option value="【攻撃された時】">【攻撃された時】</option> 
+						<option value="【撃破された時】">【撃破された時】</option> 
+						<option value="【レスト時】">【レスト時】</option> 
+						<option value="【自メイン中】">【自メイン中】</option> 
+						<option value="【メイン起動】">【メイン起動】</option> 
+						<option value="【カウンター】">【カウンター】</option> 
+						<option value="【追撃】">【追撃】</option> 
+						<option value="【絕地反撃】">【絕地反撃】</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+        <!-- 重置按鈕 -->
+        <button onclick="resetFilters()">Reset</button>
+
+        <!-- 顯示查詢結果 -->
+        <div id="results"></div>
+
+        <!-- 分頁控制 -->
+        <div id="pagination">
+            <button id="prevPage" onclick="changePage(-1)">上一頁</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" onclick="changePage(1)">下一頁</button>
+        </div>
+		<h2>構築表</h2>
+		<button id="clearDeckButton">清空構築表</button>
+		<button id="shareDeckButton">分享構築(匯出成圖片)</button>
+		<button onclick="generateDeckText()">產生構築文字檔</button>
+
+
+		<div id="deckCounter" style="
+			background: rgba(0, 0, 0, 0.8);
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			//z-index: 1000;
+		">
+			卡牌數量: 0/50
+		</div>
+
+
+		<div id="deck"></div>
+		<div id="flagship"></div>
+    </div>
+	<br />
+		<button onclick="exportDeckCode()">匯出牌組代碼</button>
+		<textarea id="deckCodeOutput" readonly style="width: 100%; height: 80px;"></textarea>
+		<textarea id="deckCodeInput" placeholder="貼上牌組代碼" style="width: 100%; height: 80px;"></textarea>
+		<button onclick="importDeckCode()">載入牌組代碼</button>
+	
+
+
+    <script src="data.js"></script>
+    <script src="deckbuild.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+
+
+</body>
+</html>
