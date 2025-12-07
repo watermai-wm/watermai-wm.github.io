@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251207-1",
+    "L_name": "魯普雷希特親王",
+    "Format": "7.5.1",
+    "Description": "20251207 貓腳印-士林店 桌墊賽 9人 冠軍 : 魯普雷希特親王 水麥",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251206-1",
     "L_name": "天城",
     "Format": "7.5.1",
