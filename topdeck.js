@@ -1,12 +1,21 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251227-1",
+    "L_name": "不屈",
+    "Format": "7.5.1",
+    "Description": "20251227 貓腳印-東門店 碧藍戰卡CE桌墊賽 6人 冠軍 不屈 蛋頭",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251226-1",
     "L_name": "列星頓",
     "Format": "7.5.1",
     "Description": "20251226 玩具e哥花蓮和平店 碧藍戰卡CE桌墊賽 6人 冠軍 列星頓 心皓",
     "Level": "常規賽",
-    "Players": 5,
+    "Players": 6,
     "Champion": 1
   },
   {
