@@ -23714,7 +23714,7 @@ const cards = [
     },
     {
         "card_id": 7519011,
-        "card_name": "火力",
+        "card_name": "綾波&拉菲&標槍&Z23",
         "card_code": "CE01-901覺醒",
         "attributes": {
             "顏　色": "無",
