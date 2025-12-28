@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20251228-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.5.1",
+    "Description": "20251228 貓腳印-士林店 店家賽 5人 冠軍 : 信濃 男爵",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251227-2",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.5",
