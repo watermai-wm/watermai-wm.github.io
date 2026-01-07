@@ -1,8 +1,26 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260107-1",
+    "L_name": "讓·巴爾",
+    "Format": "7.5.1",
+    "Description": "20260107 玩具e哥花蓮和平店 碧藍戰卡CE週賽 7人（7.5.1）冠軍 讓·巴爾 ひろし",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260102-1",
+    "L_name": "火力",
+    "Format": "7.5.1",
+    "Description": "20260102 玩具e哥花蓮和平店 碧藍戰卡CE週賽 6人(7.5.1) 冠軍 火力 ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20251228-1",
-    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "L_name": "信濃",
     "Format": "7.5.1",
     "Description": "20251228 貓腳印-士林店 店家賽 5人 冠軍 : 信濃 男爵",
     "Level": "常規賽",
