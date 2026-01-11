@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260111-1",
+    "L_name": "綾波&拉菲&標槍&Z23",
+    "Format": "7.5.1",
+    "Description": "20260111 貓腳印-士林店 店家賽 6人 冠軍 : 綾波&拉菲&標槍&Z23 二つの蝉の屍骸と絡み合う二つの冬虫夏草,
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260110-1",
     "L_name": "普利茅斯",
     "Format": "7.5.1",
