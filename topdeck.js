@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260116-1",
+    "L_name": "綾波&拉菲&標槍&Z23",
+    "Format": "7.5.1",
+    "Description": "20260116 玩具e哥花蓮和平店 碧藍戰卡CE週賽 8人(7.5.1) 冠軍 綾波&拉菲&標槍&Z23 東方煌月",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260111-2",
     "L_name": "皇家幸運號",
     "Format": "7.5",
