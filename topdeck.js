@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260125-2",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.5",
+    "Description": "20260125 玩具e哥花蓮和平店 赤色中軸盃 6人 (7.5)（魔女/三殭屍選拔；調皮搗蛋限一） 冠軍 俾斯麥Zwei ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260125-1",
+    "L_name": "信濃",
+    "Format": "7.5.1",
+    "Description": "20260125 貓腳印-士林店 店家賽 5人 冠軍 : 信濃 男爵",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260121-1",
     "L_name": "讓·巴爾",
     "Format": "7.5.1",
