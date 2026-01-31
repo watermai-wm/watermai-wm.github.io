@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260131-1",
+    "L_name": "綾波&拉菲&標槍&Z23",
+    "Format": "7.5.1",
+    "Description": "20260131 貓腳印-東門店 碧藍戰卡CE 信濃特殊賽 6人(7.5.1) 冠軍 綾波&拉菲&標槍&Z23 明石測牌器",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260130-1",
     "L_name": "島風",
     "Format": "7.5.1",
