@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260131-2",
+    "L_name": "曙光",
+    "Format": "7.5",
+    "Description": "20260131 玩具e哥花蓮和平店 碧藍航線盃 4人 (7.5) 冠軍 曙光 展示無敵的天羽羽斬",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260131-1",
     "L_name": "綾波&拉菲&標槍&Z23",
     "Format": "7.5.1",
