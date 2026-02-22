@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260222-1",
+    "L_name": "聖路易斯",
+    "Format": "7.5.1",
+    "Description": "20260222 貓腳印-東門店 碧藍戰卡CE 信濃特殊賽 6人(7.5.1) 冠軍 聖路易斯 男爵",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260202-1",
     "L_name": "沙恩霍斯特",
     "Format": "7.5.1",
