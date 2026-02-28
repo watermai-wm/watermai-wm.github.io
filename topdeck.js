@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260228-1",
+    "L_name": "拉斐爾",
+    "Format": "7.5.1",
+    "Description": "20260228 貓腳印-東門店 信濃賽 4人 冠軍 拉斐爾 現在我就是露娜sama",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260222-2",
     "L_name": "拉斐爾",
     "Format": "7.5.1",
