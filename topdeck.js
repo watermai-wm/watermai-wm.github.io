@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260315-1",
+    "L_name": "貝爾法斯特",
+    "Format": "7.5.1",
+    "Description": "20260315 貓腳印-士林店 碧藍戰卡CE週賽 5人 冠軍 貝爾法斯特 皇宮",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260309-1",
     "L_name": "讓·巴爾",
     "Format": "7.5.1",
