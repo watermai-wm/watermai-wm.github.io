@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260322-1",
+    "L_name": "島風",
+    "Format": "7.5.1",
+    "Description": "20260322 貓腳印-士林店 信濃特殊賽 5人(7.5.1) 冠軍 島風 蛋頭",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260320-1",
     "L_name": "黎胥留",
     "Format": "7.5.1",
