@@ -23808,7 +23808,7 @@ const cards = [
         "acquisition_method": "CE01"
     },
     {
-        "card_id": 752101,
+        "card_id": 7521010,
         "card_name": "綾波",
         "card_code": "CE02-101",
         "attributes": {
@@ -23827,7 +23827,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752102,
+        "card_id": 7521020,
         "card_name": "雷",
         "card_code": "CE02-102",
         "attributes": {
@@ -23846,7 +23846,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752103,
+        "card_id": 7521030,
         "card_name": "電",
         "card_code": "CE02-103",
         "attributes": {
@@ -23865,7 +23865,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752104,
+        "card_id": 7521040,
         "card_name": "夕立",
         "card_code": "CE02-104",
         "attributes": {
@@ -23884,7 +23884,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752105,
+        "card_id": 7521050,
         "card_name": "夕立.改",
         "card_code": "CE02-105",
         "attributes": {
@@ -23903,7 +23903,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752106,
+        "card_id": 7521060,
         "card_name": "能代(μ兵裝)",
         "card_code": "CE02-106",
         "attributes": {
@@ -23922,7 +23922,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752107,
+        "card_id": 7521070,
         "card_name": "小天城",
         "card_code": "CE02-106",
         "attributes": {
@@ -23941,7 +23941,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752108,
+        "card_id": 7521080,
         "card_name": "金剛(μ兵裝)",
         "card_code": "CE02-108",
         "attributes": {
@@ -23960,7 +23960,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752109,
+        "card_id": 7521090,
         "card_name": "瑞鳳",
         "card_code": "CE02-109",
         "attributes": {
@@ -23979,7 +23979,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752110,
+        "card_id": 7521100,
         "card_name": "大鳳(μ兵裝)",
         "card_code": "CE02-110",
         "attributes": {
@@ -23998,7 +23998,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752111,
+        "card_id": 7521110,
         "card_name": "小大鳳",
         "card_code": "CE02-111",
         "attributes": {
@@ -24017,7 +24017,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752112,
+        "card_id": 7521120,
         "card_name": "小赤城",
         "card_code": "CE02-112",
         "attributes": {
@@ -24036,7 +24036,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752113,
+        "card_id": 7521130,
         "card_name": "白鳳",
         "card_code": "CE02-113",
         "attributes": {
@@ -24055,7 +24055,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752114,
+        "card_id": 7521140,
         "card_name": "惡毒(μ兵裝)",
         "card_code": "CE02-114",
         "attributes": {
@@ -24074,7 +24074,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752115,
+        "card_id": 7521150,
         "card_name": "馬賽曲",
         "card_code": "CE02-115",
         "attributes": {
@@ -24093,7 +24093,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752116,
+        "card_id": 7521160,
         "card_name": "史特拉斯堡",
         "card_code": "CE02-116",
         "attributes": {
@@ -24112,7 +24112,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752117,
+        "card_id": 7521170,
         "card_name": "強音共鳴",
         "card_code": "CE02-117",
         "attributes": {
@@ -24131,7 +24131,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752118,
+        "card_id": 7521180,
         "card_name": "Cœur Battant",
         "card_code": "CE02-118",
         "attributes": {
@@ -24150,7 +24150,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752201,
+        "card_id": 7522010,
         "card_name": "拉菲",
         "card_code": "CE02-201",
         "attributes": {
@@ -24169,7 +24169,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752202,
+        "card_id": 7522020,
         "card_name": "小海倫娜",
         "card_code": "CE02-202",
         "attributes": {
@@ -24188,7 +24188,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752203,
+        "card_id": 7522030,
         "card_name": "小聖地牙哥",
         "card_code": "CE02-203",
         "attributes": {
@@ -24207,7 +24207,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752204,
+        "card_id": 7522040,
         "card_name": "克里夫蘭(μ兵裝)",
         "card_code": "CE02-204",
         "attributes": {
@@ -24226,7 +24226,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752205,
+        "card_id": 7522050,
         "card_name": "小克里夫蘭",
         "card_code": "CE02-205",
         "attributes": {
@@ -24245,7 +24245,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752206,
+        "card_id": 7522060,
         "card_name": "波夕(μ兵裝)",
         "card_code": "CE02-206",
         "attributes": {
@@ -24264,7 +24264,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752207,
+        "card_id": 7522070,
         "card_name": "布雷默頓",
         "card_code": "CE02-207",
         "attributes": {
@@ -24283,26 +24283,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752207,
-        "card_name": "布雷默頓",
-        "card_code": "CE02-207",
-        "attributes": {
-            "顏　色": "藍",
-            "種　類": "艦船卡",
-            "費　用": "4",
-            "戰　力": "600",
-            "陣　營": "白鷹",
-            "艦船類型": "重巡",
-            "罕　貴": "-",
-            "勢　力": "碧藍航線",
-            "支援範圍": "手牌",
-            "支援值": "100"
-        },
-        "card_effect": "■【登場時】查看己方卡組最上方的5張卡，將其中最多1張《白鷹》〈重巡〉/名稱中帶有「μ兵裝」的艦船卡公開並加入手牌，而後將其餘卡牌以隨機順序置於卡組最下方。",
-        "acquisition_method": "CE02-早期測試"
-    },
-	{
-        "card_id": 752208,
+        "card_id": 7522080,
         "card_name": "北卡羅來納",
         "card_code": "CE02-208",
         "attributes": {
@@ -24321,7 +24302,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752209,
+        "card_id": 7522090,
         "card_name": "企業",
         "card_code": "CE02-209",
         "attributes": {
@@ -24340,7 +24321,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752210,
+        "card_id": 7522100,
         "card_name": "約克鎮",
         "card_code": "CE02-210",
         "attributes": {
@@ -24359,7 +24340,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752211,
+        "card_id": 7522110,
         "card_name": "射水魚",
         "card_code": "CE02-211",
         "attributes": {
@@ -24378,7 +24359,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752212,
+        "card_id": 7522120,
         "card_name": "鯡魚",
         "card_code": "CE02-212",
         "attributes": {
@@ -24397,7 +24378,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752213,
+        "card_id": 7522130,
         "card_name": "絮弗倫",
         "card_code": "CE02-213",
         "attributes": {
@@ -24416,7 +24397,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752214,
+        "card_id": 7522140,
         "card_name": "黎胥留",
         "card_code": "CE02-214",
         "attributes": {
@@ -24435,7 +24416,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752215,
+        "card_id": 7522150,
         "card_name": "閃耀的完美舞台",
         "card_code": "CE02-215",
         "attributes": {
@@ -24454,7 +24435,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752216,
+        "card_id": 7522160,
         "card_name": "魚群守護",
         "card_code": "CE02-216",
         "attributes": {
@@ -24473,7 +24454,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752217,
+        "card_id": 7522170,
         "card_name": "夢幻翠青",
         "card_code": "CE02-217",
         "attributes": {
@@ -24492,7 +24473,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752218,
+        "card_id": 7522180,
         "card_name": "接力演出",
         "card_code": "CE02-218",
         "attributes": {
@@ -24511,7 +24492,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752301,
+        "card_id": 7523010,
         "card_name": "標槍",
         "card_code": "CE02-301",
         "attributes": {
@@ -24530,7 +24511,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752302,
+        "card_id": 7523020,
         "card_name": "謝菲爾德(μ兵裝)",
         "card_code": "CE02-302",
         "attributes": {
@@ -24549,7 +24530,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752303,
+        "card_id": 7523030,
         "card_name": "歐若拉",
         "card_code": "CE02-303",
         "attributes": {
@@ -24568,7 +24549,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752304,
+        "card_id": 7523040,
         "card_name": "克麗奧佩脫拉",
         "card_code": "CE02-304",
         "attributes": {
@@ -24587,7 +24568,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752305,
+        "card_id": 7523050,
         "card_name": "黑太子",
         "card_code": "CE02-305",
         "attributes": {
@@ -24606,7 +24587,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752306,
+        "card_id": 7523060,
         "card_name": "小柴郡",
         "card_code": "CE02-306",
         "attributes": {
@@ -24625,7 +24606,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752307,
+        "card_id": 7523070,
         "card_name": "約克",
         "card_code": "CE02-307",
         "attributes": {
@@ -24644,7 +24625,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752308,
+        "card_id": 7523080,
         "card_name": "埃克塞特",
         "card_code": "CE02-308",
         "attributes": {
@@ -24663,7 +24644,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752309,
+        "card_id": 7523090,
         "card_name": "小聲望",
         "card_code": "CE02-309",
         "attributes": {
@@ -24682,7 +24663,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752310,
+        "card_id": 7523100,
         "card_name": "英王喬治五世",
         "card_code": "CE02-310",
         "attributes": {
@@ -24701,7 +24682,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752311,
+        "card_id": 7523110,
         "card_name": "光輝(μ兵裝)",
         "card_code": "CE02-311",
         "attributes": {
@@ -24720,7 +24701,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752312,
+        "card_id": 7523120,
         "card_name": "伏波",
         "card_code": "CE02-312",
         "attributes": {
@@ -24739,7 +24720,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752313,
+        "card_id": 7523130,
         "card_name": "飛雲",
         "card_code": "CE02-313",
         "attributes": {
@@ -24758,7 +24739,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752314,
+        "card_id": 7523140,
         "card_name": "寧海",
         "card_code": "CE02-314",
         "attributes": {
@@ -24777,7 +24758,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752315,
+        "card_id": 7523150,
         "card_name": "平海",
         "card_code": "CE02-315",
         "attributes": {
@@ -24796,7 +24777,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752316,
+        "card_id": 7523160,
         "card_name": "應瑞",
         "card_code": "CE02-316",
         "attributes": {
@@ -24815,7 +24796,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752317,
+        "card_id": 7523170,
         "card_name": "肇和",
         "card_code": "CE02-317",
         "attributes": {
@@ -24834,7 +24815,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752318,
+        "card_id": 7523180,
         "card_name": "氣氛高漲",
         "card_code": "CE02-318",
         "attributes": {
@@ -24853,7 +24834,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752401,
+        "card_id": 7524010,
         "card_name": "Z23",
         "card_code": "CE02-401",
         "attributes": {
@@ -24872,7 +24853,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752402,
+        "card_id": 7524020,
         "card_name": "歐根親王(μ兵裝)",
         "card_code": "CE02-402",
         "attributes": {
@@ -24891,7 +24872,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752403,
+        "card_id": 7524030,
         "card_name": "腓特烈‧卡爾",
         "card_code": "CE02-403",
         "attributes": {
@@ -24910,7 +24891,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752404,
+        "card_id": 7524040,
         "card_name": "小埃吉爾",
         "card_code": "CE02-404",
         "attributes": {
@@ -24929,7 +24910,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752405,
+        "card_id": 7524050,
         "card_name": "魯普雷希特親王",
         "card_code": "CE02-405",
         "attributes": {
@@ -24948,7 +24929,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752406,
+        "card_id": 7524060,
         "card_name": "小腓特烈",
         "card_code": "CE02-406",
         "attributes": {
@@ -24967,7 +24948,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752407,
+        "card_id": 7524070,
         "card_name": "烏爾里希·馮·胡滕",
         "card_code": "CE02-407",
         "attributes": {
@@ -24986,7 +24967,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752408,
+        "card_id": 7524080,
         "card_name": "齊柏林伯爵",
         "card_code": "CE02-408",
         "attributes": {
@@ -25005,7 +24986,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752409,
+        "card_id": 7524090,
         "card_name": "小齊柏林",
         "card_code": "CE02-409",
         "attributes": {
@@ -25024,7 +25005,26 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752411,
+        "card_id": 752410,
+        "card_name": "彼得·史特拉塞",
+        "card_code": "CE02-408",
+        "attributes": {
+            "顏　色": "黑",
+            "種　類": "艦船卡",
+            "費　用": "5",
+            "戰　力": "600",
+            "陣　營": "鐵血",
+            "艦船類型": "航母",
+            "罕　貴": "-",
+            "勢　力": "赤色中軸",
+            "支援範圍": "手牌·戰場",
+            "支援值": "100"
+        },
+        "card_effect": "■當對方戰場上的艦船卡因己方只擁有1種顏色的旗艦卡技能降戰力時，若己方戰場上不存在費用為5或以上的艦船卡，可以將己方的4張魔方卡轉為休息狀態。若有執行此動作時，將撤退區的此卡以休息狀態登場於未被放置卡牌的己方戰場。■【登場時】可以捨棄1張手牌：抽1張卡。",
+        "acquisition_method": "CE02-早期測試"
+    },
+	{
+        "card_id": 7524110,
         "card_name": "U-47",
         "card_code": "CE02-411",
         "attributes": {
@@ -25043,7 +25043,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752412,
+        "card_id": 7524120,
         "card_name": "阿蒂利奧·雷戈洛",
         "card_code": "CE02-412",
         "attributes": {
@@ -25055,14 +25055,14 @@ const cards = [
             "艦船類型": "驅逐",
             "罕　貴": "-",
             "勢　力": "赤色中軸",
-            "支援範圍": "手牌·戰場",
+            "支援範圍": "手牌",
             "支援值": "100"
         },
         "card_effect": "■【登場時】抽1張卡。■己方從手牌登場費用為5或以上的《薩丁帝國》艦船卡時，可以戰場上的此卡彈回手牌。",
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752413,
+        "card_id": 7524130,
         "card_name": "拿坡里",
         "card_code": "CE02-413",
         "attributes": {
@@ -25081,7 +25081,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752414,
+        "card_id": 7524140,
         "card_name": "維托里奧·維內托",
         "card_code": "CE02-414",
         "attributes": {
@@ -25100,7 +25100,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752415,
+        "card_id": 7524150,
         "card_name": "羅馬",
         "card_code": "CE02-415",
         "attributes": {
@@ -25119,7 +25119,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752416,
+        "card_id": 7524160,
         "card_name": "天鷹",
         "card_code": "CE02-416",
         "attributes": {
@@ -25138,7 +25138,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752417,
+        "card_id": 7524170,
         "card_name": "李奧納多・達・文西",
         "card_code": "CE02-417",
         "attributes": {
@@ -25157,7 +25157,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752418,
+        "card_id": 7524180,
         "card_name": "深紅之歌",
         "card_code": "CE02-418",
         "attributes": {
@@ -25176,7 +25176,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752501,
+        "card_id": 7525010,
         "card_name": "可畏(μ兵裝)",
         "card_code": "CE02-501",
         "attributes": {
@@ -25195,7 +25195,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752502,
+        "card_id": 7525020,
         "card_name": "巴爾的摩(μ兵裝)",
         "card_code": "CE02-502",
         "attributes": {
@@ -25214,7 +25214,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752503,
+        "card_id": 7525030,
         "card_name": "大青花魚(μ兵裝)",
         "card_code": "CE02-503",
         "attributes": {
@@ -25233,7 +25233,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752504,
+        "card_id": 7525040,
         "card_name": "塔什干(μ兵裝)",
         "card_code": "CE02-504",
         "attributes": {
@@ -25252,7 +25252,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752505,
+        "card_id": 7525050,
         "card_name": "曙光",
         "card_code": "CE02-505",
         "attributes": {
@@ -25271,7 +25271,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752506,
+        "card_id": 7525060,
         "card_name": "庫爾斯克",
         "card_code": "CE02-506",
         "attributes": {
@@ -25290,7 +25290,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752507,
+        "card_id": 7525070,
         "card_name": "魯莽(μ兵裝)",
         "card_code": "CE02-507",
         "attributes": {
@@ -25309,7 +25309,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752508,
+        "card_id": 7525080,
         "card_name": "克里蒙梭",
         "card_code": "CE02-508",
         "attributes": {
@@ -25328,7 +25328,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752509,
+        "card_id": 7525090,
         "card_name": "試作型布里MKII",
         "card_code": "CE02-509",
         "attributes": {
@@ -25347,7 +25347,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752510,
+        "card_id": 7525100,
         "card_name": "重音搖滾",
         "card_code": "CE02-510",
         "attributes": {
@@ -25366,7 +25366,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752511,
+        "card_id": 7525110,
         "card_name": "應援高歌",
         "card_code": "CE02-511",
         "attributes": {
@@ -25385,7 +25385,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752512,
+        "card_id": 7525120,
         "card_name": "ALIZARIN",
         "card_code": "CE02-512",
         "attributes": {
@@ -25404,7 +25404,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752513,
+        "card_id": 7525130,
         "card_name": "CYANIDIN",
         "card_code": "CE02-513",
         "attributes": {
@@ -25423,7 +25423,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752514,
+        "card_id": 7525140,
         "card_name": "舞台換位",
         "card_code": "CE02-514",
         "attributes": {
@@ -25442,7 +25442,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752515,
+        "card_id": 7525150,
         "card_name": "退役演出",
         "card_code": "CE02-515",
         "attributes": {
