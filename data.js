@@ -25005,7 +25005,7 @@ const cards = [
         "acquisition_method": "CE02-早期測試"
     },
 	{
-        "card_id": 752410,
+        "card_id": 7524100,
         "card_name": "彼得·史特拉塞",
         "card_code": "CE02-408",
         "attributes": {
