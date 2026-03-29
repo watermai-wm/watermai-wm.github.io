@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260329-1",
+    "L_name": "紐澤西",
+    "Format": "7.5.1",
+    "Description": "20260329 貓腳印-士林店 週賽 5人 冠軍 紐澤西 水麥",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260328-2",
+    "L_name": "黎胥留",
+    "Format": "7.5.1",
+    "Description": "20260328  逛逛紙牌社 週賽 7人 冠軍 黎胥留",
+    "Level": "常規賽",
+    "Players": 7,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260328-1",
+    "L_name": "埃姆登",
+    "Format": "7.5.1",
+    "Description": "20260328 貓腳印-東門店 信濃賽 4人 冠軍 埃姆登 現在我就是露娜sama",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260327-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.5.1",
