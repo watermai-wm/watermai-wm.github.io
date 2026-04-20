@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260419-1",
+    "L_name": "拉斐爾",
+    "Format": "7.5.1",
+    "Description": "20260419 玩具e哥花蓮和平店 碧藍戰卡CE週賽 6人(7.5.1) 冠軍 拉斐爾 心皓",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260412-1",
     "L_name": "埃姆登",
     "Format": "7.5.1",
