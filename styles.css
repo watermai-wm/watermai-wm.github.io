@@ -517,4 +517,76 @@ textarea:focus {
     max-width: 100%; /* 確保圖片不會超出容器，如果原始圖片尺寸大於容器，這很有用 */
     height: auto; /* 保持圖片比例 */
 }
+/* 右上角按鈕固定定位 */
+.changelog-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 15px;
+    background-color: #007bff; /* 按鈕顏色，可依你的網站風格調整 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+/* Modal 背景遮罩 */
+.changelog-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明黑底 */
+    z-index: 1001; /* 必須比按鈕層級高 */
+    display: flex; /* 會由 JS 切換 display 控制顯示 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal 內部文字區塊 */
+.changelog-content {
+    background-color: #1a1a1a; /* 深灰/黑色背景 */
+    color: #ffffff;            /* 預設文字為白色 */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    position: relative;
+    border: 1px solid #444;    /* 加上深色邊框，讓視窗更有立體感 */
+}
+
+/* 右上角叉叉 (配合深色背景調整) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaaaaa; /* 預設改為淺灰色 */
+}
+
+/* 滑鼠移到叉叉上時變為純白，增加互動感 */
+.close-btn:hover {
+    color: #ffffff; 
+}
+
+/* 如果你的底部關閉按鈕在黑底上看不清楚，可以順便加上這段樣式 */
+.close-btn-bottom {
+    margin-top: 15px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #333;    /* 按鈕深底 */
+    color: #fff;               /* 按鈕白字 */
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.close-btn-bottom:hover {
+    background-color: #555;    /* 滑鼠移過去變亮 */
+}

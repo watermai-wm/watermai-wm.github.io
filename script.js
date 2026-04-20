@@ -422,3 +422,42 @@ window.onload = function() {
     populateFilterOptions();
     searchCards(); // 初始顯示所有卡片
 };
+
+
+// 綁定右上角按鈕的點擊事件
+document.getElementById('changelogBtn').addEventListener('click', openChangelog);
+
+function openChangelog() {
+    const modal = document.getElementById('changelogModal');
+    const contentBox = document.getElementById('changelogText');
+    
+    // 顯示 Modal (覆蓋掉 inline 的 display: none)
+    modal.style.display = 'flex'; 
+
+    // 使用 fetch 讀取外部檔案 (這裡假設你的檔名為 changelog.txt)
+    fetch('changelog.txt')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`無法讀取檔案 (HTTP 狀態碼: ${response.status})`);
+            }
+            return response.text();
+        })
+        .then(text => {
+            // 使用 <pre> 標籤以保留純文字檔的換行與空白格式
+            contentBox.innerHTML = `<pre style="white-space: pre-wrap; font-family: inherit; margin: 0;">${text}</pre>`;
+        })
+        .catch(error => {
+            contentBox.innerHTML = `<span style="color: red;">載入失敗：${error.message}</span>`;
+        });
+}
+
+function closeChangelog() {
+    document.getElementById('changelogModal').style.display = 'none';
+}
+
+// 附加功能：點擊 Modal 的半透明黑底部分也能關閉視窗
+document.getElementById('changelogModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeChangelog();
+    }
+});
