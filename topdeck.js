@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260426-1",
+    "L_name": "列星頓",
+    "Format": "7.5.1",
+    "Description": "20260426 貓腳印-士林店 信濃賽 8人 冠軍 列星頓 男爵",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260425-1",
+    "L_name": "武藏",
+    "Format": "7.5.1",
+    "Description": "20260425 貓腳印-東門店 信濃賽 4人(7.5.1) 冠軍 武藏 そこのやつ",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260419-1",
     "L_name": "拉斐爾",
     "Format": "7.5.1",
