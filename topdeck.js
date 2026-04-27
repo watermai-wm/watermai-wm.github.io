@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260427-1",
+    "L_name": "聖女貞德",
+    "Format": "7.5.1",
+    "Description": "20260427 玩具e哥花蓮和平店 碧藍戰卡CE 信濃特殊賽 10人(7.5.1) 冠軍 聖女貞德 無盡的明天",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260426-1",
     "L_name": "列星頓",
     "Format": "7.5.1",
