@@ -768,6 +768,23 @@ function shareDeckAsImage() {
     deckArea.style.color = "white";
     deckArea.style.fontFamily = "Arial, sans-serif";
 
+    // ========= ⭐ 新增：卡牌數量顯示 =========
+    let totalCards = Object.values(deck.mainDeck).reduce((sum, count) => sum + count, 0);
+
+    let counter = document.createElement("div");
+    counter.innerText = `卡牌數量: ${totalCards}/50`;
+    counter.style.marginBottom = "10px";
+    counter.style.fontSize = "18px";
+    counter.style.fontWeight = "bold";
+    counter.style.background = "rgba(0,0,0,0.6)";
+    counter.style.padding = "8px";
+    counter.style.borderRadius = "8px";
+    counter.style.display = "block";
+	counter.style.textAlign = "left";
+
+    deckArea.appendChild(counter);
+    // ========= ⭐ 新增結束 =========
+
     // 取得卡片的實際寬度
     let sampleCard = deckContainer?.firstElementChild || flagshipContainer?.firstElementChild;
     let cardWidth = sampleCard ? sampleCard.getBoundingClientRect().width : 110;
