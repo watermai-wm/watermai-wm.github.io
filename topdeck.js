@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260503-1",
+    "L_name": "君主",
+    "Format": "7.5.1",
+    "Description": "20260503 貓腳印-士林店 店家賽 4人 冠軍 君主 水麥",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260427-1",
     "L_name": "聖女貞德",
     "Format": "7.5.1",
