@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260509-1",
+    "L_name": "列星頓",
+    "Format": "7.5.1",
+    "Description": "20260509 貓腳印-東門店 店家賽 6人 冠軍 列星頓 Whiskey",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260504-1",
     "L_name": "龍鳳",
     "Format": "7.5.1",
