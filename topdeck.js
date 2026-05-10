@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260510-1",
+    "L_name": "怨仇",
+    "Format": "7.5.1",
+    "Description": "20260510 貓腳印-士林店 店家賽 5人 冠軍 怨仇 水麥",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260509-1",
     "L_name": "列星頓",
     "Format": "7.5.1",
