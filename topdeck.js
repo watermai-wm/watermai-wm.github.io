@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260517-2",
+    "L_name": "射水魚",
+    "Format": "7.5.1",
+    "Description": "20260517 屏東 周賽 5人 冠軍 射水魚 金正恩",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260517-1",
     "L_name": "蘇維埃俄羅斯",
     "Format": "7.5.1",
