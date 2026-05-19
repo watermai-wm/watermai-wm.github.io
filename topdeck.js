@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260519-1",
+    "L_name": "鎮海",
+    "Format": "7.5.1",
+    "Description": "20260519 玩具e哥花蓮和平店 碧藍戰卡CE週賽 8人(7.5.1) 冠軍 鎮海 東方煌月",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260517-2",
     "L_name": "射水魚",
     "Format": "7.5.1",
