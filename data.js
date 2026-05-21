@@ -25766,11 +25766,29 @@ const cards = [
         "card_effect": "■此卡的名稱在規則上被視為「μ兵裝」。■【主階段啟動】將己方卡組最上方的2張卡送入撤退區。之後，可以將己方撤退區的1張費用為4或以下的《鐵血》〈重巡〉/名稱中帶有「μ兵裝」的艦船卡登場。",
         "acquisition_method": "CE02-預覽測試"
     },
-	
 	{
         "card_id": 7520810,
-        "card_name": "巴爾的摩(μ兵裝)",
+        "card_name": "白龍",
         "card_code": "CE02-081",
+        "attributes": {
+            "顏　色": "無",
+            "種　類": "艦船卡",
+            "費　用": "4",
+            "戰　力": "600",
+            "陣　營": "重櫻",
+            "艦船類型": "航母",
+            "罕　貴": "-",
+            "勢　力": "赤色中軸",
+            "支援範圍": "手牌·戰場",
+            "支援值": "100"
+        },
+        "card_effect": "【無】",
+        "acquisition_method": "CE02-預覽測試"
+    },
+	{
+        "card_id": 7520820,
+        "card_name": "巴爾的摩(μ兵裝)",
+        "card_code": "CE02-082",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25787,9 +25805,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520820,
+        "card_id": 7520830,
         "card_name": "大青花魚(μ兵裝)",
-        "card_code": "CE02-082",
+        "card_code": "CE02-083",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25806,9 +25824,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520830,
+        "card_id": 7520840,
         "card_name": "黛朵(μ兵裝)",
-        "card_code": "CE02-083",
+        "card_code": "CE02-084",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25825,9 +25843,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520840,
+        "card_id": 7520850,
         "card_name": "可畏(μ兵裝)",
-        "card_code": "CE02-084",
+        "card_code": "CE02-085",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25844,9 +25862,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520850,
+        "card_id": 7520860,
         "card_name": "塔什干(μ兵裝)",
-        "card_code": "CE02-085",
+        "card_code": "CE02-086",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25863,9 +25881,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520860,
+        "card_id": 7520870,
         "card_name": "火力",
-        "card_code": "CE02-086",
+        "card_code": "CE02-087",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25882,9 +25900,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520870,
+        "card_id": 7520880,
         "card_name": "曙光",
-        "card_code": "CE02-087",
+        "card_code": "CE02-088",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25901,9 +25919,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520880,
+        "card_id": 7520890,
         "card_name": "庫爾斯克",
-        "card_code": "CE02-088",
+        "card_code": "CE02-089",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25920,9 +25938,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520890,
+        "card_id": 7520900,
         "card_name": "魯莽(μ兵裝)",
-        "card_code": "CE02-089",
+        "card_code": "CE02-090",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25939,9 +25957,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520900,
+        "card_id": 7520910,
         "card_name": "克里蒙梭",
-        "card_code": "CE02-090",
+        "card_code": "CE02-091",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25958,9 +25976,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520910,
+        "card_id": 7520920,
         "card_name": "試作型布里MKII",
-        "card_code": "CE02-091",
+        "card_code": "CE02-092",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25977,9 +25995,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520920,
+        "card_id": 7520930,
         "card_name": "超限充能",
-        "card_code": "CE02-092",
+        "card_code": "CE02-093",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -25996,9 +26014,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520930,
+        "card_id": 7520940,
         "card_name": "重音搖滾",
-        "card_code": "CE02-093",
+        "card_code": "CE02-094",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -26015,9 +26033,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520940,
+        "card_id": 7520950,
         "card_name": "應援高歌",
-        "card_code": "CE02-094",
+        "card_code": "CE02-095",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -26034,9 +26052,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520950,
+        "card_id": 7520960,
         "card_name": "ALIZARIN",
-        "card_code": "CE02-095",
+        "card_code": "CE02-096",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -26053,9 +26071,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520960,
+        "card_id": 7520970,
         "card_name": "CYANIDIN",
-        "card_code": "CE02-096",
+        "card_code": "CE02-097",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -26072,9 +26090,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520970,
+        "card_id": 7520980,
         "card_name": "舞台換位",
-        "card_code": "CE02-097",
+        "card_code": "CE02-098",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
@@ -26091,9 +26109,9 @@ const cards = [
         "acquisition_method": "CE02-預覽測試"
     },
 	{
-        "card_id": 7520980,
+        "card_id": 7520990,
         "card_name": "退役演出",
-        "card_code": "CE02-098",
+        "card_code": "CE02-099",
         "attributes": {
             "顏　色": "無",
             "種　類": "事件卡",
