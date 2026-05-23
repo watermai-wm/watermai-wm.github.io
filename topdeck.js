@@ -28,6 +28,15 @@ const topDecks = [
     "Champion": 1
   },
   {
+    "deck_id": "20260523-4",
+    "L_name": "曙光",
+    "Format": "7.5.1",
+    "Description": "20260523 玩具e哥花蓮和平店 碧藍戰卡CE01新彈賽 8人(7.5.1)（至少編入8張CE01卡牌） 冠軍 曙光 展示無敵的天羽羽斬",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260519-1",
     "L_name": "鎮海",
     "Format": "7.5.1",
