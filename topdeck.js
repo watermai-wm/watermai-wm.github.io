@@ -1,6 +1,33 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260523-1",
+    "L_name": "光輝",
+    "Format": "7.5.2",
+    "Description": "20260523 逛逛紙牌社 7.5.2預覽賽 11人 冠軍：光輝",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260523-2",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.5.2",
+    "Description": "20260523 逛逛紙牌社 7.5.2預覽賽 11人 亞軍：俾斯麥Zwei",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260523-3",
+    "L_name": "不屈",
+    "Format": "7.5.1",
+    "Description": "20260523 屏東 交流賽 4人 冠軍：不屈 古鐵",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260519-1",
     "L_name": "鎮海",
     "Format": "7.5.1",
