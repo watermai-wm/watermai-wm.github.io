@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260528-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.5.2",
+    "Description": "20260528 玩具e哥花蓮和平店 碧藍戰卡CE 君主特殊賽 9人(7.5.1) 冠軍 奧古斯特·馮·帕塞瓦爾 無盡的明天",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260523-1",
     "L_name": "光輝",
     "Format": "7.5.2",
