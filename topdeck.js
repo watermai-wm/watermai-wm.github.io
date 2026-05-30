@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260530-1",
+    "L_name": "腓特烈大帝",
+    "Format": "7.5.2",
+    "Description": "20260530 貓腳印-東門店 君主特殊賽(7.5.2) 4人 冠軍 腓特烈大帝 KIRA",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260528-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.5.1",
