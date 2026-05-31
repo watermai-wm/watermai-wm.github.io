@@ -19,6 +19,15 @@ const topDecks = [
     "Champion": 0
   },
   {
+    "deck_id": "20260531-3",
+    "L_name": "魯普雷希特親王",
+    "Format": "7.5.2",
+    "Description": "20260531 屏東 交流賽(7.5.1) 4人 冠軍 魯普雷希特親王 金正恩",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260530-1",
     "L_name": "腓特烈大帝",
     "Format": "7.5.2",
