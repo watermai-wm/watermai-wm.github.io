@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260606-1",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.5.1",
+    "Description": "20260606 逛逛紙牌社 店家賽(7.5.1) 11人 冠軍：奧古斯特·馮·帕塞瓦爾",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260606-2",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.5.1",
+    "Description": "20260606 逛逛紙牌社 店家賽(7.5.1) 11人 亞軍：俾斯麥Zwei",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 0
+  },
+  {
     "deck_id": "20260605-1",
     "L_name": "島風",
     "Format": "7.5.2",
