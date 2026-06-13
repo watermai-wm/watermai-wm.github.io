@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260613-1",
+    "L_name": "列星頓",
+    "Format": "7.5.2",
+    "Description": "20260613 貓腳印-東門店 店家賽(7.5.2) 4人 冠軍 列星頓 Whiskey",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260612-1",
+    "L_name": "約克鎮II",
+    "Format": "7.5.2",
+    "Description": "20260612 玩具e哥花蓮和平店 碧藍戰卡CE週賽 8人(7.5.2) 冠軍 約克鎮II 藍玥",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260606-1",
     "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.5.1",
