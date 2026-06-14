@@ -995,126 +995,185 @@ function importDeckCode() {
     }
 }
 
-// ====== 新增：更新牌組統計 (費用曲線與種類分布) ======
+// ====== 修改後的 updateDeckStats (堆疊長條圖 + 圓餅圖同步顏色) ======
 function updateDeckStats() {
-    let costCounts = {};
-    let typeCounts = { '艦船卡': 0, '事件卡': 0 }; 
+    // 1. 定義共用的顏色對應表 (Color Map) 與追蹤的種類清單
+    const colorMap = {
+        '艦船卡': '#2196F3',             // 藍色
+        '事件卡(追擊)': '#9C27B0',       // 紫色
+        '事件卡(主階段啟動)': '#FF9800', // 橘色
+        '事件卡(反制)': '#F44336',       // 紅色
+        '事件卡(其他)': '#9E9E9E'        // 灰色
+    };
+    const trackedTypes = Object.keys(colorMap);
+
+    let typeCounts = {};
+    trackedTypes.forEach(t => typeCounts[t] = 0);
+    
+    // 費用追蹤改為二維結構：costCounts[費用][種類] = 數量
+    let costCounts = {}; 
     let maxCost = 0;
 
-    // 統計主牌組數據
+    // 2. 統計主牌組數據
     Object.keys(deck.mainDeck).forEach(cardID => {
         let card = allCards.find(c => c.card_id == cardID); 
+        if (!card) return; 
         let count = deck.mainDeck[cardID]; 
         
         let costStr = card.attributes['費　用'];
         let cost = parseInt(costStr) || 0; 
-        
-        costCounts[cost] = (costCounts[cost] || 0) + count;
         if (cost > maxCost) maxCost = cost;
 
+        // 初始化該費用的物件
+        if (!costCounts[cost]) {
+            costCounts[cost] = {};
+            trackedTypes.forEach(t => costCounts[cost][t] = 0);
+        }
+
+        // 處理種類與字串比對
         let type = card.attributes['種　類'];
+        if (type === '事件卡') {
+            let effect = card.card_effect || ""; 
+            if (effect.includes("■【追擊】")) {
+                type = '事件卡(追擊)';
+            } else if (effect.includes("■【主階段啟動】")) {
+                type = '事件卡(主階段啟動)';
+            } else if (effect.includes("■【反制】")) {
+                type = '事件卡(反制)';
+            } else {
+                type = '事件卡(其他)'; 
+            }
+        }
+        
         typeCounts[type] = (typeCounts[type] || 0) + count;
+        costCounts[cost][type] += count;
     });
 
-    // --- 準備費用曲線資料 ---
+    // 3. 準備費用曲線資料 (堆疊長條圖)
     let displayMaxCost = Math.max(maxCost, 6); 
     let costLabels = [];
-    let costData = [];
     for (let i = 0; i <= displayMaxCost; i++) {
-        costLabels.push(i.toString()); // X 軸標籤 (0, 1, 2...)
-        costData.push(costCounts[i] || 0); // Y 軸數量
+        costLabels.push(i.toString()); 
     }
 
-	// --- 繪製/更新費用曲線 (長條圖) ---
+    // 依據種類建立多個 Dataset
+    let barDatasets = trackedTypes.map(type => {
+        let dataArray = [];
+        for (let i = 0; i <= displayMaxCost; i++) {
+            dataArray.push((costCounts[i] && costCounts[i][type]) ? costCounts[i][type] : 0);
+        }
+        return {
+            label: type,
+            data: dataArray,
+            backgroundColor: colorMap[type], // 使用對應顏色
+            borderWidth: 1,
+            borderColor: '#121212'
+        };
+    });
+
+    // 4. 繪製/更新費用曲線 (堆疊長條圖)
     const manaCtx = document.getElementById('manaCurveChart');
     if (manaCtx) {
-        if (manaChartInstance) manaChartInstance.destroy(); // 摧毀舊圖表，重新繪製
+        if (manaChartInstance) manaChartInstance.destroy(); 
         manaChartInstance = new Chart(manaCtx, {
             type: 'bar',
             data: {
                 labels: costLabels,
-                datasets: [{
-                    label: '卡牌數量',
-                    data: costData,
-                    backgroundColor: '#4CAF50', // 長條圖顏色
-                    borderColor: '#388E3C',
-                    borderWidth: 1
-                }]
+                datasets: barDatasets // 傳入堆疊資料
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                events: [], // 停用所有滑鼠事件 (包含 hover 變色)
-                layout: {
-                    padding: { top: 20 } // 圖表上方預留空間，避免數字被裁切
-                },
+                events: [], 
+                layout: { padding: { top: 20 } },
                 scales: {
                     y: {
+                        stacked: true, // 啟用 Y 軸堆疊
                         beginAtZero: true,
                         ticks: { stepSize: 1, color: 'white' }, 
                         grid: { color: 'rgba(255, 255, 255, 0.2)' } 
                     },
                     x: {
+                        stacked: true, // 啟用 X 軸堆疊
                         ticks: { color: 'white' }, 
                         grid: { display: false }
                     }
                 },
                 plugins: {
                     legend: { display: false }, 
-                    tooltip: { enabled: false } // 徹底關閉 Tooltip 黑框
+                    tooltip: { enabled: false } 
                 }
             },
             plugins: [{
-                // 自定義插件：直接在長條上方繪製數字
-                id: 'customDataLabels',
-                afterDatasetsDraw(chart, args, pluginOptions) {
+                // 修改標籤邏輯：只在整根長條圖的最頂端印出該費用的「總卡數」
+                id: 'customStackedLabels',
+                afterDatasetsDraw(chart) {
                     const { ctx } = chart;
+                    
+                    let totals = new Array(chart.data.labels.length).fill(0);
+                    let highestY = new Array(chart.data.labels.length).fill(Number.MAX_VALUE);
+                    
+                    // 找出每個 X 座標的總數，以及繪圖區塊的最高點 (Y座標最小的值)
                     chart.data.datasets.forEach((dataset, i) => {
                         const meta = chart.getDatasetMeta(i);
                         meta.data.forEach((bar, index) => {
-                            const data = dataset.data[index];
-                            if (data > 0) { // 只有大於 0 才顯示數字
-                                ctx.fillStyle = 'white'; // 數字顏色
-                                ctx.font = 'bold 12px Arial';
-                                ctx.textAlign = 'center';
-                                ctx.textBaseline = 'bottom';
-                                ctx.fillText(data, bar.x, bar.y - 5); // Y座標向上偏移 5px
+                            let val = dataset.data[index];
+                            if (val > 0) {
+                                totals[index] += val;
+                                if (bar.y < highestY[index]) highestY[index] = bar.y;
                             }
                         });
+                    });
+
+                    // 繪製總數文字
+                    totals.forEach((total, index) => {
+                        if (total > 0) {
+                            const meta = chart.getDatasetMeta(0);
+                            const barX = meta.data[index].x;
+                            
+                            ctx.fillStyle = 'white'; 
+                            ctx.font = 'bold 12px Arial';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            ctx.fillText(total, barX, highestY[index] - 5); 
+                        }
                     });
                 }
             }]
         });
     }
 
-    // --- 準備種類分布資料 ---
+    // 5. 準備與繪製種類分布資料 (圓餅圖)
     let typeLabels = [];
     let typeData = [];
-    for (let [type, count] of Object.entries(typeCounts)) {
-        if (count > 0 || type === '艦船卡' || type === '事件卡') {
-            typeLabels.push(`${type} (${count})`); // 標籤顯示：艦船卡 (40)
+    let typeColors = [];
+
+    for (let [t, count] of Object.entries(typeCounts)) {
+        if (count > 0) { 
+            typeLabels.push(`${t} (${count})`); 
             typeData.push(count);
+            typeColors.push(colorMap[t]);
         }
     }
 
-    // --- 繪製/更新種類分布 (圓餅圖) ---
+    if (typeData.length === 0) {
+        typeLabels.push('無卡牌');
+        typeData.push(1);
+        typeColors.push('rgba(255, 255, 255, 0.1)');
+    }
+
     const typeCtx = document.getElementById('typeDistributionChart');
     if (typeCtx) {
-        if (typeChartInstance) typeChartInstance.destroy(); // 摧毀舊圖表，重新繪製
+        if (typeChartInstance) typeChartInstance.destroy(); 
         typeChartInstance = new Chart(typeCtx, {
             type: 'pie',
             data: {
                 labels: typeLabels,
                 datasets: [{
                     data: typeData,
-                    backgroundColor: [
-                        '#2196F3', // 艦船卡顏色 (藍)
-                        '#F44336', // 事件卡顏色 (紅)
-                        '#FFEB3B', // 如果有第三種卡(黃)
-                        '#9C27B0'  // 如果有第四種卡(紫)
-                    ],
+                    backgroundColor: typeColors, 
                     borderWidth: 1,
-                    borderColor: '#121212' // 黑色邊線以融入背景
+                    borderColor: '#121212' 
                 }]
             },
             options: {
@@ -1122,8 +1181,8 @@ function updateDeckStats() {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        position: 'right', // 圖例放右邊
-                        labels: { color: 'white' } // 圖例文字為白色
+                        position: 'right', 
+                        labels: { color: 'white' } 
                     }
                 }
             }
