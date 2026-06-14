@@ -313,7 +313,10 @@ function renderCards(filteredCards) {
 }
 
 //新增卡片到牌組
+// 新增卡片到牌組 (加入捲動位置鎖定)
 function addCardToDeck(cardID) {
+    let currentScroll = window.scrollY; // 1. 記錄當下捲動高度
+
     let card = allCards.find(c => c.card_id == cardID);
     let rarity = card.attributes['罕　貴'];
 
@@ -334,6 +337,8 @@ function addCardToDeck(cardID) {
 
     renderDeck();
     updateDeckCounter();
+    
+    window.scrollTo(0, currentScroll); // 2. 強制還原捲動高度
 }
 
 
@@ -462,40 +467,49 @@ function createCardElement(card, count, isFlagship = false) {
 }
 
 
-//調整卡片數量
+// 調整卡片數量 (加入捲動位置鎖定)
 function adjustCardCount(cardID, change) {
-    let isFlagship = deck.flagship[cardID] !== undefined; // 檢查是否為旗艦卡
+    let currentScroll = window.scrollY; // 1. 記錄當下捲動高度
+
+    let isFlagship = deck.flagship[cardID] !== undefined; 
 
     if (!deck.mainDeck[cardID] && !isFlagship) deck.mainDeck[cardID] = 0;
 
     let newCount = (deck.mainDeck[cardID] || 0) + change;
 
     if (newCount <= 0) {
-        delete deck.mainDeck[cardID]; // 若數量變為 0，則從牌組移除
+        delete deck.mainDeck[cardID]; 
         if (isFlagship) {
-            delete deck.flagship[cardID]; // 若是旗艦區的卡片，也從旗艦區移除
+            delete deck.flagship[cardID]; 
         }
     } else if (newCount > 4) {
-        newCount = 4; // 限制最多 4 張
+        newCount = 4; 
     } else {
-        deck.mainDeck[cardID] = newCount; // 更新數量
+        deck.mainDeck[cardID] = newCount; 
     }
 
-    renderDeck(); // 重新渲染牌組
-    updateDeckCounter(); // 更新數量顯示
+    renderDeck(); 
+    updateDeckCounter(); 
+
+    window.scrollTo(0, currentScroll); // 2. 強制還原捲動高度
 }
 
 
 
-//移除卡片
+// 移除卡片 (加入捲動位置鎖定)
 function removeFromDeck(cardID, isFlagship = false) {
+    let currentScroll = window.scrollY; // 1. 記錄當下捲動高度
+
     if (isFlagship) {
         delete deck.flagship[cardID];
     } else {
         delete deck.mainDeck[cardID];
     }
+    
     renderDeck();
     updateDeckCounter();
+
+    window.scrollTo(0, currentScroll); // 2. 強制還原捲動高度
 }
 
 
