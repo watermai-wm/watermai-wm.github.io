@@ -3,6 +3,9 @@ let currentPage = 1;
 const cardsPerPage = 20;
 let deck = { flagship: {}, mainDeck: {} }; // 旗艦與牌組
 let filteredCardsGlobal = []; // 🔴 非常重要，不能宣告在 searchCards 裡
+// 用來儲存圖表實例的全域變數（必須放在外層，避免每次更新圖表互相重疊）
+let manaChartInstance = null;
+let typeChartInstance = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("頁面加載完成");
@@ -723,6 +726,11 @@ function updateDeckCounter() {
     if (totalCards > 50) {
         showSoftAlert("超過上限");
     }
+	
+	// 觸發牌組統計與圖表更新
+    if (typeof updateDeckStats === "function") {
+        updateDeckStats();
+    }
 }
 
 // 顯示 Soft Alert
@@ -977,6 +985,7 @@ function importDeckCode() {
         if (parsed.flagship && parsed.mainDeck) {
             deck = parsed;
             renderDeck(); // 載入並重新顯示
+			updateDeckCounter(); // 更新卡牌數量與統計圖表
             showSoftAlert("牌組已載入！");
         } else {
             throw new Error("格式錯誤");
@@ -986,5 +995,184 @@ function importDeckCode() {
     }
 }
 
+// ====== 新增：更新牌組統計 (費用曲線與種類分布) ======
+function updateDeckStats() {
+    let costCounts = {};
+    let typeCounts = { '艦船卡': 0, '事件卡': 0 }; 
+    let maxCost = 0;
 
+    // 統計主牌組數據
+    Object.keys(deck.mainDeck).forEach(cardID => {
+        let card = allCards.find(c => c.card_id == cardID); 
+        let count = deck.mainDeck[cardID]; 
+        
+        let costStr = card.attributes['費　用'];
+        let cost = parseInt(costStr) || 0; 
+        
+        costCounts[cost] = (costCounts[cost] || 0) + count;
+        if (cost > maxCost) maxCost = cost;
+
+        let type = card.attributes['種　類'];
+        typeCounts[type] = (typeCounts[type] || 0) + count;
+    });
+
+    // --- 準備費用曲線資料 ---
+    let displayMaxCost = Math.max(maxCost, 6); 
+    let costLabels = [];
+    let costData = [];
+    for (let i = 0; i <= displayMaxCost; i++) {
+        costLabels.push(i.toString()); // X 軸標籤 (0, 1, 2...)
+        costData.push(costCounts[i] || 0); // Y 軸數量
+    }
+
+	// --- 繪製/更新費用曲線 (長條圖) ---
+    const manaCtx = document.getElementById('manaCurveChart');
+    if (manaCtx) {
+        if (manaChartInstance) manaChartInstance.destroy(); // 摧毀舊圖表，重新繪製
+        manaChartInstance = new Chart(manaCtx, {
+            type: 'bar',
+            data: {
+                labels: costLabels,
+                datasets: [{
+                    label: '卡牌數量',
+                    data: costData,
+                    backgroundColor: '#4CAF50', // 長條圖顏色
+                    borderColor: '#388E3C',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                events: [], // 停用所有滑鼠事件 (包含 hover 變色)
+                layout: {
+                    padding: { top: 20 } // 圖表上方預留空間，避免數字被裁切
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1, color: 'white' }, 
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' } 
+                    },
+                    x: {
+                        ticks: { color: 'white' }, 
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false }, 
+                    tooltip: { enabled: false } // 徹底關閉 Tooltip 黑框
+                }
+            },
+            plugins: [{
+                // 自定義插件：直接在長條上方繪製數字
+                id: 'customDataLabels',
+                afterDatasetsDraw(chart, args, pluginOptions) {
+                    const { ctx } = chart;
+                    chart.data.datasets.forEach((dataset, i) => {
+                        const meta = chart.getDatasetMeta(i);
+                        meta.data.forEach((bar, index) => {
+                            const data = dataset.data[index];
+                            if (data > 0) { // 只有大於 0 才顯示數字
+                                ctx.fillStyle = 'white'; // 數字顏色
+                                ctx.font = 'bold 12px Arial';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillText(data, bar.x, bar.y - 5); // Y座標向上偏移 5px
+                            }
+                        });
+                    });
+                }
+            }]
+        });
+    }
+
+    // --- 準備種類分布資料 ---
+    let typeLabels = [];
+    let typeData = [];
+    for (let [type, count] of Object.entries(typeCounts)) {
+        if (count > 0 || type === '艦船卡' || type === '事件卡') {
+            typeLabels.push(`${type} (${count})`); // 標籤顯示：艦船卡 (40)
+            typeData.push(count);
+        }
+    }
+
+    // --- 繪製/更新種類分布 (圓餅圖) ---
+    const typeCtx = document.getElementById('typeDistributionChart');
+    if (typeCtx) {
+        if (typeChartInstance) typeChartInstance.destroy(); // 摧毀舊圖表，重新繪製
+        typeChartInstance = new Chart(typeCtx, {
+            type: 'pie',
+            data: {
+                labels: typeLabels,
+                datasets: [{
+                    data: typeData,
+                    backgroundColor: [
+                        '#2196F3', // 艦船卡顏色 (藍)
+                        '#F44336', // 事件卡顏色 (紅)
+                        '#FFEB3B', // 如果有第三種卡(黃)
+                        '#9C27B0'  // 如果有第四種卡(紫)
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#121212' // 黑色邊線以融入背景
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right', // 圖例放右邊
+                        labels: { color: 'white' } // 圖例文字為白色
+                    }
+                }
+            }
+        });
+    }
+}
+
+// ====== 新增：起手 5 張模擬 ======
+function simulateStartingHand() {
+    let deckArray = [];
+    
+    // 展開主牌組為一維陣列[cite: 2]
+    Object.keys(deck.mainDeck).forEach(cardID => {
+        let count = deck.mainDeck[cardID];
+        for (let i = 0; i < count; i++) {
+            deckArray.push(cardID);
+        }
+    });
+
+    if (deckArray.length < 5) {
+        showSoftAlert("主牌組數量不足 5 張，無法模擬起手"); // 使用現有的提醒功能[cite: 2]
+        return;
+    }
+
+    // Fisher-Yates 洗牌演算法
+    for (let i = deckArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deckArray[i], deckArray[j]] = [deckArray[j], deckArray[i]];
+    }
+
+    // 抽出前 5 張
+    let startingHand = deckArray.slice(0, 5);
+    
+    // 渲染抽牌結果
+    let container = document.getElementById("drawnCardsContainer");
+    container.innerHTML = "";
+    
+    startingHand.forEach(cardID => {
+        let card = allCards.find(c => c.card_id == cardID); // 取得卡片資料[cite: 2]
+        let imgDiv = document.createElement("div");
+        imgDiv.innerHTML = `<img src="images/${card.card_id}.png" alt="${card.card_name}" style="width: 150px; border-radius: 5px;">`; // 使用現有的圖片路徑邏輯[cite: 2]
+        container.appendChild(imgDiv);
+    });
+
+    // 顯示 Modal
+    document.getElementById("drawSimulationModal").style.display = "flex";
+}
+
+function closeDrawSimulationModal() {
+    document.getElementById("drawSimulationModal").style.display = "none";
+}
 
