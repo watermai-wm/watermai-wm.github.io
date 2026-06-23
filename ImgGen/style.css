@@ -198,9 +198,10 @@ input[type="checkbox"] {
 #card-name-input,
 #faction-input, /* !! 關鍵改動：新增 ID !! */
 #card-id-input, /* !! 新增 ID !! */
+#custom-text-input, /* !! 新增：自訂文字 !! */
 input[type="range"] {
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* 按鈕樣式 */
@@ -221,9 +222,19 @@ input[type="range"] {
 .button:hover {
     background-color: #0056b3;
 }
+/* 還原預設大小按鈕 (較小、次要樣式) */
+.button-reset {
+    background-color: #6c757d;
+    padding: 6px 12px;
+    font-size: 0.9em;
+}
+.button-reset:hover {
+    background-color: #5a6268;
+}
+
 .button-download {
-    background-color: #28a745; 
-    margin-top: auto; 
+    background-color: #28a745;
+    margin-top: auto;
 }
 .button-download:hover {
     background-color: #218838;
@@ -250,6 +261,17 @@ input[type="range"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1em;
+}
+#custom-text-input { /* !! 新增：效果文 (多行) !! */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    font-family: inherit;
+    resize: vertical; /* 允許玩家上下拉高輸入框 */
+    line-height: 1.4;
 }
 
 /* 下拉選單樣式 */

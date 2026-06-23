@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
 	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
 	const cardIdInput = document.getElementById('card-id-input'); // !! 新增 !!
+	const customTextInput = document.getElementById('custom-text-input'); // !! 新增：效果文 (可拖曳) !!
+	const customTextSizeSlider = document.getElementById('custom-text-size'); // !! 新增：效果文字大小 !!
+	const resetTextSizeBtn = document.getElementById('reset-text-size'); // !! 新增：還原預設大小 !!
     
     // 旗艦專用
     const leaderOptionsGroup = document.getElementById('leader-options-group');
@@ -87,7 +90,33 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPower = '100'; 
     let currentCardName = ''; // 卡片名稱狀態
 	let currentfaction = ''; // !! 關鍵改動：新增勢力狀態
-    
+
+    // !! 新增：效果文 (多行、可拖曳) 狀態 !!
+    const CUSTOM_TEXT_DEFAULT_SIZE = 26; // 效果文字預設大小
+    let customTextSize = CUSTOM_TEXT_DEFAULT_SIZE; // 效果文字大小 (可由滑桿調整)
+    const CUSTOM_TEXT_MAX_WIDTH = 640; // 自動折行的最大寬度 (canvas 內部座標)
+    const CUSTOM_TEXT_LINE_HEIGHT = 1.35; // 行高倍率
+    let customText = '';
+    // !! 文字框固定位置 !! 左緣離卡片左邊 55px；文字框「底部」離卡片底部 195px，文字往上長
+    const CUSTOM_TEXT_BOX_LEFT = 55;
+    const CUSTOM_TEXT_BOX_BOTTOM_GAP = 195;
+    const CUSTOM_TEXT_BOX_BOTTOM = TARGET_HEIGHT - CUSTOM_TEXT_BOX_BOTTOM_GAP; // 最後一行文字底部的 y 座標 (= 878)
+
+    // !! 新增：關鍵字圖示 (在效果文中以【關鍵字】內嵌對應 PNG) !!
+    const KEYWORD_FOLDER = 'keywords';
+    const KW_IMG_SCALE = 1.0;  // 圖示高度相對於字級
+    const KW_IMG_MARGIN = 3;    // 圖示左右間距 (px)
+    const KEYWORD_NAMES = [
+        '主階段啟動', '反制', '固守+100', '固守+200', '固守+300',
+        '對方主階段開始時', '對方回合中', '對方回合結束時', '對方回合開始時',
+        '己方主階段開始時', '己方回合中', '己方回合結束時', '己方的主階段中',
+        '強擊+100', '強擊+200', '強擊+300', '強擊+400',
+        '支援時', '改造', '攻擊時', '每回合1次', '潛水', '登場時',
+        '絕地反擊', '被擊破時', '被攻擊時', '覺醒', '轉為休息狀態時',
+        '追擊', '速攻', '遠程'
+    ];
+    const keywordImages = {}; // name -> { img, loaded }
+
     // 圖片變換狀態
     const imgState = { zoom: 1, offsetX: 0, offsetY: 0 };
     let isDragging = false;
@@ -110,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const textY = 936;
             const fontSize = 40; // 這是您在 script.js 中設定的 40px
 
-            textCtx.font = `300 ${fontSize}px "Chiron GoRound TC"`;
+            textCtx.font = `500 ${fontSize}px "Noto Sans TC", sans-serif`;
             textCtx.textAlign = 'center';
             textCtx.strokeStyle = 'black';
             textCtx.lineWidth = 3; // 這是您在 script.js 中設定的 3px
@@ -135,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // 使用相同的字體和樣式
-            textCtx.font = `300 ${fontSize}px "Chiron GoRound TC"`; // 300 = Light
+            textCtx.font = `500 ${fontSize}px "Noto Sans TC", sans-serif`; // 300 = Light
             textCtx.textAlign = 'center';
             textCtx.strokeStyle = 'black';
             textCtx.lineWidth = 2; // 2px 描邊
@@ -161,8 +190,109 @@ document.addEventListener('DOMContentLoaded', () => {
             textCtx.strokeText(currentCardId, textX, textY);
             textCtx.fillText(currentCardId, textX, textY);
         }
+
+        // --- 4. 繪製效果文 (多行、自動折行、關鍵字內嵌圖示、可拖曳) --- (!! 新增區塊 !!)
+        if (customText) {
+            setCustomTextFont();
+            textCtx.textAlign = 'left';
+            textCtx.textBaseline = 'alphabetic';
+            textCtx.strokeStyle = 'black';
+            textCtx.lineWidth = Math.max(3, customTextSize * 0.11);
+            textCtx.lineJoin = 'round'; // 邊角圓滑，避免描邊外刺
+            textCtx.miterLimit = 2;
+            textCtx.fillStyle = 'white';
+
+            const lines = wrapCustomLines();
+            const lineHeight = customTextSize * CUSTOM_TEXT_LINE_HEIGHT;
+            // 底部固定、往上長：最後一行 baseline = 文字框底部 - 約一個 descent
+            const N = lines.length;
+            const baselineLast = CUSTOM_TEXT_BOX_BOTTOM - customTextSize * 0.15;
+            lines.forEach((line, i) => {
+                let x = CUSTOM_TEXT_BOX_LEFT;
+                const y = baselineLast - (N - 1 - i) * lineHeight;
+                for (const unit of line) {
+                    if (unit.type === 'char') {
+                        textCtx.strokeText(unit.ch, x, y);
+                        textCtx.fillText(unit.ch, x, y);
+                        x += textCtx.measureText(unit.ch).width;
+                    } else if (unit.type === 'image') {
+                        const e = keywordImages[unit.name];
+                        const h = customTextSize * KW_IMG_SCALE;
+                        const w = e.img.naturalWidth * h / e.img.naturalHeight;
+                        const top = y - customTextSize * 0.4 - h / 2; // 與文字視覺中線對齊 (CJK 中線約 0.4em)
+                        x += KW_IMG_MARGIN;
+                        textCtx.drawImage(e.img, x, top, w, h);
+                        x += w + KW_IMG_MARGIN;
+                    }
+                }
+            });
+        }
     }
-    
+
+    // !! 新增：統一設定效果文字型 (繪製/量測共用) !!
+    function setCustomTextFont() {
+        textCtx.font = `700 ${customTextSize}px "Noto Sans TC", sans-serif`;
+    }
+
+    // !! 新增：把效果文拆成排版單位 (逐字 + 【關鍵字】內嵌圖示 + 換行) !!
+    function buildCustomUnits() {
+        const units = [];
+        const pushPlain = (str) => {
+            for (const ch of str) {
+                if (ch === '\n') units.push({ type: 'newline' });
+                else units.push({ type: 'char', ch });
+            }
+        };
+        const re = /【([^】]+)】/g;
+        let lastIndex = 0;
+        let m;
+        while ((m = re.exec(customText)) !== null) {
+            pushPlain(customText.slice(lastIndex, m.index));
+            const name = m[1];
+            const entry = keywordImages[name];
+            if (entry && entry.loaded) {
+                units.push({ type: 'image', name });
+            } else {
+                pushPlain(m[0]); // 非關鍵字或圖片尚未載入 -> 整段含括號當文字顯示
+            }
+            lastIndex = re.lastIndex;
+        }
+        pushPlain(customText.slice(lastIndex));
+        return units;
+    }
+
+    // !! 新增：單一排版單位的寬度 (呼叫前需先設定字型) !!
+    function customUnitWidth(unit) {
+        if (unit.type === 'char') return textCtx.measureText(unit.ch).width;
+        if (unit.type === 'image') {
+            const e = keywordImages[unit.name];
+            const h = customTextSize * KW_IMG_SCALE;
+            const w = e.img.naturalWidth * h / e.img.naturalHeight;
+            return w + KW_IMG_MARGIN * 2;
+        }
+        return 0;
+    }
+
+    // !! 新增：依最大寬度自動折行，回傳「每行的排版單位陣列」 !!
+    function wrapCustomLines() {
+        setCustomTextFont();
+        const units = buildCustomUnits();
+        const lines = [];
+        let cur = [];
+        let curW = 0;
+        for (const unit of units) {
+            if (unit.type === 'newline') { lines.push(cur); cur = []; curW = 0; continue; }
+            const w = customUnitWidth(unit);
+            if (cur.length > 0 && curW + w > CUSTOM_TEXT_MAX_WIDTH) {
+                lines.push(cur); cur = []; curW = 0;
+            }
+            cur.push(unit);
+            curW += w;
+        }
+        lines.push(cur);
+        return lines;
+    }
+
     // 繪製背景/圖片/Fog
     function redrawCanvas() {
         if (imagesLoaded < imagesToLoad) {
@@ -443,6 +573,22 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCardId = cardIdInput.value;
         redrawText(); // 只需要重繪文字畫布
     });
+	// !! 新增：效果文輸入框的即時監聽 (textarea，含換行) !!
+    customTextInput.addEventListener('input', () => {
+        customText = customTextInput.value;
+        redrawText(); // 只需要重繪文字畫布
+    });
+	// !! 新增：效果文字大小滑桿的即時監聽 !!
+    customTextSizeSlider.addEventListener('input', () => {
+        customTextSize = parseInt(customTextSizeSlider.value, 10);
+        redrawText();
+    });
+	// !! 新增：還原預設大小按鈕 !!
+    resetTextSizeBtn.addEventListener('click', () => {
+        customTextSize = CUSTOM_TEXT_DEFAULT_SIZE;
+        customTextSizeSlider.value = CUSTOM_TEXT_DEFAULT_SIZE;
+        redrawText();
+    });
 
     // 處理圖片上傳
     imageUpload.addEventListener('change', (event) => {
@@ -487,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
         redrawCanvas();
     });
 
-    // 處理滑鼠拖曳
+    // 處理滑鼠拖曳 (僅拖曳卡圖；效果文字框為固定位置)
     playerCanvas.addEventListener('mousedown', (e) => {
         if (!currentImage) return;
         isDragging = true;
@@ -497,9 +643,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     playerCanvas.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
+        const canvasScaleRatio = TARGET_WIDTH / playerCanvas.clientWidth;
         const deltaX = e.clientX - lastMouseX;
         const deltaY = e.clientY - lastMouseY;
-        const canvasScaleRatio = TARGET_WIDTH / playerCanvas.clientWidth;
         imgState.offsetX += (deltaX * canvasScaleRatio);
         imgState.offsetY += (deltaY * canvasScaleRatio);
         lastMouseX = e.clientX;
@@ -564,6 +710,33 @@ document.addEventListener('DOMContentLoaded', () => {
     cardNameInput.value = '';
 	factionInput.value = ''; // !! 關鍵改動：初始化勢力輸入框
 	cardIdInput.value = 'CE00-000'; // !! 新增：初始化編號輸入框
+	customTextInput.value = ''; // !! 新增：初始化效果文輸入框
+	customTextSizeSlider.value = customTextSize; // !! 新增：初始化效果文字大小滑桿
+
+	// !! 新增：預載所有關鍵字圖示；載入完成後重繪文字 !!
+	KEYWORD_NAMES.forEach(name => {
+		const img = new Image();
+		img.crossOrigin = 'anonymous';
+		keywordImages[name] = { img, loaded: false };
+		img.onload = () => {
+			keywordImages[name].loaded = true;
+			redrawText(); // 圖示就緒後把對應【關鍵字】換成圖
+		};
+		img.onerror = () => {
+			console.warn('關鍵字圖示載入失敗:', name);
+		};
+		img.src = `${KEYWORD_FOLDER}/${encodeURIComponent(name)}.png`;
+	});
+
+	// !! 新增：明確載入效果文字體 (canvas 用字不會自動觸發下載)，載完重繪 !!
+	if (document.fonts && document.fonts.load) {
+		Promise.all([
+			document.fonts.load('500 26px "Noto Sans TC"'), // 卡名/陣營艦種 Medium
+			document.fonts.load('700 26px "Noto Sans TC"')  // 技能文 Bold
+		]).then(() => {
+			redrawText();
+		}).catch(() => {});
+	}
     
     // 等待字體載入
     document.fonts.ready.then(() => {
