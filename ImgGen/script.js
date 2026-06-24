@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const CUSTOM_TEXT_BOX_LEFT = 55;
     const CUSTOM_TEXT_BOX_BOTTOM_GAP = 195;
     const CUSTOM_TEXT_BOX_BOTTOM = TARGET_HEIGHT - CUSTOM_TEXT_BOX_BOTTOM_GAP; // 最後一行文字底部的 y 座標 (= 878)
+    // 事件卡(非全圖)時：文字框頂端固定離卡片頂 530px，文字往下長
+    const CUSTOM_TEXT_BOX_EVENT_TOP = 530;
 
     // !! 新增：關鍵字圖示 (在效果文中以【關鍵字】內嵌對應 PNG) !!
     const KEYWORD_FOLDER = 'keywords';
@@ -204,12 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const lines = wrapCustomLines();
             const lineHeight = customTextSize * CUSTOM_TEXT_LINE_HEIGHT;
-            // 底部固定、往上長：最後一行 baseline = 文字框底部 - 約一個 descent
             const N = lines.length;
-            const baselineLast = CUSTOM_TEXT_BOX_BOTTOM - customTextSize * 0.15;
+            // 事件卡且未勾全圖：頂端固定 530px、往下長；其餘(含事件卡勾全圖)：底部固定 195px、往上長
+            const eventTopMode = (currentType === 'event' && !isFullArt);
+            const baselineFirst = CUSTOM_TEXT_BOX_EVENT_TOP + customTextSize * 0.85; // 第一行 baseline = 頂端 + 約一個 ascent
+            const baselineLast = CUSTOM_TEXT_BOX_BOTTOM - customTextSize * 0.15;     // 最後一行 baseline = 底部 - 約一個 descent
             lines.forEach((line, i) => {
                 let x = CUSTOM_TEXT_BOX_LEFT;
-                const y = baselineLast - (N - 1 - i) * lineHeight;
+                const y = eventTopMode
+                    ? baselineFirst + i * lineHeight
+                    : baselineLast - (N - 1 - i) * lineHeight;
                 for (const unit of line) {
                     if (unit.type === 'char') {
                         textCtx.strokeText(unit.ch, x, y);
