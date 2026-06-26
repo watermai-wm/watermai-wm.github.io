@@ -451,9 +451,13 @@ document.addEventListener('DOMContentLoaded', () => {
             supportValuePath = `${FRAME_FOLDER}/support-${currentSupportValue}.png`;
             powerPath = `${FRAME_FOLDER}/power-${currentPower}.png`;
         } else if (currentType === 'event') {
-            bgPath = `${FRAME_FOLDER}/bg-event.png`; 
-            framePath = `${FRAME_FOLDER}/frame-event-${currentColor}.png`;
-            topFramePath = `${FRAME_FOLDER}/topframe-event.png`;
+            bgPath = `${FRAME_FOLDER}/bg-event.png`;
+            framePath = isFullArt
+                ? `${FRAME_FOLDER}/frame-event-${currentColor}-full.png`
+                : `${FRAME_FOLDER}/frame-event-${currentColor}.png`;
+            topFramePath = isFullArt
+                ? `${FRAME_FOLDER}/topframe-event-full.png`
+                : `${FRAME_FOLDER}/topframe-event.png`;
             extraBasePath = `${FRAME_FOLDER}/cost-${currentColor}-base.png`;
             extraFactionPath = `${FRAME_FOLDER}/cost-${currentColor}-${currentFaction}.png`;
             extraTextPath = `${FRAME_FOLDER}/cost-${currentColor}-text.png`;

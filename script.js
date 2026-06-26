@@ -279,9 +279,9 @@ function displayResults(filteredCards) {
         cardAttributes.textContent = `顏色: ${card.attributes['顏　色']}, 種類: ${card.attributes['種　類']}, 費用: ${card.attributes['費　用']}, 戰力: ${card.attributes['戰　力']}`;
         cardText.appendChild(cardAttributes);
 
-        // 顯示卡片效果
+        // 顯示卡片技能
         const cardEffect = document.createElement('p');
-        cardEffect.textContent = `效果: ${card.card_effect}`;
+        cardEffect.textContent = `技能: ${card.card_effect}`;
         cardText.appendChild(cardEffect);
 		
 		// 顯示獲取方法
