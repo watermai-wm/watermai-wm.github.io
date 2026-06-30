@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260627-1",
+    "L_name": "普利茅斯",
+    "Format": "7.5.2",
+    "Description": "20260627 逛逛紙牌社 店家賽(7.5.1) 10人 冠軍：普利茅斯",
+    "Level": "常規賽",
+    "Players": 10,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260626-1",
     "L_name": "火力",
     "Format": "7.5.2",
