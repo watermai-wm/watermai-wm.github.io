@@ -1,9 +1,54 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260704-4",
+    "L_name": "讓·巴爾"
+    "Format": "7.5.1",
+    "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 殿軍 讓·巴爾 淵眼",
+    "Level": "城市賽",
+    "Players": 20,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260704-3",
+    "L_name": "埃姆登"
+    "Format": "7.5.1",
+    "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 季軍 埃姆登 咪薯",
+    "Level": "城市賽",
+    "Players": 20,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260704-2",
+    "L_name": "奧古斯特·馮·帕塞瓦爾"
+    "Format": "7.5.1",
+    "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 亞軍 奧古斯特·馮·帕塞瓦爾 Kira",
+    "Level": "城市賽",
+    "Players": 20,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260704-1",
+    "L_name": "埃姆登"
+    "Format": "7.5.1",
+    "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 冠軍 埃姆登 煒傑",
+    "Level": "城市賽",
+    "Players": 20,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260703-1",
+    "L_name": "龍鳳",
+    "Format": "7.5.2",
+    "Description": "20260703 玩具e哥花蓮和平店 碧藍戰卡CE週賽 6人(7.5.2) 冠軍 龍鳳 ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260627-1",
     "L_name": "普利茅斯",
-    "Format": "7.5.2",
+    "Format": "7.5.1",
     "Description": "20260627 逛逛紙牌社 店家賽(7.5.1) 10人 冠軍：普利茅斯",
     "Level": "常規賽",
     "Players": 10,
