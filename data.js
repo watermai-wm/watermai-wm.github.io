@@ -19193,7 +19193,7 @@ const cards = [
     {
         "card_id": 1445,
         "card_name": "蘭利II",
-        "card_code": "BP07-032<SEC>",
+        "card_code": "BP07-032",
         "attributes": {
             "顏　色": "藍",
             "種　類": "艦船卡",
