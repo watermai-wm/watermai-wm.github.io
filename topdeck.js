@@ -1,8 +1,17 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260705-1",
+    "L_name": "俾斯麥Zwei",
+    "Format": "7.5.1",
+    "Description": "20260705 屏東 交流賽 4人 冠軍 讓·巴爾",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 0
+  },
+  {
     "deck_id": "20260704-5",
-    "L_name": "俾斯麥Zwei"
+    "L_name": "俾斯麥Zwei",
     "Format": "7.5.1",
     "Description": "20260704 逛逛紙牌社 店家賽(7.5.1) 9人 冠軍：俾斯麥Zwei",
     "Level": "常規賽",
@@ -11,7 +20,7 @@ const topDecks = [
   },
   {
     "deck_id": "20260704-4",
-    "L_name": "讓·巴爾"
+    "L_name": "讓·巴爾",
     "Format": "7.5.1",
     "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 殿軍 讓·巴爾 淵眼",
     "Level": "城市賽",
@@ -20,7 +29,7 @@ const topDecks = [
   },
   {
     "deck_id": "20260704-3",
-    "L_name": "埃姆登"
+    "L_name": "埃姆登",
     "Format": "7.5.1",
     "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 季軍 埃姆登 咪薯",
     "Level": "城市賽",
@@ -29,7 +38,7 @@ const topDecks = [
   },
   {
     "deck_id": "20260704-2",
-    "L_name": "奧古斯特·馮·帕塞瓦爾"
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
     "Format": "7.5.1",
     "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 亞軍 奧古斯特·馮·帕塞瓦爾 Kira",
     "Level": "城市賽",
@@ -38,7 +47,7 @@ const topDecks = [
   },
   {
     "deck_id": "20260704-1",
-    "L_name": "埃姆登"
+    "L_name": "埃姆登",
     "Format": "7.5.1",
     "Description": "20260704 碧藍戰卡CE城市賽-台北站 20人(7.5.1) 冠軍 埃姆登 煒傑",
     "Level": "城市賽",
@@ -47,7 +56,7 @@ const topDecks = [
   },
   {
     "deck_id": "20260703-1",
-    "L_name": "龍鳳",
+    "L_name": "龍鳳",,
     "Format": "7.5.2",
     "Description": "20260703 玩具e哥花蓮和平店 碧藍戰卡CE週賽 6人(7.5.2) 冠軍 龍鳳 ひろし",
     "Level": "常規賽",
