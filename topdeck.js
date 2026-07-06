@@ -7,7 +7,7 @@ const topDecks = [
     "Description": "20260705 屏東 交流賽 4人 冠軍 讓·巴爾",
     "Level": "常規賽",
     "Players": 4,
-    "Champion": 0
+    "Champion": 1
   },
   {
     "deck_id": "20260704-5",
@@ -16,7 +16,7 @@ const topDecks = [
     "Description": "20260704 逛逛紙牌社 店家賽(7.5.1) 9人 冠軍：俾斯麥Zwei",
     "Level": "常規賽",
     "Players": 9,
-    "Champion": 0
+    "Champion": 1
   },
   {
     "deck_id": "20260704-4",
