@@ -1,10 +1,19 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260708-1",
+    "L_name": "哈爾濱",
+    "Format": "7.5.2",
+    "Description": "20260708 玩具e哥花蓮和平店 碧藍戰卡CE週賽 4人(7.5.2) 冠軍 哈爾濱 ひろし",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260705-1",
     "L_name": "俾斯麥Zwei",
     "Format": "7.5.1",
-    "Description": "20260705 屏東 交流賽 4人 冠軍 讓·巴爾 ",
+    "Description": "20260705 屏東 交流賽 4人 冠軍 讓·巴爾",
     "Level": "常規賽",
     "Players": 4,
     "Champion": 1
