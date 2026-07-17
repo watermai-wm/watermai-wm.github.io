@@ -18262,7 +18262,7 @@ const cards = [
     {
         "card_id": 1396,
         "card_name": "酒匂",
-        "card_code": "BP07-003<SEC>",
+        "card_code": "BP07-003,
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -18281,7 +18281,7 @@ const cards = [
     {
         "card_id": 1397,
         "card_name": "酒匂",
-        "card_code": "BP07-003",
+        "card_code": "BP07-003<SEC>"",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
