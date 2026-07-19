@@ -1,6 +1,51 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260718-4",
+    "L_name": "信濃",
+    "Format": "7.5.1",
+    "Description": "20260718 碧藍戰卡CE城市賽-高雄站 17人(7.5.1) 殿軍 信濃 恆裕",
+    "Level": "城市賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260718-3",
+    "L_name": "奧古斯特·馮·帕塞瓦爾",
+    "Format": "7.5.1",
+    "Description": "20260718 碧藍戰卡CE城市賽-高雄站 17人(7.5.1) 季軍 奧古斯特·馮·帕塞瓦爾 韋峻",
+    "Level": "城市賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260718-2",
+    "L_name": "光輝",
+    "Format": "7.5.1",
+    "Description": "20260718 碧藍戰卡CE城市賽-高雄站 17人(7.5.1) 亞軍 光輝 柏融",
+    "Level": "城市賽",
+    "Players": 12,
+    "Champion": 0
+  },
+  {
+    "deck_id": "20260718-1",
+    "L_name": "貝爾法斯特",
+    "Format": "7.5.1",
+    "Description": "20260718 碧藍戰卡CE城市賽-高雄站 17人(7.5.1) 冠軍 貝爾法斯特 金正恩",
+    "Level": "城市賽",
+    "Players": 12,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260717-1",
+    "L_name": "黎胥留",
+    "Format": "7.5.2",
+    "Description": "20260717 玩具e哥花蓮和平店 碧藍戰卡CE週賽 8人(7.5.2) 冠軍 龍鳳 ひろし",
+    "Level": "常規賽",
+    "Players": 8,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260712-4",
     "L_name": "黎胥留",
     "Format": "7.5.1",

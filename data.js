@@ -5336,7 +5336,7 @@ const cards = [
             "支援範圍": "手牌·戰場",
             "支援值": "100"
         },
-        "card_effect": "【強擊+200】（此卡發起攻擊的戰鬥中，此卡戰力+200）【被擊破時】可以將己方手牌中的1張費用為3或以下的「班森」或「拉菲」艦船卡登場於未被放置卡牌的己方戰場。",
+        "card_effect": "■【強擊+200】（此卡發起攻擊的戰鬥中，此卡戰力+200）■【被擊破時】可以將己方手牌中的1張費用為3或以下的「班森」或「拉菲」艦船卡登場於未被放置卡牌的己方戰場。",
         "acquisition_method": "EP02"
     },
     {
@@ -5355,7 +5355,7 @@ const cards = [
             "支援範圍": "戰場",
             "支援值": "100"
         },
-        "card_effect": "【反制】（在己方的防守步驟中可以發動）將手牌中的此卡登場。【潛水】（己方回合結束時，將戰場上的此卡置於卡組最下方）",
+        "card_effect": "■【反制】（在己方的防守步驟中可以發動）將手牌中的此卡登場。■【潛水】（己方回合結束時，將戰場上的此卡置於卡組最下方）",
         "acquisition_method": "EP02"
     },
     {
@@ -5374,12 +5374,12 @@ const cards = [
             "支援範圍": "手牌·戰場",
             "支援值": "100"
         },
-        "card_effect": "【反制】（在己方的防守步驟可以發動）將手牌中的此卡登場。【潛水】（己方回合結束時，將戰場上的此卡置於卡組最下方）【攻擊時】當此卡攻擊〈輕巡〉艦船卡時，本次戰鬥中，此卡戰力+100。",
+        "card_effect": "■【反制】（在己方的防守步驟可以發動）將手牌中的此卡登場。■【潛水】（己方回合結束時，將戰場上的此卡置於卡組最下方）■【攻擊時】當此卡攻擊〈輕巡〉艦船卡時，本次戰鬥中，此卡戰力+100。",
         "acquisition_method": "EP02"
     },
     {
         "card_id": 525,
-        "card_name": "埃克賽特",
+        "card_name": "埃克塞特",
         "card_code": "BP02-050<PR>",
         "attributes": {
             "顏　色": "黃",
@@ -5393,7 +5393,7 @@ const cards = [
             "支援範圍": "戰場",
             "支援值": "100"
         },
-        "card_effect": "【登場時】當己方的旗艦卡為《皇家》〈戰列〉卡牌時，本回合中，位於前排的此卡可以攻擊對方處於休息狀態的艦船卡。【每回合1次】此卡通過攻擊擊破對方位於前排的艦船卡時，將此卡轉為激活狀態。",
+        "card_effect": "■【登場時】當己方的旗艦卡為《皇家》〈戰列〉卡牌時，本回合中，位於前排的此卡可以攻擊對方處於休息狀態的艦船卡。■【每回合1次】此卡通過攻擊擊破對方位於前排的艦船卡時，將此卡轉為激活狀態。",
         "acquisition_method": "EP02"
     },
     {
@@ -21986,7 +21986,7 @@ const cards = [
 	{
         "card_id": 7510081,
         "card_name": "翔鶴",
-        "card_code": "CE01-008",
+        "card_code": "CE01-008<PR>",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -22024,7 +22024,7 @@ const cards = [
 	{
         "card_id": 7510091,
         "card_name": "伊19",
-        "card_code": "CE01-009",
+        "card_code": "CE01-009<PR>",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -22157,7 +22157,7 @@ const cards = [
 	{
         "card_id": 7510151,
         "card_name": "凱爾聖",
-        "card_code": "CE01-015",
+        "card_code": "CE01-015<PR>",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -22442,7 +22442,7 @@ const cards = [
 	{
         "card_id": 7510271,
         "card_name": "華盛頓",
-        "card_code": "CE01-027",
+        "card_code": "CE01-027<PR>",
         "attributes": {
             "顏　色": "藍",
             "種　類": "艦船卡",
@@ -22480,7 +22480,7 @@ const cards = [
 	{
         "card_id": 7510281,
         "card_name": "薩拉托加",
-        "card_code": "CE01-028",
+        "card_code": "CE01-028<PR>",
         "attributes": {
             "顏　色": "藍",
             "種　類": "艦船卡",
@@ -22575,7 +22575,7 @@ const cards = [
 	{
         "card_id": 7510321,
         "card_name": "吉尚",
-        "card_code": "CE01-032",
+        "card_code": "CE01-032<PR>",
         "attributes": {
             "顏　色": "藍",
             "種　類": "艦船卡",
@@ -22784,7 +22784,7 @@ const cards = [
 	{
         "card_id": 7510412,
         "card_name": "君主",
-        "card_code": "CE01-041覺醒",
+        "card_code": "CE01-041覺醒<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "旗艦卡-覺醒",
@@ -22879,7 +22879,7 @@ const cards = [
 	{
         "card_id": 7510441,
         "card_name": "小貝法",
-        "card_code": "CE01-044",
+        "card_code": "CE01-044<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -22917,7 +22917,7 @@ const cards = [
 	{
         "card_id": 7510451,
         "card_name": "格洛斯特",
-        "card_code": "CE01-045",
+        "card_code": "CE01-045<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -23088,7 +23088,7 @@ const cards = [
 	{
         "card_id": 7510531,
         "card_name": "太原",
-        "card_code": "CE01-053",
+        "card_code": "CE01-053<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -23183,7 +23183,7 @@ const cards = [
 	{
         "card_id": 7510571,
         "card_name": "建武",
-        "card_code": "CE01-057",
+        "card_code": "CE01-057<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -23392,7 +23392,7 @@ const cards = [
 	{
         "card_id": 7510651,
         "card_name": "亞爾薇特",
-        "card_code": "CE01-065",
+        "card_code": "CE01-065<PR>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
@@ -23639,7 +23639,7 @@ const cards = [
 	{
         "card_id": 7510771,
         "card_name": "巴拉卡少校",
-        "card_code": "CE01-077",
+        "card_code": "CE01-077<PR>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
@@ -23677,7 +23677,7 @@ const cards = [
 	{
         "card_id": 7510781,
         "card_name": "托里切利",
-        "card_code": "CE01-078",
+        "card_code": "CE01-078<PR>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
@@ -23905,7 +23905,7 @@ const cards = [
 	{
         "card_id": 7510881,
         "card_name": "伏爾加",
-        "card_code": "CE01-088",
+        "card_code": "CE01-088<PR>",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -24057,7 +24057,7 @@ const cards = [
 	{
         "card_id": 7519021,
         "card_name": "綾波.改",
-        "card_code": "CE01-902",
+        "card_code": "CE01-902<PR>",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -24095,7 +24095,7 @@ const cards = [
 	{
         "card_id": 7519031,
         "card_name": "拉菲.改",
-        "card_code": "CE01-903",
+        "card_code": "CE01-903<PR>",
         "attributes": {
             "顏　色": "藍",
             "種　類": "艦船卡",
@@ -24133,7 +24133,7 @@ const cards = [
 	{
         "card_id": 7519041,
         "card_name": "標槍.改",
-        "card_code": "CE01-904",
+        "card_code": "CE01-904<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -24171,7 +24171,7 @@ const cards = [
 	{
         "card_id": 7519051,
         "card_name": "Z23.改",
-        "card_code": "CE01-905",
+        "card_code": "CE01-905<PR>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
@@ -24190,7 +24190,7 @@ const cards = [
 	{
         "card_id": 7519901,
         "card_name": "伊13",
-        "card_code": "BP05-005",
+        "card_code": "BP05-005<PR>",
         "attributes": {
             "顏　色": "紅",
             "種　類": "艦船卡",
@@ -24209,7 +24209,7 @@ const cards = [
 	{
         "card_id": 7519902,
         "card_name": "U-101",
-        "card_code": "BP05-058",
+        "card_code": "BP05-058<PR>",
         "attributes": {
             "顏　色": "黑",
             "種　類": "艦船卡",
@@ -24228,7 +24228,7 @@ const cards = [
 	{
         "card_id": 7519903,
         "card_name": "泛用型布里",
-        "card_code": "BP05-067",
+        "card_code": "BP05-067<PR>",
         "attributes": {
             "顏　色": "無",
             "種　類": "艦船卡",
@@ -25969,7 +25969,7 @@ const cards = [
             "艦船類型": "戰列",
             "罕　貴": "-",
             "勢　力": "赤色中軸",
-            "支援範圍": "戰場",
+            "支援範圍": "手牌·戰場",
             "支援值": "100"
         },
         "card_effect": "■【強擊+100】■【己方主階段開始時】若己方撤退區存在3張或以上費用為2或以上的擁有【追擊】技能的事件卡，且己方戰場上不存在「克里蒙梭」艦船卡，可以將手牌中的此卡登場。（此技能在手牌中發動）■【登場時】本回合中，己方不能登場艦船卡。",
