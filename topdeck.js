@@ -49,7 +49,7 @@ const topDecks = [
     "deck_id": "20260712-4",
     "L_name": "黎胥留",
     "Format": "7.5.1",
-    "Description": "20260704 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 殿軍 黎胥留 心皓",
+    "Description": "20260712 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 殿軍 黎胥留 心皓",
     "Level": "城市賽",
     "Players": 12,
     "Champion": 0
@@ -58,7 +58,7 @@ const topDecks = [
     "deck_id": "20260712-3",
     "L_name": "武藏",
     "Format": "7.5.1",
-    "Description": "20260704 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 季軍 武藏 天之驕子",
+    "Description": "20260712 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 季軍 武藏 天之驕子",
     "Level": "城市賽",
     "Players": 12,
     "Champion": 0
@@ -67,7 +67,7 @@ const topDecks = [
     "deck_id": "20260712-2",
     "L_name": "龍鳳",
     "Format": "7.5.1",
-    "Description": "20260704 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 亞軍 龍鳳 ひろし",
+    "Description": "20260712 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 亞軍 龍鳳 ひろし",
     "Level": "城市賽",
     "Players": 12,
     "Champion": 0
@@ -76,7 +76,7 @@ const topDecks = [
     "deck_id": "20260712-1",
     "L_name": "列星頓",
     "Format": "7.5.1",
-    "Description": "20260704 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 冠軍 列星頓 小洛",
+    "Description": "20260712 碧藍戰卡CE城市賽-花蓮站 12人(7.5.1) 冠軍 列星頓 小洛",
     "Level": "城市賽",
     "Players": 12,
     "Champion": 1
