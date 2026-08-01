@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260731-1",
+    "L_name": "曙光",
+    "Format": "7.5.2",
+    "Description": "20260731 玩具e哥花蓮和平店 碧藍戰卡CE 君主特殊賽 11人(7.5.2) 冠軍 曙光 北聯很爛可以加強嗎？",
+    "Level": "常規賽",
+    "Players": 11,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260726-1",
     "L_name": "瑞鶴",
     "Format": "7.5.2",
