@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260802-1",
+    "L_name": "哈爾濱",
+    "Format": "7.5.2",
+    "Description": "20260802 貓腳印-士林店 碧藍戰卡CE週賽 6人(7.5.2) 冠軍 哈爾濱 淵眼",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260731-1",
     "L_name": "曙光",
     "Format": "7.5.2",
@@ -13,7 +22,7 @@ const topDecks = [
     "deck_id": "20260726-1",
     "L_name": "瑞鶴",
     "Format": "7.5.2",
-    "Description": "20260726 貓腳印-士林店 碧藍戰卡CE週賽 6人(7.5.2) 冠軍 瑞鶴 男爵",
+    "Description": "20260726 貓腳印-士林店 碧藍戰卡CE週賽 4人(7.5.2) 冠軍 瑞鶴 男爵",
     "Level": "常規賽",
     "Players": 4,
     "Champion": 1
