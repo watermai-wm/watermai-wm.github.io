@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260804-1",
+    "L_name": "皇家方舟",
+    "Format": "7.5.2",
+    "Description": "20260804 玩具e哥花蓮和平店 碧藍戰卡CE週賽 6人(7.5.2) 冠軍 皇家方舟 ひろし",
+    "Level": "常規賽",
+    "Players": 6,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260802-1",
     "L_name": "哈爾濱",
     "Format": "7.5.2",
