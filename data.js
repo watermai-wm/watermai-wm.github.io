@@ -7926,7 +7926,7 @@ const cards = [
     {
         "card_id": 660,
         "card_name": "貝爾法斯特",
-        "card_code": "SD02-006<誓約>",
+        "card_code": "SD02-006<PR>",
         "attributes": {
             "顏　色": "黃",
             "種　類": "艦船卡",
@@ -7945,7 +7945,7 @@ const cards = [
     {
         "card_id": 661,
         "card_name": "企業",
-        "card_code": "BP01-002覺醒<誓約>",
+        "card_code": "BP01-002覺醒<PR>",
         "attributes": {
             "顏　色": "藍",
             "種　類": "旗艦卡-覺醒",
