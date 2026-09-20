@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260920-1",
+    "L_name": "聖女貞德",
+    "Format": "7.5.2",
+    "Description": "20260920 屏東 碧藍戰卡CE週賽 4人 冠軍 聖女貞德",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260918-1",
     "L_name": "明石",
     "Format": "7.5.2",
