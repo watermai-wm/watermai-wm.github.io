@@ -1,6 +1,24 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20260930-1",
+    "L_name": "聖女貞德",
+    "Format": "7.5.2",
+    "Description": "20260930 玩具e哥花蓮和平店 碧藍戰卡CE 君主特殊賽 9人(7.5.2) 冠軍 聖女貞德 藍玥",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
+    "deck_id": "20260925-1",
+    "L_name": "拉斐爾",
+    "Format": "7.5.2",
+    "Description": "20260925 玩具e哥花蓮和平店 碧藍戰卡CE週賽 5人(7.5.2) 冠軍 拉斐爾 豐川祥子的狗",
+    "Level": "常規賽",
+    "Players": 5,
+    "Champion": 1
+  },
+  {
     "deck_id": "20260920-1",
     "L_name": "聖女貞德",
     "Format": "7.5.2",
