@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const affiliationSelect = document.getElementById('affiliation-select'); // !! 關鍵改動：新增
     const zoomSlider = document.getElementById('zoom-slider');
     const fullArtToggle = document.getElementById('full-art-toggle');
+    const bleedToggle = document.getElementById('bleed-toggle');
+    const exportSizeHint = document.getElementById('export-size-hint');
     const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
 	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
 	const cardIdInput = document.getElementById('card-id-input'); // !! 新增 !!
@@ -60,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const TARGET_WIDTH = 767;
     const TARGET_HEIGHT = 1073;
+    const EXPORT_WIDTH = 744;
+    const EXPORT_HEIGHT = 1038;
+    const BLEED_MARGIN = 36;
+    const EXPORT_DPI = 300;
 
     // 資源路徑
     const FRAME_FOLDER = 'CardFrame'; 
@@ -671,38 +677,130 @@ document.addEventListener('DOMContentLoaded', () => {
     playerCanvas.addEventListener('mouseup', stopDragging);
     playerCanvas.addEventListener('mouseleave', stopDragging);
 
-    // 處理下載卡片功能
-    downloadButton.addEventListener('click', () => {
-        const DOWNLOAD_MULTIPLIER = 1;
-        const cssWidth = cardEditor.clientWidth; 
-        const baseScale = TARGET_WIDTH / cssWidth; 
-        const finalScale = baseScale * DOWNLOAD_MULTIPLIER;
-        
-        downloadButton.innerText = '生成中...';
-        downloadButton.disabled = true;
+    bleedToggle.addEventListener('change', () => {
+        exportSizeHint.textContent = bleedToggle.checked
+            ? '輸出：816 × 1110 px · 300 DPI（四邊各 36 px 出血）'
+            : '輸出：744 × 1038 px · 300 DPI';
+    });
 
-        html2canvas(cardEditor, {
-            useCORS: true, 
-            backgroundColor: null, 
-            scale: finalScale, 
-        }).then(canvas => {
-            const image = canvas.toDataURL('image/png');
+    // PNG 的 pHYs 區塊使用每公尺像素數；Canvas 預設的 96 DPI 必須覆寫。
+    async function pngWithDpi(blob, dpi) {
+        const bytes = new Uint8Array(await blob.arrayBuffer());
+        const view = new DataView(bytes.buffer);
+        const chunk = new Uint8Array(21);
+        const chunkView = new DataView(chunk.buffer);
+        chunkView.setUint32(0, 9);
+        chunk.set([112, 72, 89, 115], 4); // pHYs
+        const pixelsPerMeter = Math.round(dpi / 0.0254);
+        chunkView.setUint32(8, pixelsPerMeter);
+        chunkView.setUint32(12, pixelsPerMeter);
+        chunk[16] = 1; // 單位：公尺
+        let crc = 0xffffffff;
+        for (const byte of chunk.subarray(4, 17)) {
+            crc ^= byte;
+            for (let bit = 0; bit < 8; bit++) {
+                crc = (crc >>> 1) ^ ((crc & 1) ? 0xedb88320 : 0);
+            }
+        }
+        chunkView.setUint32(17, (crc ^ 0xffffffff) >>> 0);
+
+        const parts = [bytes.subarray(0, 8)];
+        for (let offset = 8; offset < bytes.length;) {
+            const length = view.getUint32(offset);
+            const end = offset + length + 12;
+            const type = String.fromCharCode(...bytes.subarray(offset + 4, offset + 8));
+            if (type !== 'pHYs') parts.push(bytes.subarray(offset, end));
+            if (type === 'IHDR') parts.push(chunk);
+            offset = end;
+        }
+        return new Blob(parts, { type: 'image/png' });
+    }
+
+    async function loadExportImage(src) {
+        const image = new Image();
+        image.src = src;
+        await image.decode();
+        return image;
+    }
+
+    // 直接合成卡片圖層，避免螢幕大小、CSS 邊框影響匯出尺寸。
+    downloadButton.addEventListener('click', async () => {
+        const withBleed = bleedToggle.checked;
+        const margin = withBleed ? BLEED_MARGIN : 0;
+        const outputWidth = EXPORT_WIDTH + margin * 2;
+        const outputHeight = EXPORT_HEIGHT + margin * 2;
+        const controls = [...document.querySelectorAll('#controls-panel input, #controls-panel select, #controls-panel textarea, #controls-panel button')];
+        const disabledStates = controls.map(control => control.disabled);
+        controls.forEach(control => { control.disabled = true; });
+        downloadButton.innerText = '生成中...';
+        try {
+            const foregroundLayers = [...cardEditor.querySelectorAll('img')];
+            await document.fonts.ready;
+            await Promise.all([
+                ...foregroundLayers,
+                currentBaseImage, currentBgVisualImage, currentMarkImage,
+                currentFogImage, currentMask,
+                ...(currentImage ? [currentImage] : [])
+            ].map(image => image.decode()).concat(
+                Object.values(keywordImages).map(async entry => {
+                    try {
+                        await entry.img.decode();
+                        entry.loaded = true;
+                    } catch {
+                        // 缺少關鍵字圖示時沿用編輯器的純文字呈現。
+                    }
+                })
+            ));
+            redrawCanvas();
+
+            const cardCanvas = document.createElement('canvas');
+            cardCanvas.width = TARGET_WIDTH;
+            cardCanvas.height = TARGET_HEIGHT;
+            const cardCtx = cardCanvas.getContext('2d');
+            // 子元素按畫面上的 z-index 排序，文字畫布位於最上層外框之下。
+            const layers = [...cardEditor.children].sort((a, b) =>
+                Number(getComputedStyle(a).zIndex) - Number(getComputedStyle(b).zIndex));
+            for (const layer of layers) {
+                if (layer.tagName === 'CANVAS') {
+                    cardCtx.drawImage(layer, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+                } else if (layer.tagName === 'IMG') {
+                    drawAspectCover(cardCtx, layer, 0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+                }
+            }
+
+            const output = document.createElement('canvas');
+            output.width = outputWidth;
+            output.height = outputHeight;
+            const outputCtx = output.getContext('2d');
+            let bleedLine;
+            if (withBleed) {
+                const [bleedBackground, line] = await Promise.all([
+                    loadExportImage(`${FRAME_FOLDER}/bg-${currentColor}.png`),
+                    loadExportImage(`${FRAME_FOLDER}/line-${currentColor}${currentType === 'leader' ? '-flag' : ''}.png`)
+                ]);
+                outputCtx.drawImage(bleedBackground, 0, 0, outputWidth, outputHeight);
+                bleedLine = line;
+            }
+            outputCtx.drawImage(cardCanvas, margin, margin, EXPORT_WIDTH, EXPORT_HEIGHT);
+            if (bleedLine) outputCtx.drawImage(bleedLine, 0, 0, outputWidth, outputHeight);
+
+            const blob = await new Promise((resolve, reject) => output.toBlob(
+                result => result ? resolve(result) : reject(new Error('PNG 編碼失敗')), 'image/png'));
+            const imageUrl = URL.createObjectURL(await pngWithDpi(blob, EXPORT_DPI));
             const link = document.createElement('a');
-            link.href = image;
-            const outputWidth = TARGET_WIDTH * DOWNLOAD_MULTIPLIER;
-            const outputHeight = TARGET_HEIGHT * DOWNLOAD_MULTIPLIER;
+            link.href = imageUrl;
             link.download = `my-card-${currentType}-${currentColor}-${currentFaction}-${outputWidth}x${outputHeight}.png`;
             document.body.appendChild(link);
             link.click();
-            document.body.removeChild(link);
-            downloadButton.innerText = '下載卡片';
-            downloadButton.disabled = false;
-        }).catch(error => {
+            link.remove();
+            setTimeout(() => URL.revokeObjectURL(imageUrl), 1000);
+        } catch (error) {
             console.error('卡片生成失敗:', error);
             alert('卡片生成失敗，請稍後再試。');
+        } finally {
             downloadButton.innerText = '下載卡片';
-            downloadButton.disabled = false;
-        });
+            controls.forEach((control, index) => { control.disabled = disabledStates[index]; });
+        }
     });
     
     // --- 6. 初始化 ---
