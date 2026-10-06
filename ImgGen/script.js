@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardPreview = document.getElementById('card-preview');
     const bleedBackgroundLayer = document.getElementById('bleed-background-layer');
     const bleedLineLayer = document.getElementById('bleed-line-layer');
+    const bleedArtworkCanvas = document.getElementById('bleed-artwork-canvas');
+    const bleedArtworkCtx = bleedArtworkCanvas.getContext('2d');
     const exportStatus = document.getElementById('export-status');
     const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
 	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
@@ -310,8 +312,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return lines;
     }
 
+    // 把原圖的座標換算到出血畫布，保留縮放和拖曳位置，讓卡面外的部分可見。
+    function drawBleedArtwork(targetCtx) {
+        if (!isFullArt || !currentImage || !currentImage.complete || !currentImage.naturalWidth) return;
+        const scaleX = EXPORT_WIDTH / TARGET_WIDTH;
+        const scaleY = EXPORT_HEIGHT / TARGET_HEIGHT;
+        targetCtx.drawImage(currentImage,
+            BLEED_MARGIN + imgState.offsetX * scaleX,
+            BLEED_MARGIN + imgState.offsetY * scaleY,
+            currentImage.width * imgState.zoom * scaleX,
+            currentImage.height * imgState.zoom * scaleY);
+    }
+
+    function redrawBleedArtwork() {
+        bleedArtworkCtx.clearRect(0, 0, bleedArtworkCanvas.width, bleedArtworkCanvas.height);
+        bleedArtworkCanvas.hidden = !(bleedToggle.checked && isFullArt && currentImage);
+        if (!bleedArtworkCanvas.hidden) drawBleedArtwork(bleedArtworkCtx);
+    }
+
     // 繪製背景/圖片/Fog
     function redrawCanvas() {
+        redrawBleedArtwork();
         if (imagesLoaded < imagesToLoad) {
             ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
             ctx.fillStyle = '#999';
@@ -653,10 +674,11 @@ document.addEventListener('DOMContentLoaded', () => {
     playerCanvas.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         const canvasScaleRatio = TARGET_WIDTH / playerCanvas.clientWidth;
+        const canvasScaleRatioY = TARGET_HEIGHT / playerCanvas.clientHeight;
         const deltaX = e.clientX - lastMouseX;
         const deltaY = e.clientY - lastMouseY;
         imgState.offsetX += (deltaX * canvasScaleRatio);
-        imgState.offsetY += (deltaY * canvasScaleRatio);
+        imgState.offsetY += (deltaY * canvasScaleRatioY);
         lastMouseX = e.clientX;
         lastMouseY = e.clientY;
         redrawCanvas();
@@ -675,6 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardPreview.classList.toggle('with-bleed', withBleed);
         bleedBackgroundLayer.hidden = !withBleed;
         bleedLineLayer.hidden = !withBleed;
+        redrawBleedArtwork();
         if (withBleed) {
             const backgroundPath = `${FRAME_FOLDER}/bg-${currentColor}.png`;
             const linePath = `${FRAME_FOLDER}/line-${currentColor}${currentType === 'leader' ? '-flag' : ''}.png`;
@@ -819,6 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     loadExportImage(`${FRAME_FOLDER}/line-${currentColor}${currentType === 'leader' ? '-flag' : ''}.png`)
                 ]);
                 outputCtx.drawImage(bleedBackground, 0, 0, outputWidth, outputHeight);
+                drawBleedArtwork(outputCtx);
                 bleedLine = line;
             }
             outputCtx.drawImage(cardCanvas, margin, margin, EXPORT_WIDTH, EXPORT_HEIGHT);
