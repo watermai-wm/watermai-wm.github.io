@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullArtToggle = document.getElementById('full-art-toggle');
     const bleedToggle = document.getElementById('bleed-toggle');
     const exportSizeHint = document.getElementById('export-size-hint');
+    const cardPreview = document.getElementById('card-preview');
+    const bleedBackgroundLayer = document.getElementById('bleed-background-layer');
+    const bleedLineLayer = document.getElementById('bleed-line-layer');
+    const exportStatus = document.getElementById('export-status');
     const cardNameInput = document.getElementById('card-name-input'); // 獲取輸入框
 	const factionInput = document.getElementById('faction-input'); // !! 關鍵改動 !!
 	const cardIdInput = document.getElementById('card-id-input'); // !! 新增 !!
@@ -134,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 圖片載入計數器
     let imagesToLoad = 0;
     let imagesLoaded = 0;
+    let imageLoadVersion = 0;
 
     // --- 3. 核心繪圖函式 (Canvas) ---
     
@@ -380,34 +385,21 @@ document.addEventListener('DOMContentLoaded', () => {
             { obj: currentFogImage, src: paths.fogPath },
             { obj: currentMask, src: paths.bgPath }
         ];
+        const version = ++imageLoadVersion;
         imagesToLoad = baseImages.length;
         imagesLoaded = 0;
-        const onImageLoad = () => {
-            imagesLoaded++;
-            if (imagesLoaded === imagesToLoad) {
-                redrawCanvas(); 
-            }
-        };
-        if (currentImage) {
-            imagesToLoad++;
-            if (currentImage.complete) {
-                onImageLoad();
-            } else {
-                currentImage.onload = onImageLoad;
-            }
-        }
         baseImages.forEach(imgData => {
             imgData.obj.crossOrigin = "anonymous";
-            if (imgData.obj.src !== imgData.src) {
+            if (imgData.obj.getAttribute('src') !== imgData.src) {
                 imgData.obj.src = imgData.src;
-                if (!imgData.obj.complete) {
-                    imgData.obj.onload = onImageLoad;
-                } else {
-                    onImageLoad();
-                }
-            } else {
-                onImageLoad();
             }
+        });
+        Promise.all(baseImages.map(({ obj }) => waitForImage(obj))).then(() => {
+            if (version !== imageLoadVersion) return;
+            imagesLoaded = imagesToLoad;
+            redrawCanvas();
+        }).catch(error => {
+            if (version === imageLoadVersion) exportStatus.textContent = error.message;
         });
     }
 
@@ -525,6 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSupportValue = supportValueSelect.value;
         currentPower = powerSelect.value;
         currentCardName = cardNameInput.value; 
+        updateBleedPreview();
 		currentfaction = factionInput.value; // !! 新增
 		currentCardId = cardIdInput.value; // !! 新增
         
@@ -677,11 +670,55 @@ document.addEventListener('DOMContentLoaded', () => {
     playerCanvas.addEventListener('mouseup', stopDragging);
     playerCanvas.addEventListener('mouseleave', stopDragging);
 
-    bleedToggle.addEventListener('change', () => {
+    function updateBleedPreview() {
+        const withBleed = bleedToggle.checked;
+        cardPreview.classList.toggle('with-bleed', withBleed);
+        bleedBackgroundLayer.hidden = !withBleed;
+        bleedLineLayer.hidden = !withBleed;
+        if (withBleed) {
+            const backgroundPath = `${FRAME_FOLDER}/bg-${currentColor}.png`;
+            const linePath = `${FRAME_FOLDER}/line-${currentColor}${currentType === 'leader' ? '-flag' : ''}.png`;
+            if (bleedBackgroundLayer.getAttribute('src') !== backgroundPath) bleedBackgroundLayer.src = backgroundPath;
+            if (bleedLineLayer.getAttribute('src') !== linePath) bleedLineLayer.src = linePath;
+        }
         exportSizeHint.textContent = bleedToggle.checked
             ? '輸出：816 × 1110 px · 300 DPI（四邊各 36 px 出血）'
             : '輸出：744 × 1038 px · 300 DPI';
-    });
+    }
+    bleedToggle.addEventListener('change', updateBleedPreview);
+    window.addEventListener('pageshow', updateBleedPreview);
+
+    function withTimeout(promise, ms, message) {
+        let timer;
+        return Promise.race([
+            promise,
+            new Promise((_, reject) => { timer = setTimeout(() => reject(new Error(message)), ms); })
+        ]).finally(() => clearTimeout(timer));
+    }
+
+    // 已載好的圖片可直接使用；載入事件不會取代編輯器原本的 onload。
+    function waitForImage(image) {
+        const name = image.getAttribute('src') || '卡片素材';
+        if (image.complete) {
+            return image.naturalWidth > 0 ? Promise.resolve(image)
+                : Promise.reject(new Error(`圖片載入失敗：${name}`));
+        }
+        return new Promise((resolve, reject) => {
+            const cleanup = () => {
+                clearTimeout(timer);
+                image.removeEventListener('load', loaded);
+                image.removeEventListener('error', failed);
+            };
+            const loaded = () => { cleanup(); resolve(image); };
+            const failed = () => { cleanup(); reject(new Error(`圖片載入失敗：${name}`)); };
+            const timer = setTimeout(() => {
+                cleanup();
+                reject(new Error(`圖片載入逾時，請重試：${name}`));
+            }, 12000);
+            image.addEventListener('load', loaded, { once: true });
+            image.addEventListener('error', failed, { once: true });
+        });
+    }
 
     // PNG 的 pHYs 區塊使用每公尺像素數；Canvas 預設的 96 DPI 必須覆寫。
     async function pngWithDpi(blob, dpi) {
@@ -719,7 +756,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadExportImage(src) {
         const image = new Image();
         image.src = src;
-        await image.decode();
+        await waitForImage(image);
         return image;
     }
 
@@ -733,24 +770,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const disabledStates = controls.map(control => control.disabled);
         controls.forEach(control => { control.disabled = true; });
         downloadButton.innerText = '生成中...';
+        exportStatus.textContent = '';
         try {
             const foregroundLayers = [...cardEditor.querySelectorAll('img')];
-            await document.fonts.ready;
+            // 遠端字型無回應時使用備用字型，不讓下載一直等待。
+            await withTimeout(document.fonts.ready, 2000, '字型載入逾時').catch(() => {});
             await Promise.all([
                 ...foregroundLayers,
                 currentBaseImage, currentBgVisualImage, currentMarkImage,
                 currentFogImage, currentMask,
                 ...(currentImage ? [currentImage] : [])
-            ].map(image => image.decode()).concat(
-                Object.values(keywordImages).map(async entry => {
+            ].map(waitForImage).concat(
+                Object.entries(keywordImages).filter(([name]) => customText.includes(`【${name}】`)).map(async ([, entry]) => {
                     try {
-                        await entry.img.decode();
+                        await withTimeout(waitForImage(entry.img), 2000, '關鍵字圖示載入逾時');
                         entry.loaded = true;
                     } catch {
                         // 缺少關鍵字圖示時沿用編輯器的純文字呈現。
                     }
                 })
             ));
+            imagesLoaded = imagesToLoad;
             redrawCanvas();
 
             const cardCanvas = document.createElement('canvas');
@@ -784,8 +824,9 @@ document.addEventListener('DOMContentLoaded', () => {
             outputCtx.drawImage(cardCanvas, margin, margin, EXPORT_WIDTH, EXPORT_HEIGHT);
             if (bleedLine) outputCtx.drawImage(bleedLine, 0, 0, outputWidth, outputHeight);
 
-            const blob = await new Promise((resolve, reject) => output.toBlob(
-                result => result ? resolve(result) : reject(new Error('PNG 編碼失敗')), 'image/png'));
+            const blob = await withTimeout(new Promise((resolve, reject) => output.toBlob(
+                result => result ? resolve(result) : reject(new Error('PNG 編碼失敗')), 'image/png')),
+                12000, 'PNG 編碼逾時，請重試');
             const imageUrl = URL.createObjectURL(await pngWithDpi(blob, EXPORT_DPI));
             const link = document.createElement('a');
             link.href = imageUrl;
@@ -796,7 +837,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => URL.revokeObjectURL(imageUrl), 1000);
         } catch (error) {
             console.error('卡片生成失敗:', error);
-            alert('卡片生成失敗，請稍後再試。');
+            exportStatus.textContent = `卡片生成失敗：${error.message}`;
         } finally {
             downloadButton.innerText = '下載卡片';
             controls.forEach((control, index) => { control.disabled = disabledStates[index]; });
@@ -846,9 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}).catch(() => {});
 	}
     
-    // 等待字體載入
-    document.fonts.ready.then(() => {
-        console.log('字體已載入，執行初始繪製。');
-        onSelectionChange();
-    });
+    // 先初始化卡片，不以 Google 字型載入完成作為前提。
+    onSelectionChange();
+    document.fonts.ready.then(redrawText).catch(() => {});
 });

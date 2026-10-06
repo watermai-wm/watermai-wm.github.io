@@ -19,6 +19,8 @@
 
         <div id="editor-layout">
 
+            <div id="card-preview">
+                <img id="bleed-background-layer" alt="出血底圖" hidden>
             <div id="card-editor">
                 <canvas id="player-image-canvas" width="767" height="1073"></canvas>
                 
@@ -36,6 +38,8 @@
                 <canvas id="text-canvas" width="767" height="1073"></canvas>
 
                 <img id="top-frame-layer" src="" alt="最上層外框">
+            </div>
+                <img id="bleed-line-layer" alt="出血線框" hidden>
             </div>
 
             <div id="controls-panel">
@@ -216,6 +220,7 @@
                     <label for="bleed-toggle">出血</label>
                 </div>
                 <small id="export-size-hint" aria-live="polite">輸出：744 × 1038 px · 300 DPI</small>
+                <small id="export-status" role="status"></small>
 
                 <button id="download-card" class="button button-download">下載卡片</button>
             </div>
