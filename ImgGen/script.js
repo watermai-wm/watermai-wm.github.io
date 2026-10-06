@@ -375,16 +375,18 @@ document.addEventListener('DOMContentLoaded', () => {
         redrawText();
     }
     
-    // 輔助函式：修正 typo (img.img.height -> img.height)
+    // 裁切範圍必須使用素材原始尺寸；DOM 圖層的 width/height 是螢幕顯示尺寸。
     function drawAspectCover(ctx, img, x, y, w, h) {
         if (!img || img.naturalHeight === 0) return; 
-        const imgRatio = img.width / img.height; // <-- 修正
+        const sourceWidth = img.naturalWidth;
+        const sourceHeight = img.naturalHeight;
+        const imgRatio = sourceWidth / sourceHeight;
         const canvasRatio = w / h;
-        let sx = 0, sy = 0, sw = img.width, sh = img.height;
+        let sx = 0, sy = 0, sw = sourceWidth, sh = sourceHeight;
         if (imgRatio > canvasRatio) { 
-            sw = img.height * canvasRatio; sx = (img.width - sw) / 2;
+            sw = sourceHeight * canvasRatio; sx = (sourceWidth - sw) / 2;
         } else { 
-            sh = img.width / canvasRatio; sy = (img.height - sh) / 2;
+            sh = sourceWidth / canvasRatio; sy = (sourceHeight - sh) / 2;
         }
         ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
     }

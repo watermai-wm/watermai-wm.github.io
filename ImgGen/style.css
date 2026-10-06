@@ -63,7 +63,7 @@ h1 {
 }
 
 #card-editor > img {
-    object-fit: cover; 
+    object-fit: fill;
     object-position: center;
     pointer-events: none; 
 }
