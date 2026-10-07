@@ -1,9 +1,14 @@
 ======
 
+2026/10/07 更新
+更新CE03早期測試紅色
+
+======
+
 2026/10/04 更新
 CE02 移除預覽測試
 文字勘誤
-alcg-ce.com/announce/ce02_errata/
+https://alcg-ce.com/announce/ce02_errata/
 
 ======
 
