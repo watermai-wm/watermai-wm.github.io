@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20261025-1",
+    "L_name": "沙恩霍斯特",
+    "Format": "7.5.2",
+    "Description": "20261025 屏東 週賽 4人(7.5.2) 冠軍 沙恩霍斯特",
+    "Level": "常規賽",
+    "Players": 4,
+    "Champion": 1
+  },
+  {
     "deck_id": "20261024-1",
     "L_name": "大鳳(μ兵裝)",
     "Format": "7.5.2",
