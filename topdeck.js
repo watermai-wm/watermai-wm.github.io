@@ -1,6 +1,15 @@
 // topdeck.js
 const topDecks = [
   {
+    "deck_id": "20261031-1",
+    "L_name": "龍鳳",
+    "Format": "7.5.2",
+    "Description": "20261031 玩具e哥花蓮和平店 碧藍戰卡CE 君主特殊賽 9人(7.5.2) 冠軍 龍鳳 ひろし",
+    "Level": "常規賽",
+    "Players": 9,
+    "Champion": 1
+  },
+  {
     "deck_id": "20261025-1",
     "L_name": "沙恩霍斯特",
     "Format": "7.5.2",
